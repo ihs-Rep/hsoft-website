@@ -5,16 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HSoft — Small Tools. Smart Solutions. | Windows Utilities</title>
   <meta name="description" content="Discover practical Windows utilities by HSoft, designed to simplify everyday computing, improve productivity, and streamline IT tasks.">
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/images/favicon.png?v=3">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=3">
   
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="HSoft — Small Tools. Smart Solutions.">
   <meta property="og:description" content="Practical Windows utilities designed to simplify everyday computing, improve productivity, and make IT tasks easier.">
-  <meta property="og:image" content="assets/images/logo.svg">
+  <meta property="og:image" content="assets/images/logo.png">
   
   <!-- Styles -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('hsoft_theme');
+        if (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+        if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      } catch(e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -22,16 +33,36 @@
   <header class="site-header">
     <div class="container">
       <a href="index.html" class="brand-link" aria-label="HSoft Home">
-        <img src="assets/images/logo.svg" alt="HSoft Logo" class="brand-logo" width="180" height="44">
+        <img src="assets/images/logo.png" alt="HSoft Logo" class="brand-logo light-mode-logo" width="166" height="48">
+        <img src="assets/images/logo-light.png" alt="HSoft Logo" class="brand-logo dark-mode-logo" width="166" height="48">
       </a>
 
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
+      <div class="header-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
 
       <nav class="main-nav" aria-label="Main Navigation">
         <ul class="nav-links">
@@ -71,7 +102,7 @@
               Explore Tools
             </a>
             <a href="about.html" class="btn btn-secondary">
-              About HSoft
+              About
             </a>
           </div>
         </div>
@@ -81,10 +112,27 @@
     <!-- Section A: Featured Tools -->
     <section class="section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header text-center">
           <span class="section-tag">Featured Utilities</span>
           <h2 class="section-title">Built for Performance and Simplicity</h2>
           <p class="section-desc">Focused Windows tools developed without unnecessary bloat or complex setups.</p>
+        </div>
+
+        <!-- Quick Live Search on Home -->
+        <div class="home-search-bar-wrap">
+          <div class="search-bar" style="margin-bottom: 0;">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input 
+              type="search" 
+              id="home-tools-search-input" 
+              class="search-input" 
+              placeholder="Search tools: Adobe Blocker, Decoy, MailSafe, FocusPoint, SMB Monitor..." 
+              aria-label="Quick search utilities"
+            >
+          </div>
         </div>
 
         <div class="tools-grid" id="featured-tools-container">
@@ -194,7 +242,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a href="index.html" aria-label="HSoft Home">
-            <img src="assets/images/logo-light.svg" alt="HSoft Logo" height="36" width="147">
+            <img src="assets/images/logo-light.png" alt="HSoft Logo" height="40" width="151">
           </a>
           <p>HSoft develops practical, lightweight software utilities and tools for Windows PCs. Focused on clarity, security, and everyday productivity.</p>
         </div>
@@ -220,12 +268,9 @@
 
         <div class="footer-col">
           <h4>Connect</h4>
-          <!-- Configurable social links: Uncomment and replace URL when official profiles are active -->
           <ul class="footer-links">
-            <!-- <li><a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">GitHub</a></li> -->
-            <!-- <li><a href="https://twitter.com/your-handle" target="_blank" rel="noopener noreferrer">Twitter / X</a></li> -->
-            <li><a href="contact.html">Developer Inquiries</a></li>
-            <li><span style="font-size: 0.85rem; color: #64748B;">Social profiles will be linked upon launch.</span></li>
+            <li><a href="mailto:info@hsoft.lk">info@hsoft.lk</a></li>
+            <li><span style="font-size: 0.85rem; color: #64748B;">Official developer email</span></li>
           </ul>
         </div>
       </div>

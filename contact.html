@@ -5,14 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact &amp; Support — HSoft</title>
   <meta name="description" content="Get in touch with HSoft for support inquiries, feature suggestions, bug reports, and feedback regarding our Windows utility software.">
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/images/favicon.png?v=3">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=3">
   
   <meta property="og:type" content="website">
   <meta property="og:title" content="Contact HSoft">
   <meta property="og:description" content="Reach out for technical support, bug reports, or feature requests.">
-  <meta property="og:image" content="assets/images/logo.svg">
+  <meta property="og:image" content="assets/images/logo.png">
   
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('hsoft_theme');
+        if (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+        if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      } catch(e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -20,16 +31,36 @@
   <header class="site-header">
     <div class="container">
       <a href="index.html" class="brand-link" aria-label="HSoft Home">
-        <img src="assets/images/logo.svg" alt="HSoft Logo" class="brand-logo" width="180" height="44">
+        <img src="assets/images/logo.png" alt="HSoft Logo" class="brand-logo light-mode-logo" width="166" height="48">
+        <img src="assets/images/logo-light.png" alt="HSoft Logo" class="brand-logo dark-mode-logo" width="166" height="48">
       </a>
 
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
+      <div class="header-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
 
       <nav class="main-nav" aria-label="Main Navigation">
         <ul class="nav-links">
@@ -48,7 +79,7 @@
     <div class="container">
       <h1 class="page-title">Contact &amp; Support</h1>
       <p class="page-subtitle">
-        Have feedback, discovered a bug, or want to suggest a new utility? We'd love to hear from you.
+        Have feedback, discovered a bug, or want to suggest a new Windows utility? We'd love to hear from you.
       </p>
     </div>
   </div>
@@ -57,10 +88,17 @@
   <main class="main-content">
     <div class="container">
 
-      <!-- Notice regarding contact availability -->
+      <!-- Direct Official Contact Banner -->
       <div style="max-width: 900px; margin: 2.5rem auto 0;">
-        <div class="notice-box notice-info">
-          <strong>Direct Channel Notice:</strong> HSoft is an independent software project currently preparing for its official public release. Direct email addresses and GitHub repository links will be activated alongside the first official tool release. In the meantime, you can review the contact channels and inquiry formats below.
+        <div class="notice-box notice-info" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <strong>Official Support Email:</strong> Reach the developer directly at 
+            <a href="mailto:info@hsoft.lk" style="font-weight: 700; text-decoration: underline;">info@hsoft.lk</a>
+          </div>
+          <a href="mailto:info@hsoft.lk" class="btn btn-primary btn-sm" style="box-shadow: none;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            Send Email
+          </a>
         </div>
       </div>
 
@@ -68,59 +106,59 @@
         
         <!-- Channels & Guidance -->
         <div class="contact-card">
-          <h3>Inquiry Categories</h3>
-          <p>Please select an appropriate subject when contacting us to ensure a fast response:</p>
+          <h3>Inquiry Guidelines</h3>
+          <p>To help us diagnose and respond effectively, please include relevant context:</p>
           
           <div style="margin-bottom: 1.5rem;">
             <h4 style="font-size: 1rem; color: var(--primary); margin-bottom: 0.35rem;">🐛 Bug Reports</h4>
             <p style="font-size: 0.9rem; margin-bottom: 1rem;">
-              Encountered an issue with one of our utilities? Please include your Windows edition (e.g., Windows 11 23H2), tool version, and steps to reproduce.
+              Encountered an issue with <em>Adobe Blocker</em>, <em>Decoy</em>, <em>MailSafe</em>, <em>FocusPoint</em>, or <em>Net Mode SMB Monitor</em>? Please state your exact Windows edition (e.g. Windows 11 23H2 64-bit), tool name, and steps to reproduce.
             </p>
 
             <h4 style="font-size: 1rem; color: var(--primary); margin-bottom: 0.35rem;">💡 Feature Requests</h4>
             <p style="font-size: 0.9rem; margin-bottom: 1rem;">
-              Have an idea for a new feature or a new standalone Windows tool? We welcome practical suggestions that improve user workflows.
+              Have an idea for a new feature or a new standalone Windows utility? We welcome practical suggestions from technicians and users.
             </p>
 
-            <h4 style="font-size: 1rem; color: var(--primary); margin-bottom: 0.35rem;">💬 General Questions</h4>
+            <h4 style="font-size: 1rem; color: var(--primary); margin-bottom: 0.35rem;">💬 Technical Feedback</h4>
             <p style="font-size: 0.9rem; margin-bottom: 0;">
-              Inquiries regarding software licensing, compatibility, and future release schedules.
+              Suggestions on installer performance, firewall rules, or UI ergonomics.
             </p>
           </div>
 
           <div style="padding-top: 1.25rem; border-top: 1px solid var(--border-color);">
-            <h4 style="font-size: 0.95rem; color: var(--primary); margin-bottom: 0.5rem;">Configuration Note for Site Owner</h4>
+            <h4 style="font-size: 0.95rem; color: var(--primary); margin-bottom: 0.5rem;">Direct Inbox</h4>
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">
-              To configure your actual contact email, open <code>contact.html</code> and update the form action or replace the placeholder with your domain mailbox (e.g. <code>contact@hsoft.lk</code>).
+              You can email us directly anytime at <a href="mailto:info@hsoft.lk" style="font-weight: 600;">info@hsoft.lk</a>. We review and respond to inquiries promptly.
             </p>
           </div>
         </div>
 
-        <!-- Interactive Contact Form Mockup / Client Interface -->
+        <!-- Interactive Contact Form -->
         <div class="contact-card">
-          <h3>Send a Message</h3>
-          <p>Fill out the form below. For static deployment, submissions can be routed to Formspree, Cloudflare Workers, or your preferred mail service.</p>
+          <h3>Send a Quick Message</h3>
+          <p>Submit your message using the form below, or click the direct email button above.</p>
 
           <div id="contact-form-notice"></div>
 
           <form id="contact-form" class="contact-form" novalidate>
             <div class="form-group">
               <label for="contact-name" class="form-label">Your Name</label>
-              <input type="text" id="contact-name" class="form-control" placeholder="John Doe" required>
+              <input type="text" id="contact-name" class="form-control" placeholder="Your name or company" required>
             </div>
 
             <div class="form-group">
               <label for="contact-email" class="form-label">Email Address</label>
-              <input type="email" id="contact-email" class="form-control" placeholder="john@example.com" required>
+              <input type="email" id="contact-email" class="form-control" placeholder="name@example.com" required>
             </div>
 
             <div class="form-group">
-              <label for="contact-type" class="form-label">Inquiry Type</label>
+              <label for="contact-type" class="form-label">Inquiry Category</label>
               <select id="contact-type" class="form-control">
-                <option value="bug">Bug Report</option>
+                <option value="bug">Bug Report (Adobe Blocker, Decoy, etc.)</option>
                 <option value="feature">Feature Request / Suggestion</option>
                 <option value="support">Technical Support</option>
-                <option value="general">General Inquiry</option>
+                <option value="general">General Inquiries</option>
               </select>
             </div>
 
@@ -146,7 +184,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a href="index.html" aria-label="HSoft Home">
-            <img src="assets/images/logo-light.svg" alt="HSoft Logo" height="36" width="147">
+            <img src="assets/images/logo-light.png" alt="HSoft Logo" height="40" width="151">
           </a>
           <p>HSoft develops practical, lightweight software utilities and tools for Windows PCs. Focused on clarity, security, and everyday productivity.</p>
         </div>
@@ -173,8 +211,8 @@
         <div class="footer-col">
           <h4>Connect</h4>
           <ul class="footer-links">
-            <li><a href="contact.html">Developer Inquiries</a></li>
-            <li><span style="font-size: 0.85rem; color: #64748B;">Social profiles will be linked upon launch.</span></li>
+            <li><a href="mailto:info@hsoft.lk">info@hsoft.lk</a></li>
+            <li><span style="font-size: 0.85rem; color: #64748B;">Official developer email</span></li>
           </ul>
         </div>
       </div>
