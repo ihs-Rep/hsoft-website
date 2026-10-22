@@ -3,16 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About HSoft — Independent Windows Utilities Developer</title>
-  <meta name="description" content="Learn about HSoft, an independent software brand creating straightforward, practical Windows utilities designed to simplify computing.">
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <title>About HSoft — Free Windows Solutions &amp; Software Utilities</title>
+  <meta name="description" content="Learn about HSoft, an independent software brand creating practical, lightweight Windows utilities for security, automated backups, productivity, and IT network management.">
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/images/favicon.png?v=3">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=3">
   
   <meta property="og:type" content="website">
   <meta property="og:title" content="About HSoft — Small Tools. Smart Solutions.">
-  <meta property="og:description" content="HSoft develops practical software utilities designed to make everyday computing simpler.">
-  <meta property="og:image" content="assets/images/logo.svg">
+  <meta property="og:description" content="HSoft develops practical Windows software utilities designed for security, productivity, and IT support.">
+  <meta property="og:image" content="assets/images/logo.png">
   
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=2.0">
+  <script>
+    (function() {
+      try {
+        var t = localStorage.getItem('hsoft_theme');
+        if (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+        if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      } catch(e) {}
+    })();
+  </script>
 </head>
 <body>
 
@@ -20,16 +31,36 @@
   <header class="site-header">
     <div class="container">
       <a href="index.html" class="brand-link" aria-label="HSoft Home">
-        <img src="assets/images/logo.svg" alt="HSoft Logo" class="brand-logo" width="180" height="44">
+        <img src="assets/images/logo.png" alt="HSoft Logo" class="brand-logo light-mode-logo" width="166" height="48">
+        <img src="assets/images/logo-light.png" alt="HSoft Logo" class="brand-logo dark-mode-logo" width="166" height="48">
       </a>
 
-      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="3" y1="12" x2="21" y2="12"></line>
-          <line x1="3" y1="6" x2="21" y2="6"></line>
-          <line x1="3" y1="18" x2="21" y2="18"></line>
-        </svg>
-      </button>
+      <div class="header-actions">
+        <button type="button" class="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
 
       <nav class="main-nav" aria-label="Main Navigation">
         <ul class="nav-links">
@@ -48,7 +79,7 @@
     <div class="container">
       <h1 class="page-title">About HSoft</h1>
       <p class="page-subtitle">
-        Independent software development focused on practical, high-utility Windows tools.
+        Independent software development focused on practical, high-utility Windows tools and desktop solutions.
       </p>
     </div>
   </div>
@@ -60,51 +91,53 @@
         
         <h2>Our Mission</h2>
         <p>
-          <strong>HSoft</strong> develops practical software utilities designed to make everyday computing simpler. Our focus is on creating straightforward tools that help Windows users work more efficiently.
+          <strong>HSoft</strong> develops focused, practical software utilities designed to solve tangible everyday computing problems. Our tagline — <em>"Small Tools. Smart Solutions."</em> — reflects our dedication to creating compact, single-purpose Windows applications that deliver high impact without background bloat, unnecessary subscriptions, or intrusive telemetry.
         </p>
         <p>
-          Modern personal computing often suffers from bloated software, complex configurations, intrusive background telemetry, and unnecessary subscription models. HSoft was founded on a simple premise: build compact, single-purpose software utilities that do their job exceptionally well without getting in the way.
+          Modern desktop computing is frequently burdened by heavyweight software suites, complex multi-step configurations, and forced cloud integrations. HSoft builds desktop-native software that does exactly what it promises, executes instantly, and respects user autonomy.
+        </p>
+
+        <h2>Core Solution Areas</h2>
+        <p>HSoft develops software utilities across four primary operational domains:</p>
+
+        <h3>1. System Security, Privacy &amp; Access Control</h3>
+        <p>
+          Utilities like <strong>Adobe Blocker</strong> and <strong>Decoy</strong> provide kernel-level hosts filtering, ultra-fast Windows Firewall batch injection, and tamper-proof administrative controls. They empower users to restrict unwanted background telemetry, prevent unauthorized bypass, and enforce distraction-free desktop environments.
+        </p>
+
+        <h3>2. Business Data Protection &amp; Automated Backups</h3>
+        <p>
+          Critical data protection shouldn't require complex enterprise appliances. Applications such as <strong>MailSafe</strong> offer automated, scheduled redundancy for Outlook email archives (PST/OST files), accounting databases, and essential office directories to local disks, external drives, and mapped network storage.
+        </p>
+
+        <h3>3. Desktop Productivity &amp; Workflow</h3>
+        <p>
+          Lightweight productivity tools like <strong>FocusPoint</strong> streamline daily task management and recurring schedules with zero-latency floating capture windows, unobtrusive system notifications, and minimal RAM footprint.
+        </p>
+
+        <h3>4. Network Management &amp; IT Diagnostics</h3>
+        <p>
+          Developed for system administrators and multi-user environments, utilities like <strong>Net Mode SMB Monitor</strong> enable instant network adapter isolation (switching between local QuickBooks networks and internet access) while delivering real-time throughput metrics and audit tracking for SMB file servers.
         </p>
 
         <h2>Who We Build For</h2>
-        <p>HSoft tools are designed with real-world users in mind:</p>
         <ul>
-          <li><strong>Windows PC Users:</strong> Everyday computer users looking for clean, reliable utilities to handle routine maintenance, file tasks, and system checks.</li>
-          <li><strong>IT Support &amp; Technicians:</strong> Support engineers and field technicians who need portable, fast, zero-install tools for on-site troubleshooting.</li>
-          <li><strong>Office &amp; Remote Professionals:</strong> Users needing focused utilities to eliminate repetitive manual desktop tasks.</li>
-          <li><strong>Enthusiasts &amp; Power Users:</strong> Computing hobbyists who value lightweight native software with clear specifications and no junkware.</li>
+          <li><strong>IT Support Professionals &amp; System Administrators:</strong> Engineers requiring lightweight, portable tools for network diagnostics, firewall control, and workstation policy enforcement.</li>
+          <li><strong>Office &amp; Accounting Workstations:</strong> Teams running Outlook, file servers, or multi-user software that demand dependable local backups and isolated local network modes.</li>
+          <li><strong>Developers, Power Users &amp; Creators:</strong> Users who demand clean native executables without background spyware, promotional adware, or telemetry overhead.</li>
+          <li><strong>Home &amp; Family Users:</strong> Anyone seeking straightforward, dependable utilities for Windows maintenance and secure web filtering.</li>
         </ul>
 
-        <h2>Development Principles</h2>
-        <p>Every tool released under the HSoft brand adheres to four straightforward standards:</p>
-        
-        <h3>1. Purpose-Driven Simplicity</h3>
-        <p>
-          We focus on single-purpose utility applications. Rather than bundling dozens of unrelated modules into one heavy suite, each application is engineered to solve a specific problem quickly and cleanly.
-        </p>
-
-        <h3>2. Transparency &amp; Integrity</h3>
-        <p>
-          We publish accurate technical specifications, real system requirements, complete changelogs, and cryptographic SHA-256 checksums for every build. We never bundle promotional toolbars, third-party adware, or deceptive installers.
-        </p>
-
-        <h3>3. Respect for System Resources</h3>
-        <p>
-          Utilities should consume minimal CPU and RAM. Our software operates cleanly when active and releases system resources immediately when closed.
-        </p>
-
-        <h3>4. User Privacy First</h3>
-        <p>
-          We believe desktop tools should not spy on their users. HSoft utilities operate locally on your PC without silent telemetry or unauthorized background data transmission.
-        </p>
-
-        <h2>Brand Identity &amp; Name</h2>
-        <p>
-          The name <strong>HSoft</strong> represents the fusion of <em>H</em> and <em>Software</em>, paired with our guiding tagline: <strong>"Small Tools. Smart Solutions."</strong> It embodies our commitment to developing compact software assets that deliver tangible productivity gains.
-        </p>
+        <h2>Our Development Standards</h2>
+        <ul>
+          <li><strong>100% Standalone &amp; Native:</strong> We prioritize native Windows APIs, C#, WPF, and PowerShell integration for maximum performance and minimal system overhead.</li>
+          <li><strong>Zero Silent Telemetry:</strong> Our desktop utilities operate locally on your PC. No personal documents, keystrokes, or network activity are ever collected or sent to remote servers.</li>
+          <li><strong>No Bundled Adware:</strong> We never bundle third-party toolbars, browser hijackers, or unwanted software wrappers. Every release includes verified SHA-256 checksums.</li>
+          <li><strong>Transparent Changelogs:</strong> We maintain honest, detailed documentation, verified compatibility tables, and direct support channels.</li>
+        </ul>
 
         <div class="notice-box notice-info" style="margin-top: 2.5rem;">
-          <strong>Feedback &amp; Collaboration:</strong> We are continuously refining our utility designs based on user suggestions and technical feedback. If you have an idea for a tool or an enhancement, please reach out via our <a href="contact.html">Contact Page</a>.
+          <strong>Official Inquiries &amp; Support:</strong> For feature suggestions, bug reports, or enterprise feedback, contact us directly at <a href="mailto:info@hsoft.lk"><strong>info@hsoft.lk</strong></a> or visit our <a href="contact.html">Contact Page</a>.
         </div>
 
       </article>
@@ -117,7 +150,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a href="index.html" aria-label="HSoft Home">
-            <img src="assets/images/logo-light.svg" alt="HSoft Logo" height="36" width="147">
+            <img src="assets/images/logo-light.png" alt="HSoft Logo" height="40" width="151">
           </a>
           <p>HSoft develops practical, lightweight software utilities and tools for Windows PCs. Focused on clarity, security, and everyday productivity.</p>
         </div>
@@ -144,8 +177,8 @@
         <div class="footer-col">
           <h4>Connect</h4>
           <ul class="footer-links">
-            <li><a href="contact.html">Developer Inquiries</a></li>
-            <li><span style="font-size: 0.85rem; color: #64748B;">Social profiles will be linked upon launch.</span></li>
+            <li><a href="mailto:info@hsoft.lk">info@hsoft.lk</a></li>
+            <li><span style="font-size: 0.85rem; color: #64748B;">Official developer email</span></li>
           </ul>
         </div>
       </div>
@@ -158,6 +191,6 @@
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js?v=2.0"></script>
 </body>
 </html>

@@ -27,9 +27,10 @@ hsoft-website/
 │   │   ├── tools-data.js        # Central software tools catalog data
 │   │   └── main.js              # Navigation, dynamic rendering, search & filters
 │   └── images/
-│       ├── logo.svg             # Main SVG logo (Dark navy wordmark with blue accent)
-│       ├── logo-light.svg       # Light SVG logo for dark footer background
-│       ├── favicon.svg          # High-resolution SVG favicon
+│       ├── logo.png             # Official brand logo (Transparent PNG)
+│       ├── logo-light.png       # Light version logo for dark footer
+│       ├── favicon.png          # High-resolution PNG favicon
+│       ├── favicon.svg          # SVG favicon fallback
 │       └── tool-placeholder.svg # Fallback UI preview vector graphic
 └── README.md                    # Deployment and management guide
 ```

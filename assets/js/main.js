@@ -4,6 +4,7 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
+  initThemeToggle();
   initMobileMenu();
   initCurrentYear();
   
@@ -24,6 +25,48 @@ document.addEventListener("DOMContentLoaded", () => {
     initContactForm();
   }
 });
+
+/**
+ * Dark / Light Theme Toggle Logic
+ */
+function initThemeToggle() {
+  const savedTheme = localStorage.getItem("hsoft_theme");
+  const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const initialTheme = savedTheme ? savedTheme : (prefersDark ? "dark" : "light");
+  
+  applyTheme(initialTheme);
+
+  const toggleBtns = document.querySelectorAll(".theme-toggle-btn");
+  toggleBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+      const nextTheme = isDark ? "light" : "dark";
+      applyTheme(nextTheme);
+      localStorage.setItem("hsoft_theme", nextTheme);
+      showToast(`Switched to ${nextTheme === "dark" ? "Dark" : "Light"} Mode`);
+    });
+  });
+}
+
+function applyTheme(theme) {
+  const isDark = theme === "dark";
+  if (isDark) {
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else {
+    document.documentElement.removeAttribute("data-theme");
+  }
+
+  // Explicit logo visibility guarantee
+  const lightLogos = document.querySelectorAll(".brand-logo.light-mode-logo");
+  const darkLogos = document.querySelectorAll(".brand-logo.dark-mode-logo");
+
+  lightLogos.forEach(img => {
+    img.style.setProperty("display", isDark ? "none" : "block", "important");
+  });
+  darkLogos.forEach(img => {
+    img.style.setProperty("display", isDark ? "block" : "none", "important");
+  });
+}
 
 /**
  * Mobile Navigation Toggle
@@ -129,15 +172,25 @@ function createToolCardHtml(tool) {
     ? tool.supportedWindows.map(os => `<span class="tool-meta-item">${escapeHtml(os)}</span>`).join("")
     : `<span class="tool-meta-item">Windows</span>`;
 
+  const iconHtml = tool.iconUrl
+    ? `<img src="${escapeHtml(tool.iconUrl)}" alt="${escapeHtml(tool.name)} Icon" class="tool-card-icon">`
+    : `<div class="tool-card-icon-placeholder"><span>${escapeHtml(tool.name.charAt(0))}</span></div>`;
+
   return `
     <article class="tool-card">
       <div class="tool-card-header">
         <span class="tool-card-category">${escapeHtml(tool.category || "Utility")}</span>
         ${statusBadge}
       </div>
-      <h3 class="tool-card-title">
-        <a href="tool-details.html?id=${encodeURIComponent(tool.id)}">${escapeHtml(tool.name)}</a>
-      </h3>
+      <div class="tool-card-identity">
+        ${iconHtml}
+        <div>
+          <h3 class="tool-card-title">
+            <a href="tool-details.html?id=${encodeURIComponent(tool.id)}">${escapeHtml(tool.name)}</a>
+          </h3>
+          <span style="font-size: 0.8rem; color: var(--text-light); font-weight: 500;">HSoft Windows Utility</span>
+        </div>
+      </div>
       <p class="tool-card-desc">${escapeHtml(tool.shortDescription || tool.description)}</p>
       <div class="tool-card-meta">
         ${osPills}
@@ -186,6 +239,37 @@ function initHomePage() {
         </div>
       `;
     }
+  }
+
+  // Home Screen Quick Search
+  const homeSearchInput = document.getElementById("home-tools-search-input");
+  if (homeSearchInput && featuredContainer) {
+    homeSearchInput.addEventListener("input", (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      const allTools = getAllTools();
+      const filtered = allTools.filter(tool => {
+        return !q || 
+          (tool.name && tool.name.toLowerCase().includes(q)) ||
+          (tool.shortDescription && tool.shortDescription.toLowerCase().includes(q)) ||
+          (tool.description && tool.description.toLowerCase().includes(q)) ||
+          (tool.category && tool.category.toLowerCase().includes(q));
+      });
+
+      if (filtered.length > 0) {
+        featuredContainer.innerHTML = filtered.map(createToolCardHtml).join("");
+      } else {
+        featuredContainer.innerHTML = `
+          <div class="empty-state" style="grid-column: 1 / -1;">
+            <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <h3>No Utilities Found for "${escapeHtml(q)}"</h3>
+            <p>Try searching for Adobe Blocker, Decoy, MailSafe, FocusPoint, or Net Mode.</p>
+          </div>
+        `;
+      }
+    });
   }
 
   // Render Latest Releases
@@ -455,8 +539,11 @@ function initToolDetailsPage() {
         <div class="tool-detail-intro">
           <div class="tool-detail-main-info">
             <div class="tool-detail-title-row">
-              <h1 class="tool-detail-title">${escapeHtml(tool.name)}</h1>
-              ${statusBadge}
+              ${tool.iconUrl ? `<img src="${escapeHtml(tool.iconUrl)}" alt="${escapeHtml(tool.name)} Icon" class="tool-detail-icon">` : ''}
+              <div>
+                <h1 class="tool-detail-title">${escapeHtml(tool.name)}</h1>
+                <div style="margin-top: 0.35rem;">${statusBadge}</div>
+              </div>
             </div>
             <p class="tool-detail-summary">${escapeHtml(tool.shortDescription || tool.description)}</p>
             <div class="tool-detail-actions">
@@ -559,16 +646,30 @@ function initContactForm() {
   form.addEventListener("submit", (e) => {
     e.preventDefault();
     
-    // Clear and show configuration reminder notice
+    const name = (document.getElementById("contact-name")?.value || "").trim();
+    const email = (document.getElementById("contact-email")?.value || "").trim();
+    const type = document.getElementById("contact-type")?.value || "general";
+    const message = (document.getElementById("contact-message")?.value || "").trim();
+
+    if (!message) {
+      showToast("Please enter a message description.");
+      return;
+    }
+
+    const subject = encodeURIComponent(`[HSoft Inquiry: ${type.toUpperCase()}] from ${name || "User"}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nInquiry Type: ${type}\n\nMessage:\n${message}\n\n---\nSent via HSoft Website`);
+    const mailtoUrl = `mailto:info@hsoft.lk?subject=${subject}&body=${body}`;
+
     if (noticeBox) {
       noticeBox.innerHTML = `
-        <div class="notice-box notice-warning">
-          <strong>Notice:</strong> This static website does not have an active form-processing backend connected. 
-          To enable direct contact form submissions on Cloudflare Pages, integrate a free service like Formspree, Cloudflare Workers, or configure your official email address in <code>contact.html</code>.
+        <div class="notice-box notice-info" style="margin-bottom: 1.25rem;">
+          <strong>Message Prepared:</strong> Opening your default mail client to send to <strong>info@hsoft.lk</strong>. 
+          If your email app didn't open automatically, <a href="${mailtoUrl}" style="text-decoration: underline; font-weight: 700;">click here to send directly</a>.
         </div>
       `;
     }
-    
-    showToast("Static demo form — please see configuration note.");
+
+    window.location.href = mailtoUrl;
+    showToast("Opening email client for info@hsoft.lk...");
   });
 }
