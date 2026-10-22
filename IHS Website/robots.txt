@@ -1,0 +1,7 @@
+# HSoft robots.txt
+# Update the Sitemap URL once your custom domain (e.g., https://hsoft.lk) or your Cloudflare Pages URL is live.
+
+User-agent: *
+Allow: /
+
+# Sitemap: https://your-domain.pages.dev/sitemap.xml
