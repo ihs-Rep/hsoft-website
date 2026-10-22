@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HSoft — Small Tools. Smart Solutions. | Windows Utilities</title>
+  <meta name="description" content="Discover practical Windows utilities by HSoft, designed to simplify everyday computing, improve productivity, and streamline IT tasks.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="HSoft — Small Tools. Smart Solutions.">
+  <meta property="og:description" content="Practical Windows utilities designed to simplify everyday computing, improve productivity, and make IT tasks easier.">
+  <meta property="og:image" content="assets/images/logo.svg">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand-link" aria-label="HSoft Home">
+        <img src="assets/images/logo.svg" alt="HSoft Logo" class="brand-logo" width="180" height="44">
+      </a>
+
+      <button class="mobile-nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="tools.html" class="nav-link">Tools</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+          <li><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-badge">
+            <span class="pulse-dot"></span>
+            Independent Windows Utilities
+          </div>
+          <h1 class="hero-title">Small Tools. Smart Solutions.</h1>
+          <p class="hero-description">
+            Discover practical Windows utilities designed to simplify everyday computing, improve productivity, and make IT tasks easier.
+          </p>
+          <div class="hero-actions">
+            <a href="tools.html" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              Explore Tools
+            </a>
+            <a href="about.html" class="btn btn-secondary">
+              About HSoft
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section A: Featured Tools -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Utilities</span>
+          <h2 class="section-title">Built for Performance and Simplicity</h2>
+          <p class="section-desc">Focused Windows tools developed without unnecessary bloat or complex setups.</p>
+        </div>
+
+        <div class="tools-grid" id="featured-tools-container">
+          <!-- Dynamically populated from tools-data.js -->
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="tools.html" class="btn btn-secondary">View All Tools in Catalog &rarr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section B: Why HSoft? -->
+    <section class="section section-subtle">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-tag">Core Principles</span>
+          <h2 class="section-title">Why Choose HSoft?</h2>
+          <p class="section-desc">Every application is crafted with a focus on reliability, clear functionality, and respect for system resources.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <h3>Simple &amp; Practical Tools</h3>
+            <p>Designed to perform specific tasks quickly and effectively without confusing menus or superfluous options.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+            </div>
+            <h3>Clear Product Information</h3>
+            <p>Honest specifications, direct changelogs, verified file checksums, and transparent system requirements.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+            </div>
+            <h3>Easy Access to Releases</h3>
+            <p>Direct download links via trusted release platforms like GitHub Releases, free of deceptive download wrappers.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-wrapper">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <h3>Everyday Windows Computing</h3>
+            <p>Built specifically for Windows PC users, IT technicians, and power users seeking lightweight utility software.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section C: Latest Releases -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Updates</span>
+          <h2 class="section-title">Latest Releases</h2>
+          <p class="section-desc">Recent version updates and release packages published by HSoft.</p>
+        </div>
+
+        <div id="latest-releases-container" class="tools-grid">
+          <!-- Populated from tools-data.js; fallback message rendered when empty -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Section D: Call to Action -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Find the Right Tool for Your Workflow</h2>
+          <p>Explore our growing collection of focused Windows utilities created to make daily IT operations and general computing easier.</p>
+          <a href="tools.html" class="btn btn-primary" style="background-color: #3B82F6;">
+            Browse All Tools
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Section E: Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" aria-label="HSoft Home">
+            <img src="assets/images/logo-light.svg" alt="HSoft Logo" height="36" width="147">
+          </a>
+          <p>HSoft develops practical, lightweight software utilities and tools for Windows PCs. Focused on clarity, security, and everyday productivity.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tools.html">Tools Directory</a></li>
+            <li><a href="about.html">About HSoft</a></li>
+            <li><a href="contact.html">Contact &amp; Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="tools.html">Upcoming Releases</a></li>
+            <li><a href="contact.html">Report a Bug</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <!-- Configurable social links: Uncomment and replace URL when official profiles are active -->
+          <ul class="footer-links">
+            <!-- <li><a href="https://github.com/your-username" target="_blank" rel="noopener noreferrer">GitHub</a></li> -->
+            <!-- <li><a href="https://twitter.com/your-handle" target="_blank" rel="noopener noreferrer">Twitter / X</a></li> -->
+            <li><a href="contact.html">Developer Inquiries</a></li>
+            <li><span style="font-size: 0.85rem; color: #64748B;">Social profiles will be linked upon launch.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span class="current-year"></span> HSoft. All rights reserved.</p>
+        <span class="footer-badge">Small Tools. Smart Solutions.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/tools-data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
