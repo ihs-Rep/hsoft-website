@@ -228,6 +228,11 @@ function createToolCardHtml(tool) {
  * Render Tech News Card Component
  */
 function createNewsCardHtml(article) {
+  const sourceLabel = article.source || article.author || "IHSByte Desk";
+  const locationBadge = article.location 
+    ? `<div class="news-location-tag" style="font-size: 0.78rem; color: var(--text-light); margin-top: 0.25rem;">📍 ${escapeHtml(article.location)}</div>`
+    : "";
+
   return `
     <article class="news-card" onclick="openArticleModal('${escapeHtml(article.id)}')">
       <div class="news-card-header">
@@ -236,13 +241,19 @@ function createNewsCardHtml(article) {
       </div>
       <h3 class="news-card-title">${escapeHtml(article.title)}</h3>
       <p class="news-card-summary">${escapeHtml(article.summary)}</p>
-      <div class="news-card-footer">
+      <div class="news-card-footer" style="align-items: flex-start;">
         <div class="news-author-date">
-          <span>${escapeHtml(article.date)}</span>
-          <span>•</span>
-          <span>${escapeHtml(article.author)}</span>
+          <div>
+            <div style="font-weight: 600; color: var(--text-heading); font-size: 0.85rem;">
+              📅 ${escapeHtml(article.date)}
+            </div>
+            <div style="font-size: 0.8rem; color: var(--secondary); font-weight: 500; margin-top: 0.15rem;">
+              🏢 ${escapeHtml(sourceLabel)}
+            </div>
+            ${locationBadge}
+          </div>
         </div>
-        <span class="news-read-action">
+        <span class="news-read-action" style="margin-top: 0.25rem;">
           Read Story &rarr;
         </span>
       </div>
@@ -304,10 +315,16 @@ window.openArticleModal = function(articleId) {
     <h1 style="font-size: clamp(1.6rem, 3.2vw, 2.3rem); font-weight: 850; line-height: 1.25; color: var(--text-heading); margin-bottom: 0.75rem;">
       ${escapeHtml(article.title)}
     </h1>
-    <div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; display: flex; gap: 0.75rem; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
-      <span>By <strong>${escapeHtml(article.author)}</strong></span>
-      <span>•</span>
-      <span>Published on ${escapeHtml(article.date)}</span>
+    <div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 0.45rem; border-bottom: 1px solid var(--border-color); padding-bottom: 1.25rem;">
+      <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+        <span>📅 Published Date: <strong>${escapeHtml(article.date)}</strong></span>
+        <span>•</span>
+        <span>⏱️ Read Time: <strong>${escapeHtml(article.readTime)}</strong></span>
+      </div>
+      <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; font-size: 0.88rem; color: var(--text-light);">
+        <span>🏢 Original Source / Owner: <strong style="color: var(--secondary);">${escapeHtml(article.source || article.author)}</strong></span>
+        ${article.location ? `<span>•</span><span>📍 Origin Location: <strong style="color: var(--text-heading);">${escapeHtml(article.location)}</strong></span>` : ''}
+      </div>
     </div>
     <div class="modal-article-body">
       ${article.content}
@@ -421,13 +438,16 @@ function initNewsCatalog() {
           </div>
           <h2 class="featured-story-title">${escapeHtml(featuredStory.title)}</h2>
           <p class="featured-story-desc">${escapeHtml(featuredStory.summary)}</p>
-          <div class="news-card-footer" style="padding-top: 1.25rem;">
+          <div class="news-card-footer" style="padding-top: 1.25rem; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
             <div class="news-author-date">
-              <span><strong>${escapeHtml(featuredStory.author)}</strong></span>
-              <span>•</span>
-              <span>${escapeHtml(featuredStory.date)}</span>
-              <span>•</span>
-              <span>${escapeHtml(featuredStory.readTime)}</span>
+              <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; font-size: 0.9rem;">
+                <span>📅 <strong>${escapeHtml(featuredStory.date)}</strong></span>
+                <span>•</span>
+                <span>🏢 Source: <strong style="color: var(--secondary);">${escapeHtml(featuredStory.source || featuredStory.author)}</strong></span>
+                <span>•</span>
+                <span>⏱️ ${escapeHtml(featuredStory.readTime)}</span>
+              </div>
+              ${featuredStory.location ? `<div style="font-size: 0.82rem; color: var(--text-light); margin-top: 0.35rem;">📍 Origin Location: <strong style="color: var(--text-heading);">${escapeHtml(featuredStory.location)}</strong></div>` : ''}
             </div>
             <span class="btn btn-primary btn-sm">Read Full Analysis &rarr;</span>
           </div>
