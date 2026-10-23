@@ -18,9 +18,9 @@ const IHSBYTE_TOOLS = [
     description: "Adobe Blocker is a specialized, lightweight Windows utility built for power users, creatives, and IT administrators. It instantly prevents background network and firewall access for all installed Adobe applications—including Photoshop, Illustrator, Acrobat DC, Premiere Pro, InDesign, After Effects, and Lightroom. Equipped with an ultra-fast batch firewall injection engine (1–2 seconds execution), automated sinkholing of 40+ Adobe telemetry endpoints, and one-click Adobe Genuine Service (AGS) disabling.",
     category: "Security & Firewall",
     version: "2.0 (Dark Edition)",
-    releaseDate: "",
+    releaseDate: "October 2026",
     supportedWindows: ["Windows 11", "Windows 10", "Windows 8.1", "Windows 7 (32/64-bit)"],
-    systemRequirements: "Windows 7, 8, 8.1, 10, or 11 (32-bit or 64-bit). Requires Administrator privileges for Windows Firewall and Hosts rules. Standalone executable (~127 KB), zero external runtimes needed.",
+    systemRequirements: "Windows 7, 8, 8.1, 10, or 11 (32-bit or 64-bit). Requires Administrator privileges for Windows Firewall and Hosts rules. Standalone executable (~125.5 KB), zero external runtimes needed.",
     features: [
       "One-click universal blocking for Photoshop, Illustrator, Acrobat, Premiere Pro, and Creative Cloud apps",
       "High-speed batch firewall rule generation powered by native netsh batch injection in under 2 seconds",
@@ -30,9 +30,9 @@ const IHSBYTE_TOOLS = [
       "Modern dark-themed standalone GUI (#0B0F17) with zero background processes"
     ],
     screenshots: [],
-    downloadUrl: "",
-    fileSize: "127 KB",
-    sha256: "",
+    downloadUrl: "downloads/AdobeBlocker.exe",
+    fileSize: "125.5 KB",
+    sha256: "9DD9854F252CB9CFAAAE77929C19617EE272409A8CCC597FA6F1CAF8F2BDE48E",
     changelog: [
       {
         version: "2.0",
@@ -47,7 +47,7 @@ const IHSBYTE_TOOLS = [
     ],
     knownIssues: [],
     supportUrl: "contact.html",
-    status: "coming-soon",
+    status: "released",
     isFeatured: true
   },
   {

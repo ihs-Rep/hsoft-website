@@ -181,9 +181,9 @@ function createToolCardHtml(tool) {
     : `<span class="status-badge coming-soon"><span class="dot"></span>Coming Soon</span>`;
 
   const downloadBtn = isReleased
-    ? `<a href="${escapeHtml(tool.downloadUrl)}" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
+    ? `<a href="${escapeHtml(tool.downloadUrl)}" class="btn btn-primary btn-sm" download>
          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-         Download
+         Download (${escapeHtml(tool.fileSize || "EXE")})
        </a>`
     : `<button class="btn btn-secondary btn-sm btn-disabled" disabled title="Under active development">Coming Soon</button>`;
 
@@ -607,9 +607,9 @@ function initToolDetailsPage() {
   let downloadSectionHtml = "";
   if (isReleased) {
     downloadSectionHtml = `
-      <a href="${escapeHtml(tool.downloadUrl)}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+      <a href="${escapeHtml(tool.downloadUrl)}" class="btn btn-primary" download>
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download Installer
+        Download Executable (${escapeHtml(tool.fileSize || "125.5 KB")})
       </a>
     `;
   } else {
@@ -635,6 +635,19 @@ function initToolDetailsPage() {
   }
   if (Array.isArray(tool.supportedWindows) && tool.supportedWindows.length > 0) {
     metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Supported OS</span><span class="meta-box-val">${escapeHtml(tool.supportedWindows.join(", "))}</span></div>`;
+  }
+
+  let checksumHtml = "";
+  if (tool.sha256) {
+    checksumHtml = `
+      <div class="checksum-box">
+        <div class="checksum-header">
+          <span>SHA-256 Checksum</span>
+          <button type="button" class="btn btn-secondary btn-sm" id="copy-sha-btn" style="padding: 0.2rem 0.5rem; font-size: 0.72rem;">Copy</button>
+        </div>
+        <div class="checksum-value" id="sha-value-text">${escapeHtml(tool.sha256)}</div>
+      </div>
+    `;
   }
 
   let featuresHtml = "";
@@ -700,6 +713,7 @@ function initToolDetailsPage() {
 
           <aside class="tool-detail-meta-box">
             ${metaListHtml || `<div class="meta-box-item"><span class="meta-box-label">Status</span><span class="meta-box-val">In Development</span></div>`}
+            ${checksumHtml}
           </aside>
         </div>
       </div>
@@ -744,6 +758,13 @@ function initToolDetailsPage() {
       </div>
     </div>
   `;
+
+  const copyBtn = document.getElementById("copy-sha-btn");
+  if (copyBtn && tool.sha256) {
+    copyBtn.addEventListener("click", () => {
+      copyToClipboard(tool.sha256, "SHA-256 Checksum copied!");
+    });
+  }
 }
 
 function renderToolNotFound(container, message) {
@@ -764,6 +785,13 @@ function renderToolNotFound(container, message) {
       </div>
     </div>
   `;
+
+  const copyBtn = document.getElementById("copy-sha-btn");
+  if (copyBtn && tool.sha256) {
+    copyBtn.addEventListener("click", () => {
+      copyToClipboard(tool.sha256, "SHA-256 Checksum copied!");
+    });
+  }
 }
 
 /**
