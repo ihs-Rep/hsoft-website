@@ -1,14 +1,55 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 44" width="180" height="44" fill="none">
-  <!-- Symbol -->
-  <rect x="2" y="2" width="40" height="40" rx="10" fill="#1E293B"/>
-  <rect x="3" y="3" width="38" height="38" rx="9" stroke="#3B82F6" stroke-width="1.2" stroke-opacity="0.6"/>
-  <path d="M14 13V31" stroke="#3B82F6" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M30 13V31" stroke="#3B82F6" stroke-width="3.5" stroke-linecap="round"/>
-  <path d="M14 22H30" stroke="#60A5FA" stroke-width="3.5" stroke-linecap="round"/>
-  <circle cx="22" cy="22" r="2" fill="#FFFFFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 110" width="460" height="110" fill="none">
+  <defs>
+    <linearGradient id="topFaceDark" x1="32" y1="24" x2="88" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#00F2FE"/>
+    </linearGradient>
+    <linearGradient id="leftFaceDark" x1="32" y1="40" x2="60" y2="88" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <linearGradient id="rightFaceDark" x1="60" y1="56" x2="88" y2="88" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="byteGradDark" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <filter id="glowDark" x="-25%" y="-25%" width="150%" height="150%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow Behind Emblem -->
+  <circle cx="60" cy="55" r="44" fill="#0284C7" opacity="0.38" filter="url(#glowDark)"/>
+
+  <!-- Circuit traces -->
+  <path d="M 60,18 L 60,10" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="60" cy="9" r="3" fill="#00F2FE"/>
   
-  <!-- Wordmark -->
-  <text x="52" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="-0.5">
-    <tspan fill="#3B82F6">H</tspan><tspan fill="#FFFFFF">Soft</tspan>
+  <path d="M 90,38 L 100,32" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="101" cy="31" r="3" fill="#00F2FE"/>
+
+  <path d="M 30,72 L 20,78" stroke="#0284C7" stroke-width="2.5" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="19" cy="79" r="3" fill="#38BDF8"/>
+
+  <!-- Emblem Isometric Cube -->
+  <polygon points="60,24 88,40 60,56 32,40" fill="url(#topFaceDark)"/>
+  <polygon points="32,42 59,57 59,88 32,72" fill="url(#leftFaceDark)"/>
+  <polygon points="61,57 88,42 88,72 61,88" fill="url(#rightFaceDark)"/>
+
+  <!-- Tech Accent Lines on Top Face -->
+  <polyline points="46,32 60,40 74,32" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+  <!-- Byte Center Core Node -->
+  <circle cx="60" cy="56" r="4.5" fill="#FFFFFF" filter="url(#glowDark)"/>
+
+  <!-- Brand Typography -->
+  <text x="116" y="67" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif" font-size="42" font-weight="900" letter-spacing="-0.5px">
+    <tspan fill="#F8FAFC">IHS</tspan><tspan fill="url(#byteGradDark)">BYTE</tspan>
+  </text>
+  <text x="118" y="88" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif" font-size="11.5" font-weight="700" letter-spacing="3.5px" fill="#94A3B8">
+    WINDOWS UTILITIES &amp; TECH
   </text>
 </svg>

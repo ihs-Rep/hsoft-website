@@ -1,5 +1,5 @@
 /**
- * HSoft - Central Software Tools Data
+ * IHSByte - Central Software Tools Data
  * 
  * Featured Projects from D:\Antigravity:
  * - Adobe Blocker
@@ -9,7 +9,7 @@
  * - Net Mode SMB Monitor
  */
 
-const HSOFT_TOOLS = [
+const IHSBYTE_TOOLS = [
   {
     id: "adobe-blocker",
     name: "Adobe Blocker",
@@ -30,7 +30,7 @@ const HSOFT_TOOLS = [
       "Modern dark-themed standalone GUI (#0B0F17) with zero background processes"
     ],
     screenshots: [],
-    downloadUrl: "", // Coming soon - binary in testing
+    downloadUrl: "",
     fileSize: "127 KB",
     sha256: "",
     changelog: [
@@ -178,25 +178,28 @@ const HSOFT_TOOLS = [
   }
 ];
 
+// Compatibility alias
+const HSOFT_TOOLS = IHSBYTE_TOOLS;
+
 // Helper functions for accessing tool data
 function getAllTools() {
-  return HSOFT_TOOLS;
+  return IHSBYTE_TOOLS;
 }
 
 function getToolById(id) {
   if (!id) return null;
-  return HSOFT_TOOLS.find(tool => tool.id.toLowerCase() === id.trim().toLowerCase()) || null;
+  return IHSBYTE_TOOLS.find(tool => tool.id.toLowerCase() === id.trim().toLowerCase()) || null;
 }
 
 function getFeaturedTools() {
-  return HSOFT_TOOLS.filter(tool => tool.isFeatured);
+  return IHSBYTE_TOOLS.filter(tool => tool.isFeatured);
 }
 
 function getReleasedTools() {
-  return HSOFT_TOOLS.filter(tool => tool.status === "released");
+  return IHSBYTE_TOOLS.filter(tool => tool.status === "released");
 }
 
 function getCategories() {
-  const categories = new Set(HSOFT_TOOLS.map(tool => tool.category).filter(Boolean));
+  const categories = new Set(IHSBYTE_TOOLS.map(tool => tool.category).filter(Boolean));
   return Array.from(categories);
 }

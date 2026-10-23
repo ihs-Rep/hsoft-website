@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Windows Utilities &amp; Tools Directory — HSoft</title>
-  <meta name="description" content="Browse HSoft's directory of Windows utilities, software tools, and productivity applications designed for IT technicians, office users, and PC enthusiasts.">
-  <link rel="icon" type="image/png" sizes="128x128" href="assets/images/favicon.png?v=3">
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=3">
+  <title>Windows Utilities &amp; Tools Directory — IHSByte</title>
+  <meta name="description" content="Browse IHSByte's directory of Windows desktop utilities, security tools, and productivity applications built natively for Windows 10 and Windows 11.">
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/images/favicon.png?v=4">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=4">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=4">
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Windows Utilities Directory — HSoft">
-  <meta property="og:description" content="Explore HSoft's directory of practical Windows software tools.">
+  <meta property="og:title" content="Windows Utilities Directory — IHSByte">
+  <meta property="og:description" content="Explore IHSByte's directory of practical, lightweight Windows software tools.">
   <meta property="og:image" content="assets/images/logo.png">
   
-  <link rel="stylesheet" href="assets/css/style.css?v=2.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.0">
   <script>
     (function() {
       try {
-        var t = localStorage.getItem('hsoft_theme');
+        var t = localStorage.getItem('ihsbyte_theme') || localStorage.getItem('hsoft_theme');
         if (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
         if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
       } catch(e) {}
@@ -30,9 +30,9 @@
   <!-- Site Header -->
   <header class="site-header">
     <div class="container">
-      <a href="index.html" class="brand-link" aria-label="HSoft Home">
-        <img src="assets/images/logo.png" alt="HSoft Logo" class="brand-logo light-mode-logo" width="166" height="48">
-        <img src="assets/images/logo-light.png" alt="HSoft Logo" class="brand-logo dark-mode-logo" width="166" height="48">
+      <a href="index.html" class="brand-link" aria-label="IHSByte Home">
+        <img src="assets/images/logo.svg" alt="IHSByte Logo" class="brand-logo light-mode-logo" width="168" height="42">
+        <img src="assets/images/logo-light.svg" alt="IHSByte Logo" class="brand-logo dark-mode-logo" width="168" height="42">
       </a>
 
       <div class="header-actions">
@@ -66,20 +66,25 @@
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="tools.html" class="nav-link active">Tools</a></li>
+          <li>
+            <a href="news.html" class="nav-link">
+              News
+              <span class="nav-badge-pill">New</span>
+            </a>
+          </li>
           <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
-          <li><a href="privacy.html" class="nav-link">Privacy Policy</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Page Header -->
+  <!-- Glowing Page Header -->
   <div class="page-header">
     <div class="container">
       <h1 class="page-title">Software Tools Directory</h1>
       <p class="page-subtitle">
-        Browse our catalog of Windows desktop utilities. Find focused applications built to solve specific workflow challenges.
+        Browse our catalog of Windows desktop utilities. Find focused applications built to solve specific workflow, security, and networking challenges.
       </p>
     </div>
   </div>
@@ -99,14 +104,13 @@
             type="search" 
             id="tools-search-input" 
             class="search-input" 
-            placeholder="Search tools by name, category, or functionality..." 
+            placeholder="Search utilities by name, category, or functionality..." 
             aria-label="Search tools"
           >
         </div>
 
         <div class="category-filters">
-          <span class="filter-label">Filter by Category:</span>
-          <div id="tools-filter-categories" style="display: inline-flex; flex-wrap: wrap; gap: 0.5rem;">
+          <div id="tools-filter-categories" style="display: inline-flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
             <!-- Category buttons populated by JS -->
           </div>
         </div>
@@ -134,10 +138,10 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <a href="index.html" aria-label="HSoft Home">
-            <img src="assets/images/logo-light.png" alt="HSoft Logo" height="40" width="151">
+          <a href="index.html" aria-label="IHSByte Home">
+            <img src="assets/images/logo-light.svg" alt="IHSByte Logo" height="40" width="155">
           </a>
-          <p>HSoft develops practical, lightweight software utilities and tools for Windows PCs. Focused on clarity, security, and everyday productivity.</p>
+          <p>IHSByte develops lightweight, high-performance Windows utilities and delivers independent tech research and cybersecurity analysis.</p>
         </div>
 
         <div class="footer-col">
@@ -145,7 +149,8 @@
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="tools.html">Tools Directory</a></li>
-            <li><a href="about.html">About HSoft</a></li>
+            <li><a href="news.html">Tech News</a></li>
+            <li><a href="about.html">About IHSByte</a></li>
             <li><a href="contact.html">Contact &amp; Support</a></li>
           </ul>
         </div>
@@ -154,29 +159,30 @@
           <h4>Resources</h4>
           <ul class="footer-links">
             <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="tools.html">Upcoming Releases</a></li>
-            <li><a href="contact.html">Report a Bug</a></li>
+            <li><a href="tools.html">Upcoming Utilities</a></li>
+            <li><a href="contact.html">Report Bug / Feedback</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Connect</h4>
           <ul class="footer-links">
-            <li><a href="mailto:info@hsoft.lk">info@hsoft.lk</a></li>
+            <li><a href="mailto:contact@ihsbyte.com.lk">contact@ihsbyte.com.lk</a></li>
             <li><span style="font-size: 0.85rem; color: #64748B;">Official developer email</span></li>
+            <li><span style="font-size: 0.85rem; color: #64748B;">Domain: ihsbyte.com.lk</span></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; <span class="current-year"></span> HSoft. All rights reserved.</p>
-        <span class="footer-badge">Small Tools. Smart Solutions.</span>
+        <p>&copy; <span class="current-year"></span> IHSByte (ihsbyte.com.lk). All rights reserved.</p>
+        <span class="footer-badge">Smart Windows Utilities &amp; Tech Insights</span>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/tools-data.js?v=2.0"></script>
-  <script src="assets/js/main.js?v=2.0"></script>
+  <script src="assets/js/tools-data.js?v=3.0"></script>
+  <script src="assets/js/main.js?v=3.0"></script>
 </body>
 </html>

@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy — HSoft</title>
-  <meta name="description" content="Read HSoft's privacy policy regarding website usage, software applications, telemetry, and data transparency.">
-  <link rel="icon" type="image/png" sizes="128x128" href="assets/images/favicon.png?v=3">
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=3">
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=3">
+  <title>Privacy Policy — IHSByte</title>
+  <meta name="description" content="Read IHSByte's privacy policy regarding website usage, software applications, telemetry, and data transparency.">
+  <link rel="icon" type="image/png" sizes="128x128" href="assets/images/favicon.png?v=4">
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=4">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg?v=4">
   
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Privacy Policy — HSoft">
-  <meta property="og:description" content="Transparency regarding website data, cookies, and software utilities.">
+  <meta property="og:title" content="Privacy Policy — IHSByte">
+  <meta property="og:description" content="Transparency regarding website data, cookies, and desktop software utilities.">
   <meta property="og:image" content="assets/images/logo.png">
   
-  <link rel="stylesheet" href="assets/css/style.css?v=2.0">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.0">
   <script>
     (function() {
       try {
-        var t = localStorage.getItem('hsoft_theme');
+        var t = localStorage.getItem('ihsbyte_theme') || localStorage.getItem('hsoft_theme');
         if (!t && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
         if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
       } catch(e) {}
@@ -30,9 +30,9 @@
   <!-- Site Header -->
   <header class="site-header">
     <div class="container">
-      <a href="index.html" class="brand-link" aria-label="HSoft Home">
-        <img src="assets/images/logo.png" alt="HSoft Logo" class="brand-logo light-mode-logo" width="166" height="48">
-        <img src="assets/images/logo-light.png" alt="HSoft Logo" class="brand-logo dark-mode-logo" width="166" height="48">
+      <a href="index.html" class="brand-link" aria-label="IHSByte Home">
+        <img src="assets/images/logo.svg" alt="IHSByte Logo" class="brand-logo light-mode-logo" width="168" height="42">
+        <img src="assets/images/logo-light.svg" alt="IHSByte Logo" class="brand-logo dark-mode-logo" width="168" height="42">
       </a>
 
       <div class="header-actions">
@@ -66,96 +66,92 @@
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link">Home</a></li>
           <li><a href="tools.html" class="nav-link">Tools</a></li>
+          <li>
+            <a href="news.html" class="nav-link">
+              News
+              <span class="nav-badge-pill">New</span>
+            </a>
+          </li>
           <li><a href="about.html" class="nav-link">About</a></li>
           <li><a href="contact.html" class="nav-link">Contact</a></li>
-          <li><a href="privacy.html" class="nav-link active">Privacy Policy</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Page Header -->
+  <!-- Glowing Page Header -->
   <div class="page-header">
     <div class="container">
       <h1 class="page-title">Privacy Policy</h1>
       <p class="page-subtitle">
-        Last updated: October 2026. Review our commitments to transparent, privacy-respecting software.
+        Last updated: October 2026. Review our commitments to transparent, privacy-respecting software and website operations.
       </p>
     </div>
   </div>
 
   <!-- Main Content -->
-  <main class="main-content">
+  <main class="main-content section">
     <div class="container">
-      <article class="prose">
+      <div class="content-wrapper">
 
-        <div class="notice-box notice-warning">
-          <strong>Site Owner Review Checklist:</strong> This privacy policy template covers both website browsing and published Windows utilities. Before launching publicly, confirm which third-party services (such as Cloudflare Web Analytics, Google Analytics, Formspree, or GitHub Releases) you actively enable, and update the flagged sections accordingly.
-        </div>
+        <section class="content-section">
+          <h2>1. Introduction</h2>
+          <p>
+            At <strong>IHSByte</strong> (ihsbyte.com.lk), we prioritize user transparency and respect the privacy of individuals visiting our website and utilizing our Windows utility software. This Privacy Policy outlines what information is collected, how it is handled, and your rights concerning your personal information.
+          </p>
+        </section>
 
-        <h2>1. Introduction</h2>
-        <p>
-          At <strong>HSoft</strong>, we prioritize user transparency and respect the privacy of individuals visiting our website and utilizing our Windows utility software. This Privacy Policy outlines what information is collected, how it is handled, and your rights concerning your personal information.
-        </p>
+        <section class="content-section">
+          <h2>2. Website Information &amp; Hosting</h2>
+          <p>
+            This website is hosted statically via <strong>Cloudflare Pages</strong>. When you browse the website, standard web server logs and network-level metadata (such as your IP address, browser user-agent, operating system, and request timestamp) may be processed by Cloudflare's edge infrastructure to ensure network security, DDoS mitigation, and caching.
+          </p>
+        </section>
 
-        <h2>2. Website Information &amp; Hosting</h2>
-        <p>
-          This website is hosted statically via <strong>Cloudflare Pages</strong>. When you browse the website, standard web server logs and network-level metadata (such as your IP address, browser user-agent, operating system, and request timestamp) may be processed by Cloudflare's infrastructure to ensure network security, DDoS mitigation, and edge caching.
-        </p>
-        <p>
-          For more details on how Cloudflare handles network data, refer to Cloudflare's official Privacy Policy.
-        </p>
+        <section class="content-section">
+          <h2>3. Cookies &amp; Local Storage</h2>
+          <p>
+            The IHSByte website does not use tracking cookies or advertising cookies. Any client-side state (such as dark/light theme preference) is stored strictly on your local device via standard browser <code>localStorage</code> and is never transmitted to an external server.
+          </p>
+        </section>
 
-        <h2>3. Cookies &amp; Local Storage</h2>
-        <p>
-          The core HSoft website does not use tracking cookies or advertising cookies. Any client-side state (such as user interface preferences or cached filter settings) is stored locally on your device via standard HTML5 browser storage and is never transmitted to an external server.
-        </p>
-        <p>
-          <em>[Owner Action Required]: If you install third-party tracking scripts or cookie-based analytics in the future, document cookie names, lifespans, and opt-out mechanisms here.</em>
-        </p>
+        <section class="content-section">
+          <h2>4. Contact &amp; Correspondence Data</h2>
+          <p>
+            If you contact IHSByte directly via email at <a href="mailto:contact@ihsbyte.com.lk">contact@ihsbyte.com.lk</a> for bug reports, support queries, or feature requests, we receive the information you choose to provide (such as your name, email address, Windows build details, and problem description).
+          </p>
+          <p>
+            This information is used solely to respond to your inquiry and troubleshoot reported software issues. We do not sell, rent, or trade your correspondence data.
+          </p>
+        </section>
 
-        <h2>4. Contact &amp; Correspondence Data</h2>
-        <p>
-          If you contact HSoft directly via email or future web forms for bug reports, support queries, or feature requests, we receive the information you choose to provide (such as your name, email address, Windows build details, and problem description).
-        </p>
-        <p>
-          This information is used solely to respond to your inquiry, troubleshoot reported software bugs, or evaluate proposed enhancements. We do not sell, rent, or trade your correspondence data.
-        </p>
+        <section class="content-section">
+          <h2>5. Windows Utility Software &amp; Zero Silent Telemetry</h2>
+          <p>
+            Our core development philosophy is that utility applications should operate natively and privately on your Windows computer:
+          </p>
+          <ul class="features-list">
+            <li><strong>Offline Functionality:</strong> Unless explicitly noted (such as network socket diagnostics), IHSByte utilities operate entirely offline.</li>
+            <li><strong>Zero Silent Telemetry:</strong> IHSByte desktop applications do not collect or transmit personal files, keystrokes, browsing history, or background activity.</li>
+            <li><strong>Crash Logs &amp; Error Reporting:</strong> In the event of a crash, no diagnostic logs are uploaded unless you explicitly inspect and transmit them as part of a voluntary bug report.</li>
+          </ul>
+        </section>
 
-        <h2>5. Windows Utility Software &amp; Telemetry</h2>
-        <p>
-          Our guiding philosophy is that utility applications should operate natively and privately on your Windows machine:
-        </p>
-        <ul>
-          <li><strong>Offline Functionality:</strong> Unless explicitly noted in a tool's documentation (such as a network ping or socket utility that requires network access to function), HSoft utilities operate offline.</li>
-          <li><strong>Zero Silent Telemetry:</strong> HSoft applications do not silently collect or transmit personal files, keystrokes, browsing history, or background activity.</li>
-          <li><strong>Crash Logs &amp; Error Reporting:</strong> In the event of a software crash, no diagnostic logs are automatically uploaded unless you explicitly inspect and transmit them as part of a voluntary bug report.</li>
-        </ul>
-        <p>
-          <em>[Owner Action Required]: When releasing a new software tool, confirm in its specific tool documentation whether it checks for automatic version updates or sends any network requests.</em>
-        </p>
+        <section class="content-section">
+          <h2>6. Third-Party Download Providers</h2>
+          <p>
+            Software binaries and installers for IHSByte utilities are distributed through trusted release platforms such as <strong>GitHub Releases</strong>. When downloading an installer, your request is handled directly by GitHub's infrastructure and is governed by GitHub's Terms of Service and Privacy Statement.
+          </p>
+        </section>
 
-        <h2>6. Third-Party Download Providers</h2>
-        <p>
-          Software binaries and installers for HSoft utilities are typically distributed through trusted platforms such as <strong>GitHub Releases</strong>. When downloading an installer, your download request is handled directly by GitHub's servers and is governed by GitHub's Terms of Service and Privacy Statement.
-        </p>
+        <section class="content-section">
+          <h2>7. Contact Information</h2>
+          <p>
+            If you have questions or concerns regarding this Privacy Policy or our software practices, please contact us directly at <a href="mailto:contact@ihsbyte.com.lk"><strong>contact@ihsbyte.com.lk</strong></a> or review our <a href="contact.html">Contact Page</a>.
+          </p>
+        </section>
 
-        <h2>7. External Links</h2>
-        <p>
-          Our website may contain links to external sites (such as Microsoft documentation, developer repositories, or third-party open-source libraries). We do not control and are not responsible for the privacy practices or content of external web properties.
-        </p>
-
-        <h2>8. Changes to This Policy</h2>
-        <p>
-          We may update this Privacy Policy from time to time to reflect changes in our tools, deployment practices, or legal requirements. Updated policies will be published directly to this page with an updated revision date.
-        </p>
-
-        <h2>9. Contact Information</h2>
-        <p>
-          If you have questions or concerns regarding this Privacy Policy or our software practices, please contact us directly at <a href="mailto:info@hsoft.lk"><strong>info@hsoft.lk</strong></a> or review our <a href="contact.html">Contact Page</a>.
-        </p>
-
-      </article>
+      </div>
     </div>
   </main>
 
@@ -164,10 +160,10 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <a href="index.html" aria-label="HSoft Home">
-            <img src="assets/images/logo-light.png" alt="HSoft Logo" height="40" width="151">
+          <a href="index.html" aria-label="IHSByte Home">
+            <img src="assets/images/logo-light.svg" alt="IHSByte Logo" height="40" width="155">
           </a>
-          <p>HSoft develops practical, lightweight software utilities and tools for Windows PCs. Focused on clarity, security, and everyday productivity.</p>
+          <p>IHSByte develops lightweight, high-performance Windows utilities and delivers independent tech research and cybersecurity analysis.</p>
         </div>
 
         <div class="footer-col">
@@ -175,7 +171,8 @@
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="tools.html">Tools Directory</a></li>
-            <li><a href="about.html">About HSoft</a></li>
+            <li><a href="news.html">Tech News</a></li>
+            <li><a href="about.html">About IHSByte</a></li>
             <li><a href="contact.html">Contact &amp; Support</a></li>
           </ul>
         </div>
@@ -184,28 +181,30 @@
           <h4>Resources</h4>
           <ul class="footer-links">
             <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="tools.html">Upcoming Releases</a></li>
-            <li><a href="contact.html">Report a Bug</a></li>
+            <li><a href="tools.html">Upcoming Utilities</a></li>
+            <li><a href="contact.html">Report Bug / Feedback</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Connect</h4>
           <ul class="footer-links">
-            <li><a href="mailto:info@hsoft.lk">info@hsoft.lk</a></li>
+            <li><a href="mailto:contact@ihsbyte.com.lk">contact@ihsbyte.com.lk</a></li>
             <li><span style="font-size: 0.85rem; color: #64748B;">Official developer email</span></li>
+            <li><span style="font-size: 0.85rem; color: #64748B;">Domain: ihsbyte.com.lk</span></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; <span class="current-year"></span> HSoft. All rights reserved.</p>
-        <span class="footer-badge">Small Tools. Smart Solutions.</span>
+        <p>&copy; <span class="current-year"></span> IHSByte (ihsbyte.com.lk). All rights reserved.</p>
+        <span class="footer-badge">Smart Windows Utilities &amp; Tech Insights</span>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="assets/js/main.js?v=2.0"></script>
+  <script src="assets/js/tools-data.js?v=3.0"></script>
+  <script src="assets/js/main.js?v=3.0"></script>
 </body>
 </html>

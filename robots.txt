@@ -1,7 +1,7 @@
-# HSoft robots.txt
-# Update the Sitemap URL once your custom domain (e.g., https://hsoft.lk) or your Cloudflare Pages URL is live.
+# IHSByte robots.txt
+# Domain: ihsbyte.com.lk
 
 User-agent: *
 Allow: /
 
-# Sitemap: https://your-domain.pages.dev/sitemap.xml
+Sitemap: https://ihsbyte.com.lk/sitemap.xml

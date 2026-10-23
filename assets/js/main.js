@@ -1,12 +1,14 @@
 /**
- * HSoft - Main Application Script
+ * IHSByte - Main Application Script
  * Vanilla JavaScript (Zero external dependencies)
+ * Brand: IHSByte (ihsbyte.com.lk)
  */
 
 document.addEventListener("DOMContentLoaded", () => {
   initThemeToggle();
   initMobileMenu();
   initCurrentYear();
+  initArticleModal();
   
   // Page-specific initializers
   if (document.getElementById("featured-tools-container")) {
@@ -15,6 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
   
   if (document.getElementById("tools-catalog-container")) {
     initToolsCatalog();
+  }
+  
+  if (document.getElementById("news-catalog-container")) {
+    initNewsCatalog();
   }
   
   if (document.getElementById("tool-details-container")) {
@@ -30,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
  * Dark / Light Theme Toggle Logic
  */
 function initThemeToggle() {
-  const savedTheme = localStorage.getItem("hsoft_theme");
+  const savedTheme = localStorage.getItem("ihsbyte_theme") || localStorage.getItem("hsoft_theme");
   const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
   const initialTheme = savedTheme ? savedTheme : (prefersDark ? "dark" : "light");
   
@@ -42,7 +48,7 @@ function initThemeToggle() {
       const isDark = document.documentElement.getAttribute("data-theme") === "dark";
       const nextTheme = isDark ? "light" : "dark";
       applyTheme(nextTheme);
-      localStorage.setItem("hsoft_theme", nextTheme);
+      localStorage.setItem("ihsbyte_theme", nextTheme);
       showToast(`Switched to ${nextTheme === "dark" ? "Dark" : "Light"} Mode`);
     });
   });
@@ -56,7 +62,7 @@ function applyTheme(theme) {
     document.documentElement.removeAttribute("data-theme");
   }
 
-  // Explicit logo visibility guarantee
+  // Explicit logo visibility guarantee for light/dark logos
   const lightLogos = document.querySelectorAll(".brand-logo.light-mode-logo");
   const darkLogos = document.querySelectorAll(".brand-logo.dark-mode-logo");
 
@@ -153,6 +159,19 @@ function fallbackCopy(text, successMessage) {
 }
 
 /**
+ * Helper to escape HTML characters
+ */
+function escapeHtml(str) {
+  if (typeof str !== "string") return "";
+  return str
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+/**
  * Render Tool Card Component
  */
 function createToolCardHtml(tool) {
@@ -166,7 +185,7 @@ function createToolCardHtml(tool) {
          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
          Download
        </a>`
-    : `<button class="btn btn-secondary btn-sm btn-disabled" disabled title="Not yet released">Coming Soon</button>`;
+    : `<button class="btn btn-secondary btn-sm btn-disabled" disabled title="Under active development">Coming Soon</button>`;
 
   const osPills = Array.isArray(tool.supportedWindows) && tool.supportedWindows.length > 0
     ? tool.supportedWindows.map(os => `<span class="tool-meta-item">${escapeHtml(os)}</span>`).join("")
@@ -188,7 +207,7 @@ function createToolCardHtml(tool) {
           <h3 class="tool-card-title">
             <a href="tool-details.html?id=${encodeURIComponent(tool.id)}">${escapeHtml(tool.name)}</a>
           </h3>
-          <span style="font-size: 0.8rem; color: var(--text-light); font-weight: 500;">HSoft Windows Utility</span>
+          <span style="font-size: 0.8rem; color: var(--text-light); font-weight: 500;">IHSByte Utility</span>
         </div>
       </div>
       <p class="tool-card-desc">${escapeHtml(tool.shortDescription || tool.description)}</p>
@@ -206,44 +225,140 @@ function createToolCardHtml(tool) {
 }
 
 /**
- * Helper to escape HTML characters
+ * Render Tech News Card Component
  */
-function escapeHtml(str) {
-  if (typeof str !== "string") return "";
-  return str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
+function createNewsCardHtml(article) {
+  return `
+    <article class="news-card" onclick="openArticleModal('${escapeHtml(article.id)}')">
+      <div class="news-card-header">
+        <span class="news-category-badge">${escapeHtml(article.category)}</span>
+        <span class="news-read-time">${escapeHtml(article.readTime)}</span>
+      </div>
+      <h3 class="news-card-title">${escapeHtml(article.title)}</h3>
+      <p class="news-card-summary">${escapeHtml(article.summary)}</p>
+      <div class="news-card-footer">
+        <div class="news-author-date">
+          <span>${escapeHtml(article.date)}</span>
+          <span>•</span>
+          <span>${escapeHtml(article.author)}</span>
+        </div>
+        <span class="news-read-action">
+          Read Story &rarr;
+        </span>
+      </div>
+    </article>
+  `;
 }
+
+/**
+ * Article Reader Modal System
+ */
+function initArticleModal() {
+  if (document.getElementById("article-reader-modal")) return;
+
+  const modalBackdrop = document.createElement("div");
+  modalBackdrop.id = "article-reader-modal";
+  modalBackdrop.className = "article-modal-backdrop";
+  modalBackdrop.innerHTML = `
+    <div class="article-modal-container" role="dialog" aria-modal="true">
+      <button type="button" class="modal-close-btn" aria-label="Close article" onclick="closeArticleModal()">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <div id="modal-article-content"></div>
+    </div>
+  `;
+
+  modalBackdrop.addEventListener("click", (e) => {
+    if (e.target === modalBackdrop) {
+      closeArticleModal();
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeArticleModal();
+    }
+  });
+
+  document.body.appendChild(modalBackdrop);
+}
+
+window.openArticleModal = function(articleId) {
+  if (typeof NEWS_DATA === "undefined") return;
+  const article = NEWS_DATA.find(a => a.id === articleId);
+  if (!article) return;
+
+  const contentContainer = document.getElementById("modal-article-content");
+  if (!contentContainer) return;
+
+  const tagsHtml = (article.tags || []).map(t => `<span class="tool-meta-item">#${escapeHtml(t)}</span>`).join(" ");
+
+  contentContainer.innerHTML = `
+    <div class="news-card-header" style="margin-bottom: 0.75rem;">
+      <span class="news-category-badge">${escapeHtml(article.category)}</span>
+      <span class="news-read-time">${escapeHtml(article.readTime)}</span>
+    </div>
+    <h1 style="font-size: clamp(1.6rem, 3.2vw, 2.3rem); font-weight: 850; line-height: 1.25; color: var(--text-heading); margin-bottom: 0.75rem;">
+      ${escapeHtml(article.title)}
+    </h1>
+    <div style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.5rem; display: flex; gap: 0.75rem; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem;">
+      <span>By <strong>${escapeHtml(article.author)}</strong></span>
+      <span>•</span>
+      <span>Published on ${escapeHtml(article.date)}</span>
+    </div>
+    <div class="modal-article-body">
+      ${article.content}
+    </div>
+    <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+      <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        ${tagsHtml}
+      </div>
+      <button type="button" class="btn btn-secondary btn-sm" onclick="closeArticleModal()">Close Story</button>
+    </div>
+  `;
+
+  const modal = document.getElementById("article-reader-modal");
+  if (modal) {
+    modal.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+};
+
+window.closeArticleModal = function() {
+  const modal = document.getElementById("article-reader-modal");
+  if (modal) {
+    modal.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+};
 
 /**
  * HOME PAGE LOGIC
  */
 function initHomePage() {
   const featuredContainer = document.getElementById("featured-tools-container");
-  const releasesContainer = document.getElementById("latest-releases-container");
-
-  if (typeof getAllTools !== "function") return;
+  const homeNewsContainer = document.getElementById("home-news-container");
 
   // Render Featured Tools
-  const featured = getFeaturedTools();
-  if (featuredContainer) {
+  if (featuredContainer && typeof getAllTools === "function") {
+    const featured = getFeaturedTools();
     if (featured.length > 0) {
       featuredContainer.innerHTML = featured.map(createToolCardHtml).join("");
     } else {
       featuredContainer.innerHTML = `
         <div class="empty-state" style="grid-column: 1 / -1;">
-          <p>Tools are currently being prepared. Check back soon!</p>
+          <p>Utilities are currently being prepared. Check back soon!</p>
         </div>
       `;
     }
   }
 
-  // Home Screen Quick Search
+  // Home Quick Live Search
   const homeSearchInput = document.getElementById("home-tools-search-input");
-  if (homeSearchInput && featuredContainer) {
+  if (homeSearchInput && featuredContainer && typeof getAllTools === "function") {
     homeSearchInput.addEventListener("input", (e) => {
       const q = e.target.value.toLowerCase().trim();
       const allTools = getAllTools();
@@ -265,32 +380,121 @@ function initHomePage() {
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
             <h3>No Utilities Found for "${escapeHtml(q)}"</h3>
-            <p>Try searching for Adobe Blocker, Decoy, MailSafe, FocusPoint, or Net Mode.</p>
+            <p>Try searching for Adobe Blocker, Decoy, MailSafe, FocusPoint, or SMB Monitor.</p>
           </div>
         `;
       }
     });
   }
 
-  // Render Latest Releases
-  if (releasesContainer) {
-    const released = getReleasedTools();
-    if (released.length > 0) {
-      releasesContainer.innerHTML = released.map(createToolCardHtml).join("");
-    } else {
-      releasesContainer.innerHTML = `
-        <div class="empty-state" style="max-width: 600px; margin: 0 auto;">
-          <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <polyline points="12 6 12 12 16 14"/>
-          </svg>
-          <h3>No Public Releases Yet</h3>
-          <p>All HSoft utilities are currently under active development and testing. Stable builds and download packages will appear here once officially published.</p>
-          <a href="tools.html" class="btn btn-secondary btn-sm">Preview Upcoming Utilities</a>
+  // Render Latest Tech News on Home Page
+  if (homeNewsContainer && typeof NEWS_DATA !== "undefined") {
+    const topStories = NEWS_DATA.slice(0, 3);
+    homeNewsContainer.innerHTML = topStories.map(createNewsCardHtml).join("");
+  }
+}
+
+/**
+ * TECH NEWS CATALOG PAGE LOGIC
+ */
+function initNewsCatalog() {
+  const newsGrid = document.getElementById("news-catalog-container");
+  const searchInput = document.getElementById("news-search-input");
+  const filterContainer = document.getElementById("news-filter-categories");
+  const countDisplay = document.getElementById("news-count-display");
+  const featuredBannerContainer = document.getElementById("news-featured-banner");
+
+  if (typeof NEWS_DATA === "undefined" || !newsGrid) return;
+
+  let selectedCategory = "all";
+  let searchQuery = "";
+
+  // Render Featured Top Banner
+  if (featuredBannerContainer) {
+    const featuredStory = NEWS_DATA.find(a => a.featured) || NEWS_DATA[0];
+    if (featuredStory) {
+      featuredBannerContainer.innerHTML = `
+        <div class="featured-story-banner" onclick="openArticleModal('${escapeHtml(featuredStory.id)}')">
+          <div class="featured-badge">
+            <span class="pulse-dot"></span>
+            Featured Analysis
+          </div>
+          <h2 class="featured-story-title">${escapeHtml(featuredStory.title)}</h2>
+          <p class="featured-story-desc">${escapeHtml(featuredStory.summary)}</p>
+          <div class="news-card-footer" style="padding-top: 1.25rem;">
+            <div class="news-author-date">
+              <span><strong>${escapeHtml(featuredStory.author)}</strong></span>
+              <span>•</span>
+              <span>${escapeHtml(featuredStory.date)}</span>
+              <span>•</span>
+              <span>${escapeHtml(featuredStory.readTime)}</span>
+            </div>
+            <span class="btn btn-primary btn-sm">Read Full Analysis &rarr;</span>
+          </div>
         </div>
       `;
     }
   }
+
+  // Category Filter Pills
+  if (filterContainer) {
+    const categories = Array.from(new Set(NEWS_DATA.map(a => a.category)));
+    let buttonsHtml = `<button type="button" class="filter-btn active" data-category="all">All News</button>`;
+    categories.forEach(cat => {
+      buttonsHtml += `<button type="button" class="filter-btn" data-category="${escapeHtml(cat)}">${escapeHtml(cat)}</button>`;
+    });
+    filterContainer.innerHTML = buttonsHtml;
+
+    filterContainer.addEventListener("click", (e) => {
+      const btn = e.target.closest(".filter-btn");
+      if (!btn) return;
+      filterContainer.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      selectedCategory = btn.getAttribute("data-category");
+      applyNewsFilters();
+    });
+  }
+
+  // Live News Search
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      searchQuery = e.target.value.toLowerCase().trim();
+      applyNewsFilters();
+    });
+  }
+
+  function applyNewsFilters() {
+    const filtered = NEWS_DATA.filter(article => {
+      const matchesCategory = selectedCategory === "all" || article.category === selectedCategory;
+      const matchesSearch = !searchQuery ||
+        (article.title && article.title.toLowerCase().includes(searchQuery)) ||
+        (article.summary && article.summary.toLowerCase().includes(searchQuery)) ||
+        (article.category && article.category.toLowerCase().includes(searchQuery)) ||
+        (article.tags && article.tags.some(t => t.toLowerCase().includes(searchQuery)));
+      return matchesCategory && matchesSearch;
+    });
+
+    if (countDisplay) {
+      countDisplay.textContent = `Showing ${filtered.length} of ${NEWS_DATA.length} articles`;
+    }
+
+    if (filtered.length > 0) {
+      newsGrid.innerHTML = filtered.map(createNewsCardHtml).join("");
+    } else {
+      newsGrid.innerHTML = `
+        <div class="empty-state" style="grid-column: 1 / -1;">
+          <svg class="empty-state-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+          <h3>No Tech Articles Found</h3>
+          <p>No stories matched your filter criteria. Try searching for Windows 11, SMB, privacy, or security.</p>
+        </div>
+      `;
+    }
+  }
+
+  applyNewsFilters();
 }
 
 /**
@@ -382,27 +586,24 @@ function initToolDetailsPage() {
   const toolId = urlParams.get("id");
 
   if (!toolId) {
-    renderToolNotFound(container, "No tool specified. Please select a tool from our catalog.");
+    renderToolNotFound(container, "No tool specified. Please select a utility from our catalog.");
     return;
   }
 
   const tool = getToolById(toolId);
   if (!tool) {
-    renderToolNotFound(container, `We could not find any software tool with the ID "${escapeHtml(toolId)}". It may have been renamed or removed.`);
+    renderToolNotFound(container, `We could not find any software tool with the ID "${escapeHtml(toolId)}". It may have been renamed or updated.`);
     return;
   }
 
-  // Update page title
-  document.title = `${tool.name} — HSoft Tools`;
+  document.title = `${tool.name} — IHSByte Windows Utilities`;
 
   const isReleased = tool.status === "released" && Boolean(tool.downloadUrl);
   
-  // Build Status Badge
   const statusBadge = isReleased
     ? `<span class="status-badge released"><span class="dot"></span>Released</span>`
     : `<span class="status-badge coming-soon"><span class="dot"></span>Under Development / Coming Soon</span>`;
 
-  // Build Download / Action Button
   let downloadSectionHtml = "";
   if (isReleased) {
     downloadSectionHtml = `
@@ -419,7 +620,6 @@ function initToolDetailsPage() {
     `;
   }
 
-  // Build Meta items (only show fields that actually exist)
   let metaListHtml = "";
   if (tool.category) {
     metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Category</span><span class="meta-box-val">${escapeHtml(tool.category)}</span></div>`;
@@ -437,7 +637,6 @@ function initToolDetailsPage() {
     metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Supported OS</span><span class="meta-box-val">${escapeHtml(tool.supportedWindows.join(", "))}</span></div>`;
   }
 
-  // Features list
   let featuresHtml = "";
   if (Array.isArray(tool.features) && tool.features.length > 0) {
     const items = tool.features.map(f => `<li>${escapeHtml(f)}</li>`).join("");
@@ -449,56 +648,15 @@ function initToolDetailsPage() {
     `;
   }
 
-  // Screenshots
-  let screenshotsHtml = "";
-  if (Array.isArray(tool.screenshots) && tool.screenshots.length > 0) {
-    const images = tool.screenshots.map(s => `
-      <div style="margin-bottom: 1.5rem;">
-        <img src="${escapeHtml(s.url)}" alt="${escapeHtml(s.caption || tool.name)}" style="border-radius: var(--radius-md); border: 1px solid var(--border-color); width: 100%;">
-        ${s.caption ? `<p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.5rem; text-align: center;">${escapeHtml(s.caption)}</p>` : ""}
-      </div>
-    `).join("");
-    screenshotsHtml = `
-      <section class="detail-section">
-        <h2 class="detail-heading">Screenshots</h2>
-        ${images}
-      </section>
-    `;
-  } else {
-    // Show clean placeholder illustration
-    screenshotsHtml = `
-      <section class="detail-section">
-        <h2 class="detail-heading">Interface Preview</h2>
-        <img src="assets/images/tool-placeholder.svg" alt="Preview Placeholder" style="width: 100%; border-radius: var(--radius-md);">
-        <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.75rem; text-align: center;">UI screenshots will be published with the stable release.</p>
-      </section>
-    `;
-  }
-
-  // Checksum box
-  let checksumHtml = "";
-  if (tool.sha256) {
-    checksumHtml = `
-      <div class="checksum-box">
-        <div class="checksum-header">
-          <span>SHA-256 Checksum</span>
-          <button type="button" class="btn btn-secondary btn-sm" id="copy-sha-btn" style="padding: 0.2rem 0.5rem; font-size: 0.75rem;">Copy</button>
-        </div>
-        <div class="checksum-value" id="sha-value-text">${escapeHtml(tool.sha256)}</div>
-      </div>
-    `;
-  }
-
-  // Changelog
   let changelogHtml = "";
   if (Array.isArray(tool.changelog) && tool.changelog.length > 0) {
     const entries = tool.changelog.map(log => `
-      <div class="changelog-entry">
-        <div class="changelog-version">
+      <div class="changelog-entry" style="margin-bottom: 1.5rem;">
+        <div style="font-weight: 700; color: var(--text-heading); margin-bottom: 0.4rem;">
           <span>Version ${escapeHtml(log.version)}</span>
-          ${log.date ? `<span class="changelog-date">(${escapeHtml(log.date)})</span>` : ""}
+          ${log.date ? `<span style="font-weight: normal; color: var(--text-muted); font-size: 0.85rem;">(${escapeHtml(log.date)})</span>` : ""}
         </div>
-        <ul class="changelog-items">
+        <ul class="features-list">
           ${(log.changes || []).map(c => `<li>${escapeHtml(c)}</li>`).join("")}
         </ul>
       </div>
@@ -511,21 +669,7 @@ function initToolDetailsPage() {
     `;
   }
 
-  // Known issues
-  let knownIssuesHtml = "";
-  if (Array.isArray(tool.knownIssues) && tool.knownIssues.length > 0) {
-    const issues = tool.knownIssues.map(i => `<li>${escapeHtml(i)}</li>`).join("");
-    knownIssuesHtml = `
-      <section class="detail-section">
-        <h2 class="detail-heading">Known Issues</h2>
-        <ul class="changelog-items">${issues}</ul>
-      </section>
-    `;
-  }
-
-  // Build the complete page content
   container.innerHTML = `
-    <!-- Tool Header Bar -->
     <div class="tool-detail-header">
       <div class="container">
         <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -556,13 +700,11 @@ function initToolDetailsPage() {
 
           <aside class="tool-detail-meta-box">
             ${metaListHtml || `<div class="meta-box-item"><span class="meta-box-label">Status</span><span class="meta-box-val">In Development</span></div>`}
-            ${checksumHtml}
           </aside>
         </div>
       </div>
     </div>
 
-    <!-- Main Details Body -->
     <div class="container">
       <div class="detail-layout">
         <div class="detail-main-col">
@@ -572,9 +714,7 @@ function initToolDetailsPage() {
           </section>
 
           ${featuresHtml}
-          ${screenshotsHtml}
           ${changelogHtml}
-          ${knownIssuesHtml}
         </div>
 
         <div class="detail-sidebar-col">
@@ -588,15 +728,15 @@ function initToolDetailsPage() {
           <div class="sidebar-card">
             <h3 class="sidebar-title">Security &amp; Integrity</h3>
             <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.75rem;">
-              HSoft software releases do not bundle third-party toolbars or unwanted adware. Always verify file SHA-256 checksums before execution.
+              IHSByte software releases are 100% clean of third-party adware, malware, or intrusive telemetry.
             </p>
-            <a href="privacy.html" style="font-size: 0.85rem;">Learn about our privacy and safety standards →</a>
+            <a href="privacy.html" style="font-size: 0.85rem;">Learn about our privacy and safety standards &rarr;</a>
           </div>
 
           <div class="sidebar-card">
             <h3 class="sidebar-title">Need Help or Found a Bug?</h3>
             <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
-              Report issues, request features, or send general feedback directly to the developer.
+              Report issues, request features, or send general feedback directly to the IHSByte team.
             </p>
             <a href="contact.html" class="btn btn-secondary btn-sm" style="width: 100%;">Contact Support</a>
           </div>
@@ -604,14 +744,6 @@ function initToolDetailsPage() {
       </div>
     </div>
   `;
-
-  // Attach Checksum Copy Button Handler
-  const copyBtn = document.getElementById("copy-sha-btn");
-  if (copyBtn && tool.sha256) {
-    copyBtn.addEventListener("click", () => {
-      copyToClipboard(tool.sha256, "SHA-256 Checksum copied!");
-    });
-  }
 }
 
 function renderToolNotFound(container, message) {
@@ -623,7 +755,7 @@ function renderToolNotFound(container, message) {
           <line x1="12" y1="8" x2="12" y2="12"/>
           <line x1="12" y1="16" x2="12.01" y2="16"/>
         </svg>
-        <h2 style="font-size: 1.75rem; color: var(--primary); margin-bottom: 0.75rem;">Tool Not Found</h2>
+        <h2 style="font-size: 1.75rem; color: var(--text-heading); margin-bottom: 0.75rem;">Tool Not Found</h2>
         <p style="color: var(--text-muted); margin-bottom: 1.75rem;">${escapeHtml(message)}</p>
         <div style="display: flex; gap: 1rem; justify-content: center;">
           <a href="tools.html" class="btn btn-primary">Browse All Tools</a>
@@ -656,20 +788,20 @@ function initContactForm() {
       return;
     }
 
-    const subject = encodeURIComponent(`[HSoft Inquiry: ${type.toUpperCase()}] from ${name || "User"}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nInquiry Type: ${type}\n\nMessage:\n${message}\n\n---\nSent via HSoft Website`);
-    const mailtoUrl = `mailto:info@hsoft.lk?subject=${subject}&body=${body}`;
+    const subject = encodeURIComponent(`[IHSByte Inquiry: ${type.toUpperCase()}] from ${name || "User"}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nInquiry Type: ${type}\n\nMessage:\n${message}\n\n---\nSent via IHSByte Website (ihsbyte.com.lk)`);
+    const mailtoUrl = `mailto:contact@ihsbyte.com.lk?subject=${subject}&body=${body}`;
 
     if (noticeBox) {
       noticeBox.innerHTML = `
-        <div class="notice-box notice-info" style="margin-bottom: 1.25rem;">
-          <strong>Message Prepared:</strong> Opening your default mail client to send to <strong>info@hsoft.lk</strong>. 
-          If your email app didn't open automatically, <a href="${mailtoUrl}" style="text-decoration: underline; font-weight: 700;">click here to send directly</a>.
+        <div class="notice-box notice-info" style="margin-bottom: 1.25rem; background: var(--secondary-light); border: 1px solid var(--secondary-border); padding: 1rem; border-radius: var(--radius-md);">
+          <strong>Message Prepared:</strong> Opening your default mail client to send to <strong>contact@ihsbyte.com.lk</strong>. 
+          If your email app didn't open automatically, <a href="${mailtoUrl}" style="text-decoration: underline; font-weight: 700; color: var(--secondary);">click here to send directly</a>.
         </div>
       `;
     }
 
     window.location.href = mailtoUrl;
-    showToast("Opening email client for info@hsoft.lk...");
+    showToast("Opening email client for contact@ihsbyte.com.lk...");
   });
 }
