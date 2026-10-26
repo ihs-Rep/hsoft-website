@@ -343,7 +343,6 @@ function createToolCardHtml(tool) {
     </article>
   `;
 }
-}
 
 /**
  * Render Tech News Card Component with Image
