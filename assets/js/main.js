@@ -771,11 +771,20 @@ function initToolDetailsPage() {
 
   let downloadSectionHtml = "";
   if (isReleased) {
-    downloadSectionHtml = `
-      <a href="${escapeHtml(tool.downloadUrl)}" class="btn btn-primary" download onclick="handleDownloadAction('${escapeHtml(tool.id)}', event)">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download Executable (${escapeHtml(tool.fileSize || "125.5 KB")})
+    const directExeBtn = tool.directExeUrl ? `
+      <a href="${escapeHtml(tool.directExeUrl)}" class="btn btn-secondary" download onclick="handleDownloadAction('${escapeHtml(tool.id)}', event)" title="Direct Standalone Executable">
+        Direct .EXE (125.5 KB)
       </a>
+    ` : "";
+
+    downloadSectionHtml = `
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <a href="${escapeHtml(tool.downloadUrl)}" class="btn btn-primary" download onclick="handleDownloadAction('${escapeHtml(tool.id)}', event)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Package (${escapeHtml(tool.fileSize || "ZIP")})
+        </a>
+        ${directExeBtn}
+      </div>
     `;
   } else {
     downloadSectionHtml = `
@@ -1076,6 +1085,18 @@ function initToolDetailsPage() {
               IHSByte software releases are 100% clean of third-party adware, malware, or intrusive telemetry.
             </p>
             <a href="privacy.html" style="font-size: 0.85rem;">Learn about our privacy and safety standards &rarr;</a>
+          </div>
+
+          <div class="sidebar-card" style="border-left: 3px solid var(--secondary);">
+            <h3 class="sidebar-title" style="display: flex; align-items: center; gap: 0.4rem;">
+              🛡️ SmartScreen / Browser Note
+            </h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.65rem;">
+              Because Adobe Blocker is an independent, new utility modifying Windows Firewall rules without an enterprise Code Signing Certificate, Chrome or Windows SmartScreen may show an "Unrecognized / Unknown Publisher" prompt.
+            </p>
+            <div style="font-size: 0.84rem; background: var(--bg-subtle); padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); color: var(--text-heading); font-weight: 550;">
+              <strong>To Run:</strong> Click <em>"More info"</em> &rarr; then click <em>"Run anyway"</em>.
+            </div>
           </div>
 
           <div class="sidebar-card">

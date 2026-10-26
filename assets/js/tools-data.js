@@ -30,8 +30,9 @@ const IHSBYTE_TOOLS = [
       "Modern dark-themed standalone GUI (#0B0F17) with zero background processes"
     ],
     screenshots: [],
-    downloadUrl: "downloads/AdobeBlocker.exe",
-    fileSize: "125.5 KB",
+    downloadUrl: "downloads/AdobeBlocker-v2.0.zip",
+    directExeUrl: "downloads/AdobeBlocker.exe",
+    fileSize: "33.8 KB (ZIP)",
     sha256: "9DD9854F252CB9CFAAAE77929C19617EE272409A8CCC597FA6F1CAF8F2BDE48E",
     changelog: [
       {
