@@ -5,6 +5,7 @@ Fetches real-time tech and IT news from authoritative industry RSS/Atom feeds:
 - Cybersecurity & Zero-Days (The Hacker News, BleepingComputer, KrebsOnSecurity)
 - Cloud, Enterprise IT & Networking (The Register, Ars Technica)
 - Linux & Open Source Systems (Phoronix)
+Extracts publication dates, sources, locations, clean summaries, and source cover images.
 Updates assets/js/news-data.js with validated, structured content.
 """
 
@@ -42,7 +43,7 @@ FEED_SOURCES = [
     {
         "name": "Ars Technica IT",
         "url": "https://feeds.arstechnica.com/arstechnica/technology-lab",
-        "default_category": "IT Infrastructure",
+        "default_category": "Networking & IT",
         "location": "Boston, Massachusetts, USA",
         "limit": 4
     },
@@ -62,14 +63,21 @@ FEED_SOURCES = [
     }
 ]
 
+# High quality technology fallback imagery for items that lack raw RSS image tags
+CATEGORY_FALLBACK_IMAGES = {
+    "Cybersecurity": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    "Cloud & Enterprise IT": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "Linux & Open Source": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80",
+    "Windows & Systems": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    "Networking & IT": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
+    "AI & Hardware": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80"
+}
+
 def clean_html(raw_html):
     if not raw_html:
         return ""
-    # Strip HTML tags
     clean = re.sub(r'<[^>]+>', ' ', raw_html)
-    # Unescape HTML entities
     clean = html.unescape(clean)
-    # Normalize whitespaces
     clean = re.sub(r'\s+', ' ', clean).strip()
     return clean
 
@@ -83,7 +91,7 @@ def detect_category(title, summary, default_cat):
         return "Cloud & Enterprise IT"
     if any(k in text for k in ["windows", "microsoft 365", "copilot", "windows 11", "powershell", "active directory", "smb"]):
         return "Windows & Systems"
-    if any(k in text for k in ["router", "switch", "vpn", "firewall", "dns", "bgp", "ethernet", "wi-fi", "tcp", "ssh"]):
+    if any(k in text for k in ["router", "switch", "vpn", "firewall", "dns", "bgp", "ethernet", "wi-fi", "tcp", "ssh", "tls"]):
         return "Networking & IT"
     if any(k in text for k in ["ai", "llm", "nvidia", "intel", "amd", "gpu", "quantum", "chip"]):
         return "AI & Hardware"
@@ -106,8 +114,6 @@ def fetch_feed_items(source):
             content = response.read()
             
         root = ET.fromstring(content)
-        
-        # Check if RSS or Atom
         is_atom = 'atom' in root.tag.lower()
         
         entries = root.findall('.//{http://www.w3.org/2005/Atom}entry') if is_atom else root.findall('.//item')
@@ -155,14 +161,12 @@ def fetch_feed_items(source):
                 
                 if date_elem is not None and date_elem.text:
                     try:
-                        # Try RFC 2822
                         dt = parsedate_to_datetime(date_elem.text)
                         date_str = dt.strftime("%B %d, %Y")
                         iso_str = dt.strftime("%Y-%m-%d")
                         pub_dt = dt
                     except Exception:
                         try:
-                            # Try ISO 8601
                             iso_cleaned = date_elem.text.replace('Z', '+00:00')
                             dt = datetime.fromisoformat(iso_cleaned)
                             date_str = dt.strftime("%B %d, %Y")
@@ -174,15 +178,44 @@ def fetch_feed_items(source):
                 category = detect_category(title, clean_desc, source['default_category'])
                 slug_id = re.sub(r'[^a-z0-9]+', '-', title.lower()).strip('-')[:60]
                 
+                # Extract image URL
+                image_url = ""
+                # A. Enclosure
+                enclosure = entry.find('enclosure')
+                if enclosure is not None and enclosure.attrib.get('url'):
+                    cand = enclosure.attrib.get('url')
+                    if any(cand.endswith(ext) for ext in ['.jpg', '.jpeg', '.png', '.webp']):
+                        image_url = cand
+                
+                # B. Media content / thumbnail
+                if not image_url:
+                    for m_tag in ['{http://search.yahoo.com/mrss/}content', '{http://search.yahoo.com/mrss/}thumbnail']:
+                        m_elem = entry.find(m_tag)
+                        if m_elem is not None and m_elem.attrib.get('url'):
+                            image_url = m_elem.attrib.get('url')
+                            break
+                            
+                # C. Extract <img> from HTML description
+                if not image_url and raw_desc:
+                    img_match = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', raw_desc)
+                    if img_match:
+                        cand = img_match.group(1)
+                        if cand.startswith('http') and not any(bad in cand for bad in ['feedburner', '1x1', 'pixel', 'stat', 'button']):
+                            image_url = cand
+                            
+                # D. High-quality contextual fallback image
+                if not image_url:
+                    image_url = CATEGORY_FALLBACK_IMAGES.get(category, "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80")
+                
                 # Detailed full content for modal reader
                 full_body = f"""
                   <p>{html.escape(clean_desc)}</p>
-                  <h3>Key Takeaways &amp; Technical Analysis</h3>
-                  <p>This report highlights critical shifts in the modern enterprise and computing ecosystem. Organizations and IT specialists should review existing configurations, audit dependency chains, and monitor official advisories to mitigate operational risks.</p>
-                  <p><strong>Primary Source:</strong> Published by <em>{html.escape(source['name'])}</em> in {html.escape(source['location'])}. For technical documentation and direct updates, consult the original bulletin.</p>
+                  <h3>Technical Context &amp; Industry Impact</h3>
+                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>
+                  <p><strong>Primary Source:</strong> Published by <em>{html.escape(source['name'])}</em> in {html.escape(source['location'])}.</p>
                   <div style="margin-top: 1.5rem;">
                     <a href="{html.escape(link)}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
-                      Visit Original Source at {html.escape(source['name'])} &rarr;
+                      Visit Original Story on {html.escape(source['name'])} &rarr;
                     </a>
                   </div>
                 """
@@ -198,6 +231,7 @@ def fetch_feed_items(source):
                     "source": source['name'],
                     "location": source['location'],
                     "sourceUrl": link,
+                    "imageUrl": image_url,
                     "featured": False,
                     "summary": clean_desc,
                     "tags": [category, source['name'], "IT Intelligence"],
@@ -207,7 +241,7 @@ def fetch_feed_items(source):
             except Exception as item_err:
                 continue
                 
-        print(f"[{source['name']}] Successfully fetched {len(items)} articles.")
+        print(f"[{source['name']}] Successfully processed {len(items)} articles with image metadata.")
     except Exception as e:
         print(f"[{source['name']}] Warning - Failed to fetch feed: {e}")
         
@@ -215,7 +249,7 @@ def fetch_feed_items(source):
 
 def main():
     print("=" * 60)
-    print("IHSByte - Automated IT & Tech News Fetcher Starting")
+    print("IHSByte - Automated IT & Tech News Fetcher with Image Extraction")
     print(f"Execution Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 60)
     
@@ -224,13 +258,11 @@ def main():
         all_articles.extend(fetch_feed_items(source))
         
     if not all_articles:
-        print("Error: No articles could be fetched from any source. Keeping existing catalog.")
+        print("Error: No articles could be fetched. Preserving existing catalog.")
         return
         
-    # Sort articles by publication timestamp descending
     all_articles.sort(key=lambda x: x.get('_timestamp', 0), reverse=True)
     
-    # Deduplicate by title similarity
     unique_articles = []
     seen_titles = set()
     for art in all_articles:
@@ -239,19 +271,16 @@ def main():
             seen_titles.add(normalized)
             unique_articles.append(art)
             
-    # Limit to top 15 most important fresh articles across all IT sectors
     final_articles = unique_articles[:15]
     if final_articles:
         final_articles[0]['featured'] = True
         
-    # Remove temporary timestamp key before writing
     for art in final_articles:
         art.pop('_timestamp', None)
         
-    # Generate JavaScript file content
     js_output = f"""/**
  * IHSByte - Automated Tech & IT Industry News Catalog
- * Automatically aggregated from global authoritative sources:
+ * Automatically aggregated from global authoritative sources with source imagery:
  * - Cybersecurity (The Hacker News, BleepingComputer, KrebsOnSecurity)
  * - Cloud, Enterprise IT & Networking (The Register, Ars Technica)
  * - Linux, Kernel & Open Source (Phoronix)
@@ -273,7 +302,7 @@ if (typeof module !== 'undefined' && module.exports) {{
         f.write(js_output)
         
     print("=" * 60)
-    print(f"Success! {len(final_articles)} live IT news stories saved to {output_path}")
+    print(f"Success! {len(final_articles)} live IT stories with images saved to {output_path}")
     print("=" * 60)
 
 if __name__ == "__main__":

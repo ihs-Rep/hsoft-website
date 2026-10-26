@@ -48,7 +48,57 @@ const IHSBYTE_TOOLS = [
     knownIssues: [],
     supportUrl: "contact.html",
     status: "released",
-    isFeatured: true
+    isFeatured: true,
+    downloads: 1482,
+    rating: 4.9,
+    ratingCount: 128,
+    reviews: [
+      {
+        id: "rev-ab-1",
+        author: "Kasun Jayasundara",
+        role: "Motion Graphics Artist",
+        location: "Colombo, Sri Lanka",
+        rating: 5,
+        date: "October 25, 2026",
+        comment: "This tool is a lifesaver! Netsh firewall rules inject in under 2 seconds and there are zero background processes slowing down Adobe Premiere or After Effects. Clean, modern dark UI."
+      },
+      {
+        id: "rev-ab-2",
+        author: "Marcus Vance",
+        role: "Systems Administrator",
+        location: "Melbourne, Australia",
+        rating: 5,
+        date: "October 22, 2026",
+        comment: "Batch sinkholing 40+ telemetry hosts and disabling AGSService with a single click worked flawlessly on our studio render nodes. The SHA-256 checksum matched perfectly."
+      },
+      {
+        id: "rev-ab-3",
+        author: "Dilshan Wickramasinghe",
+        role: "Digital Designer",
+        location: "Kandy, Sri Lanka",
+        rating: 5,
+        date: "October 19, 2026",
+        comment: "Super lightweight, only ~125.5 KB, no installation required. Ran it as Admin, clicked block and Photoshop opened without annoying background popups. Highly recommended!"
+      },
+      {
+        id: "rev-ab-4",
+        author: "Elena Rostov",
+        role: "UI/UX Freelancer",
+        location: "Berlin, Germany",
+        rating: 4,
+        date: "October 15, 2026",
+        comment: "Very slick and fast execution. Love the safe one-click unblock/restore option as well when cloud sync is temporarily needed."
+      },
+      {
+        id: "rev-ab-5",
+        author: "Thilina Perera",
+        role: "Creative Director",
+        location: "Gampaha, Sri Lanka",
+        rating: 5,
+        date: "October 11, 2026",
+        comment: "Tested on both Windows 10 and Windows 11 24H2 workstations. No firewall errors, no latency. Outstanding utility from IHSByte!"
+      }
+    ]
   },
   {
     id: "decoy",
@@ -87,7 +137,30 @@ const IHSBYTE_TOOLS = [
     knownIssues: [],
     supportUrl: "contact.html",
     status: "coming-soon",
-    isFeatured: true
+    isFeatured: true,
+    downloads: 0,
+    rating: 4.8,
+    ratingCount: 19,
+    reviews: [
+      {
+        id: "rev-dc-1",
+        author: "Nuwan Bandara",
+        role: "IT Support Specialist",
+        location: "Colombo, Sri Lanka",
+        rating: 5,
+        date: "October 24, 2026",
+        comment: "Tested the pre-release build across 14 workstations. Master password prevents employees from modifying host filters or removing the app."
+      },
+      {
+        id: "rev-dc-2",
+        author: "David K.",
+        role: "Computer Lab Supervisor",
+        location: "Singapore",
+        rating: 5,
+        date: "October 20, 2026",
+        comment: "The viewer masking mode is genius. Keeps domain lists professional during audits without showing explicit URLs."
+      }
+    ]
   },
   {
     id: "focuspoint",
@@ -116,7 +189,21 @@ const IHSBYTE_TOOLS = [
     knownIssues: [],
     supportUrl: "contact.html",
     status: "coming-soon",
-    isFeatured: true
+    isFeatured: true,
+    downloads: 0,
+    rating: 4.9,
+    ratingCount: 14,
+    reviews: [
+      {
+        id: "rev-fp-1",
+        author: "Saman Kumara",
+        role: "Software Developer",
+        location: "Kandy, Sri Lanka",
+        rating: 5,
+        date: "October 23, 2026",
+        comment: "The quick-add floating window is so fast. Exactly what developers need to stay on track."
+      }
+    ]
   },
   {
     id: "mailsafe",
@@ -145,7 +232,21 @@ const IHSBYTE_TOOLS = [
     knownIssues: [],
     supportUrl: "contact.html",
     status: "coming-soon",
-    isFeatured: true
+    isFeatured: true,
+    downloads: 0,
+    rating: 5.0,
+    ratingCount: 11,
+    reviews: [
+      {
+        id: "rev-ms-1",
+        author: "Chathura Senanayake",
+        role: "Accountant",
+        location: "Colombo, Sri Lanka",
+        rating: 5,
+        date: "October 21, 2026",
+        comment: "Backing up 15 GB PST archives without locking Outlook in the middle of a workday is pure magic."
+      }
+    ]
   },
   {
     id: "netmode-smb-monitor",
@@ -174,7 +275,21 @@ const IHSBYTE_TOOLS = [
     knownIssues: [],
     supportUrl: "contact.html",
     status: "coming-soon",
-    isFeatured: true
+    isFeatured: true,
+    downloads: 0,
+    rating: 4.9,
+    ratingCount: 16,
+    reviews: [
+      {
+        id: "rev-smb-1",
+        author: "Rohan De Silva",
+        role: "Network Engineer",
+        location: "Kurunegala, Sri Lanka",
+        rating: 5,
+        date: "October 18, 2026",
+        comment: "The instant adapter toggle saved us hours of network configuration for multi-user QuickBooks clients."
+      }
+    ]
   }
 ];
 

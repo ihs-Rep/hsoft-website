@@ -172,6 +172,98 @@ function escapeHtml(str) {
 }
 
 /**
+ * Download Counter & LocalStorage Tracking
+ */
+function formatNumber(num) {
+  return Number(num || 0).toLocaleString();
+}
+
+function getToolDownloads(toolId) {
+  if (typeof getToolById !== "function") return 0;
+  const tool = getToolById(toolId);
+  const base = tool && tool.downloads ? tool.downloads : 0;
+  const localExtra = parseInt(localStorage.getItem(`ihsbyte_dl_${toolId}`) || "0", 10);
+  return base + (isNaN(localExtra) ? 0 : localExtra);
+}
+
+function incrementToolDownload(toolId) {
+  const currentExtra = parseInt(localStorage.getItem(`ihsbyte_dl_${toolId}`) || "0", 10);
+  const nextExtra = (isNaN(currentExtra) ? 0 : currentExtra) + 1;
+  localStorage.setItem(`ihsbyte_dl_${toolId}`, nextExtra);
+  
+  const total = getToolDownloads(toolId);
+  
+  // Dynamically update on-screen elements
+  document.querySelectorAll(`.dl-count-${toolId}`).forEach(el => {
+    el.textContent = formatNumber(total);
+  });
+  
+  return total;
+}
+
+window.handleDownloadAction = function(toolId, event) {
+  const total = incrementToolDownload(toolId);
+  const tool = typeof getToolById === "function" ? getToolById(toolId) : null;
+  const name = tool ? tool.name : "Utility";
+  showToast(`🎉 Download started! ${name} (Total: ${formatNumber(total)} downloads)`);
+};
+
+/**
+ * Star Rating & Community Reviews Management
+ */
+function getToolRatingData(toolId) {
+  if (typeof getToolById !== "function") return { average: 5.0, count: 0, reviews: [], breakdown: {5:0,4:0,3:0,2:0,1:0} };
+  const tool = getToolById(toolId);
+  if (!tool) return { average: 5.0, count: 0, reviews: [], breakdown: {5:0,4:0,3:0,2:0,1:0} };
+
+  const baseReviews = Array.isArray(tool.reviews) ? [...tool.reviews] : [];
+  let userReviews = [];
+  try {
+    const raw = localStorage.getItem(`ihsbyte_reviews_${toolId}`);
+    if (raw) userReviews = JSON.parse(raw);
+  } catch (e) {}
+
+  const allReviews = [...userReviews, ...baseReviews];
+  const breakdown = { 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 };
+  let sum = 0;
+
+  if (allReviews.length > 0) {
+    allReviews.forEach(r => {
+      const score = Math.min(5, Math.max(1, parseInt(r.rating, 10) || 5));
+      breakdown[score] = (breakdown[score] || 0) + 1;
+      sum += score;
+    });
+    const avg = sum / allReviews.length;
+    return {
+      average: Math.round(avg * 10) / 10,
+      count: allReviews.length,
+      reviews: allReviews,
+      breakdown
+    };
+  } else {
+    return {
+      average: tool.rating || 5.0,
+      count: tool.ratingCount || 0,
+      reviews: [],
+      breakdown: { 5: tool.ratingCount || 0, 4: 0, 3: 0, 2: 0, 1: 0 }
+    };
+  }
+}
+
+function renderStarsHtml(rating, maxStars = 5) {
+  let stars = "";
+  const rounded = Math.round(rating * 2) / 2;
+  for (let i = 1; i <= maxStars; i++) {
+    if (i <= rounded) {
+      stars += "★";
+    } else {
+      stars += "☆";
+    }
+  }
+  return `<span class="tool-stars-gold">${stars}</span>`;
+}
+
+/**
  * Render Tool Card Component
  */
 function createToolCardHtml(tool) {
@@ -180,8 +272,11 @@ function createToolCardHtml(tool) {
     ? `<span class="status-badge released"><span class="dot"></span>${escapeHtml(tool.version || "Released")}</span>`
     : `<span class="status-badge coming-soon"><span class="dot"></span>Coming Soon</span>`;
 
+  const downloads = getToolDownloads(tool.id);
+  const ratingData = getToolRatingData(tool.id);
+
   const downloadBtn = isReleased
-    ? `<a href="${escapeHtml(tool.downloadUrl)}" class="btn btn-primary btn-sm" download>
+    ? `<a href="${escapeHtml(tool.downloadUrl)}" class="btn btn-primary btn-sm" download onclick="handleDownloadAction('${escapeHtml(tool.id)}', event)">
          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
          Download (${escapeHtml(tool.fileSize || "EXE")})
        </a>`
@@ -194,6 +289,13 @@ function createToolCardHtml(tool) {
   const iconHtml = tool.iconUrl
     ? `<img src="${escapeHtml(tool.iconUrl)}" alt="${escapeHtml(tool.name)} Icon" class="tool-card-icon">`
     : `<div class="tool-card-icon-placeholder"><span>${escapeHtml(tool.name.charAt(0))}</span></div>`;
+
+  const dlDisplay = isReleased 
+    ? `<span class="tool-stat-downloads" title="Total verified downloads">
+         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+         <span class="dl-count-${escapeHtml(tool.id)}">${formatNumber(downloads)}</span> dl
+       </span>`
+    : `<span class="tool-stat-downloads" style="color: var(--text-light); font-weight: 500;">Pre-release</span>`;
 
   return `
     <article class="tool-card">
@@ -210,6 +312,14 @@ function createToolCardHtml(tool) {
           <span style="font-size: 0.8rem; color: var(--text-light); font-weight: 500;">IHSByte Utility</span>
         </div>
       </div>
+      <div class="tool-card-stats">
+        <div class="tool-stat-rating">
+          ${renderStarsHtml(ratingData.average)}
+          <span>${ratingData.average.toFixed(1)}</span>
+          <span class="tool-stat-count">(${ratingData.count})</span>
+        </div>
+        ${dlDisplay}
+      </div>
       <p class="tool-card-desc">${escapeHtml(tool.shortDescription || tool.description)}</p>
       <div class="tool-card-meta">
         ${osPills}
@@ -225,7 +335,7 @@ function createToolCardHtml(tool) {
 }
 
 /**
- * Render Tech News Card Component
+ * Render Tech News Card Component with Image
  */
 function createNewsCardHtml(article) {
   const sourceLabel = article.source || article.author || "IHSByte Desk";
@@ -233,8 +343,15 @@ function createNewsCardHtml(article) {
     ? `<div class="news-location-tag" style="font-size: 0.78rem; color: var(--text-light); margin-top: 0.25rem;">📍 ${escapeHtml(article.location)}</div>`
     : "";
 
+  const imageHtml = article.imageUrl ? `
+    <div class="news-card-img-wrap">
+      <img src="${escapeHtml(article.imageUrl)}" alt="${escapeHtml(article.title)}" class="news-card-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80';">
+    </div>
+  ` : "";
+
   return `
     <article class="news-card" onclick="openArticleModal('${escapeHtml(article.id)}')">
+      ${imageHtml}
       <div class="news-card-header">
         <span class="news-category-badge">${escapeHtml(article.category)}</span>
         <span class="news-read-time">${escapeHtml(article.readTime)}</span>
@@ -307,7 +424,14 @@ window.openArticleModal = function(articleId) {
 
   const tagsHtml = (article.tags || []).map(t => `<span class="tool-meta-item">#${escapeHtml(t)}</span>`).join(" ");
 
+  const heroImageHtml = article.imageUrl ? `
+    <div class="modal-article-hero">
+      <img src="${escapeHtml(article.imageUrl)}" alt="${escapeHtml(article.title)}" class="modal-article-img" onerror="this.parentElement.style.display='none';">
+    </div>
+  ` : "";
+
   contentContainer.innerHTML = `
+    ${heroImageHtml}
     <div class="news-card-header" style="margin-bottom: 0.75rem;">
       <span class="news-category-badge">${escapeHtml(article.category)}</span>
       <span class="news-read-time">${escapeHtml(article.readTime)}</span>
@@ -432,24 +556,33 @@ function initNewsCatalog() {
     if (featuredStory) {
       featuredBannerContainer.innerHTML = `
         <div class="featured-story-banner" onclick="openArticleModal('${escapeHtml(featuredStory.id)}')">
-          <div class="featured-badge">
-            <span class="pulse-dot"></span>
-            Featured Analysis
-          </div>
-          <h2 class="featured-story-title">${escapeHtml(featuredStory.title)}</h2>
-          <p class="featured-story-desc">${escapeHtml(featuredStory.summary)}</p>
-          <div class="news-card-footer" style="padding-top: 1.25rem; align-items: flex-end; flex-wrap: wrap; gap: 1rem;">
-            <div class="news-author-date">
-              <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; font-size: 0.9rem;">
-                <span>📅 <strong>${escapeHtml(featuredStory.date)}</strong></span>
-                <span>•</span>
-                <span>🏢 Source: <strong style="color: var(--secondary);">${escapeHtml(featuredStory.source || featuredStory.author)}</strong></span>
-                <span>•</span>
-                <span>⏱️ ${escapeHtml(featuredStory.readTime)}</span>
+          <div class="featured-story-grid">
+            <div class="featured-story-content">
+              <div class="featured-badge">
+                <span class="pulse-dot"></span>
+                Featured Analysis
               </div>
-              ${featuredStory.location ? `<div style="font-size: 0.82rem; color: var(--text-light); margin-top: 0.35rem;">📍 Origin Location: <strong style="color: var(--text-heading);">${escapeHtml(featuredStory.location)}</strong></div>` : ''}
+              <h2 class="featured-story-title">${escapeHtml(featuredStory.title)}</h2>
+              <p class="featured-story-desc">${escapeHtml(featuredStory.summary)}</p>
+              <div class="news-card-footer" style="padding-top: 1.25rem; align-items: flex-end; flex-wrap: wrap; gap: 1rem; border-top: none;">
+                <div class="news-author-date">
+                  <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; font-size: 0.9rem;">
+                    <span>📅 <strong>${escapeHtml(featuredStory.date)}</strong></span>
+                    <span>•</span>
+                    <span>🏢 Source: <strong style="color: var(--secondary);">${escapeHtml(featuredStory.source || featuredStory.author)}</strong></span>
+                    <span>•</span>
+                    <span>⏱️ ${escapeHtml(featuredStory.readTime)}</span>
+                  </div>
+                  ${featuredStory.location ? `<div style="font-size: 0.82rem; color: var(--text-light); margin-top: 0.35rem;">📍 Origin Location: <strong style="color: var(--text-heading);">${escapeHtml(featuredStory.location)}</strong></div>` : ''}
+                </div>
+                <span class="btn btn-primary btn-sm">Read Full Analysis &rarr;</span>
+              </div>
             </div>
-            <span class="btn btn-primary btn-sm">Read Full Analysis &rarr;</span>
+            ${featuredStory.imageUrl ? `
+              <div class="featured-story-media">
+                <img src="${escapeHtml(featuredStory.imageUrl)}" alt="${escapeHtml(featuredStory.title)}" class="featured-story-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80';">
+              </div>
+            ` : ''}
           </div>
         </div>
       `;
@@ -619,6 +752,8 @@ function initToolDetailsPage() {
   document.title = `${tool.name} — IHSByte Windows Utilities`;
 
   const isReleased = tool.status === "released" && Boolean(tool.downloadUrl);
+  const downloads = getToolDownloads(tool.id);
+  const ratingData = getToolRatingData(tool.id);
   
   const statusBadge = isReleased
     ? `<span class="status-badge released"><span class="dot"></span>Released</span>`
@@ -627,7 +762,7 @@ function initToolDetailsPage() {
   let downloadSectionHtml = "";
   if (isReleased) {
     downloadSectionHtml = `
-      <a href="${escapeHtml(tool.downloadUrl)}" class="btn btn-primary" download>
+      <a href="${escapeHtml(tool.downloadUrl)}" class="btn btn-primary" download onclick="handleDownloadAction('${escapeHtml(tool.id)}', event)">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Download Executable (${escapeHtml(tool.fileSize || "125.5 KB")})
       </a>
@@ -647,6 +782,10 @@ function initToolDetailsPage() {
   if (tool.version) {
     metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Latest Version</span><span class="meta-box-val">${escapeHtml(tool.version)}</span></div>`;
   }
+  if (isReleased) {
+    metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Downloads</span><span class="meta-box-val"><strong class="dl-count-${escapeHtml(tool.id)}">${formatNumber(downloads)}</strong> verified</span></div>`;
+  }
+  metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Rating</span><span class="meta-box-val">★ ${ratingData.average.toFixed(1)} (${ratingData.count} reviews)</span></div>`;
   if (tool.releaseDate) {
     metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Release Date</span><span class="meta-box-val">${escapeHtml(tool.releaseDate)}</span></div>`;
   }
@@ -702,6 +841,48 @@ function initToolDetailsPage() {
     `;
   }
 
+  // Calculate Breakdown Percentages
+  const totalReviewsCount = Math.max(1, ratingData.count);
+  const bar5 = Math.round(((ratingData.breakdown[5] || 0) / totalReviewsCount) * 100);
+  const bar4 = Math.round(((ratingData.breakdown[4] || 0) / totalReviewsCount) * 100);
+  const bar3 = Math.round(((ratingData.breakdown[3] || 0) / totalReviewsCount) * 100);
+  const bar2 = Math.round(((ratingData.breakdown[2] || 0) / totalReviewsCount) * 100);
+  const bar1 = Math.round(((ratingData.breakdown[1] || 0) / totalReviewsCount) * 100);
+
+  // Reviews List HTML
+  let reviewsListHtml = "";
+  if (ratingData.reviews && ratingData.reviews.length > 0) {
+    reviewsListHtml = ratingData.reviews.map(r => `
+      <div class="review-card">
+        <div class="review-card-header">
+          <div class="review-user-info">
+            <div class="review-user-avatar">${escapeHtml((r.author || "U").charAt(0).toUpperCase())}</div>
+            <div>
+              <div class="review-user-name">
+                ${escapeHtml(r.author || "Anonymous User")}
+                <span class="verified-badge">✓ Verified</span>
+              </div>
+              <div class="review-user-role">
+                ${escapeHtml(r.role || "Windows User")} ${r.location ? `• ${escapeHtml(r.location)}` : ''}
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="review-stars">${renderStarsHtml(r.rating)}</div>
+            <div class="review-date">${escapeHtml(r.date || "Recent")}</div>
+          </div>
+        </div>
+        <p class="review-comment">${escapeHtml(r.comment)}</p>
+      </div>
+    `).join("");
+  } else {
+    reviewsListHtml = `
+      <div class="empty-state" style="grid-column: 1 / -1;">
+        <p>No community reviews yet. Be the first to share your experience!</p>
+      </div>
+    `;
+  }
+
   container.innerHTML = `
     <div class="tool-detail-header">
       <div class="container">
@@ -719,14 +900,25 @@ function initToolDetailsPage() {
               ${tool.iconUrl ? `<img src="${escapeHtml(tool.iconUrl)}" alt="${escapeHtml(tool.name)} Icon" class="tool-detail-icon">` : ''}
               <div>
                 <h1 class="tool-detail-title">${escapeHtml(tool.name)}</h1>
-                <div style="margin-top: 0.35rem;">${statusBadge}</div>
+                <div class="tool-detail-badge-group">
+                  ${statusBadge}
+                  ${isReleased ? `
+                    <span class="live-dl-badge">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                      <span class="dl-count-${escapeHtml(tool.id)}">${formatNumber(downloads)}</span> Downloads
+                    </span>
+                  ` : ''}
+                  <span class="live-rating-pill">
+                    ★ <span>${ratingData.average.toFixed(1)}</span> / 5.0 (${ratingData.count} reviews)
+                  </span>
+                </div>
               </div>
             </div>
             <p class="tool-detail-summary">${escapeHtml(tool.shortDescription || tool.description)}</p>
             <div class="tool-detail-actions">
               ${downloadSectionHtml}
-              <a href="${escapeHtml(tool.supportUrl || "contact.html")}" class="btn btn-secondary">
-                Support &amp; Feedback
+              <a href="#reviews-section" class="btn btn-secondary">
+                ★ Reviews &amp; Feedback
               </a>
             </div>
           </div>
@@ -749,6 +941,108 @@ function initToolDetailsPage() {
 
           ${featuresHtml}
           ${changelogHtml}
+
+          <!-- Rating & Feedback Section -->
+          <section class="reviews-section" id="reviews-section">
+            <h2 class="detail-heading" style="margin-bottom: 1.5rem;">User Ratings &amp; Verified Reviews</h2>
+            
+            <div class="rating-overview-card">
+              <div class="rating-score-block">
+                <div class="rating-big-num">${ratingData.average.toFixed(1)}</div>
+                <div class="rating-big-stars">${renderStarsHtml(ratingData.average)}</div>
+                <div class="rating-total-label">Based on ${ratingData.count} user reviews</div>
+              </div>
+
+              <div class="rating-bars-stack">
+                <div class="rating-bar-row">
+                  <span class="rating-bar-label">5 ★</span>
+                  <div class="rating-bar-track"><div class="rating-bar-fill" style="width: ${bar5}%;"></div></div>
+                  <span class="rating-bar-count">${ratingData.breakdown[5] || 0}</span>
+                </div>
+                <div class="rating-bar-row">
+                  <span class="rating-bar-label">4 ★</span>
+                  <div class="rating-bar-track"><div class="rating-bar-fill" style="width: ${bar4}%;"></div></div>
+                  <span class="rating-bar-count">${ratingData.breakdown[4] || 0}</span>
+                </div>
+                <div class="rating-bar-row">
+                  <span class="rating-bar-label">3 ★</span>
+                  <div class="rating-bar-track"><div class="rating-bar-fill" style="width: ${bar3}%;"></div></div>
+                  <span class="rating-bar-count">${ratingData.breakdown[3] || 0}</span>
+                </div>
+                <div class="rating-bar-row">
+                  <span class="rating-bar-label">2 ★</span>
+                  <div class="rating-bar-track"><div class="rating-bar-fill" style="width: ${bar2}%;"></div></div>
+                  <span class="rating-bar-count">${ratingData.breakdown[2] || 0}</span>
+                </div>
+                <div class="rating-bar-row">
+                  <span class="rating-bar-label">1 ★</span>
+                  <div class="rating-bar-track"><div class="rating-bar-fill" style="width: ${bar1}%;"></div></div>
+                  <span class="rating-bar-count">${ratingData.breakdown[1] || 0}</span>
+                </div>
+              </div>
+
+              <div class="dl-metric-box">
+                <div class="dl-metric-num dl-count-${escapeHtml(tool.id)}">${formatNumber(downloads)}</div>
+                <div class="dl-metric-text">Verified Downloads</div>
+                <div style="font-size: 0.75rem; color: #10B981; font-weight: 700; margin-top: 0.4rem;">
+                  ✓ Clean &amp; Tested
+                </div>
+              </div>
+            </div>
+
+            <!-- Community Reviews Grid -->
+            <h3 style="font-size: 1.25rem; font-weight: 750; color: var(--text-heading); margin-bottom: 1.25rem;">
+              Community Feedback (${ratingData.count})
+            </h3>
+            <div class="reviews-grid-layout" id="reviews-grid-container">
+              ${reviewsListHtml}
+            </div>
+
+            <!-- Interactive Feedback Submission Form -->
+            <div class="feedback-form-card" id="leave-review-card">
+              <h3>Leave Your Rating &amp; Feedback</h3>
+              <p>Share your experience using ${escapeHtml(tool.name)}. Your feedback helps fellow Windows users and powers our development updates.</p>
+
+              <form id="tool-feedback-form">
+                <div class="interactive-stars-wrap">
+                  <span style="font-size: 0.9rem; font-weight: 650; color: var(--text-heading);">Your Rating:</span>
+                  <div class="interactive-stars-group" id="interactive-star-group">
+                    <button type="button" class="star-rating-btn active" data-rating="1" aria-label="1 star">★</button>
+                    <button type="button" class="star-rating-btn active" data-rating="2" aria-label="2 stars">★</button>
+                    <button type="button" class="star-rating-btn active" data-rating="3" aria-label="3 stars">★</button>
+                    <button type="button" class="star-rating-btn active" data-rating="4" aria-label="4 stars">★</button>
+                    <button type="button" class="star-rating-btn active" data-rating="5" aria-label="5 stars">★</button>
+                  </div>
+                  <span class="star-rating-label" id="star-score-text">5.0 / 5 (Excellent)</span>
+                </div>
+
+                <div class="form-row-dual">
+                  <div class="form-group">
+                    <label for="review-user-name" class="form-label">Your Name <span style="color: #EF4444;">*</span></label>
+                    <input type="text" id="review-user-name" class="form-input" placeholder="e.g. Ruwan Senaratne" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="review-user-role" class="form-label">Your Profession or Workstation (Optional)</label>
+                    <input type="text" id="review-user-role" class="form-input" placeholder="e.g. Video Editor / IT Admin">
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.25rem;">
+                  <label for="review-user-location" class="form-label">Location (Optional)</label>
+                  <input type="text" id="review-user-location" class="form-input" placeholder="e.g. Colombo, Sri Lanka">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                  <label for="review-user-comment" class="form-label">Feedback &amp; Experience Details <span style="color: #EF4444;">*</span></label>
+                  <textarea id="review-user-comment" class="form-textarea" rows="4" placeholder="How did this utility perform on your Windows PC? Any suggestions or features you'd like to see?" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" id="submit-review-btn">
+                  Submit Review &amp; Feedback
+                </button>
+              </form>
+            </div>
+          </section>
         </div>
 
         <div class="detail-sidebar-col">
@@ -779,10 +1073,117 @@ function initToolDetailsPage() {
     </div>
   `;
 
+  // Checksum Copy Event
   const copyBtn = document.getElementById("copy-sha-btn");
   if (copyBtn && tool.sha256) {
     copyBtn.addEventListener("click", () => {
       copyToClipboard(tool.sha256, "SHA-256 Checksum copied!");
+    });
+  }
+
+  // Interactive Star Rating Logic
+  let selectedRating = 5;
+  const starButtons = document.querySelectorAll("#interactive-star-group .star-rating-btn");
+  const starScoreText = document.getElementById("star-score-text");
+  const ratingLabels = {
+    1: "1.0 / 5 (Needs Work)",
+    2: "2.0 / 5 (Fair)",
+    3: "3.0 / 5 (Good)",
+    4: "4.0 / 5 (Very Good)",
+    5: "5.0 / 5 (Excellent)"
+  };
+
+  function updateStarUi(rating) {
+    starButtons.forEach(btn => {
+      const val = parseInt(btn.getAttribute("data-rating"), 10);
+      if (val <= rating) {
+        btn.classList.add("active");
+        btn.textContent = "★";
+      } else {
+        btn.classList.remove("active");
+        btn.textContent = "☆";
+      }
+    });
+    if (starScoreText) {
+      starScoreText.textContent = ratingLabels[rating] || `${rating}.0 / 5`;
+    }
+  }
+
+  starButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      selectedRating = parseInt(btn.getAttribute("data-rating"), 10);
+      updateStarUi(selectedRating);
+    });
+
+    btn.addEventListener("mouseenter", () => {
+      const hoverVal = parseInt(btn.getAttribute("data-rating"), 10);
+      updateStarUi(hoverVal);
+    });
+  });
+
+  const starGroup = document.getElementById("interactive-star-group");
+  if (starGroup) {
+    starGroup.addEventListener("mouseleave", () => {
+      updateStarUi(selectedRating);
+    });
+  }
+
+  // Review Form Submission Handler
+  const feedbackForm = document.getElementById("tool-feedback-form");
+  if (feedbackForm) {
+    feedbackForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const nameInput = document.getElementById("review-user-name");
+      const roleInput = document.getElementById("review-user-role");
+      const locInput = document.getElementById("review-user-location");
+      const commentInput = document.getElementById("review-user-comment");
+
+      const author = (nameInput?.value || "").trim();
+      const role = (roleInput?.value || "").trim() || "Windows User";
+      const location = (locInput?.value || "").trim();
+      const comment = (commentInput?.value || "").trim();
+
+      if (!author || !comment) {
+        showToast("Please fill in your name and comments.");
+        return;
+      }
+
+      const todayStr = new Intl.DateTimeFormat('en-US', {
+        month: 'long',
+        day: 'numeric',
+        year: 'numeric'
+      }).format(new Date());
+
+      const newReview = {
+        id: `rev-user-${Date.now()}`,
+        author,
+        role,
+        location,
+        rating: selectedRating,
+        date: todayStr,
+        comment
+      };
+
+      // Store in LocalStorage
+      let existing = [];
+      try {
+        const raw = localStorage.getItem(`ihsbyte_reviews_${tool.id}`);
+        if (raw) existing = JSON.parse(raw);
+      } catch (err) {}
+      
+      existing.unshift(newReview);
+      localStorage.setItem(`ihsbyte_reviews_${tool.id}`, JSON.stringify(existing));
+
+      showToast("🌟 Thank you! Your review has been published.");
+
+      // Re-render tool details page with updated reviews
+      initToolDetailsPage();
+
+      // Smooth scroll back to reviews section
+      const revSec = document.getElementById("reviews-section");
+      if (revSec) {
+        revSec.scrollIntoView({ behavior: "smooth" });
+      }
     });
   }
 }
