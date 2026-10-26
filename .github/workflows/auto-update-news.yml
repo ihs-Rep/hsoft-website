@@ -1,0 +1,38 @@
+name: Auto Update IT News Feeds
+
+on:
+  schedule:
+    # Run every 12 hours (at 00:00 and 12:00 UTC)
+    - cron: '0 0,12 * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  fetch-news:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Fetch Latest IT & Tech News
+        run: |
+          python scripts/fetch_it_news.py
+
+      - name: Commit and Push News Updates
+        run: |
+          git config --local user.email "bot@ihsbyte.com.lk"
+          git config --local user.name "IHSByte NewsBot"
+          git add assets/js/news-data.js
+          if git diff --staged --quiet; then
+            echo "No news changes detected. Working tree clean."
+          else
+            git commit -m "Auto-update IT news feed [skip ci]"
+            git push origin main
+          fi
