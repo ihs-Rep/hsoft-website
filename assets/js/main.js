@@ -181,15 +181,15 @@ function formatNumber(num) {
 function getToolDownloads(toolId) {
   if (typeof getToolById !== "function") return 0;
   const tool = getToolById(toolId);
-  const base = tool && tool.downloads ? tool.downloads : 0;
-  const localExtra = parseInt(localStorage.getItem(`ihsbyte_dl_${toolId}`) || "0", 10);
+  const base = tool && typeof tool.downloads === "number" ? tool.downloads : 0;
+  const localExtra = parseInt(localStorage.getItem(`ihsbyte_user_dl_${toolId}`) || "0", 10);
   return base + (isNaN(localExtra) ? 0 : localExtra);
 }
 
 function incrementToolDownload(toolId) {
-  const currentExtra = parseInt(localStorage.getItem(`ihsbyte_dl_${toolId}`) || "0", 10);
+  const currentExtra = parseInt(localStorage.getItem(`ihsbyte_user_dl_${toolId}`) || "0", 10);
   const nextExtra = (isNaN(currentExtra) ? 0 : currentExtra) + 1;
-  localStorage.setItem(`ihsbyte_dl_${toolId}`, nextExtra);
+  localStorage.setItem(`ihsbyte_user_dl_${toolId}`, nextExtra);
   
   const total = getToolDownloads(toolId);
   
@@ -205,21 +205,21 @@ window.handleDownloadAction = function(toolId, event) {
   const total = incrementToolDownload(toolId);
   const tool = typeof getToolById === "function" ? getToolById(toolId) : null;
   const name = tool ? tool.name : "Utility";
-  showToast(`🎉 Download started! ${name} (Total: ${formatNumber(total)} downloads)`);
+  showToast(`🎉 Download started! ${name} (Total: ${formatNumber(total)})`);
 };
 
 /**
  * Star Rating & Community Reviews Management
  */
 function getToolRatingData(toolId) {
-  if (typeof getToolById !== "function") return { average: 5.0, count: 0, reviews: [], breakdown: {5:0,4:0,3:0,2:0,1:0} };
+  if (typeof getToolById !== "function") return { average: 0, count: 0, reviews: [], breakdown: {5:0,4:0,3:0,2:0,1:0} };
   const tool = getToolById(toolId);
-  if (!tool) return { average: 5.0, count: 0, reviews: [], breakdown: {5:0,4:0,3:0,2:0,1:0} };
+  if (!tool) return { average: 0, count: 0, reviews: [], breakdown: {5:0,4:0,3:0,2:0,1:0} };
 
   const baseReviews = Array.isArray(tool.reviews) ? [...tool.reviews] : [];
   let userReviews = [];
   try {
-    const raw = localStorage.getItem(`ihsbyte_reviews_${toolId}`);
+    const raw = localStorage.getItem(`ihsbyte_user_revs_${toolId}`);
     if (raw) userReviews = JSON.parse(raw);
   } catch (e) {}
 
@@ -242,15 +242,18 @@ function getToolRatingData(toolId) {
     };
   } else {
     return {
-      average: tool.rating || 5.0,
-      count: tool.ratingCount || 0,
+      average: 0,
+      count: 0,
       reviews: [],
-      breakdown: { 5: tool.ratingCount || 0, 4: 0, 3: 0, 2: 0, 1: 0 }
+      breakdown: { 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 }
     };
   }
 }
 
 function renderStarsHtml(rating, maxStars = 5) {
+  if (!rating || rating === 0) {
+    return `<span class="tool-stars-gold" style="opacity: 0.65; letter-spacing: 0px;">☆☆☆☆☆</span>`;
+  }
   let stars = "";
   const rounded = Math.round(rating * 2) / 2;
   for (let i = 1; i <= maxStars; i++) {
@@ -291,11 +294,22 @@ function createToolCardHtml(tool) {
     : `<div class="tool-card-icon-placeholder"><span>${escapeHtml(tool.name.charAt(0))}</span></div>`;
 
   const dlDisplay = isReleased 
-    ? `<span class="tool-stat-downloads" title="Total verified downloads">
-         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-         <span class="dl-count-${escapeHtml(tool.id)}">${formatNumber(downloads)}</span> dl
+    ? `<span class="tool-stat-downloads" title="Total downloads">
+         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+         <span class="dl-count-${escapeHtml(tool.id)}">${formatNumber(downloads)}</span>
        </span>`
-    : `<span class="tool-stat-downloads" style="color: var(--text-light); font-weight: 500;">Pre-release</span>`;
+    : `<span class="tool-stat-downloads" style="color: var(--text-light); font-weight: 500;">Coming Soon</span>`;
+
+  const ratingHtml = ratingData.count > 0
+    ? `<div class="tool-stat-rating">
+         ${renderStarsHtml(ratingData.average)}
+         <span>${ratingData.average.toFixed(1)}</span>
+         <span class="tool-stat-count">(${ratingData.count})</span>
+       </div>`
+    : `<div class="tool-stat-rating" title="No reviews yet">
+         ${renderStarsHtml(0)}
+         <span class="tool-stat-count">New (0)</span>
+       </div>`;
 
   return `
     <article class="tool-card">
@@ -313,11 +327,7 @@ function createToolCardHtml(tool) {
         </div>
       </div>
       <div class="tool-card-stats">
-        <div class="tool-stat-rating">
-          ${renderStarsHtml(ratingData.average)}
-          <span>${ratingData.average.toFixed(1)}</span>
-          <span class="tool-stat-count">(${ratingData.count})</span>
-        </div>
+        ${ratingHtml}
         ${dlDisplay}
       </div>
       <p class="tool-card-desc">${escapeHtml(tool.shortDescription || tool.description)}</p>
@@ -332,6 +342,7 @@ function createToolCardHtml(tool) {
       </div>
     </article>
   `;
+}
 }
 
 /**
@@ -783,9 +794,12 @@ function initToolDetailsPage() {
     metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Latest Version</span><span class="meta-box-val">${escapeHtml(tool.version)}</span></div>`;
   }
   if (isReleased) {
-    metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Downloads</span><span class="meta-box-val"><strong class="dl-count-${escapeHtml(tool.id)}">${formatNumber(downloads)}</strong> verified</span></div>`;
+    metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Downloads</span><span class="meta-box-val"><strong class="dl-count-${escapeHtml(tool.id)}">${formatNumber(downloads)}</strong></span></div>`;
   }
-  metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Rating</span><span class="meta-box-val">★ ${ratingData.average.toFixed(1)} (${ratingData.count} reviews)</span></div>`;
+  const ratingMetaText = ratingData.count > 0 
+    ? `★ ${ratingData.average.toFixed(1)} (${ratingData.count} reviews)` 
+    : `Unrated (0 reviews)`;
+  metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Rating</span><span class="meta-box-val">${ratingMetaText}</span></div>`;
   if (tool.releaseDate) {
     metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Release Date</span><span class="meta-box-val">${escapeHtml(tool.releaseDate)}</span></div>`;
   }
@@ -843,11 +857,11 @@ function initToolDetailsPage() {
 
   // Calculate Breakdown Percentages
   const totalReviewsCount = Math.max(1, ratingData.count);
-  const bar5 = Math.round(((ratingData.breakdown[5] || 0) / totalReviewsCount) * 100);
-  const bar4 = Math.round(((ratingData.breakdown[4] || 0) / totalReviewsCount) * 100);
-  const bar3 = Math.round(((ratingData.breakdown[3] || 0) / totalReviewsCount) * 100);
-  const bar2 = Math.round(((ratingData.breakdown[2] || 0) / totalReviewsCount) * 100);
-  const bar1 = Math.round(((ratingData.breakdown[1] || 0) / totalReviewsCount) * 100);
+  const bar5 = ratingData.count > 0 ? Math.round(((ratingData.breakdown[5] || 0) / totalReviewsCount) * 100) : 0;
+  const bar4 = ratingData.count > 0 ? Math.round(((ratingData.breakdown[4] || 0) / totalReviewsCount) * 100) : 0;
+  const bar3 = ratingData.count > 0 ? Math.round(((ratingData.breakdown[3] || 0) / totalReviewsCount) * 100) : 0;
+  const bar2 = ratingData.count > 0 ? Math.round(((ratingData.breakdown[2] || 0) / totalReviewsCount) * 100) : 0;
+  const bar1 = ratingData.count > 0 ? Math.round(((ratingData.breakdown[1] || 0) / totalReviewsCount) * 100) : 0;
 
   // Reviews List HTML
   let reviewsListHtml = "";
@@ -877,11 +891,17 @@ function initToolDetailsPage() {
     `).join("");
   } else {
     reviewsListHtml = `
-      <div class="empty-state" style="grid-column: 1 / -1;">
-        <p>No community reviews yet. Be the first to share your experience!</p>
+      <div class="empty-state" style="grid-column: 1 / -1; padding: 2.5rem 1.5rem; text-align: center; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px dashed var(--border-color);">
+        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">💬</div>
+        <h4 style="font-size: 1.15rem; color: var(--text-heading); margin-bottom: 0.35rem; font-weight: 750;">No Community Reviews Yet</h4>
+        <p style="font-size: 0.92rem; color: var(--text-muted); max-width: 500px; margin: 0 auto;">Be the first Windows user to test ${escapeHtml(tool.name)} and share your feedback below!</p>
       </div>
     `;
   }
+
+  const liveRatingPillHtml = ratingData.count > 0
+    ? `<span class="live-rating-pill">★ <span>${ratingData.average.toFixed(1)}</span> / 5.0 (${ratingData.count} reviews)</span>`
+    : `<span class="live-rating-pill" style="color: var(--text-muted); background: var(--bg-subtle); border-color: var(--border-color);">★ Unrated (0 reviews)</span>`;
 
   container.innerHTML = `
     <div class="tool-detail-header">
@@ -908,9 +928,7 @@ function initToolDetailsPage() {
                       <span class="dl-count-${escapeHtml(tool.id)}">${formatNumber(downloads)}</span> Downloads
                     </span>
                   ` : ''}
-                  <span class="live-rating-pill">
-                    ★ <span>${ratingData.average.toFixed(1)}</span> / 5.0 (${ratingData.count} reviews)
-                  </span>
+                  ${liveRatingPillHtml}
                 </div>
               </div>
             </div>
@@ -948,9 +966,9 @@ function initToolDetailsPage() {
             
             <div class="rating-overview-card">
               <div class="rating-score-block">
-                <div class="rating-big-num">${ratingData.average.toFixed(1)}</div>
+                <div class="rating-big-num">${ratingData.count > 0 ? ratingData.average.toFixed(1) : "0.0"}</div>
                 <div class="rating-big-stars">${renderStarsHtml(ratingData.average)}</div>
-                <div class="rating-total-label">Based on ${ratingData.count} user reviews</div>
+                <div class="rating-total-label">${ratingData.count > 0 ? `Based on ${ratingData.count} user reviews` : "No community reviews yet"}</div>
               </div>
 
               <div class="rating-bars-stack">
@@ -983,7 +1001,7 @@ function initToolDetailsPage() {
 
               <div class="dl-metric-box">
                 <div class="dl-metric-num dl-count-${escapeHtml(tool.id)}">${formatNumber(downloads)}</div>
-                <div class="dl-metric-text">Verified Downloads</div>
+                <div class="dl-metric-text">Total Downloads</div>
                 <div style="font-size: 0.75rem; color: #10B981; font-weight: 700; margin-top: 0.4rem;">
                   ✓ Clean &amp; Tested
                 </div>
@@ -1019,7 +1037,7 @@ function initToolDetailsPage() {
                 <div class="form-row-dual">
                   <div class="form-group">
                     <label for="review-user-name" class="form-label">Your Name <span style="color: #EF4444;">*</span></label>
-                    <input type="text" id="review-user-name" class="form-input" placeholder="e.g. Ruwan Senaratne" required>
+                    <input type="text" id="review-user-name" class="form-input" placeholder="e.g. Ruwan Senaratne" required autocomplete="name">
                   </div>
                   <div class="form-group">
                     <label for="review-user-role" class="form-label">Your Profession or Workstation (Optional)</label>
@@ -1167,12 +1185,12 @@ function initToolDetailsPage() {
       // Store in LocalStorage
       let existing = [];
       try {
-        const raw = localStorage.getItem(`ihsbyte_reviews_${tool.id}`);
+        const raw = localStorage.getItem(`ihsbyte_user_revs_${tool.id}`);
         if (raw) existing = JSON.parse(raw);
       } catch (err) {}
       
       existing.unshift(newReview);
-      localStorage.setItem(`ihsbyte_reviews_${tool.id}`, JSON.stringify(existing));
+      localStorage.setItem(`ihsbyte_user_revs_${tool.id}`, JSON.stringify(existing));
 
       showToast("🌟 Thank you! Your review has been published.");
 

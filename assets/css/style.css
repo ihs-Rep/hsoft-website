@@ -2162,11 +2162,84 @@ button, input, select, textarea {
   grid-template-columns: 1fr 1fr;
   gap: 1.25rem;
   margin-bottom: 1.25rem;
+  width: 100%;
 }
 
 @media (max-width: 650px) {
   .form-row-dual {
     grid-template-columns: 1fr;
+    gap: 0;
   }
 }
+
+/* Feedback Form Controls & Inputs (Themed & Full-width) */
+.feedback-form-card .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+  width: 100%;
+}
+
+.feedback-form-card .form-label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 650;
+  color: var(--text-heading);
+  margin-bottom: 0.5rem;
+}
+
+.feedback-form-card .form-input,
+.feedback-form-card .form-textarea,
+.feedback-form-card .form-control {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.85rem 1.15rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-subtle);
+  color: var(--text-heading);
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+[data-theme="dark"] .feedback-form-card .form-input,
+[data-theme="dark"] .feedback-form-card .form-textarea,
+[data-theme="dark"] .feedback-form-card .form-control {
+  background-color: #090D16;
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #F8FAFC;
+}
+
+.feedback-form-card .form-input:focus,
+.feedback-form-card .form-textarea:focus,
+.feedback-form-card .form-control:focus {
+  outline: none;
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px var(--secondary-light);
+  background-color: var(--bg-surface);
+}
+
+[data-theme="dark"] .feedback-form-card .form-input:focus,
+[data-theme="dark"] .feedback-form-card .form-textarea:focus,
+[data-theme="dark"] .feedback-form-card .form-control:focus {
+  background-color: #0D1424;
+  border-color: #38BDF8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.22);
+}
+
+.feedback-form-card .form-input::placeholder,
+.feedback-form-card .form-textarea::placeholder,
+.feedback-form-card .form-control::placeholder {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+.feedback-form-card .form-textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
 
