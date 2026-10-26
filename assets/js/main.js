@@ -10,6 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initCurrentYear();
   initArticleModal();
   
+  // Sync live global downloads & reviews from Cloudflare Edge
+  syncToolStatsFromCloud("adobe-blocker");
+
   // Page-specific initializers
   if (document.getElementById("featured-tools-container")) {
     initHomePage();
@@ -206,7 +209,45 @@ window.handleDownloadAction = function(toolId, event) {
   const tool = typeof getToolById === "function" ? getToolById(toolId) : null;
   const name = tool ? tool.name : "Utility";
   showToast(`🎉 Download started! ${name} (Total: ${formatNumber(total)})`);
+
+  // Persist globally across all users via Cloudflare Edge API
+  fetch("/api/stats", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ action: "download", toolId })
+  }).then(res => res.json()).then(data => {
+    if (data && data.status === "ok" && typeof data.downloads === "number") {
+      localStorage.setItem(`ihsbyte_user_dl_${toolId}`, data.downloads);
+      document.querySelectorAll(`.dl-count-${toolId}`).forEach(el => {
+        el.textContent = formatNumber(data.downloads);
+      });
+    }
+  }).catch(() => {});
 };
+
+/**
+ * Sync Live Global Stats & Reviews from Cloudflare Edge
+ */
+async function syncToolStatsFromCloud(toolId) {
+  try {
+    const res = await fetch(`/api/stats?tool=${encodeURIComponent(toolId)}`);
+    if (!res.ok) return;
+    const data = await res.json();
+    if (data && data.status === "ok") {
+      if (typeof data.downloads === "number") {
+        localStorage.setItem(`ihsbyte_user_dl_${toolId}`, data.downloads);
+        document.querySelectorAll(`.dl-count-${toolId}`).forEach(el => {
+          el.textContent = formatNumber(data.downloads);
+        });
+      }
+      if (Array.isArray(data.reviews)) {
+        localStorage.setItem(`ihsbyte_user_revs_${toolId}`, JSON.stringify(data.reviews));
+      }
+    }
+  } catch (err) {
+    // Non-blocking fallback
+  }
+}
 
 /**
  * Star Rating & Community Reviews Management
@@ -281,7 +322,7 @@ function createToolCardHtml(tool) {
   const downloadBtn = isReleased
     ? `<a href="${escapeHtml(tool.downloadUrl)}" class="btn btn-primary btn-sm" download onclick="handleDownloadAction('${escapeHtml(tool.id)}', event)">
          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-         Download (${escapeHtml(tool.fileSize || "EXE")})
+         Download ZIP (${escapeHtml(tool.fileSize || "ZIP")})
        </a>`
     : `<button class="btn btn-secondary btn-sm btn-disabled" disabled title="Under active development">Coming Soon</button>`;
 
@@ -759,6 +800,9 @@ function initToolDetailsPage() {
     return;
   }
 
+  // Sync latest global stats from Cloudflare Edge
+  syncToolStatsFromCloud(tool.id);
+
   document.title = `${tool.name} — IHSByte Windows Utilities`;
 
   const isReleased = tool.status === "released" && Boolean(tool.downloadUrl);
@@ -771,20 +815,11 @@ function initToolDetailsPage() {
 
   let downloadSectionHtml = "";
   if (isReleased) {
-    const directExeBtn = tool.directExeUrl ? `
-      <a href="${escapeHtml(tool.directExeUrl)}" class="btn btn-secondary" download onclick="handleDownloadAction('${escapeHtml(tool.id)}', event)" title="Direct Standalone Executable">
-        Direct .EXE (125.5 KB)
-      </a>
-    ` : "";
-
     downloadSectionHtml = `
-      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
-        <a href="${escapeHtml(tool.downloadUrl)}" class="btn btn-primary" download onclick="handleDownloadAction('${escapeHtml(tool.id)}', event)">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download Package (${escapeHtml(tool.fileSize || "ZIP")})
-        </a>
-        ${directExeBtn}
-      </div>
+      <a href="${escapeHtml(tool.downloadUrl)}" class="btn btn-primary" download onclick="handleDownloadAction('${escapeHtml(tool.id)}', event)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download ZIP Package (${escapeHtml(tool.fileSize || "33.8 KB")})
+      </a>
     `;
   } else {
     downloadSectionHtml = `
@@ -1202,7 +1237,7 @@ function initToolDetailsPage() {
         comment
       };
 
-      // Store in LocalStorage
+      // Store in LocalStorage first
       let existing = [];
       try {
         const raw = localStorage.getItem(`ihsbyte_user_revs_${tool.id}`);
@@ -1222,6 +1257,17 @@ function initToolDetailsPage() {
       if (revSec) {
         revSec.scrollIntoView({ behavior: "smooth" });
       }
+
+      // Persist globally across all visitors via Cloudflare Edge API
+      fetch("/api/stats", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "review", toolId: tool.id, review: newReview })
+      }).then(res => res.json()).then(data => {
+        if (data && data.status === "ok" && Array.isArray(data.reviews)) {
+          localStorage.setItem(`ihsbyte_user_revs_${tool.id}`, JSON.stringify(data.reviews));
+        }
+      }).catch(() => {});
     });
   }
 }
