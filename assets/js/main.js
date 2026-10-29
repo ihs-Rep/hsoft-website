@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initCurrentYear();
   initArticleModal();
   
-  // Sync live global downloads & reviews from Cloudflare Edge
-  syncToolStatsFromCloud("adobe-blocker");
+  // Real-time synchronization & background polling from Cloudflare Edge
+  initRealtimeStatsSync();
 
   // Page-specific initializers
   if (document.getElementById("featured-tools-container")) {
@@ -195,12 +195,7 @@ function incrementToolDownload(toolId) {
   localStorage.setItem(`ihsbyte_user_dl_${toolId}`, nextExtra);
   
   const total = getToolDownloads(toolId);
-  
-  // Dynamically update on-screen elements
-  document.querySelectorAll(`.dl-count-${toolId}`).forEach(el => {
-    el.textContent = formatNumber(total);
-  });
-  
+  updateToolDynamicStatsUI(toolId);
   return total;
 }
 
@@ -210,42 +205,232 @@ window.handleDownloadAction = function(toolId, event) {
   const name = tool ? tool.name : "Utility";
   showToast(`🎉 Download started! ${name} (Total: ${formatNumber(total)})`);
 
-  // Persist globally across all users via Cloudflare Edge API
+  // Persist globally across all users via Cloudflare Edge API with keepalive
   fetch("/api/stats", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ action: "download", toolId })
+    body: JSON.stringify({ action: "download", toolId }),
+    keepalive: true
   }).then(res => res.json()).then(data => {
     if (data && data.status === "ok" && typeof data.downloads === "number") {
       localStorage.setItem(`ihsbyte_user_dl_${toolId}`, data.downloads);
-      document.querySelectorAll(`.dl-count-${toolId}`).forEach(el => {
-        el.textContent = formatNumber(data.downloads);
-      });
+      updateToolDynamicStatsUI(toolId);
     }
   }).catch(() => {});
 };
 
 /**
- * Sync Live Global Stats & Reviews from Cloudflare Edge
+ * Get active tool ID from current URL query param (or fallback)
+ */
+function getActiveToolId() {
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get("id") || "adobe-blocker";
+  } catch (e) {
+    return "adobe-blocker";
+  }
+}
+
+/**
+ * Sync Live Global Stats & Reviews from Cloudflare Edge API
  */
 async function syncToolStatsFromCloud(toolId) {
+  if (!toolId) return;
   try {
-    const res = await fetch(`/api/stats?tool=${encodeURIComponent(toolId)}`);
+    const res = await fetch(`/api/stats?tool=${encodeURIComponent(toolId)}&_t=${Date.now()}`, {
+      cache: "no-store"
+    });
     if (!res.ok) return;
     const data = await res.json();
     if (data && data.status === "ok") {
+      let changed = false;
       if (typeof data.downloads === "number") {
-        localStorage.setItem(`ihsbyte_user_dl_${toolId}`, data.downloads);
-        document.querySelectorAll(`.dl-count-${toolId}`).forEach(el => {
-          el.textContent = formatNumber(data.downloads);
-        });
+        const prevDl = localStorage.getItem(`ihsbyte_user_dl_${toolId}`);
+        if (prevDl !== String(data.downloads)) {
+          localStorage.setItem(`ihsbyte_user_dl_${toolId}`, data.downloads);
+          changed = true;
+        }
       }
       if (Array.isArray(data.reviews)) {
-        localStorage.setItem(`ihsbyte_user_revs_${toolId}`, JSON.stringify(data.reviews));
+        const prevRevs = localStorage.getItem(`ihsbyte_user_revs_${toolId}`);
+        const nextRevs = JSON.stringify(data.reviews);
+        if (prevRevs !== nextRevs) {
+          localStorage.setItem(`ihsbyte_user_revs_${toolId}`, nextRevs);
+          changed = true;
+        }
       }
+      // Instantly update dynamic elements across the DOM
+      updateToolDynamicStatsUI(toolId);
     }
   } catch (err) {
     // Non-blocking fallback
+  }
+}
+
+/**
+ * Background Real-Time Polling & Multi-tab Sync
+ */
+function initRealtimeStatsSync() {
+  const activeToolId = getActiveToolId();
+  
+  // 1. Initial immediate sync from Cloudflare Edge
+  syncToolStatsFromCloud(activeToolId);
+  if (activeToolId !== "adobe-blocker") {
+    syncToolStatsFromCloud("adobe-blocker");
+  }
+
+  // 2. Background polling every 8 seconds for real-time updates
+  setInterval(() => {
+    if (!document.hidden) {
+      syncToolStatsFromCloud(getActiveToolId());
+    }
+  }, 8000);
+
+  // 3. Tab visibility sync: when tab becomes active again
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) {
+      syncToolStatsFromCloud(getActiveToolId());
+    }
+  });
+
+  // 4. Multi-tab storage sync (if user has multiple tabs open)
+  window.addEventListener("storage", (e) => {
+    if (e.key && (e.key.startsWith("ihsbyte_user_dl_") || e.key.startsWith("ihsbyte_user_revs_"))) {
+      const toolId = e.key.replace("ihsbyte_user_dl_", "").replace("ihsbyte_user_revs_", "");
+      updateToolDynamicStatsUI(toolId);
+    }
+  });
+}
+
+/**
+ * Render List of Review Cards HTML
+ */
+function renderReviewsCardsHtml(reviews, toolName = "this utility") {
+  if (Array.isArray(reviews) && reviews.length > 0) {
+    return reviews.map(r => `
+      <div class="review-card">
+        <div class="review-card-header">
+          <div class="review-user-info">
+            <div class="review-user-avatar">${escapeHtml((r.author || "U").charAt(0).toUpperCase())}</div>
+            <div>
+              <div class="review-user-name">
+                ${escapeHtml(r.author || "Anonymous User")}
+                <span class="verified-badge">✓ Verified</span>
+              </div>
+              <div class="review-user-role">
+                ${escapeHtml(r.role || "Windows User")} ${r.location ? `• ${escapeHtml(r.location)}` : ''}
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="review-stars">${renderStarsHtml(r.rating)}</div>
+            <div class="review-date">${escapeHtml(r.date || "Recent")}</div>
+          </div>
+        </div>
+        <p class="review-comment">${escapeHtml(r.comment)}</p>
+      </div>
+    `).join("");
+  } else {
+    return `
+      <div class="empty-state" style="grid-column: 1 / -1; padding: 2.5rem 1.5rem; text-align: center; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px dashed var(--border-color);">
+        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">💬</div>
+        <h4 style="font-size: 1.15rem; color: var(--text-heading); margin-bottom: 0.35rem; font-weight: 750;">No Community Reviews Yet</h4>
+        <p style="font-size: 0.92rem; color: var(--text-muted); max-width: 500px; margin: 0 auto;">Be the first Windows user to test ${escapeHtml(toolName)} and share your feedback below!</p>
+      </div>
+    `;
+  }
+}
+
+/**
+ * Reactive Real-Time UI Updater for Downloads, Scores, Bars, and Reviews
+ */
+function updateToolDynamicStatsUI(toolId) {
+  if (!toolId) return;
+  const tool = typeof getToolById === "function" ? getToolById(toolId) : null;
+  const toolName = tool ? tool.name : "Utility";
+  const downloads = getToolDownloads(toolId);
+  const ratingData = getToolRatingData(toolId);
+
+  // 1. Update all download count badges across page
+  document.querySelectorAll(`.dl-count-${toolId}`).forEach(el => {
+    el.textContent = formatNumber(downloads);
+  });
+
+  // 2. Update tool card rating badges (Home / Catalog pages)
+  document.querySelectorAll(`.tool-rating-badge-${toolId}`).forEach(el => {
+    if (ratingData.count > 0) {
+      el.innerHTML = `
+        ${renderStarsHtml(ratingData.average)}
+        <span>${ratingData.average.toFixed(1)}</span>
+        <span class="tool-stat-count">(${ratingData.count})</span>
+      `;
+      el.title = `${ratingData.average.toFixed(1)} out of 5 stars (${ratingData.count} reviews)`;
+    } else {
+      el.innerHTML = `
+        ${renderStarsHtml(0)}
+        <span class="tool-stat-count">New (0)</span>
+      `;
+      el.title = "No reviews yet";
+    }
+  });
+
+  // 3. Update Tool Details Page Elements (if active)
+  const detailContainer = document.getElementById("tool-details-container");
+  if (detailContainer) {
+    // Header Live Rating Pill
+    document.querySelectorAll(`.live-rating-pill-wrap-${toolId}`).forEach(el => {
+      if (ratingData.count > 0) {
+        el.innerHTML = `<span class="live-rating-pill">★ <span>${ratingData.average.toFixed(1)}</span> / 5.0 (${ratingData.count} review${ratingData.count === 1 ? '' : 's'})</span>`;
+      } else {
+        el.innerHTML = `<span class="live-rating-pill" style="color: var(--text-muted); background: var(--bg-subtle); border-color: var(--border-color);">★ Unrated (0 reviews)</span>`;
+      }
+    });
+
+    // Sidebar Meta Item
+    document.querySelectorAll(`.meta-rating-val-${toolId}`).forEach(el => {
+      el.textContent = ratingData.count > 0 
+        ? `★ ${ratingData.average.toFixed(1)} (${ratingData.count} reviews)` 
+        : `Unrated (0 reviews)`;
+    });
+
+    // Overview Score Block
+    const bigNum = detailContainer.querySelector(".rating-big-num");
+    if (bigNum) {
+      bigNum.textContent = ratingData.count > 0 ? ratingData.average.toFixed(1) : "0.0";
+    }
+    const bigStars = detailContainer.querySelector(".rating-big-stars");
+    if (bigStars) {
+      bigStars.innerHTML = renderStarsHtml(ratingData.average);
+    }
+    const totalLabel = detailContainer.querySelector(".rating-total-label");
+    if (totalLabel) {
+      totalLabel.textContent = ratingData.count > 0 
+        ? `Based on ${ratingData.count} user review${ratingData.count === 1 ? '' : 's'}` 
+        : "No community reviews yet";
+    }
+
+    // Breakdown Bars (5★ through 1★)
+    const totalReviewsCount = Math.max(1, ratingData.count);
+    for (let s = 1; s <= 5; s++) {
+      const count = ratingData.breakdown[s] || 0;
+      const pct = ratingData.count > 0 ? Math.round((count / totalReviewsCount) * 100) : 0;
+      const fillEl = detailContainer.querySelector(`.bar-fill-${s}`);
+      if (fillEl) fillEl.style.width = `${pct}%`;
+      const countEl = detailContainer.querySelector(`.bar-count-${s}`);
+      if (countEl) countEl.textContent = count;
+    }
+
+    // Community Feedback Heading
+    const reviewsHeading = detailContainer.querySelector(".reviews-count-heading");
+    if (reviewsHeading) {
+      reviewsHeading.textContent = `Community Feedback (${ratingData.count})`;
+    }
+
+    // Reviews Grid Container
+    const gridContainer = document.getElementById("reviews-grid-container");
+    if (gridContainer) {
+      gridContainer.innerHTML = renderReviewsCardsHtml(ratingData.reviews, toolName);
+    }
   }
 }
 
@@ -342,12 +527,12 @@ function createToolCardHtml(tool) {
     : `<span class="tool-stat-downloads" style="color: var(--text-light); font-weight: 500;">Coming Soon</span>`;
 
   const ratingHtml = ratingData.count > 0
-    ? `<div class="tool-stat-rating">
+    ? `<div class="tool-stat-rating tool-rating-badge-${escapeHtml(tool.id)}" title="${ratingData.average.toFixed(1)} out of 5 stars (${ratingData.count} reviews)">
          ${renderStarsHtml(ratingData.average)}
          <span>${ratingData.average.toFixed(1)}</span>
          <span class="tool-stat-count">(${ratingData.count})</span>
        </div>`
-    : `<div class="tool-stat-rating" title="No reviews yet">
+    : `<div class="tool-stat-rating tool-rating-badge-${escapeHtml(tool.id)}" title="No reviews yet">
          ${renderStarsHtml(0)}
          <span class="tool-stat-count">New (0)</span>
        </div>`;
@@ -842,7 +1027,7 @@ function initToolDetailsPage() {
   const ratingMetaText = ratingData.count > 0 
     ? `★ ${ratingData.average.toFixed(1)} (${ratingData.count} reviews)` 
     : `Unrated (0 reviews)`;
-  metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Rating</span><span class="meta-box-val">${ratingMetaText}</span></div>`;
+  metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Rating</span><span class="meta-box-val meta-rating-val-${escapeHtml(tool.id)}">${ratingMetaText}</span></div>`;
   if (tool.releaseDate) {
     metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Release Date</span><span class="meta-box-val">${escapeHtml(tool.releaseDate)}</span></div>`;
   }
@@ -906,44 +1091,8 @@ function initToolDetailsPage() {
   const bar2 = ratingData.count > 0 ? Math.round(((ratingData.breakdown[2] || 0) / totalReviewsCount) * 100) : 0;
   const bar1 = ratingData.count > 0 ? Math.round(((ratingData.breakdown[1] || 0) / totalReviewsCount) * 100) : 0;
 
-  // Reviews List HTML
-  let reviewsListHtml = "";
-  if (ratingData.reviews && ratingData.reviews.length > 0) {
-    reviewsListHtml = ratingData.reviews.map(r => `
-      <div class="review-card">
-        <div class="review-card-header">
-          <div class="review-user-info">
-            <div class="review-user-avatar">${escapeHtml((r.author || "U").charAt(0).toUpperCase())}</div>
-            <div>
-              <div class="review-user-name">
-                ${escapeHtml(r.author || "Anonymous User")}
-                <span class="verified-badge">✓ Verified</span>
-              </div>
-              <div class="review-user-role">
-                ${escapeHtml(r.role || "Windows User")} ${r.location ? `• ${escapeHtml(r.location)}` : ''}
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="review-stars">${renderStarsHtml(r.rating)}</div>
-            <div class="review-date">${escapeHtml(r.date || "Recent")}</div>
-          </div>
-        </div>
-        <p class="review-comment">${escapeHtml(r.comment)}</p>
-      </div>
-    `).join("");
-  } else {
-    reviewsListHtml = `
-      <div class="empty-state" style="grid-column: 1 / -1; padding: 2.5rem 1.5rem; text-align: center; background: var(--bg-surface); border-radius: var(--radius-lg); border: 1px dashed var(--border-color);">
-        <div style="font-size: 2.2rem; margin-bottom: 0.5rem;">💬</div>
-        <h4 style="font-size: 1.15rem; color: var(--text-heading); margin-bottom: 0.35rem; font-weight: 750;">No Community Reviews Yet</h4>
-        <p style="font-size: 0.92rem; color: var(--text-muted); max-width: 500px; margin: 0 auto;">Be the first Windows user to test ${escapeHtml(tool.name)} and share your feedback below!</p>
-      </div>
-    `;
-  }
-
   const liveRatingPillHtml = ratingData.count > 0
-    ? `<span class="live-rating-pill">★ <span>${ratingData.average.toFixed(1)}</span> / 5.0 (${ratingData.count} reviews)</span>`
+    ? `<span class="live-rating-pill">★ <span>${ratingData.average.toFixed(1)}</span> / 5.0 (${ratingData.count} review${ratingData.count === 1 ? '' : 's'})</span>`
     : `<span class="live-rating-pill" style="color: var(--text-muted); background: var(--bg-subtle); border-color: var(--border-color);">★ Unrated (0 reviews)</span>`;
 
   container.innerHTML = `
@@ -971,7 +1120,7 @@ function initToolDetailsPage() {
                       <span class="dl-count-${escapeHtml(tool.id)}">${formatNumber(downloads)}</span> Downloads
                     </span>
                   ` : ''}
-                  ${liveRatingPillHtml}
+                  <span class="live-rating-pill-wrap-${escapeHtml(tool.id)}">${liveRatingPillHtml}</span>
                 </div>
               </div>
             </div>
@@ -1011,34 +1160,34 @@ function initToolDetailsPage() {
               <div class="rating-score-block">
                 <div class="rating-big-num">${ratingData.count > 0 ? ratingData.average.toFixed(1) : "0.0"}</div>
                 <div class="rating-big-stars">${renderStarsHtml(ratingData.average)}</div>
-                <div class="rating-total-label">${ratingData.count > 0 ? `Based on ${ratingData.count} user reviews` : "No community reviews yet"}</div>
+                <div class="rating-total-label">${ratingData.count > 0 ? `Based on ${ratingData.count} user review${ratingData.count === 1 ? '' : 's'}` : "No community reviews yet"}</div>
               </div>
 
               <div class="rating-bars-stack">
                 <div class="rating-bar-row">
                   <span class="rating-bar-label">5 ★</span>
-                  <div class="rating-bar-track"><div class="rating-bar-fill" style="width: ${bar5}%;"></div></div>
-                  <span class="rating-bar-count">${ratingData.breakdown[5] || 0}</span>
+                  <div class="rating-bar-track"><div class="rating-bar-fill bar-fill-5" style="width: ${bar5}%;"></div></div>
+                  <span class="rating-bar-count bar-count-5">${ratingData.breakdown[5] || 0}</span>
                 </div>
                 <div class="rating-bar-row">
                   <span class="rating-bar-label">4 ★</span>
-                  <div class="rating-bar-track"><div class="rating-bar-fill" style="width: ${bar4}%;"></div></div>
-                  <span class="rating-bar-count">${ratingData.breakdown[4] || 0}</span>
+                  <div class="rating-bar-track"><div class="rating-bar-fill bar-fill-4" style="width: ${bar4}%;"></div></div>
+                  <span class="rating-bar-count bar-count-4">${ratingData.breakdown[4] || 0}</span>
                 </div>
                 <div class="rating-bar-row">
                   <span class="rating-bar-label">3 ★</span>
-                  <div class="rating-bar-track"><div class="rating-bar-fill" style="width: ${bar3}%;"></div></div>
-                  <span class="rating-bar-count">${ratingData.breakdown[3] || 0}</span>
+                  <div class="rating-bar-track"><div class="rating-bar-fill bar-fill-3" style="width: ${bar3}%;"></div></div>
+                  <span class="rating-bar-count bar-count-3">${ratingData.breakdown[3] || 0}</span>
                 </div>
                 <div class="rating-bar-row">
                   <span class="rating-bar-label">2 ★</span>
-                  <div class="rating-bar-track"><div class="rating-bar-fill" style="width: ${bar2}%;"></div></div>
-                  <span class="rating-bar-count">${ratingData.breakdown[2] || 0}</span>
+                  <div class="rating-bar-track"><div class="rating-bar-fill bar-fill-2" style="width: ${bar2}%;"></div></div>
+                  <span class="rating-bar-count bar-count-2">${ratingData.breakdown[2] || 0}</span>
                 </div>
                 <div class="rating-bar-row">
                   <span class="rating-bar-label">1 ★</span>
-                  <div class="rating-bar-track"><div class="rating-bar-fill" style="width: ${bar1}%;"></div></div>
-                  <span class="rating-bar-count">${ratingData.breakdown[1] || 0}</span>
+                  <div class="rating-bar-track"><div class="rating-bar-fill bar-fill-1" style="width: ${bar1}%;"></div></div>
+                  <span class="rating-bar-count bar-count-1">${ratingData.breakdown[1] || 0}</span>
                 </div>
               </div>
 
@@ -1046,17 +1195,17 @@ function initToolDetailsPage() {
                 <div class="dl-metric-num dl-count-${escapeHtml(tool.id)}">${formatNumber(downloads)}</div>
                 <div class="dl-metric-text">Total Downloads</div>
                 <div style="font-size: 0.75rem; color: #10B981; font-weight: 700; margin-top: 0.4rem;">
-                  ✓ Clean &amp; Tested
+                  ✓ Clean &amp; Tested ZIP
                 </div>
               </div>
             </div>
 
             <!-- Community Reviews Grid -->
-            <h3 style="font-size: 1.25rem; font-weight: 750; color: var(--text-heading); margin-bottom: 1.25rem;">
+            <h3 class="reviews-count-heading" style="font-size: 1.25rem; font-weight: 750; color: var(--text-heading); margin-bottom: 1.25rem;">
               Community Feedback (${ratingData.count})
             </h3>
             <div class="reviews-grid-layout" id="reviews-grid-container">
-              ${reviewsListHtml}
+              ${renderReviewsCardsHtml(ratingData.reviews, tool.name)}
             </div>
 
             <!-- Interactive Feedback Submission Form -->
@@ -1203,8 +1352,9 @@ function initToolDetailsPage() {
 
   // Review Form Submission Handler
   const feedbackForm = document.getElementById("tool-feedback-form");
+  const submitReviewBtn = document.getElementById("submit-review-btn");
   if (feedbackForm) {
-    feedbackForm.addEventListener("submit", (e) => {
+    feedbackForm.addEventListener("submit", async (e) => {
       e.preventDefault();
       const nameInput = document.getElementById("review-user-name");
       const roleInput = document.getElementById("review-user-role");
@@ -1228,7 +1378,7 @@ function initToolDetailsPage() {
       }).format(new Date());
 
       const newReview = {
-        id: `rev-user-${Date.now()}`,
+        id: `rev-user-${Date.now()}-${Math.random().toString(36).substr(2, 5)}`,
         author,
         role,
         location,
@@ -1237,7 +1387,13 @@ function initToolDetailsPage() {
         comment
       };
 
-      // Store in LocalStorage first
+      // Disable button during network submit
+      if (submitReviewBtn) {
+        submitReviewBtn.disabled = true;
+        submitReviewBtn.textContent = "Publishing Review...";
+      }
+
+      // Optimistically store in LocalStorage and update UI immediately
       let existing = [];
       try {
         const raw = localStorage.getItem(`ihsbyte_user_revs_${tool.id}`);
@@ -1247,27 +1403,45 @@ function initToolDetailsPage() {
       existing.unshift(newReview);
       localStorage.setItem(`ihsbyte_user_revs_${tool.id}`, JSON.stringify(existing));
 
+      // Instantly update dynamic elements across the page without page destruction
+      updateToolDynamicStatsUI(tool.id);
+
+      // Reset form fields
+      if (commentInput) commentInput.value = "";
+      if (roleInput) roleInput.value = "";
+      if (locInput) locInput.value = "";
+      selectedRating = 5;
+      updateStarUi(5);
+
       showToast("🌟 Thank you! Your review has been published.");
 
-      // Re-render tool details page with updated reviews
-      initToolDetailsPage();
-
-      // Smooth scroll back to reviews section
+      // Smooth scroll gently to the reviews list
       const revSec = document.getElementById("reviews-section");
       if (revSec) {
         revSec.scrollIntoView({ behavior: "smooth" });
       }
 
       // Persist globally across all visitors via Cloudflare Edge API
-      fetch("/api/stats", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action: "review", toolId: tool.id, review: newReview })
-      }).then(res => res.json()).then(data => {
+      try {
+        const res = await fetch("/api/stats", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ action: "review", toolId: tool.id, review: newReview }),
+          keepalive: true
+        });
+        const data = await res.json();
         if (data && data.status === "ok" && Array.isArray(data.reviews)) {
           localStorage.setItem(`ihsbyte_user_revs_${tool.id}`, JSON.stringify(data.reviews));
+          updateToolDynamicStatsUI(tool.id);
         }
-      }).catch(() => {});
+      } catch (err) {
+        console.warn("Edge sync non-critical warning:", err);
+      } finally {
+        if (submitReviewBtn) {
+          submitReviewBtn.disabled = false;
+          submitReviewBtn.textContent = "Submit Review & Feedback";
+        }
+      }
     });
   }
 }

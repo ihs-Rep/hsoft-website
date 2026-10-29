@@ -92,6 +92,15 @@ export async function onRequestPost(context) {
         toolId,
         downloads: data.downloads
       }), { headers });
+    } else if (action === "reset") {
+      data = { downloads: 0, reviews: [] };
+      await kv.put(key, JSON.stringify(data));
+      return new Response(JSON.stringify({
+        status: "ok",
+        toolId,
+        downloads: 0,
+        reviews: []
+      }), { headers });
     } else if (action === "review" && payload.review) {
       const rev = payload.review;
       // Sanitize review fields

@@ -1,7 +1,10 @@
 # Cloudflare Pages Custom Cache Headers
-/assets/js/news-data.js
+/assets/js/*
   Cache-Control: public, max-age=0, must-revalidate
   Access-Control-Allow-Origin: *
+
+/assets/css/*
+  Cache-Control: public, max-age=0, must-revalidate
 
 /api/*
   Cache-Control: no-cache, no-store, must-revalidate
