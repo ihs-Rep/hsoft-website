@@ -33,6 +33,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No news changes detected. Working tree clean."
           else
-            git commit -m "Auto-update IT news feed [skip ci]"
+            git commit -m "Auto-update IT news feed: $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git pull --rebase origin main
             git push origin main
           fi

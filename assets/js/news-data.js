@@ -5,10 +5,52 @@
  * - Cloud, Enterprise IT & Networking (The Register, Ars Technica)
  * - Linux, Kernel & Open Source (Phoronix)
  * 
- * Last Automated Sync: October 29, 2026 00:37:25 UTC
+ * Last Automated Sync: October 29, 2026 09:58:46 UTC
  */
 
 const NEWS_DATA = [
+  {
+    "id": "google-struggling-to-make-ai-mode-searches-pay",
+    "title": "Google struggling to make AI Mode searches pay",
+    "category": "Cloud & Enterprise IT",
+    "date": "October 29, 2026",
+    "isoDate": "2026-10-29",
+    "readTime": "2 min read",
+    "author": "The Register Editorial",
+    "source": "The Register",
+    "location": "London, United Kingdom",
+    "sourceUrl": "https://www.theregister.com/ai-and-ml/2026/10/29/google-struggling-to-make-ai-mode-searches-pay/5306181",
+    "imageUrl": "https://image.theregister.com/?imageId=5306186&width=800",
+    "featured": true,
+    "summary": "That\u2019s a problem, cos it just spent $51 billion on infrastructure and still needs to rent compute from others to run its cloud",
+    "tags": [
+      "Cloud & Enterprise IT",
+      "The Register",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>That\u2019s a problem, cos it just spent $51 billion on infrastructure and still needs to rent compute from others to run its cloud</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Register</em> in London, United Kingdom.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.theregister.com/ai-and-ml/2026/10/29/google-struggling-to-make-ai-mode-searches-pay/5306181\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Register &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "gxvk-3dfx-glide-api-implemented-atop-vulkan-for-modern-usage",
+    "title": "GXVK: 3Dfx Glide API Implemented Atop Vulkan For Modern Usage",
+    "category": "Linux & Open Source",
+    "date": "October 28, 2026",
+    "isoDate": "2026-10-28",
+    "readTime": "2 min read",
+    "author": "Phoronix Editorial",
+    "source": "Phoronix",
+    "location": "Chicago, Illinois, USA",
+    "sourceUrl": "https://www.phoronix.com/news/GXVK-3Dfx-Glide-Vulkan",
+    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80",
+    "featured": false,
+    "summary": "The open-source D7VK project that implements the Direct3D 7 / 6 / 5 / 3 APIs atop the Vulkan API for faster, modern performance is out with a new release. This new D7VK 2.4 release came as a bit of a surprise since it was just last month D7VK announced its maturity status and more or less in maintenance mode. But br...",
+    "tags": [
+      "Linux & Open Source",
+      "Phoronix",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>The open-source D7VK project that implements the Direct3D 7 / 6 / 5 / 3 APIs atop the Vulkan API for faster, modern performance is out with a new release. This new D7VK 2.4 release came as a bit of a surprise since it was just last month D7VK announced its maturity status and more or less in maintenance mode. But br...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.phoronix.com/news/GXVK-3Dfx-Glide-Vulkan\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Phoronix &rarr;\n                    </a>\n                  </div>\n                "
+  },
   {
     "id": "police-seize-virtualine-bulletproof-service-tied-to-ransowma",
     "title": "Police seize Virtualine bulletproof service tied to ransowmare, cybercrime",
@@ -21,7 +63,7 @@ const NEWS_DATA = [
     "location": "New York City, New York, USA",
     "sourceUrl": "https://www.bleepingcomputer.com/news/security/police-seize-virtualine-bulletproof-service-tied-to-ransowmare-cybercrime/",
     "imageUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80",
-    "featured": true,
+    "featured": false,
     "summary": "U.S. law enforcement has seized the primary domain of Virtualine, a bulletproof hosting service advertised on cybercrime forums for facilitating illegal activities. [...]",
     "tags": [
       "AI & Hardware",
@@ -199,27 +241,6 @@ const NEWS_DATA = [
     "content": "\n                  <p>Third-party Android app stores can now apply to Google for permission to install apps with one tap, without Android&#x27;s usual confirmation screens, and to update them in the background. To qualify, a store must pass identity checks and send Google its full catalog, along with every new app and update, for ongoing malw...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://thehackernews.com/2026/10/google-to-allow-one-tap-android-app.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Hacker News &rarr;\n                    </a>\n                  </div>\n                "
   },
   {
-    "id": "amazon-tells-tokenmaxxing-devs-to-slow-their-ai-roll",
-    "title": "Amazon tells tokenmaxxing devs to slow their AI roll",
-    "category": "AI & Hardware",
-    "date": "October 28, 2026",
-    "isoDate": "2026-10-28",
-    "readTime": "2 min read",
-    "author": "The Register Editorial",
-    "source": "The Register",
-    "location": "London, United Kingdom",
-    "sourceUrl": "https://www.theregister.com/ai-and-ml/2026/10/28/amazon-tells-tokenmaxxing-devs-to-slow-their-ai-roll/5306090",
-    "imageUrl": "https://image.theregister.com/?imageId=5251931&width=800",
-    "featured": false,
-    "summary": "Focus more on what matters, please, like creating useful software and accomplishing company goals",
-    "tags": [
-      "AI & Hardware",
-      "The Register",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Focus more on what matters, please, like creating useful software and accomplishing company goals</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Register</em> in London, United Kingdom.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.theregister.com/ai-and-ml/2026/10/28/amazon-tells-tokenmaxxing-devs-to-slow-their-ai-roll/5306090\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Register &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
     "id": "sony-isp-subsidiary-data-breach-exposes-2-5-million-customer",
     "title": "Sony ISP subsidiary data breach exposes 2.5 million customer records",
     "category": "Cybersecurity",
@@ -302,27 +323,6 @@ const NEWS_DATA = [
       "IT Intelligence"
     ],
     "content": "\n                  <p>Chinese state-sponsored hacking group Volt Typhoon has been using a framework that relies on rotating chains of connected devices compromised on demand, including for zero-day attacks targeting high-value systems. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/security/volt-typhoon-hides-zero-day-attacks-using-silent-train-framework/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "canonical-reviving-their-immutable-ubuntu-core-desktop",
-    "title": "Canonical Reviving Their Immutable Ubuntu Core Desktop",
-    "category": "Linux & Open Source",
-    "date": "October 28, 2026",
-    "isoDate": "2026-10-28",
-    "readTime": "2 min read",
-    "author": "Phoronix Editorial",
-    "source": "Phoronix",
-    "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/Ubuntu-Core-Desktop-2026",
-    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80",
-    "featured": false,
-    "summary": "Canonical engineers back in 2023 outlined plans for Ubuntu Core Desktop as their immutable Linux desktop. They made some good initial progress but since 2024 it went rather silent. Now they are reviving Ubuntu Core Desktop as their immutable desktop OS offering and with grand plans for the future...",
-    "tags": [
-      "Linux & Open Source",
-      "Phoronix",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Canonical engineers back in 2023 outlined plans for Ubuntu Core Desktop as their immutable Linux desktop. They made some good initial progress but since 2024 it went rather silent. Now they are reviving Ubuntu Core Desktop as their immutable desktop OS offering and with grand plans for the future...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.phoronix.com/news/Ubuntu-Core-Desktop-2026\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Phoronix &rarr;\n                    </a>\n                  </div>\n                "
   }
 ];
 
