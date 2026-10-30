@@ -5,30 +5,303 @@
  * - Cloud, Enterprise IT & Networking (The Register, Ars Technica)
  * - Linux, Kernel & Open Source (Phoronix)
  * 
- * Last Automated Sync: October 30, 2026 00:39:03 UTC
+ * Last Automated Sync: October 30, 2026 12:39:57 UTC
  */
 
 const NEWS_DATA = [
   {
-    "id": "risc-v-has-a-nice-portable-performance-optimization-with-lin",
-    "title": "RISC-V Has A Nice Portable Performance Optimization With Linux 7.4",
+    "id": "another-week-another-vibe-coded-os-closed-source-in-the-name",
+    "title": "Another Week, Another Vibe Coded OS; Closed-Source In The Name Of Security",
     "category": "Linux & Open Source",
-    "date": "October 29, 2026",
-    "isoDate": "2026-10-29",
+    "date": "October 30, 2026",
+    "isoDate": "2026-10-30",
     "readTime": "2 min read",
     "author": "Phoronix Editorial",
     "source": "Phoronix",
     "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/Linux-7.4-RISC-V",
+    "sourceUrl": "https://www.phoronix.com/news/NULLos",
     "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80",
     "featured": true,
-    "summary": "The RISC-V architecture changes were merged today for the Linux 7.4 kernel with one nice optimization standing out...",
+    "summary": "With today's AI/LLM capabilities, there is almost a new operating system heard about each week \"coded from scratch\" predominantly via AI agents. This week was no exception with another project hitting our email inbox. Though most of them are open-source, this one is closed-source in the name of security...",
     "tags": [
       "Linux & Open Source",
       "Phoronix",
       "IT Intelligence"
     ],
-    "content": "\n                  <p>The RISC-V architecture changes were merged today for the Linux 7.4 kernel with one nice optimization standing out...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.phoronix.com/news/Linux-7.4-RISC-V\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Phoronix &rarr;\n                    </a>\n                  </div>\n                "
+    "content": "\n                  <p>With today&#x27;s AI/LLM capabilities, there is almost a new operating system heard about each week &quot;coded from scratch&quot; predominantly via AI agents. This week was no exception with another project hitting our email inbox. Though most of them are open-source, this one is closed-source in the name of security...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.phoronix.com/news/NULLos\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Phoronix &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "trezor-warns-of-suspected-hardware-implant-in-one-of-its-wal",
+    "title": "Trezor Warns of Suspected Hardware Implant in One of Its Wallets Sold by CryptoBilis",
+    "category": "Cybersecurity",
+    "date": "October 30, 2026",
+    "isoDate": "2026-10-30",
+    "readTime": "2 min read",
+    "author": "The Hacker News Editorial",
+    "source": "The Hacker News",
+    "location": "San Francisco, California, USA",
+    "sourceUrl": "https://thehackernews.com/2026/10/trezor-warns-of-suspected-hardware.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEih5QxhFnBw6d40ollOAoolmZedxywTm7DeBQpEqydVG5Pqg0v5iDVFT1hhbsW7Thqg00oI8MACNXC9FX6MCp_qMRkBRiqdxb9D4CDKfTWTZwI5eyY3V2IOa8ODSg24kX7Ni_C968r2X89tUXwPbDnHPV9xX-ydhytwerqMI1ru7tqdIK-cqA0p9oM5Ppxr/s1600/trezor-wallet.jpg",
+    "featured": false,
+    "summary": "A Trezor Safe 5 hardware wallet bought from the reseller CryptoBilis has an extra circuit board that sends out the recovery phrase over a mobile network, a customer has reported. Trezor has not yet examined the device. It is telling everyone who bought a Trezor from CryptoBilis since March 2026 to move their funds t...",
+    "tags": [
+      "Cybersecurity",
+      "The Hacker News",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>A Trezor Safe 5 hardware wallet bought from the reseller CryptoBilis has an extra circuit board that sends out the recovery phrase over a mobile network, a customer has reported. Trezor has not yet examined the device. It is telling everyone who bought a Trezor from CryptoBilis since March 2026 to move their funds t...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://thehackernews.com/2026/10/trezor-warns-of-suspected-hardware.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Hacker News &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "why-urgent-security-fixes-aren-t-fixed-observe-prove-act-con",
+    "title": "Why Urgent Security Fixes Aren't Fixed. Observe, Prove, Act, Confirm Gets Them Moving",
+    "category": "AI & Hardware",
+    "date": "October 30, 2026",
+    "isoDate": "2026-10-30",
+    "readTime": "2 min read",
+    "author": "The Hacker News Editorial",
+    "source": "The Hacker News",
+    "location": "San Francisco, California, USA",
+    "sourceUrl": "https://thehackernews.com/2026/10/why-urgent-security-fixes-arent-fixed.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEitJWSYL167QzDoyvN2y9DAuXmFFe0en34dEHp-I2sSVLEPIfljdlRfeIthyMQUgSvf9AfwW4p-solbE5zH3cKpfeLKWg-IqPnVdHbKQ99Bw91fDAoqHx3E9mlpNmXYA5i3RnaTYxZYkZcwbeY31O4CljtFQYp2JPLTmJo1BI09Al9Kh-CDtzFubVly7hM/s1600/cp.jpg",
+    "featured": false,
+    "summary": "The alert is critical. The fix is known. And the ticket sits in a queue for days. Security teams understand the risk, but the people who keep applications available need proof that the change won\u2019t break anything. Their concerns are practical. An IPS protection could block legitimate traffic. A configuration change ...",
+    "tags": [
+      "AI & Hardware",
+      "The Hacker News",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>The alert is critical. The fix is known. And the ticket sits in a queue for days. Security teams understand the risk, but the people who keep applications available need proof that the change won\u2019t break anything. Their concerns are practical. An IPS protection could block legitimate traffic. A configuration change ...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://thehackernews.com/2026/10/why-urgent-security-fixes-arent-fixed.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Hacker News &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "microsoft-finally-fixes-vpn-issues-caused-by-september-updat",
+    "title": "Microsoft finally fixes VPN issues caused by September updates",
+    "category": "Windows & Systems",
+    "date": "October 30, 2026",
+    "isoDate": "2026-10-30",
+    "readTime": "2 min read",
+    "author": "BleepingComputer Editorial",
+    "source": "BleepingComputer",
+    "location": "New York City, New York, USA",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/microsoft/microsoft-finally-fixes-vpn-issues-caused-by-september-updates/",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80",
+    "featured": false,
+    "summary": "Microsoft has resolved Always On VPN connection failures triggered after installing the September 2026 Windows 11 security updates. [...]",
+    "tags": [
+      "Windows & Systems",
+      "BleepingComputer",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>Microsoft has resolved Always On VPN connection failures triggered after installing the September 2026 Windows 11 security updates. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/microsoft/microsoft-finally-fixes-vpn-issues-caused-by-september-updates/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "accenture-ai-agents-are-sifting-through-applicants",
+    "title": "Accenture AI agents are sifting through applicants",
+    "category": "AI & Hardware",
+    "date": "October 30, 2026",
+    "isoDate": "2026-10-30",
+    "readTime": "2 min read",
+    "author": "The Register Editorial",
+    "source": "The Register",
+    "location": "London, United Kingdom",
+    "sourceUrl": "https://www.theregister.com/ai-and-ml/2026/10/30/accenture-ai-agents-are-sifting-through-applicants/5306460",
+    "imageUrl": "https://image.theregister.com/?imageId=5252012&width=800",
+    "featured": false,
+    "summary": "But a human makes final hiring decisions at global tech consultancy",
+    "tags": [
+      "AI & Hardware",
+      "The Register",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>But a human makes final hiring decisions at global tech consultancy</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Register</em> in London, United Kingdom.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.theregister.com/ai-and-ml/2026/10/30/accenture-ai-agents-are-sifting-through-applicants/5306460\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Register &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "syrian-hacker-behind-fake-tweet-that-triggered-136-billion-m",
+    "title": "Syrian Hacker Behind Fake Tweet That Triggered $136 Billion Market Drop Gets 42 Months in Prison",
+    "category": "Cybersecurity",
+    "date": "October 30, 2026",
+    "isoDate": "2026-10-30",
+    "readTime": "2 min read",
+    "author": "The Hacker News Editorial",
+    "source": "The Hacker News",
+    "location": "San Francisco, California, USA",
+    "sourceUrl": "https://thehackernews.com/2026/10/syrian-hacker-behind-fake-tweet-that.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgxhyw9NKYcR8Nkb28O8I-MA0sr3NhXC_Xr7gjpFqZKFd-29F8pGa5TCuIL2GTBPLAPzQ9iW5DsU_2zK-pUWIar_TdJdKiQMsptNjA-XxvVwMACBSQR9tW_qAC8d7I21YdqraYoY5LdWCRE8vKXjrxYCEW8X7ZbPulwCzdTdxODqnMuJbqQUZStRMRiKHc/s1600/tweets.jpg",
+    "featured": false,
+    "summary": "Ahmad Umar Agha, a Syrian Electronic Army hacker known online as \"Th3Pr0,\" has been sentenced by a U.S. federal court to 42 months in prison for his role in a hacking conspiracy that targeted Western news outlets. The conspiracy was organized and led by members of former Syrian President Bashar al-Assad's inner circ...",
+    "tags": [
+      "Cybersecurity",
+      "The Hacker News",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>Ahmad Umar Agha, a Syrian Electronic Army hacker known online as &quot;Th3Pr0,&quot; has been sentenced by a U.S. federal court to 42 months in prison for his role in a hacking conspiracy that targeted Western news outlets. The conspiracy was organized and led by members of former Syrian President Bashar al-Assad&#x27;s inner circ...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://thehackernews.com/2026/10/syrian-hacker-behind-fake-tweet-that.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Hacker News &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "amd-perfopt-makes-it-into-linux-7-4-as-a-nice-performance-bo",
+    "title": "AMD PerfOpt Makes it Into Linux 7.4 As A Nice Performance Boost For AMD iGPUs",
+    "category": "Linux & Open Source",
+    "date": "October 30, 2026",
+    "isoDate": "2026-10-30",
+    "readTime": "2 min read",
+    "author": "Phoronix Editorial",
+    "source": "Phoronix",
+    "location": "Chicago, Illinois, USA",
+    "sourceUrl": "https://www.phoronix.com/news/Linux-7.4-IOMMU",
+    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80",
+    "featured": false,
+    "summary": "As anticipated, the AMD PerfOpt feature was picked up for the Linux 7.4 kernel. As shown already in multiple Phoronix benchmarks, AMD PerfOpt makes for a nice performance boost for AMD integrated graphics, especially for AI workloads...",
+    "tags": [
+      "Linux & Open Source",
+      "Phoronix",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>As anticipated, the AMD PerfOpt feature was picked up for the Linux 7.4 kernel. As shown already in multiple Phoronix benchmarks, AMD PerfOpt makes for a nice performance boost for AMD integrated graphics, especially for AI workloads...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.phoronix.com/news/Linux-7.4-IOMMU\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Phoronix &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "drupal-warns-of-critical-commerce-core-flaw-exploited-in-att",
+    "title": "Drupal warns of critical Commerce Core flaw exploited in attacks",
+    "category": "Cybersecurity",
+    "date": "October 30, 2026",
+    "isoDate": "2026-10-30",
+    "readTime": "2 min read",
+    "author": "BleepingComputer Editorial",
+    "source": "BleepingComputer",
+    "location": "New York City, New York, USA",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/drupal-warns-of-critical-commerce-core-flaw-exploited-in-attacks/",
+    "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    "featured": false,
+    "summary": "Drupal warned admins to patch a critical access bypass vulnerability in the Commerce Core module that attackers are exploiting in the wild. [...]",
+    "tags": [
+      "Cybersecurity",
+      "BleepingComputer",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>Drupal warned admins to patch a critical access bypass vulnerability in the Commerce Core module that attackers are exploiting in the wild. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/security/drupal-warns-of-critical-commerce-core-flaw-exploited-in-attacks/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "domestic-droid-gone-amok-don-t-worry-you-re-covered",
+    "title": "Domestic droid gone amok? Don't worry, you're covered",
+    "category": "AI & Hardware",
+    "date": "October 30, 2026",
+    "isoDate": "2026-10-30",
+    "readTime": "2 min read",
+    "author": "The Register Editorial",
+    "source": "The Register",
+    "location": "London, United Kingdom",
+    "sourceUrl": "https://www.theregister.com/ai-and-ml/2026/10/30/domestic-droid-gone-amok-dont-worry-youre-covered/5306396",
+    "imageUrl": "https://image.theregister.com/?imageId=260510&width=800",
+    "featured": false,
+    "summary": "Insurance firms look to insulate domestic humanoid robot owners against the inevitable chaos they will bring",
+    "tags": [
+      "AI & Hardware",
+      "The Register",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>Insurance firms look to insulate domestic humanoid robot owners against the inevitable chaos they will bring</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Register</em> in London, United Kingdom.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.theregister.com/ai-and-ml/2026/10/30/domestic-droid-gone-amok-dont-worry-youre-covered/5306396\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Register &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "apple-silicon-linux-driver-adapted-to-help-older-intel-power",
+    "title": "Apple Silicon Linux Driver Adapted To Help Older Intel-Powered Macs",
+    "category": "Linux & Open Source",
+    "date": "October 30, 2026",
+    "isoDate": "2026-10-30",
+    "readTime": "2 min read",
+    "author": "Phoronix Editorial",
+    "source": "Phoronix",
+    "location": "Chicago, Illinois, USA",
+    "sourceUrl": "https://www.phoronix.com/news/Linux-Patches-Intel-macsmc",
+    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80",
+    "featured": false,
+    "summary": "The Linux kernel's \"macsmc\" driver was developed for supporting the system management controller (SMC) on Apple Silicon Macs for supporting the light sensor, fan control, and other sensors. That macsmc driver now is seeing work to extend it for better supporting older Intel-powered Macs...",
+    "tags": [
+      "Linux & Open Source",
+      "Phoronix",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>The Linux kernel&#x27;s &quot;macsmc&quot; driver was developed for supporting the system management controller (SMC) on Apple Silicon Macs for supporting the light sensor, fan control, and other sensors. That macsmc driver now is seeing work to extend it for better supporting older Intel-powered Macs...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.phoronix.com/news/Linux-Patches-Intel-macsmc\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Phoronix &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "uk-shelly-reseller-warns-payment-data-stolen-after-malware-f",
+    "title": "UK Shelly reseller warns payment data stolen after malware found on website",
+    "category": "Cybersecurity",
+    "date": "October 30, 2026",
+    "isoDate": "2026-10-30",
+    "readTime": "2 min read",
+    "author": "The Register Editorial",
+    "source": "The Register",
+    "location": "London, United Kingdom",
+    "sourceUrl": "https://www.theregister.com/cyber-crime/2026/10/30/uk-shelly-reseller-warns-payment-data-stolen-after-malware-found-on-website/5306250",
+    "imageUrl": "https://image.theregister.com/?imageId=5304901&width=800",
+    "featured": false,
+    "summary": "Customer says they received fraudulent charges on their card hours before company notified them",
+    "tags": [
+      "Cybersecurity",
+      "The Register",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>Customer says they received fraudulent charges on their card hours before company notified them</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Register</em> in London, United Kingdom.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.theregister.com/cyber-crime/2026/10/30/uk-shelly-reseller-warns-payment-data-stolen-after-malware-found-on-website/5306250\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Register &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "binance-links-6-3-billion-crypto-theft-to-compromised-devops",
+    "title": "Binance links $6.3 billion crypto theft to compromised DevOps laptop",
+    "category": "Cloud & Enterprise IT",
+    "date": "October 30, 2026",
+    "isoDate": "2026-10-30",
+    "readTime": "2 min read",
+    "author": "BleepingComputer Editorial",
+    "source": "BleepingComputer",
+    "location": "New York City, New York, USA",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/",
+    "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "featured": false,
+    "summary": "Binance, the world's largest crypto exchange, has linked the theft of about $6.3 billion in cryptocurrency to a DevOps engineer's compromised laptop. [...]",
+    "tags": [
+      "Cloud & Enterprise IT",
+      "BleepingComputer",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>Binance, the world&#x27;s largest crypto exchange, has linked the theft of about $6.3 billion in cryptocurrency to a DevOps engineer&#x27;s compromised laptop. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/security/binance-links-63-billion-crypto-theft-to-compromised-devops-laptop/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "official-claude-code-extension-on-cursor-marketplace-trojani",
+    "title": "Official Claude Code Extension on Cursor Marketplace Trojanized with Persistent SSH Backdoor",
+    "category": "Networking & IT",
+    "date": "October 30, 2026",
+    "isoDate": "2026-10-30",
+    "readTime": "2 min read",
+    "author": "The Hacker News Editorial",
+    "source": "The Hacker News",
+    "location": "San Francisco, California, USA",
+    "sourceUrl": "https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMAV00lkxu7R724ItLdgrRsnEYHR_d2eUSdcen_KymGeBY1tCo8SRVz6w_XiNzzYgwpcl0Me3JCJz8DeieRM_0jb8aL4VkHAAIeXrqNf8oQkmzKahqMHOGvhkFK32HOasHZht8BwtI1NxEZ-_nIwmQY_8fxpGbbl3csC6oZKCVnIRk3iYTRhH975dyxsWS/s1600/cursor-vscode.jpg",
+    "featured": false,
+    "summary": "Cybersecurity researchers have disclosed that a trojanized version of Anthropic's official Claude Code extension was distributed through the Cursor Marketplace as a legitimate update, attempting to install a persistent SSH backdoor on affected systems. The malicious update, version 2.1.313, was distributed under the...",
+    "tags": [
+      "Networking & IT",
+      "The Hacker News",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>Cybersecurity researchers have disclosed that a trojanized version of Anthropic&#x27;s official Claude Code extension was distributed through the Cursor Marketplace as a legitimate update, attempting to install a persistent SSH backdoor on affected systems. The malicious update, version 2.1.313, was distributed under the...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://thehackernews.com/2026/10/official-claude-code-vs-code-extension.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Hacker News &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "google-s-search-revenue-ferrari-hits-an-ai-powered-speed-bum",
+    "title": "Google's search revenue Ferrari hits an AI-powered speed bump",
+    "category": "AI & Hardware",
+    "date": "October 30, 2026",
+    "isoDate": "2026-10-30",
+    "readTime": "2 min read",
+    "author": "The Register Editorial",
+    "source": "The Register",
+    "location": "London, United Kingdom",
+    "sourceUrl": "https://www.theregister.com/ai-and-ml/2026/10/30/googles-search-revenue-ferrari-hits-an-ai-powered-speed-bump/5306520",
+    "imageUrl": "https://image.theregister.com/?imageId=5306524&width=800",
+    "featured": false,
+    "summary": "Just wait 'til we add more AI and this thing'll really fly",
+    "tags": [
+      "AI & Hardware",
+      "The Register",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>Just wait &#x27;til we add more AI and this thing&#x27;ll really fly</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Register</em> in London, United Kingdom.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.theregister.com/ai-and-ml/2026/10/30/googles-search-revenue-ferrari-hits-an-ai-powered-speed-bump/5306520\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Register &rarr;\n                    </a>\n                  </div>\n                "
   },
   {
     "id": "openai-doubles-chatgpt-pro-usage-limits-after-backlash-over-",
@@ -50,279 +323,6 @@ const NEWS_DATA = [
       "IT Intelligence"
     ],
     "content": "\n                  <p>OpenAI says it won&#x27;t reduce usage limits for the $100, $200, and $500 ChatGPT Pro plans, as well as Business Premium, and it also promised to keep Dots usage independent. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/artificial-intelligence/openai-doubles-chatgpt-pro-usage-limits-after-backlash-over-planned-50-percent-cut/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "researchers-find-bugs-in-5-ai-developer-tools-with-openai-an",
-    "title": "Researchers find bugs in 5 AI developer tools, with OpenAI and Microsoft flaws still unpatched",
-    "category": "Cloud & Enterprise IT",
-    "date": "October 29, 2026",
-    "isoDate": "2026-10-29",
-    "readTime": "2 min read",
-    "author": "The Register Editorial",
-    "source": "The Register",
-    "location": "London, United Kingdom",
-    "sourceUrl": "https://www.theregister.com/security/2026/10/29/researchers-find-bugs-in-5-ai-developer-tools-with-openai-and-microsoft-flaws-still-unpatched/5306508",
-    "imageUrl": "https://image.theregister.com/?imageId=5306527&width=800",
-    "featured": false,
-    "summary": "Embedded browsers are at the heart of the problem",
-    "tags": [
-      "Cloud & Enterprise IT",
-      "The Register",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Embedded browsers are at the heart of the problem</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Register</em> in London, United Kingdom.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.theregister.com/security/2026/10/29/researchers-find-bugs-in-5-ai-developer-tools-with-openai-and-microsoft-flaws-still-unpatched/5306508\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Register &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "binance-probes-potential-5-8-billion-crypto-theft-hack",
-    "title": "Binance probes potential $5.8 billion crypto-theft hack",
-    "category": "Cybersecurity",
-    "date": "October 29, 2026",
-    "isoDate": "2026-10-29",
-    "readTime": "2 min read",
-    "author": "BleepingComputer Editorial",
-    "source": "BleepingComputer",
-    "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack/",
-    "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-    "featured": false,
-    "summary": "Cryptocurrency exchange Binance is investigating a potential security breach involving up to $5.8 billion in digital assets, in what could become the largest cryptocurrency hack in history. [...]",
-    "tags": [
-      "Cybersecurity",
-      "BleepingComputer",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Cryptocurrency exchange Binance is investigating a potential security breach involving up to $5.8 billion in digital assets, in what could become the largest cryptocurrency hack in history. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/security/binance-probes-potential-58-billion-crypto-theft-hack/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "hugging-face-malware-campaign-returns-to-hijack-gpus-for-cry",
-    "title": "Hugging Face malware campaign returns to hijack GPUs for crypto mining",
-    "category": "Cybersecurity",
-    "date": "October 29, 2026",
-    "isoDate": "2026-10-29",
-    "readTime": "2 min read",
-    "author": "BleepingComputer Editorial",
-    "source": "BleepingComputer",
-    "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/",
-    "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-    "featured": false,
-    "summary": "A crypto-mining campaign abusing Hugging Face models returned days after takedown, hijacking GPU servers and planting backdoors, with one model downloaded over 28,000 times. Separately, a fake Solana starter kit on GitHub is positioned to trick AI coding agents into installing a NetSupport RAT. [...]",
-    "tags": [
-      "Cybersecurity",
-      "BleepingComputer",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>A crypto-mining campaign abusing Hugging Face models returned days after takedown, hijacking GPU servers and planting backdoors, with one model downloaded over 28,000 times. Separately, a fake Solana starter kit on GitHub is positioned to trick AI coding agents into installing a NetSupport RAT. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/security/hugging-face-malware-campaign-returns-to-hijack-gpus-for-crypto-mining/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "japan-airlines-suffers-third-party-data-breach-exposing-pass",
-    "title": "Japan Airlines suffers third-party data breach exposing passenger info",
-    "category": "Cybersecurity",
-    "date": "October 29, 2026",
-    "isoDate": "2026-10-29",
-    "readTime": "2 min read",
-    "author": "BleepingComputer Editorial",
-    "source": "BleepingComputer",
-    "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/",
-    "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-    "featured": false,
-    "summary": "Japan Airlines (JAL) has announced that a data breach at Amadeus's Passenger Service System exposed the data of about 92,000 customers. [...]",
-    "tags": [
-      "Cybersecurity",
-      "BleepingComputer",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Japan Airlines (JAL) has announced that a data breach at Amadeus&#x27;s Passenger Service System exposed the data of about 92,000 customers. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/security/japan-airlines-suffers-third-party-data-breach-exposing-passenger-info/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "fedora-linux-45-shipping-next-week-on-3-november",
-    "title": "Fedora Linux 45 Shipping Next Week On 3 November",
-    "category": "Linux & Open Source",
-    "date": "October 29, 2026",
-    "isoDate": "2026-10-29",
-    "readTime": "2 min read",
-    "author": "Phoronix Editorial",
-    "source": "Phoronix",
-    "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/Fedora-45-Ships-Next-Week",
-    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80",
-    "featured": false,
-    "summary": "Fedora 45 is ready to ship! It will be formally released on Tuesday, 3 November...",
-    "tags": [
-      "Linux & Open Source",
-      "Phoronix",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Fedora 45 is ready to ship! It will be formally released on Tuesday, 3 November...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.phoronix.com/news/Fedora-45-Ships-Next-Week\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Phoronix &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "howler-will-have-ai-answer-your-questions-then-burn-the-chat",
-    "title": "Howler will have AI answer your questions, then burn the chat",
-    "category": "AI & Hardware",
-    "date": "October 29, 2026",
-    "isoDate": "2026-10-29",
-    "readTime": "2 min read",
-    "author": "The Register Editorial",
-    "source": "The Register",
-    "location": "London, United Kingdom",
-    "sourceUrl": "https://www.theregister.com/offbeat/2026/10/29/howler-will-have-ai-answer-your-questions-then-burn-the-chat/5306484",
-    "imageUrl": "https://image.theregister.com/?imageId=202306&width=800",
-    "featured": false,
-    "summary": "Ask AI dumb things and leave no local chat history, all with the style of a kids' fantasy novel \u2013 or rather, one of its magical letters",
-    "tags": [
-      "AI & Hardware",
-      "The Register",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Ask AI dumb things and leave no local chat history, all with the style of a kids&#x27; fantasy novel \u2013 or rather, one of its magical letters</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Register</em> in London, United Kingdom.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.theregister.com/offbeat/2026/10/29/howler-will-have-ai-answer-your-questions-then-burn-the-chat/5306484\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Register &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "startup-wants-to-make-ai-agents-safe-for-devops-duty",
-    "title": "Startup wants to make AI agents safe for DevOps duty",
-    "category": "Cloud & Enterprise IT",
-    "date": "October 29, 2026",
-    "isoDate": "2026-10-29",
-    "readTime": "2 min read",
-    "author": "The Register Editorial",
-    "source": "The Register",
-    "location": "London, United Kingdom",
-    "sourceUrl": "https://www.theregister.com/ai-and-ml/2026/10/29/startup-wants-to-make-ai-agents-safe-for-devops-duty/5306477",
-    "imageUrl": "https://image.theregister.com/?imageId=5306496&width=800",
-    "featured": false,
-    "summary": "Infrastructure automation needs something better than prompt and pray",
-    "tags": [
-      "Cloud & Enterprise IT",
-      "The Register",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Infrastructure automation needs something better than prompt and pray</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Register</em> in London, United Kingdom.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.theregister.com/ai-and-ml/2026/10/29/startup-wants-to-make-ai-agents-safe-for-devops-duty/5306477\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Register &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "topcoat-enables-rust-to-render-server-side-web-apps",
-    "title": "Topcoat enables Rust to render server-side web apps",
-    "category": "Cloud & Enterprise IT",
-    "date": "October 29, 2026",
-    "isoDate": "2026-10-29",
-    "readTime": "2 min read",
-    "author": "The Register Editorial",
-    "source": "The Register",
-    "location": "London, United Kingdom",
-    "sourceUrl": "https://www.theregister.com/devops/2026/10/29/topcoat-enables-rust-to-render-server-side-web-apps/5306470",
-    "imageUrl": "https://image.theregister.com/?imageId=5306474&width=800",
-    "featured": false,
-    "summary": "Rust guru rejiggers web app reactivity for potentially speedier page loading",
-    "tags": [
-      "Cloud & Enterprise IT",
-      "The Register",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Rust guru rejiggers web app reactivity for potentially speedier page loading</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Register</em> in London, United Kingdom.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.theregister.com/devops/2026/10/29/topcoat-enables-rust-to-render-server-side-web-apps/5306470\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Register &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "threatsday-critical-firewall-flaws-banking-trojans-rented-we",
-    "title": "ThreatsDay: Critical Firewall Flaws, Banking Trojans Rented, Weaponized PDF, Token Theft + 26 More Stories",
-    "category": "Cybersecurity",
-    "date": "October 30, 2026",
-    "isoDate": "2026-10-30",
-    "readTime": "2 min read",
-    "author": "The Hacker News Editorial",
-    "source": "The Hacker News",
-    "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjoNTh5CKLvFJeeXzWn1LVT-e9435oFtUz4jT-4TmZaWkRUY_RY8EAtijUWxQztoK3K_tU_csSw54MuVeX8UzeT6ZWNLtTMex5pMS4z4Npz-aYAN9qIfWk2bUsei5nswh3UkzycVlKznVjK7n1I_knJ-p1I59RoX_TECTfr-NPej9LWoDt2UuwvLY4heSip/s1600/t-day.jpg",
-    "featured": false,
-    "summary": "Some attacks take real skill. Others just need someone to leave a door open. This week has both. Exposed passwords, old bugs still getting exploited, and trusted software doing things it shouldn't. There's a strange mix of clever tricks and careless mistakes. Hackers are borrowing trust from familiar apps, websites,...",
-    "tags": [
-      "Cybersecurity",
-      "The Hacker News",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Some attacks take real skill. Others just need someone to leave a door open. This week has both. Exposed passwords, old bugs still getting exploited, and trusted software doing things it shouldn&#x27;t. There&#x27;s a strange mix of clever tricks and careless mistakes. Hackers are borrowing trust from familiar apps, websites,...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://thehackernews.com/2026/10/threatsday-critical-firewall-flaws.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Hacker News &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "f2fs-adds-opt-in-multi-grain-timestamps-with-linux-7-4-other",
-    "title": "F2FS Adds Opt-In Multi-Grain Timestamps With Linux 7.4, Other Improvements",
-    "category": "Linux & Open Source",
-    "date": "October 29, 2026",
-    "isoDate": "2026-10-29",
-    "readTime": "2 min read",
-    "author": "Phoronix Editorial",
-    "source": "Phoronix",
-    "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/F2FS-Linux-7.4",
-    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80",
-    "featured": false,
-    "summary": "The F2FS (Flash Friendly File-System) improvements have been merged for Linux 7.4 to further enhance this flash-optimized solution...",
-    "tags": [
-      "Linux & Open Source",
-      "Phoronix",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>The F2FS (Flash Friendly File-System) improvements have been merged for Linux 7.4 to further enhance this flash-optimized solution...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.phoronix.com/news/F2FS-Linux-7.4\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Phoronix &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "linux-kernel-tcp-flaw-with-9-8-cvss-score-affects-ubuntu-red",
-    "title": "Linux Kernel TCP Flaw With 9.8 CVSS Score Affects Ubuntu, Red Hat and Other Distributions",
-    "category": "Linux & Open Source",
-    "date": "October 29, 2026",
-    "isoDate": "2026-10-29",
-    "readTime": "2 min read",
-    "author": "The Hacker News Editorial",
-    "source": "The Hacker News",
-    "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgfCJ0ttE8v4hkDjJRqbTvxlxFcoNtFJhbYCQ-o8NtaiyFLImEyA8aSO967eeZG9fRebhc8oVA-OloE9X9KVVAxM-H3wKvUlh8XmN6bGlEz2IJwMgcssmA7yIRi7YNOwVQYD6nhQCaWUg6fPy-QXVjfw6rV55LueKlLvZLazjKjTL94KJMMUZ2uZ3R019Km/s1600/linux-flaw.jpg",
-    "featured": false,
-    "summary": "A flaw in the Linux kernel's TCP code, tracked as CVE-2026-98432, affects Ubuntu, Red Hat Enterprise Linux (RHEL), and other Linux distributions. The kernel's own CVE team rates it 9.8 out of 10 on the CVSS scale. Anthropic said on October 27 that its AI model wrote an exploit that uses the flaw to let a remote atta...",
-    "tags": [
-      "Linux & Open Source",
-      "The Hacker News",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>A flaw in the Linux kernel&#x27;s TCP code, tracked as CVE-2026-98432, affects Ubuntu, Red Hat Enterprise Linux (RHEL), and other Linux distributions. The kernel&#x27;s own CVE team rates it 9.8 out of 10 on the CVSS scale. Anthropic said on October 27 that its AI model wrote an exploit that uses the flaw to let a remote atta...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://thehackernews.com/2026/10/linux-kernel-tcp-flaw-with-98-cvss.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Hacker News &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "fake-chatgpt-and-claude-apps-abuse-signed-executables-to-dep",
-    "title": "Fake ChatGPT and Claude Apps Abuse Signed Executables to Deploy Crypto Miners",
-    "category": "AI & Hardware",
-    "date": "October 29, 2026",
-    "isoDate": "2026-10-29",
-    "readTime": "2 min read",
-    "author": "The Hacker News Editorial",
-    "source": "The Hacker News",
-    "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/10/fake-chatgpt-and-claude-apps-abuse.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1ij0gwe-L1jDZxdoUPZ6hpSJnJgMHh2bG8bFF2y8y-dJA9nY0Fr2JOU2i4NaCetGqvTZOtvaRXbZONR6d8ajjMR6DNm_X7OwaVCiH7dPycEN9xGI0psNvPYbwDhpGmUQ4Qyhp5x9fqQ_sgzjcReslK-a-gRS3kFr5_JOns1kkuC6UheDHVb2yaV8EAhIF/s1600/claude-hack.jpg",
-    "featured": false,
-    "summary": "Threat actors are delivering malicious loaders and cryptocurrency miners under the guise of artificial intelligence (AI) desktop applications for Anthropic Claude and OpenAI ChatGPT as part of a campaign dubbed Yoba. The activity involves creating fake GitHub projects that claim to be desktop applications like GPT-5...",
-    "tags": [
-      "AI & Hardware",
-      "The Hacker News",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Threat actors are delivering malicious loaders and cryptocurrency miners under the guise of artificial intelligence (AI) desktop applications for Anthropic Claude and OpenAI ChatGPT as part of a campaign dubbed Yoba. The activity involves creating fake GitHub projects that claim to be desktop applications like GPT-5...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://thehackernews.com/2026/10/fake-chatgpt-and-claude-apps-abuse.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Hacker News &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "google-s-gemini-4-carbon-leads-benchmarks-for-finding-exploi",
-    "title": "Google's Gemini 4 Carbon Leads Benchmarks for Finding, Exploiting, and Patching Vulnerabilities",
-    "category": "Cybersecurity",
-    "date": "October 29, 2026",
-    "isoDate": "2026-10-29",
-    "readTime": "2 min read",
-    "author": "The Hacker News Editorial",
-    "source": "The Hacker News",
-    "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/10/googles-gemini-4-carbon-leads.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBMb78BxIXnGaXFzCXPdswdQZsuh8rz63Y22pLX3cOkgRgaPv3KJgw6fRULDT3am1YO4eA1obnh0aOdxZy4KVZMww8sxNOtxzZXYcouotzbB25LVdJrCeDk0MQsgCmsYQBAaGdwyhmiMNa2Y90ujuXFXZPLTIrOo1PB6vtWqWAXygOvM72cEmXvHTN9Ktw/s1600/google-gemini.jpg",
-    "featured": false,
-    "summary": "Google on Wednesday took the wraps off Gemini 4 Carbon, its latest frontier model with state-of-the-art cybersecurity and long-horizon capabilities. \"It shows significant gains across coding and agentic tasks as well as across key capabilities critical for cybersecurity defense, landing a firm lead in SEC-bench Pro ...",
-    "tags": [
-      "Cybersecurity",
-      "The Hacker News",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Google on Wednesday took the wraps off Gemini 4 Carbon, its latest frontier model with state-of-the-art cybersecurity and long-horizon capabilities. &quot;It shows significant gains across coding and agentic tasks as well as across key capabilities critical for cybersecurity defense, landing a firm lead in SEC-bench Pro ...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://thehackernews.com/2026/10/googles-gemini-4-carbon-leads.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Hacker News &rarr;\n                    </a>\n                  </div>\n                "
   }
 ];
 
