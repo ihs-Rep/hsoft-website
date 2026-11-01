@@ -5,13 +5,13 @@
  * - Cloud, Enterprise IT & Networking (The Register, Ars Technica)
  * - Linux, Kernel & Open Source (Phoronix)
  * 
- * Last Automated Sync: October 31, 2026 12:36:54 UTC
+ * Last Automated Sync: November 01, 2026 00:44:14 UTC
  */
 
 const NEWS_DATA = [
   {
-    "id": "new-linux-7-4-feature-for-reducing-ai-noise-already-reverted",
-    "title": "New Linux 7.4 Feature For Reducing AI Noise Already Reverted Due To A \"Crazy Beast\"",
+    "id": "brief-server-downtime-expected-tonight",
+    "title": "Brief Server Downtime Expected Tonight",
     "category": "Linux & Open Source",
     "date": "October 31, 2026",
     "isoDate": "2026-10-31",
@@ -19,16 +19,163 @@ const NEWS_DATA = [
     "author": "Phoronix Editorial",
     "source": "Phoronix",
     "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/Linux-7.4-Drops-Taint-Bind",
+    "sourceUrl": "https://www.phoronix.com/news/RAID-Drive-Replacement-Tonight",
     "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80",
     "featured": true,
-    "summary": "A new feature merged last week for Linux 7.4 to help reduce AI/LLM generated noise from invalid/irrelevant testing configurations is now reverted due to a \"crazy beast\" in the VFIO subsystem...",
+    "summary": "Just a friendly heads up that Phoronix.com and associated sites will be down briefly at around midnight PST / 3AM EST on 1 November for a failed drive in the NVMe SSD RAID array...",
     "tags": [
       "Linux & Open Source",
       "Phoronix",
       "IT Intelligence"
     ],
-    "content": "\n                  <p>A new feature merged last week for Linux 7.4 to help reduce AI/LLM generated noise from invalid/irrelevant testing configurations is now reverted due to a &quot;crazy beast&quot; in the VFIO subsystem...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.phoronix.com/news/Linux-7.4-Drops-Taint-Bind\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Phoronix &rarr;\n                    </a>\n                  </div>\n                "
+    "content": "\n                  <p>Just a friendly heads up that Phoronix.com and associated sites will be down briefly at around midnight PST / 3AM EST on 1 November for a failed drive in the NVMe SSD RAID array...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.phoronix.com/news/RAID-Drive-Replacement-Tonight\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Phoronix &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "openshot-4-1-released-with-auto-optimize-cli-automation-arm6",
+    "title": "OpenShot 4.1 Released With Auto-Optimize, CLI Automation & ARM64 Linux Builds",
+    "category": "Linux & Open Source",
+    "date": "October 31, 2026",
+    "isoDate": "2026-10-31",
+    "readTime": "2 min read",
+    "author": "Phoronix Editorial",
+    "source": "Phoronix",
+    "location": "Chicago, Illinois, USA",
+    "sourceUrl": "https://www.phoronix.com/news/OpenShot-4.1-Released",
+    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80",
+    "featured": false,
+    "summary": "OpenShot is closing out the month of October by releasing OpenShot 4.1 as the latest major feature release for this useful open-source video editing solution...",
+    "tags": [
+      "Linux & Open Source",
+      "Phoronix",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>OpenShot is closing out the month of October by releasing OpenShot 4.1 as the latest major feature release for this useful open-source video editing solution...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.phoronix.com/news/OpenShot-4.1-Released\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Phoronix &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "northflank-security-breach-leads-to-abuse-of-customers-ai-ap",
+    "title": "Northflank security breach leads to abuse of customers' AI API keys",
+    "category": "Cybersecurity",
+    "date": "October 31, 2026",
+    "isoDate": "2026-10-31",
+    "readTime": "2 min read",
+    "author": "BleepingComputer Editorial",
+    "source": "BleepingComputer",
+    "location": "New York City, New York, USA",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+    "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    "featured": false,
+    "summary": "Cloud application hosting platform Northflank is warning customers to rotate all credentials and secrets stored on its platform after a security breach led to unauthorized use of customers' AI API keys. [...]",
+    "tags": [
+      "Cybersecurity",
+      "BleepingComputer",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>Cloud application hosting platform Northflank is warning customers to rotate all credentials and secrets stored on its platform after a security breach led to unauthorized use of customers&#x27; AI API keys. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "google-s-ai-satellite-sends-a-very-expensive-haiku-to-earth",
+    "title": "Google's AI satellite sends a very expensive haiku to Earth",
+    "category": "Cloud & Enterprise IT",
+    "date": "October 31, 2026",
+    "isoDate": "2026-10-31",
+    "readTime": "2 min read",
+    "author": "The Register Editorial",
+    "source": "The Register",
+    "location": "London, United Kingdom",
+    "sourceUrl": "https://www.theregister.com/ai-and-ml/2026/10/31/googles-ai-satellite-sends-a-very-expensive-haiku-to-earth/5306818",
+    "imageUrl": "https://image.theregister.com/?imageId=5306822&width=800",
+    "featured": false,
+    "summary": "Experimental orbital datacenter prototype puts its TPU to work producing poetry",
+    "tags": [
+      "Cloud & Enterprise IT",
+      "The Register",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>Experimental orbital datacenter prototype puts its TPU to work producing poetry</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Register</em> in London, United Kingdom.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.theregister.com/ai-and-ml/2026/10/31/googles-ai-satellite-sends-a-very-expensive-haiku-to-earth/5306818\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Register &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "new-android-sms-of-death-exploit-can-remotely-crash-unpatche",
+    "title": "New Android SMS of Death exploit can remotely crash unpatched phones",
+    "category": "Cybersecurity",
+    "date": "October 31, 2026",
+    "isoDate": "2026-10-31",
+    "readTime": "2 min read",
+    "author": "BleepingComputer Editorial",
+    "source": "BleepingComputer",
+    "location": "New York City, New York, USA",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/",
+    "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    "featured": false,
+    "summary": "A security researcher has released a proof-of-concept exploit for a recently patched Android vulnerability, dubbed \"SMS of Death\" and tracked as CVE-2026-58882, that lets attackers remotely disrupt cellular service or crash phones by sending a specially crafted text message. [...]",
+    "tags": [
+      "Cybersecurity",
+      "BleepingComputer",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>A security researcher has released a proof-of-concept exploit for a recently patched Android vulnerability, dubbed &quot;SMS of Death&quot; and tracked as CVE-2026-58882, that lets attackers remotely disrupt cellular service or crash phones by sending a specially crafted text message. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/security/new-android-sms-of-death-exploit-can-remotely-crash-unpatched-phones/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "enlightenment-0-28-released-with-many-improvements",
+    "title": "Enlightenment 0.28 Released With Many Improvements",
+    "category": "Linux & Open Source",
+    "date": "October 31, 2026",
+    "isoDate": "2026-10-31",
+    "readTime": "2 min read",
+    "author": "Phoronix Editorial",
+    "source": "Phoronix",
+    "location": "Chicago, Illinois, USA",
+    "sourceUrl": "https://www.phoronix.com/news/Enlightenment-0.28",
+    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80",
+    "featured": false,
+    "summary": "Enlightenment 0.27 released at the beginning of 2025 and since then there's been no major feature update, falling off their roughly 12 month release cadence. But out this Halloween is Enlightenment 0.28 now with the better part of two years worth of changes...",
+    "tags": [
+      "Linux & Open Source",
+      "Phoronix",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>Enlightenment 0.27 released at the beginning of 2025 and since then there&#x27;s been no major feature update, falling off their roughly 12 month release cadence. But out this Halloween is Enlightenment 0.28 now with the better part of two years worth of changes...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.phoronix.com/news/Enlightenment-0.28\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Phoronix &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "reddit-to-lock-content-behind-logins-to-fight-scrapers",
+    "title": "Reddit to lock content behind logins to fight scrapers",
+    "category": "Cybersecurity",
+    "date": "October 31, 2026",
+    "isoDate": "2026-10-31",
+    "readTime": "2 min read",
+    "author": "BleepingComputer Editorial",
+    "source": "BleepingComputer",
+    "location": "New York City, New York, USA",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/reddit-to-lock-content-behind-logins-to-fight-scrapers/",
+    "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    "featured": false,
+    "summary": "Reddit announced in a post by co-founder Steve Huffman that the site will gradually become a \"logged-in service,\" offering limited access to visitors without accounts. [...]",
+    "tags": [
+      "Cybersecurity",
+      "BleepingComputer",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>Reddit announced in a post by co-founder Steve Huffman that the site will gradually become a &quot;logged-in service,&quot; offering limited access to visitors without accounts. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/security/reddit-to-lock-content-behind-logins-to-fight-scrapers/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
+  },
+  {
+    "id": "from-beginner-to-bug-hunter-learning-cybersecurity-in-the-ai",
+    "title": "From Beginner to Bug Hunter: Learning Cybersecurity in the AI Era.",
+    "category": "Cybersecurity",
+    "date": "October 31, 2026",
+    "isoDate": "2026-10-31",
+    "readTime": "2 min read",
+    "author": "BleepingComputer Editorial",
+    "source": "BleepingComputer",
+    "location": "New York City, New York, USA",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/from-beginner-to-bug-hunter-learning-cybersecurity-in-the-ai-era/",
+    "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
+    "featured": false,
+    "summary": "AI-generated vulnerability reports are overwhelming some bug bounty programs, making it harder for aspiring security researchers to know where to start. TryHackMe explains how beginners can build practical cybersecurity skills, use AI responsibly, and produce reproducible findings that stand up to scrutiny. [...]",
+    "tags": [
+      "Cybersecurity",
+      "BleepingComputer",
+      "IT Intelligence"
+    ],
+    "content": "\n                  <p>AI-generated vulnerability reports are overwhelming some bug bounty programs, making it harder for aspiring security researchers to know where to start. TryHackMe explains how beginners can build practical cybersecurity skills, use AI responsibly, and produce reproducible findings that stand up to scrutiny. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/security/from-beginner-to-bug-hunter-learning-cybersecurity-in-the-ai-era/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
   },
   {
     "id": "chainalysis-confirms-intrusion-into-internal-tools-and-expos",
@@ -94,48 +241,6 @@ const NEWS_DATA = [
     "content": "\n                  <p>A lot of software engineers feel bleak about the future of the profession</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Register</em> in London, United Kingdom.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.theregister.com/ai-and-ml/2026/10/31/amazon-sends-chills-through-its-workforce-with-mixed-message-memo-about-ai-use-corey-quinn/5306804\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Register &rarr;\n                    </a>\n                  </div>\n                "
   },
   {
-    "id": "kde-plasma-6-9-lands-some-new-performance-optimizations",
-    "title": "KDE Plasma 6.9 Lands Some New Performance Optimizations",
-    "category": "Linux & Open Source",
-    "date": "October 31, 2026",
-    "isoDate": "2026-10-31",
-    "readTime": "2 min read",
-    "author": "Phoronix Editorial",
-    "source": "Phoronix",
-    "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/KDE-Plasma-6.9-More-Performance",
-    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80",
-    "featured": false,
-    "summary": "I love a good performance optimization and there are several this week in the KDE space with Plasma 6.9 development heating up...",
-    "tags": [
-      "Linux & Open Source",
-      "Phoronix",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>I love a good performance optimization and there are several this week in the KDE space with Plasma 6.9 development heating up...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.phoronix.com/news/KDE-Plasma-6.9-More-Performance\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Phoronix &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "ceph-in-linux-7-4-adds-global-mount-option-for-lazy-i-o",
-    "title": "Ceph In Linux 7.4 Adds Global Mount Option For Lazy I/O",
-    "category": "Linux & Open Source",
-    "date": "October 31, 2026",
-    "isoDate": "2026-10-31",
-    "readTime": "2 min read",
-    "author": "Phoronix Editorial",
-    "source": "Phoronix",
-    "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/Linux-7.4-Ceph",
-    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80",
-    "featured": false,
-    "summary": "The Ceph kernel client changes have been submitted for Linux 7.4 ahead of its merge window expected to wrap up on Sunday...",
-    "tags": [
-      "Linux & Open Source",
-      "Phoronix",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>The Ceph kernel client changes have been submitted for Linux 7.4 ahead of its merge window expected to wrap up on Sunday...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.phoronix.com/news/Linux-7.4-Ceph\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Phoronix &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
     "id": "chocolate-caterpillar-or-chocolate-teapot-top-up-the-disk-sp",
     "title": "Chocolate Caterpillar or Chocolate Teapot? Top up the disk space for Windows 10 to find out",
     "category": "Windows & Systems",
@@ -178,27 +283,6 @@ const NEWS_DATA = [
     "content": "\n                  <p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two security flaws impacting Ivanti Connect Secure (ICS) to its Known Exploited Vulnerabilities (KEV) catalog, following active exploitation in the wild. The vulnerabilities are listed below - CVE-2026-111357 (CVSS score: 8.8) - A missi...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Hacker News &rarr;\n                    </a>\n                  </div>\n                "
   },
   {
-    "id": "backbone-of-a-beast-charting-nvidia-s-rise-to-networking-tit",
-    "title": "Backbone of a beast \u2013 charting Nvidia's rise to networking titan",
-    "category": "AI & Hardware",
-    "date": "October 31, 2026",
-    "isoDate": "2026-10-31",
-    "readTime": "2 min read",
-    "author": "The Register Editorial",
-    "source": "The Register",
-    "location": "London, United Kingdom",
-    "sourceUrl": "https://www.theregister.com/networks/2026/10/31/backbone-of-a-beast-charting-nvidias-rise-to-networking-titan/5306499",
-    "imageUrl": "https://image.theregister.com/?imageId=116063&width=800",
-    "featured": false,
-    "summary": "How a $6.9B bet on Mellanox made Nvidia bigger than Cisco, and the world's most valuable company to boot",
-    "tags": [
-      "AI & Hardware",
-      "The Register",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>How a $6.9B bet on Mellanox made Nvidia bigger than Cisco, and the world&#x27;s most valuable company to boot</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Register</em> in London, United Kingdom.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.theregister.com/networks/2026/10/31/backbone-of-a-beast-charting-nvidias-rise-to-networking-titan/5306499\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Register &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
     "id": "a-shared-chatgpt-link-could-run-attacker-code-in-your-sessio",
     "title": "A Shared ChatGPT Link Could Run Attacker Code in Your Session and Read Private Chats",
     "category": "AI & Hardware",
@@ -239,90 +323,6 @@ const NEWS_DATA = [
       "IT Intelligence"
     ],
     "content": "\n                  <p>Threat actors are launching about 8,226 network-layer distributed denial-of-service (DDoS) attacks per hour, Cloudflare revealed Thursday. The web infrastructure and security company said it autonomously mitigated 18.2 million network-layer (L3) DDoS attacks and 14.4 trillion HTTP DDoS requests in the third quarter ...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://thehackernews.com/2026/10/cloudflare-reports-182-million-network.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Hacker News &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-",
-    "title": "Anthropic VS code extension on Cursor backdoored for nearly 12 hours",
-    "category": "Networking & IT",
-    "date": "October 30, 2026",
-    "isoDate": "2026-10-30",
-    "readTime": "2 min read",
-    "author": "Ars Technica IT Editorial",
-    "source": "Ars Technica IT",
-    "location": "Boston, Massachusetts, USA",
-    "sourceUrl": "https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/",
-    "imageUrl": "https://cdn.arstechnica.net/wp-content/uploads/2022/05/caution-tape-1000x648.jpeg",
-    "featured": false,
-    "summary": "It's still unknown how attackers got access to Anthropic's verified Cursor account.",
-    "tags": [
-      "Networking & IT",
-      "Ars Technica IT",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>It&#x27;s still unknown how attackers got access to Anthropic&#x27;s verified Cursor account.</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Ars Technica IT</em> in Boston, Massachusetts, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://arstechnica.com/security/2026/10/anthropic-vs-code-extension-on-cursor-backdoored-for-nearly-12-hours/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Ars Technica IT &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "critical-linux-kernel-flaw-allows-remote-root-attacks-on-mpt",
-    "title": "Critical Linux kernel flaw allows remote root attacks on MPTCP servers",
-    "category": "Linux & Open Source",
-    "date": "October 30, 2026",
-    "isoDate": "2026-10-30",
-    "readTime": "2 min read",
-    "author": "BleepingComputer Editorial",
-    "source": "BleepingComputer",
-    "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/",
-    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80",
-    "featured": false,
-    "summary": "Security researchers at Anthropic have developed an exploit for a critical Linux kernel vulnerability that allows unauthenticated attackers to remotely execute commands as root on servers running Multipath TCP (MPTCP) listeners. [...]",
-    "tags": [
-      "Linux & Open Source",
-      "BleepingComputer",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Security researchers at Anthropic have developed an exploit for a critical Linux kernel vulnerability that allows unauthenticated attackers to remotely execute commands as root on servers running Multipath TCP (MPTCP) listeners. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/security/critical-linux-kernel-flaw-allows-remote-root-attacks-on-mptcp-servers/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "trezor-warns-of-suspected-crypto-theft-implant-in-hardware-w",
-    "title": "Trezor warns of suspected crypto-theft implant in hardware wallet",
-    "category": "Cybersecurity",
-    "date": "October 30, 2026",
-    "isoDate": "2026-10-30",
-    "readTime": "2 min read",
-    "author": "BleepingComputer Editorial",
-    "source": "BleepingComputer",
-    "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/",
-    "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-    "featured": false,
-    "summary": "Hardware wallet device maker Trezor has received credible reports about a suspected hardware crypto-theft implant in a Trezor Safe 5 sold by its reseller CryptoBilis in Southeast Asia. [...]",
-    "tags": [
-      "Cybersecurity",
-      "BleepingComputer",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Hardware wallet device maker Trezor has received credible reports about a suspected hardware crypto-theft implant in a Trezor Safe 5 sold by its reseller CryptoBilis in Southeast Asia. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/security/trezor-warns-of-suspected-crypto-theft-implant-in-hardware-wallet/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "malicious-claude-code-extension-on-cursor-planted-ssh-backdo",
-    "title": "Malicious Claude Code extension on Cursor planted SSH backdoors",
-    "category": "Cybersecurity",
-    "date": "October 30, 2026",
-    "isoDate": "2026-10-30",
-    "readTime": "2 min read",
-    "author": "BleepingComputer Editorial",
-    "source": "BleepingComputer",
-    "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/",
-    "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-    "featured": false,
-    "summary": "A malicious version of Anthropic's Claude Code VS Code extension was distributed through Cursor's extension marketplace for approximately 11 hours on October 29, exposing up to 5,000 developers to malware designed to install persistent SSH backdoors. [...]",
-    "tags": [
-      "Cybersecurity",
-      "BleepingComputer",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>A malicious version of Anthropic&#x27;s Claude Code VS Code extension was distributed through Cursor&#x27;s extension marketplace for approximately 11 hours on October 29, exposing up to 5,000 developers to malware designed to install persistent SSH backdoors. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
   }
 ];
 
