@@ -14,7 +14,8 @@
 
 export async function onRequestGet(context) {
   const url = new URL(context.request.url);
-  const toolId = (url.searchParams.get("tool") || "adobe-blocker").toLowerCase().trim();
+  let toolId = (url.searchParams.get("tool") || "firewall-blocker").toLowerCase().trim();
+  if (toolId === "adobe-blocker") toolId = "firewall-blocker";
 
   const headers = {
     "Content-Type": "application/json",
@@ -34,7 +35,17 @@ export async function onRequestGet(context) {
   }
 
   try {
-    const data = await kv.get(`stats_${toolId}`, "json") || { downloads: 0, reviews: [] };
+    let data = await kv.get(`stats_${toolId}`, "json");
+    // Seamless legacy migration: if firewall-blocker is uninitialized, inherit from adobe-blocker
+    if (!data || (data.downloads === 0 && (!data.reviews || data.reviews.length === 0))) {
+      const legacyData = await kv.get("stats_adobe-blocker", "json");
+      if (legacyData && (legacyData.downloads > 0 || (legacyData.reviews && legacyData.reviews.length > 0))) {
+        data = legacyData;
+        await kv.put(`stats_${toolId}`, JSON.stringify(data));
+      }
+    }
+    if (!data) data = { downloads: 0, reviews: [] };
+
     return new Response(JSON.stringify({
       status: "ok",
       toolId,
@@ -65,7 +76,8 @@ export async function onRequestPost(context) {
     return new Response(JSON.stringify({ status: "error", message: "Invalid JSON" }), { status: 400, headers });
   }
 
-  const toolId = (payload.toolId || "adobe-blocker").toLowerCase().trim();
+  let toolId = (payload.toolId || "firewall-blocker").toLowerCase().trim();
+  if (toolId === "adobe-blocker") toolId = "firewall-blocker";
   const action = payload.action; // "download" | "review"
 
   const kv = context.env.IHSBYTE_KV;

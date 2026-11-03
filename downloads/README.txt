@@ -1,33 +1,45 @@
 ===============================================================
-IHSByte - Adobe Blocker v2.0 (Dark Edition)
+IHSByte - Firewall Blocker v3.5 (Apple Liquid Glass Edition)
 Official Website: https://ihsbyte.com.lk
 Support & Updates: contact@ihsbyte.com.lk
 ===============================================================
 
 ABOUT:
-Adobe Blocker is a lightweight, standalone Windows utility designed 
-to disable Adobe background telemetry, licensing checks, and update 
-services using native Windows Firewall batch rules and Hosts sinkholing.
+Firewall Blocker is a lightweight, standalone Windows utility designed 
+to instantly limit and block outbound and inbound network and firewall access 
+for Adobe Creative Cloud / Creative Suite (Photoshop, Illustrator, Acrobat, Premiere Pro, etc.) 
+and CorelDRAW Graphics Suite (all versions). 
+Equipped with an Apple Liquid Glass aesthetic UI, automated netsh firewall batch 
+injection, breathing pulse status glow, and automated hosts sinkholing.
+
+FEATURES:
+- Universal blocking for both Adobe Creative Suite & CorelDRAW Graphics Suite.
+- One-click netsh batch outbound & inbound firewall rule injection in under 1 second.
+- Automated sinkholing of 50+ Adobe & Corel licensing, telemetry, and DRM endpoints.
+- Real-time breathing pulse status badge indicator (Active Protection / Inactive).
+- Automated termination of background update services (AGSService, ARM, Corel IPM).
+- Clean, responsive Apple Liquid Glass frosted dark design (#0A101C).
+- Safe one-click unblock and restore functionality.
+- Standalone portable executable with zero background services or dependencies.
 
 INSTALLATION / USAGE:
-1. Extract AdobeBlocker.exe to any folder (e.g. Desktop or Downloads).
-2. Right-click 'AdobeBlocker.exe' and select 'Run as administrator'.
-   (Administrator rights are required to inject Windows Firewall rules 
-   and modify the hosts file).
-3. Click 'Block Adobe Services' to apply rules.
-4. If you ever need to restore cloud access, click 'Restore / Unblock'.
+1. Extract 'FirewallBlocker.exe' to any folder (e.g. Desktop or Downloads).
+2. Double-click 'FirewallBlocker.exe' and click 'Yes' on the Windows UAC elevation prompt.
+3. Choose the target suites (Adobe Suite and/or CorelDRAW Suite).
+4. Click 'Block Selected Software' to instantly apply firewall rules and hosts sinkholes.
+5. If you ever need to restore cloud connectivity, click 'Unblock / Restore Access'.
 
 SECURITY & INTEGRITY:
-- Standalone executable, 100% clean of adware, spyware, or third-party miners.
-- Verified SHA-256 Checksum:
-  9DD9854F252CB9CFAAAE77929C19617EE272409A8CCC597FA6F1CAF8F2BDE48E
+- 100% clean standalone executable with zero adware, malware, or background telemetry.
+- Tested and clean against Windows Defender, Kaspersky Standard, and Bitdefender.
+- Executable SHA-256 Checksum:
+  B957D8707D1528A3DA3FCEF08DFBBE460F4B600711E31F32FEBF19AADF6E1211
 
 SMARTSCREEN / ANTIVIRUS NOTE:
-Because Adobe Blocker is a new, specialized utility that modifies 
-Windows Firewall rules without an expensive corporate Code Signing Certificate, 
-Windows SmartScreen or browser scanners may flag it as "unrecognized" 
-or "uncommonly downloaded". 
-This is a standard false positive for new security utilities.
+Because Firewall Blocker is an independent desktop utility modifying Windows 
+Firewall rules without an expensive corporate Code Signing Certificate, 
+Windows SmartScreen or browser security checks may flag it as "unrecognized".
+This is a standard false positive for new standalone administrative tools.
 To run: Click 'More Info' -> 'Run anyway'.
 ===============================================================
 (C) IHSByte. All rights reserved.

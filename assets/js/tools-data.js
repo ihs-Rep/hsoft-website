@@ -2,7 +2,7 @@
  * IHSByte - Central Software Tools Data
  * 
  * Featured Projects from D:\Antigravity:
- * - Adobe Blocker
+ * - Firewall Blocker (Apple Liquid Glass Edition)
  * - Decoy
  * - FocusPoint
  * - MailSafe
@@ -11,34 +11,49 @@
 
 const IHSBYTE_TOOLS = [
   {
-    id: "adobe-blocker",
-    name: "Adobe Blocker",
-    iconUrl: "assets/images/tool-adobe-blocker.png",
-    shortDescription: "Ultra-fast Windows firewall and hosts blocking utility to disable Adobe background telemetry, licensing checks, and update services.",
-    description: "Adobe Blocker is a specialized, lightweight Windows utility built for power users, creatives, and IT administrators. It instantly prevents background network and firewall access for all installed Adobe applications—including Photoshop, Illustrator, Acrobat DC, Premiere Pro, InDesign, After Effects, and Lightroom. Equipped with an ultra-fast batch firewall injection engine (1–2 seconds execution), automated sinkholing of 40+ Adobe telemetry endpoints, and one-click Adobe Genuine Service (AGS) disabling.",
+    id: "firewall-blocker",
+    name: "Firewall Blocker",
+    iconUrl: "assets/images/tool-firewall-blocker.png",
+    shortDescription: "Universal Apple Liquid Glass Windows firewall & hosts limiter to disable Adobe Suite & CorelDRAW background telemetry, licensing checks, and update services.",
+    description: "Firewall Blocker (Apple Liquid Glass Edition v3.5) is a specialized, high-performance Windows desktop utility engineered for creative professionals, video editors, and system administrators. It delivers one-click universal inbound and outbound network & firewall isolation for all installed Adobe Creative Cloud apps (Photoshop, Illustrator, Premiere Pro, Acrobat DC, etc.) and CorelDRAW Graphics Suite (all versions). Featuring a modern macOS-inspired Frosted Liquid Glass interface (#0A101C Obsidian Navy Base), real-time breathing status glow pill, 1-second batch netsh firewall rule injection, deep multi-drive app scanning, automated background service termination (AGSService, ARM, Corel IPM), and 50+ hosts sinkholes.",
     category: "Security & Firewall",
-    version: "2.0 (Dark Edition)",
-    releaseDate: "October 2026",
-    supportedWindows: ["Windows 11", "Windows 10", "Windows 8.1", "Windows 7 (32/64-bit)"],
-    systemRequirements: "Windows 7, 8, 8.1, 10, or 11 (32-bit or 64-bit). Requires Administrator privileges for Windows Firewall and Hosts rules. Standalone executable (~125.5 KB), zero external runtimes needed.",
+    version: "3.5 (Apple Liquid Glass Edition)",
+    releaseDate: "November 2026",
+    supportedWindows: ["Windows 11", "Windows 10", "Windows 8.1", "Windows 8", "Windows 7 (32/64-bit)"],
+    systemRequirements: "Windows 7, 8, 8.1, 10, or 11 (32-bit or 64-bit). Requires Administrator privileges for Windows Firewall and Hosts rules. Standalone portable executable (~137.7 KB), zero external runtimes needed.",
     features: [
-      "One-click universal blocking for Photoshop, Illustrator, Acrobat, Premiere Pro, and Creative Cloud apps",
-      "High-speed batch firewall rule generation powered by native netsh batch injection in under 2 seconds",
-      "Automatic sinkholing of 40+ Adobe licensing and telemetry endpoints via Windows hosts file",
-      "Terminates and disables Adobe Genuine Service (AGSService), ARM updater, and scheduled background tasks",
-      "Safe one-click restore functionality to unblock all applications and revert firewall rules",
-      "Modern dark-themed standalone GUI (#0B0F17) with zero background processes"
+      "Universal dual-suite protection: One-click blocking for both Adobe Creative Cloud & CorelDRAW Graphics Suite",
+      "High-speed native netsh batch firewall engine: Injects both Inbound and Outbound blocking rules in under 1 second",
+      "Apple Liquid Glass Frosted GUI: Obsidian Navy backdrop (#0A101C) with translucent frosted cards and ambient cyan glow beam",
+      "Breathing Animated Status Glow Badge: Real-time visual indicator reflecting Active (Blocked) vs Inactive protection",
+      "Automated hosts sinkholing: Blocks over 50+ Adobe and Corel DRM, telemetry, licensing, and genuine tracking endpoints",
+      "Background task & updater killer: Automatically halts AGSService, Adobe ARM updater, and Corel IPM background services",
+      "Deep multi-drive scanning: Scans C:, D:, and secondary drives for portable and non-standard suite installations",
+      "Safe instant rollback: One-click unblock feature completely removes firewall rules and restores network connectivity",
+      "Antivirus friendly & 100% clean: Tested false-positive free on Windows Defender, Kaspersky Standard, and Bitdefender"
     ],
     screenshots: [],
-    downloadUrl: "downloads/AdobeBlocker-v2.0.zip",
-    fileSize: "33.8 KB (ZIP)",
-    sha256: "9DD9854F252CB9CFAAAE77929C19617EE272409A8CCC597FA6F1CAF8F2BDE48E",
+    downloadUrl: "downloads/FirewallBlocker-v3.5.zip",
+    fileSize: "32.5 KB (ZIP)",
+    sha256: "B957D8707D1528A3DA3FCEF08DFBBE460F4B600711E31F32FEBF19AADF6E1211",
     changelog: [
+      {
+        version: "3.5",
+        date: "November 2026",
+        changes: [
+          "Rebranded from Adobe Blocker to Firewall Blocker with dual Adobe & CorelDRAW Suite support",
+          "Brand new Apple Liquid Glass Frosted interface with ambient cyan glow and breathing pulse status pill",
+          "CorelDRAW Graphics Suite (all versions) inbound & outbound firewall rules and hosts sinkholing added",
+          "Automated termination for Corel IPM and Adobe Genuine Service (AGS)",
+          "Zero-latency batch netsh injection engine (executes in < 1 second)",
+          "Multi-drive scanning across all connected local drives"
+        ]
+      },
       {
         version: "2.0",
         date: "October 2026",
         changes: [
-          "Complete dark theme redesign (#0B0F17) with high-contrast glowing status indicators",
+          "Complete dark theme redesign (#0B0F17) with glowing status indicators",
           "Universal multi-drive scanning for Adobe apps across C:, D:, and external drives",
           "30x faster batch engine using direct netsh script compilation",
           "Automated sinkhole for Adobe Genuine Service (AGS) and Creative Cloud telemetry"
@@ -208,7 +223,11 @@ function getAllTools() {
 
 function getToolById(id) {
   if (!id) return null;
-  return IHSBYTE_TOOLS.find(tool => tool.id.toLowerCase() === id.trim().toLowerCase()) || null;
+  const cleanId = id.trim().toLowerCase();
+  if (cleanId === "adobe-blocker") {
+    return IHSBYTE_TOOLS.find(tool => tool.id === "firewall-blocker") || null;
+  }
+  return IHSBYTE_TOOLS.find(tool => tool.id.toLowerCase() === cleanId) || null;
 }
 
 function getFeaturedTools() {

@@ -225,9 +225,11 @@ window.handleDownloadAction = function(toolId, event) {
 function getActiveToolId() {
   try {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get("id") || "adobe-blocker";
+    let id = urlParams.get("id") || "firewall-blocker";
+    if (id === "adobe-blocker") id = "firewall-blocker";
+    return id;
   } catch (e) {
-    return "adobe-blocker";
+    return "firewall-blocker";
   }
 }
 
@@ -275,8 +277,8 @@ function initRealtimeStatsSync() {
   
   // 1. Initial immediate sync from Cloudflare Edge
   syncToolStatsFromCloud(activeToolId);
-  if (activeToolId !== "adobe-blocker") {
-    syncToolStatsFromCloud("adobe-blocker");
+  if (activeToolId !== "firewall-blocker") {
+    syncToolStatsFromCloud("firewall-blocker");
   }
 
   // 2. Background polling every 8 seconds for real-time updates
@@ -757,7 +759,7 @@ function initHomePage() {
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
             <h3>No Utilities Found for "${escapeHtml(q)}"</h3>
-            <p>Try searching for Adobe Blocker, Decoy, MailSafe, FocusPoint, or SMB Monitor.</p>
+            <p>Try searching for Firewall Blocker, Decoy, MailSafe, FocusPoint, or SMB Monitor.</p>
           </div>
         `;
       }
@@ -1276,7 +1278,7 @@ function initToolDetailsPage() {
               🛡️ SmartScreen / Browser Note
             </h3>
             <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.65rem;">
-              Because Adobe Blocker is an independent, new utility modifying Windows Firewall rules without an enterprise Code Signing Certificate, Chrome or Windows SmartScreen may show an "Unrecognized / Unknown Publisher" prompt.
+              Because ${escapeHtml(tool.name)} is an independent, specialized utility modifying Windows Firewall rules without an enterprise Code Signing Certificate, Chrome or Windows SmartScreen may show an "Unrecognized / Unknown Publisher" prompt.
             </p>
             <div style="font-size: 0.84rem; background: var(--bg-subtle); padding: 0.65rem 0.85rem; border-radius: var(--radius-sm); border: 1px solid var(--border-color); color: var(--text-heading); font-weight: 550;">
               <strong>To Run:</strong> Click <em>"More info"</em> &rarr; then click <em>"Run anyway"</em>.
