@@ -280,6 +280,9 @@ function initRealtimeStatsSync() {
   if (activeToolId !== "firewall-blocker") {
     syncToolStatsFromCloud("firewall-blocker");
   }
+  if (activeToolId !== "decoy") {
+    syncToolStatsFromCloud("decoy");
+  }
 
   // 2. Background polling every 8 seconds for real-time updates
   setInterval(() => {

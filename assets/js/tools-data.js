@@ -2,7 +2,7 @@
  * IHSByte - Central Software Tools Data
  * 
  * Featured Projects from D:\Antigravity:
- * - Firewall Blocker (Apple Liquid Glass Edition)
+ * - Firewall Blocker
  * - Decoy
  * - FocusPoint
  * - MailSafe
@@ -14,19 +14,19 @@ const IHSBYTE_TOOLS = [
     id: "firewall-blocker",
     name: "Firewall Blocker",
     iconUrl: "assets/images/tool-firewall-blocker.png",
-    shortDescription: "Universal Apple Liquid Glass Windows firewall & hosts limiter to disable Adobe Suite & CorelDRAW background telemetry, licensing checks, and update services.",
-    description: "Firewall Blocker (Apple Liquid Glass Edition v3.5) is a specialized, high-performance Windows desktop utility engineered for creative professionals, video editors, and system administrators. It delivers one-click universal inbound and outbound network & firewall isolation for all installed Adobe Creative Cloud apps (Photoshop, Illustrator, Premiere Pro, Acrobat DC, etc.) and CorelDRAW Graphics Suite (all versions). Featuring a modern macOS-inspired Frosted Liquid Glass interface (#0A101C Obsidian Navy Base), real-time breathing status glow pill, 1-second batch netsh firewall rule injection, deep multi-drive app scanning, automated background service termination (AGSService, ARM, Corel IPM), and 50+ hosts sinkholes.",
+    shortDescription: "Universal Windows firewall and hosts limiter to disable Adobe Suite & CorelDRAW background telemetry, licensing checks, and update services.",
+    description: "Firewall Blocker v3.5 is a specialized, high-performance Windows desktop utility engineered for creative professionals, video editors, and system administrators. It delivers one-click universal inbound and outbound network & firewall isolation for all installed Adobe Creative Cloud apps (Photoshop, Illustrator, Premiere Pro, Acrobat DC, etc.) and CorelDRAW Graphics Suite (all versions). Featuring a distraction-free obsidian dark interface (#0A101C), real-time breathing status indicator, 1-second batch netsh firewall rule injection, deep multi-drive app scanning, automated background service termination (AGSService, ARM, Corel IPM), and 50+ hosts sinkholes.",
     category: "Security & Firewall",
-    version: "3.5 (Apple Liquid Glass Edition)",
+    version: "3.5",
     releaseDate: "November 2026",
     supportedWindows: ["Windows 11", "Windows 10", "Windows 8.1", "Windows 8", "Windows 7 (32/64-bit)"],
-    systemRequirements: "Windows 7, 8, 8.1, 10, or 11 (32-bit or 64-bit). Requires Administrator privileges for Windows Firewall and Hosts rules. Standalone portable executable (~137.7 KB), zero external runtimes needed.",
+    systemRequirements: "Windows 7, 8, 8.1, 10, or 11 (32-bit or 64-bit). Requires Administrator privileges for Windows Firewall and Hosts rules. Standalone portable executable (~138 KB), zero external runtimes needed.",
     features: [
       "Universal dual-suite protection: One-click blocking for both Adobe Creative Cloud & CorelDRAW Graphics Suite",
       "High-speed native netsh batch firewall engine: Injects both Inbound and Outbound blocking rules in under 1 second",
-      "Apple Liquid Glass Frosted GUI: Obsidian Navy backdrop (#0A101C) with translucent frosted cards and ambient cyan glow beam",
-      "Breathing Animated Status Glow Badge: Real-time visual indicator reflecting Active (Blocked) vs Inactive protection",
-      "Automated hosts sinkholing: Blocks over 50+ Adobe and Corel DRM, telemetry, licensing, and genuine tracking endpoints",
+      "Obsidian dark interface: Clean distraction-free layout (#0A101C) with ambient cyan accent line",
+      "Breathing Animated Status Badge: Real-time visual indicator reflecting Active (Blocked) vs Inactive protection",
+      "Automated hosts sinkholing: Blocks over 50+ Adobe and Corel DRM, telemetry, licensing, and tracking endpoints",
       "Background task & updater killer: Automatically halts AGSService, Adobe ARM updater, and Corel IPM background services",
       "Deep multi-drive scanning: Scans C:, D:, and secondary drives for portable and non-standard suite installations",
       "Safe instant rollback: One-click unblock feature completely removes firewall rules and restores network connectivity",
@@ -34,15 +34,15 @@ const IHSBYTE_TOOLS = [
     ],
     screenshots: [],
     downloadUrl: "downloads/FirewallBlocker-v3.5.zip",
-    fileSize: "32.5 KB (ZIP)",
-    sha256: "B957D8707D1528A3DA3FCEF08DFBBE460F4B600711E31F32FEBF19AADF6E1211",
+    fileSize: "32.8 KB (ZIP)",
+    sha256: "53ADA2F9178E084BF41348364CFAB18DA6F679E8937C343840D20721D6B5789E",
     changelog: [
       {
         version: "3.5",
         date: "November 2026",
         changes: [
           "Rebranded from Adobe Blocker to Firewall Blocker with dual Adobe & CorelDRAW Suite support",
-          "Brand new Apple Liquid Glass Frosted interface with ambient cyan glow and breathing pulse status pill",
+          "Distraction-free dark interface with ambient cyan accent and breathing pulse status pill",
           "CorelDRAW Graphics Suite (all versions) inbound & outbound firewall rules and hosts sinkholing added",
           "Automated termination for Corel IPM and Adobe Genuine Service (AGS)",
           "Zero-latency batch netsh injection engine (executes in < 1 second)",
@@ -74,38 +74,42 @@ const IHSBYTE_TOOLS = [
     name: "Decoy",
     iconUrl: "assets/images/tool-decoy.png",
     shortDescription: "Tamper-proof, password-protected Windows domain and content access control filter with viewer privacy masking.",
-    description: "Decoy is a hardened Windows domain and web filtering utility designed for offices, workstations, and multi-user family computers. It provides tamper-proof hosts-level domain blocking across all browsers with a master administrator authentication lock (preventing unauthorized user uninstallation or bypass). It also includes a specialized Viewer Mode that conceals adult or sensitive domain names behind clean privacy tags, preserving professional dignity in shared environments.",
+    description: "Decoy Enterprise is a hardened Windows domain and web filtering utility designed for offices, workstations, and multi-user family computers. It provides tamper-proof hosts-level domain blocking across all browsers with a master administrator authentication lock (preventing unauthorized user uninstallation or bypass). It also includes a specialized Viewer Mode that conceals adult or sensitive domain names behind clean privacy tags, preserving professional dignity in shared environments.",
     category: "Security & Access Control",
     version: "1.0.0",
-    releaseDate: "",
-    supportedWindows: ["Windows 11", "Windows 10", "Windows 8.1", "Windows 7"],
-    systemRequirements: "Windows 7, 8, 10, or 11. Administrator elevation required for hosts-file protection.",
+    releaseDate: "November 2026",
+    supportedWindows: ["Windows 11", "Windows 10", "Windows 8.1", "Windows 7 (32/64-bit)"],
+    systemRequirements: "Windows 7, 8, 8.1, 10, or 11. Administrator elevation required for hosts-file protection. Standalone universal installer (~710 KB).",
     features: [
       "Tamper-proof uninstallation and bypass prevention locked by master administrator password",
       "Category-based domain blocking: Social Media, Streaming, Games, Torrents, Explicit Content, and Telemetry",
       "Viewer Privacy Mode with smart domain masking and automated concealment of adult keywords",
       "Direct kernel-level hosts blocking operating across all web browsers without browser extensions",
       "Automated hosts file backup with instant one-click rollback on authorized uninstall",
-      "Zero network latency overhead, zero cloud dependency, and ultra-light memory usage"
+      "Zero network latency overhead, zero cloud dependency, and ultra-light memory usage",
+      "Silent 10-minute session auto-lock to Viewer Mode for shared workstations",
+      "Permanent backend audit logging in C:\ProgramData\Decoy\audit.log"
     ],
     screenshots: [],
-    downloadUrl: "",
-    fileSize: "170 KB",
-    sha256: "",
+    downloadUrl: "downloads/Decoy-v1.0.0.zip",
+    fileSize: "220 KB (ZIP)",
+    sha256: "D8D0DFEB1128E600DEE5408D1D5E788A0F885D4921C64DD0FBABFA020BAAD7A7",
     changelog: [
       {
         version: "1.0.0",
-        date: "October 2026",
+        date: "November 2026",
         changes: [
-          "Standalone universal installer with Desktop and Start Menu shortcuts",
+          "Official public release with standalone universal installer DecoySetup.exe",
           "Password-protected DecoyUninstall handler registering with Windows Apps & Features",
-          "Real-time category filtering and autocomplete domain search"
+          "Real-time category filtering and autocomplete domain search across 150+ preset targets",
+          "Viewer Privacy Mode with smart domain masking and adult keyword concealment",
+          "Permanent administrative audit logging"
         ]
       }
     ],
     knownIssues: [],
     supportUrl: "contact.html",
-    status: "coming-soon",
+    status: "released",
     isFeatured: true,
     downloads: 0,
     rating: 0,
