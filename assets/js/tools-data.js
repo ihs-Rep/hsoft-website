@@ -73,7 +73,7 @@ const IHSBYTE_TOOLS = [
   {
     id: "decoy",
     name: "Decoy",
-    iconUrl: "assets/images/tool-decoy.png",
+    iconUrl: "assets/images/tool-decoy.png?v=1.2.0",
     shortDescription: "Tamper-proof, password-protected Windows domain and content access control filter with viewer privacy masking.",
     description: "Decoy Enterprise is a hardened Windows domain and web filtering utility designed for offices, workstations, and multi-user family computers. It provides tamper-proof hosts-level domain blocking across all browsers with a master administrator authentication lock (preventing unauthorized user uninstallation or bypass). It also includes a specialized Viewer Mode that conceals adult or sensitive domain names behind clean privacy tags, preserving professional dignity in shared environments.",
     category: "Security & Access Control",
@@ -96,6 +96,17 @@ const IHSBYTE_TOOLS = [
     fileSize: "445 KB",
     sha256: "6CEED64B2A986554B16F11219B836570987A3A900352EA35B26C32F398BB413A",
     changelog: [
+      {
+        version: "1.2.0",
+        date: "November 2026",
+        changes: [
+          "Official branding alignment and new high-resolution 512px emblem icon",
+          "Assembly metadata officially registered under IHSBYTE Software studio",
+          "Enhanced DecoySetup universal installer with updated cryptographic signing",
+          "Updated embedded branding, about dialog, and administrative audit protections",
+          "Hardened domain filtering rules across Windows 11 and 10 web browsers"
+        ]
+      },
       {
         version: "1.0.0",
         date: "November 2026",
