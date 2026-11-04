@@ -18,7 +18,7 @@ const IHSBYTE_TOOLS = [
     shortDescription: "Universal Windows firewall and hosts limiter to disable Adobe Suite & CorelDRAW background telemetry, licensing checks, and update services.",
     description: "Firewall Blocker v3.5 is a specialized, high-performance Windows desktop utility engineered for creative professionals, video editors, and system administrators. It delivers one-click universal inbound and outbound network & firewall isolation for all installed Adobe Creative Cloud apps (Photoshop, Illustrator, Premiere Pro, Acrobat DC, etc.) and CorelDRAW Graphics Suite (all versions). Featuring a distraction-free obsidian dark interface, real-time status indicator, 1-second batch netsh firewall rule injection, deep multi-drive app scanning, automated background service termination (AGSService, ARM, Corel IPM), and 50+ hosts sinkholes.",
     category: "Security & Firewall",
-    version: "3.5",
+    version: "3.6",
     releaseDate: "November 2026",
     supportedWindows: ["Windows 11", "Windows 10", "Windows 8.1", "Windows 8", "Windows 7 (32/64-bit)"],
     systemRequirements: "Windows 7, 8, 8.1, 10, or 11 (32-bit or 64-bit). Requires Administrator privileges for Windows Firewall and Hosts rules. Standalone portable executable (~190 KB), zero external runtimes needed.",
@@ -34,7 +34,7 @@ const IHSBYTE_TOOLS = [
       "Antivirus friendly & 100% clean: Tested false-positive free on Windows Defender, Kaspersky Standard, and Bitdefender"
     ],
     screenshots: [],
-    downloadUrl: "downloads/FirewallBlocker-v3.5.zip",
+    downloadUrl: "downloads/FirewallBlocker-v3.6.zip",
     fileSize: "77.3 KB",
     sha256: "59AD7E05AF9A469EABF79265BC06A5FCFE49C4352E0CEC0668C0F26313DA1296",
     changelog: [
@@ -77,7 +77,7 @@ const IHSBYTE_TOOLS = [
     shortDescription: "Tamper-proof, password-protected Windows domain and content access control filter with viewer privacy masking.",
     description: "Decoy Enterprise is a hardened Windows domain and web filtering utility designed for offices, workstations, and multi-user family computers. It provides tamper-proof hosts-level domain blocking across all browsers with a master administrator authentication lock (preventing unauthorized user uninstallation or bypass). It also includes a specialized Viewer Mode that conceals adult or sensitive domain names behind clean privacy tags, preserving professional dignity in shared environments.",
     category: "Security & Access Control",
-    version: "1.0.0",
+    version: "1.2.0",
     releaseDate: "November 2026",
     supportedWindows: ["Windows 11", "Windows 10", "Windows 8.1", "Windows 7 (32/64-bit)"],
     systemRequirements: "Windows 7, 8, 8.1, 10, or 11. Administrator elevation required for hosts-file protection. Standalone universal installer (~921 KB).",
@@ -92,7 +92,7 @@ const IHSBYTE_TOOLS = [
       "Permanent backend audit logging in C:\\ProgramData\\Decoy\\audit.log"
     ],
     screenshots: [],
-    downloadUrl: "downloads/Decoy-v1.0.0.zip",
+    downloadUrl: "downloads/Decoy-v1.2.0.zip",
     fileSize: "445 KB",
     sha256: "6CEED64B2A986554B16F11219B836570987A3A900352EA35B26C32F398BB413A",
     changelog: [
