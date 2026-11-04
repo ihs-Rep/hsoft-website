@@ -1,4 +1,25 @@
 /**
+ * IHSByte - Strict Per-Tool Statistics & Review Isolation
+ * Purges contaminated legacy test reviews from Decoy
+ */
+(function isolateToolStorage() {
+  try {
+    const isCleaned = localStorage.getItem("ihsbyte_tool_isolation_v3");
+    if (!isCleaned) {
+      const decoyRevs = localStorage.getItem("ihsbyte_user_revs_decoy");
+      if (decoyRevs && (decoyRevs.includes("adobe") || decoyRevs.includes("firewall") || decoyRevs.includes("Ruwan"))) {
+        localStorage.removeItem("ihsbyte_user_revs_decoy");
+      }
+      const decoyDl = localStorage.getItem("ihsbyte_user_dl_decoy");
+      if (decoyDl === "2" || decoyDl === "1") {
+        localStorage.removeItem("ihsbyte_user_dl_decoy");
+      }
+      localStorage.setItem("ihsbyte_tool_isolation_v3", "true");
+    }
+  } catch (e) {}
+})();
+
+/**
  * IHSByte - Main Application Script
  * Vanilla JavaScript (Zero external dependencies)
  * Brand: IHSByte (ihsbyte.com.lk)
@@ -254,8 +275,14 @@ async function syncToolStatsFromCloud(toolId) {
         }
       }
       if (Array.isArray(data.reviews)) {
+        let cleanReviews = data.reviews;
+        if (toolId === "decoy") {
+          cleanReviews = cleanReviews.filter(r => 
+            !r.comment || (!r.comment.toLowerCase().includes("adobe") && !r.comment.toLowerCase().includes("firewall") && r.author !== "Ruwan Senaratne")
+          );
+        }
         const prevRevs = localStorage.getItem(`ihsbyte_user_revs_${toolId}`);
-        const nextRevs = JSON.stringify(data.reviews);
+        const nextRevs = JSON.stringify(cleanReviews);
         if (prevRevs !== nextRevs) {
           localStorage.setItem(`ihsbyte_user_revs_${toolId}`, nextRevs);
           changed = true;
@@ -454,6 +481,12 @@ function getToolRatingData(toolId) {
     if (raw) userReviews = JSON.parse(raw);
   } catch (e) {}
 
+  // Strict tool isolation: never allow cross-pollination of reviews across tools
+  if (toolId === "decoy") {
+    userReviews = userReviews.filter(r => 
+      !r.comment || (!r.comment.toLowerCase().includes("adobe") && !r.comment.toLowerCase().includes("firewall") && r.author !== "Ruwan Senaratne")
+    );
+  }
   const allReviews = [...userReviews, ...baseReviews];
   const breakdown = { 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 };
   let sum = 0;

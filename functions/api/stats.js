@@ -34,16 +34,35 @@ export async function onRequestGet(context) {
     }), { headers });
   }
 
+  const VALID_TOOLS = ["firewall-blocker", "decoy", "focuspoint", "mailsafe", "netmode-smb-monitor"];
+  if (!VALID_TOOLS.includes(toolId)) {
+    toolId = "firewall-blocker";
+  }
+
   try {
     let data = await kv.get(`stats_${toolId}`, "json");
-    // Seamless legacy migration: if firewall-blocker is uninitialized, inherit from adobe-blocker
-    if (!data || (data.downloads === 0 && (!data.reviews || data.reviews.length === 0))) {
+
+    // Strict tool isolation: ONLY firewall-blocker can ever inherit legacy adobe-blocker stats
+    if (toolId === "firewall-blocker" && (!data || (data.downloads === 0 && (!data.reviews || data.reviews.length === 0)))) {
       const legacyData = await kv.get("stats_adobe-blocker", "json");
       if (legacyData && (legacyData.downloads > 0 || (legacyData.reviews && legacyData.reviews.length > 0))) {
         data = legacyData;
-        await kv.put(`stats_${toolId}`, JSON.stringify(data));
+        await kv.put("stats_firewall-blocker", JSON.stringify(data));
       }
     }
+
+    // Strict isolation: if decoy was contaminated with legacy adobe/firewall test data, purge it to 0
+    if (toolId === "decoy" && data) {
+      const hasContaminatedReviews = Array.isArray(data.reviews) && data.reviews.some(r => 
+        (r.comment && (r.comment.toLowerCase().includes("adobe") || r.comment.toLowerCase().includes("firewall"))) ||
+        r.author === "Ruwan Senaratne"
+      );
+      if (hasContaminatedReviews || data.downloads === 2) {
+        data = { downloads: 0, reviews: [] };
+        await kv.put("stats_decoy", JSON.stringify(data));
+      }
+    }
+
     if (!data) data = { downloads: 0, reviews: [] };
 
     return new Response(JSON.stringify({
