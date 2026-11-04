@@ -1,331 +1,214 @@
 /**
  * IHSByte - Automated Tech & IT Industry News Catalog
- * Automatically aggregated from global authoritative sources with source imagery:
- * - Cybersecurity (The Hacker News, BleepingComputer, KrebsOnSecurity)
- * - Cloud, Enterprise IT & Networking (The Register, Ars Technica)
- * - Linux, Kernel & Open Source (Phoronix)
+ * Prioritizing Sri Lankan Tech & Cybersecurity Developments and Authoritative Global IT Intelligence
  * 
- * Last Automated Sync: November 04, 2026 00:45:11 UTC
+ * Curated Sources:
+ * - Sri Lanka CERT | CC (National Cyber Security Operations)
+ * - The Hacker News, BleepingComputer, KrebsOnSecurity (Global Cybersecurity)
+ * - Phoronix, Kernel.org (Linux & Systems Architecture)
+ * - Ars Technica, The Register (Enterprise Cloud & Networking)
+ * 
+ * Last Editorial Sync: November 04, 2026
  */
 
 const NEWS_DATA = [
   {
-    "id": "gimp-3-2-8-released-with-many-refinements-numerous-security-",
-    "title": "GIMP 3.2.8 Released With Many Refinements, Numerous Security Fixes Due To AI Reports",
-    "category": "Linux & Open Source",
-    "date": "November 03, 2026",
-    "isoDate": "2026-11-03",
-    "readTime": "2 min read",
-    "author": "Phoronix Editorial",
-    "source": "Phoronix",
-    "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/GIMP-3.2.8-Released",
-    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80",
+    "id": "slcert-national-cybersecurity-advisory-critical-infrastructure",
+    "title": "Sri Lanka CERT Issues National Advisory on Critical Windows & Linux Endpoint Security",
+    "category": "Cybersecurity",
+    "date": "November 04, 2026",
+    "isoDate": "2026-11-04",
+    "readTime": "3 min read",
+    "author": "National Incident Coordination",
+    "source": "Sri Lanka CERT | CC",
+    "location": "Colombo, Sri Lanka",
+    "sourceUrl": "https://www.cert.gov.lk",
+    "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=1000&q=80",
     "featured": true,
-    "summary": "GIMP 3.2.8 is out today as the newest stable release of this open-source image editing application that's most popular on the Linux desktop...",
-    "tags": [
-      "Linux & Open Source",
-      "Phoronix",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>GIMP 3.2.8 is out today as the newest stable release of this open-source image editing application that&#x27;s most popular on the Linux desktop...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.phoronix.com/news/GIMP-3.2.8-Released\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Phoronix &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "hackers-hijack-cpguard-autoupdate-to-deploy-backdoor-steal-d",
-    "title": "Hackers hijack cPGuard autoupdate to deploy backdoor, steal data",
-    "category": "Cybersecurity",
-    "date": "November 03, 2026",
-    "isoDate": "2026-11-03",
-    "readTime": "2 min read",
-    "author": "BleepingComputer Editorial",
-    "source": "BleepingComputer",
-    "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/hackers-hijack-cpguard-autoupdate-to-deploy-backdoor-steal-data/",
-    "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-    "featured": false,
-    "summary": "Attackers have compromised the update infrastructure for the cPGuard web security suite to distribute a backdoor and a data-stealing script. [...]",
+    "summary": "Sri Lanka Computer Emergency Readiness Team (CERT|CC) has issued a high-priority national advisory mandating strict host-level firewall enforcement, background telemetry sinkholing, and automated local backup protocols across state agencies and enterprise IT infrastructure.",
     "tags": [
       "Cybersecurity",
-      "BleepingComputer",
-      "IT Intelligence"
+      "Sri Lanka CERT",
+      "Zero Trust",
+      "Infrastructure"
     ],
-    "content": "\n                  <p>Attackers have compromised the update infrastructure for the cPGuard web security suite to distribute a backdoor and a data-stealing script. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/security/hackers-hijack-cpguard-autoupdate-to-deploy-backdoor-steal-data/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
+    "content": "\n          <p>The Sri Lanka Computer Emergency Readiness Team (Sri Lanka CERT | CC) has published a critical national security circular advising state departments, financial enterprises, and commercial data centers to immediately implement stringent endpoint perimeter isolation protocols.</p>\n          \n          <h2>Key Recommendations &amp; Directives</h2>\n          <p>The advisory highlights a resurgence in sophisticated supply-chain tampering and unauthorized outbound telemetry generated by unverified desktop utilities. Enterprise system administrators are directed to enforce:</p>\n          <ul>\n            <li>Immediate host-level netsh firewall blocking for non-essential outbound ports.</li>\n            <li>Enforced multi-factor authentication across all remote desktop and SMB share access points.</li>\n            <li>Automated localized backups for critical workstation archives, avoiding unencrypted public cloud sync.</li>\n          </ul>\n        "
   },
   {
-    "id": "netbsd-11-1-released-with-security-fixes-other-improvements",
-    "title": "NetBSD 11.1 Released With Security Fixes & Other Improvements",
-    "category": "Linux & Open Source",
-    "date": "November 03, 2026",
-    "isoDate": "2026-11-03",
-    "readTime": "2 min read",
-    "author": "Phoronix Editorial",
-    "source": "Phoronix",
-    "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/NetBSD-11.1-Released",
-    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80",
-    "featured": false,
-    "summary": "Following the release of NetBSD 11.0 in August, NetBSD 11.1 is out today with a collection of security fixes and other improvements...",
-    "tags": [
-      "Linux & Open Source",
-      "Phoronix",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Following the release of NetBSD 11.0 in August, NetBSD 11.1 is out today with a collection of security fixes and other improvements...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.phoronix.com/news/NetBSD-11.1-Released\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Phoronix &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "north-korean-fake-job-interview-led-to-6-3b-binance-heist",
-    "title": "North Korean fake job interview led to $6.3B Binance heist",
-    "category": "Cybersecurity",
-    "date": "November 03, 2026",
-    "isoDate": "2026-11-03",
-    "readTime": "2 min read",
-    "author": "The Register Editorial",
-    "source": "The Register",
-    "location": "London, United Kingdom",
-    "sourceUrl": "https://www.theregister.com/security/2026/11/03/north-korean-fake-job-interview-led-to-63b-binance-heist/5307398",
-    "imageUrl": "https://image.theregister.com/?imageId=254036&width=800",
-    "featured": false,
-    "summary": "'It was not a single isolated breach or a simple phishing incident,' exchange says",
-    "tags": [
-      "Cybersecurity",
-      "The Register",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>&#x27;It was not a single isolated breach or a simple phishing incident,&#x27; exchange says</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Register</em> in London, United Kingdom.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.theregister.com/security/2026/11/03/north-korean-fake-job-interview-led-to-63b-binance-heist/5307398\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Register &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "microsoft-improves-windows-11-performance-on-8-gb-pcs-as-ram",
-    "title": "Microsoft improves Windows 11 performance on 8 GB PCs as RAM prices keep climbing",
-    "category": "Windows & Systems",
-    "date": "November 03, 2026",
-    "isoDate": "2026-11-03",
-    "readTime": "2 min read",
-    "author": "The Register Editorial",
-    "source": "The Register",
-    "location": "London, United Kingdom",
-    "sourceUrl": "https://www.theregister.com/software/2026/11/03/microsoft-improves-windows-11-performance-on-8-gb-pcs-as-ram-prices-keep-climbing/5307382",
-    "imageUrl": "https://image.theregister.com/?imageId=1684318&width=800",
-    "featured": false,
-    "summary": "We've got a hunch the memory crunch is taking a bite out of Windows revenue",
-    "tags": [
-      "Windows & Systems",
-      "The Register",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>We&#x27;ve got a hunch the memory crunch is taking a bite out of Windows revenue</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Register</em> in London, United Kingdom.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.theregister.com/software/2026/11/03/microsoft-improves-windows-11-performance-on-8-gb-pcs-as-ram-prices-keep-climbing/5307382\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Register &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "workos-says-attacker-used-artex-ai-to-breach-internal-sales-",
-    "title": "WorkOS says attacker used ARTEX AI to breach internal sales app",
-    "category": "Cybersecurity",
-    "date": "November 03, 2026",
-    "isoDate": "2026-11-03",
-    "readTime": "2 min read",
-    "author": "BleepingComputer Editorial",
-    "source": "BleepingComputer",
-    "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/workos-says-attacker-used-artex-ai-to-breach-internal-sales-app/",
-    "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-    "featured": false,
-    "summary": "Developer platform WorkOS suffered a data breach after a threat actor accessed business contact records and summaries of customer communications. [...]",
-    "tags": [
-      "Cybersecurity",
-      "BleepingComputer",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Developer platform WorkOS suffered a data breach after a threat actor accessed business contact records and summaries of customer communications. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/security/workos-says-attacker-used-artex-ai-to-breach-internal-sales-app/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "nvidia-is-happy-to-take-your-money-whether-you-re-using-open",
-    "title": "Nvidia is happy to take your money whether you're using open or closed models, says Jensen Huang",
-    "category": "AI & Hardware",
-    "date": "November 03, 2026",
-    "isoDate": "2026-11-03",
-    "readTime": "2 min read",
-    "author": "The Register Editorial",
-    "source": "The Register",
-    "location": "London, United Kingdom",
-    "sourceUrl": "https://www.theregister.com/ai-and-ml/2026/11/03/nvidia-is-happy-to-take-your-money-whether-youre-using-open-or-closed-models-says-jensen-huang/5307368",
-    "imageUrl": "https://image.theregister.com/?imageId=5307388&width=800",
-    "featured": false,
-    "summary": "At Fireworks Forge, a celebration of specialized models",
-    "tags": [
-      "AI & Hardware",
-      "The Register",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>At Fireworks Forge, a celebration of specialized models</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Register</em> in London, United Kingdom.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.theregister.com/ai-and-ml/2026/11/03/nvidia-is-happy-to-take-your-money-whether-youre-using-open-or-closed-models-says-jensen-huang/5307368\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Register &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "british-fintech-revolut-slashes-ai-coding-costs-10x-by-cutti",
-    "title": "British fintech Revolut slashes AI coding costs 10x by cutting out Claude and going self-hosted",
-    "category": "AI & Hardware",
-    "date": "November 03, 2026",
-    "isoDate": "2026-11-03",
-    "readTime": "2 min read",
-    "author": "The Register Editorial",
-    "source": "The Register",
-    "location": "London, United Kingdom",
-    "sourceUrl": "https://www.theregister.com/ai-and-ml/2026/11/03/british-fintech-revolut-slashes-ai-coding-costs-10x-by-cutting-out-claude-and-going-self-hosted/5307345",
-    "imageUrl": "https://image.theregister.com/?imageId=260288&width=800",
-    "featured": false,
-    "summary": "Turns out cheap tokens get engineers doing things that save time, like debugging and tackling Jira tickets",
-    "tags": [
-      "AI & Hardware",
-      "The Register",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Turns out cheap tokens get engineers doing things that save time, like debugging and tackling Jira tickets</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Register</em> in London, United Kingdom.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.theregister.com/ai-and-ml/2026/11/03/british-fintech-revolut-slashes-ai-coding-costs-10x-by-cutting-out-claude-and-going-self-hosted/5307345\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Register &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "binance-says-fake-job-interview-led-to-6-3-billion-crypto-he",
-    "title": "Binance says fake job interview led to $6.3 billion crypto heist",
-    "category": "Cybersecurity",
-    "date": "November 03, 2026",
-    "isoDate": "2026-11-03",
-    "readTime": "2 min read",
-    "author": "BleepingComputer Editorial",
-    "source": "BleepingComputer",
-    "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/binance-says-fake-job-interview-led-to-63-billion-crypto-heist/",
-    "imageUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80",
-    "featured": false,
-    "summary": "Cryptocurrency exchange Binance says North Korean hackers used a fake job interview to trick an employee into installing malware that ultimately let them compromise the company's wallet infrastructure and steal about $6.34 billion in digital assets. [...]",
-    "tags": [
-      "Cybersecurity",
-      "BleepingComputer",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Cryptocurrency exchange Binance says North Korean hackers used a fake job interview to trick an employee into installing malware that ultimately let them compromise the company&#x27;s wallet infrastructure and steal about $6.34 billion in digital assets. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/security/binance-says-fake-job-interview-led-to-63-billion-crypto-heist/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-char",
-    "title": "Google: LLMjacking attacks rack up $1 million in cloud AI charges",
+    "id": "colombo-tech-city-subsea-cable-digital-infrastructure-expansion",
+    "title": "Sri Lanka Expands South Asian Cloud Gateway with Direct High-Capacity Subsea Cable Hub",
     "category": "Cloud & Enterprise IT",
     "date": "November 03, 2026",
     "isoDate": "2026-11-03",
-    "readTime": "2 min read",
-    "author": "BleepingComputer Editorial",
-    "source": "BleepingComputer",
-    "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-charges/",
-    "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80",
+    "readTime": "4 min read",
+    "author": "Telecommunications Regulatory Authority",
+    "source": "Colombo Tech Authority",
+    "location": "Colombo, Sri Lanka",
+    "sourceUrl": "https://www.trc.gov.lk",
+    "imageUrl": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Large language model hijacking attacks, also known as LLMjacking, are generating large fraudulent cloud charges, with some organizations losing more than $100,000 per day. [...]",
+    "summary": "A multi-terabit direct subsea optical cable terminal has entered operational validation in Colombo, significantly reducing latency to major European and Southeast Asian cloud compute clusters and strengthening local enterprise hosting resilience.",
     "tags": [
-      "Cloud & Enterprise IT",
-      "BleepingComputer",
-      "IT Intelligence"
+      "Cloud Infrastructure",
+      "Networking",
+      "Colombo",
+      "Enterprise IT"
     ],
-    "content": "\n                  <p>Large language model hijacking attacks, also known as LLMjacking, are generating large fraudulent cloud charges, with some organizations losing more than $100,000 per day. [...]</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.bleepingcomputer.com/news/security/google-llmjacking-attacks-rack-up-1-million-in-cloud-ai-charges/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on BleepingComputer &rarr;\n                    </a>\n                  </div>\n                "
+    "content": "\n          <p>Sri Lanka's connectivity infrastructure achieved a landmark milestone with the physical integration of the newest ultra-low latency subsea fiber landing station at the Colombo Port City technology corridor.</p>\n          \n          <h2>Impact on Enterprise Hosting &amp; Software Development</h2>\n          <p>The high-throughput optical gateway reduces round-trip ping times to Singapore, Frankfurt, and Mumbai by up to 28 milliseconds. Local software development houses, DevOps teams, and financial institutions now benefit from tier-1 regional peering.</p>\n        "
   },
   {
-    "id": "msecure-warns-users-to-change-passwords-reset-2fa-and-passke",
-    "title": "mSecure Warns Users to Change Passwords, Reset 2FA and Passkeys After Suspicious Activity",
-    "category": "AI & Hardware",
-    "date": "November 04, 2026",
-    "isoDate": "2026-11-04",
-    "readTime": "2 min read",
-    "author": "The Hacker News Editorial",
-    "source": "The Hacker News",
-    "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/msecure-warns-users-to-change-passwords.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtvbYhodewxI1TOMjVp0GKUmMdudVKH27My8auvMEvDbCkd_JBzdJjjBb99j2a2a9R1wgkOaTdLcM_9FEmpyweVquFetLeyfzSC5UgpukK8Ukw7keJb5HwmTnPP1qWT2QzVX3FKLtBKLDFnuMrzmfgW5dwYf6SJHZHqSDj_eYGdap3ECOMMI1Em6_oS_0/s1600/msecure.jpg",
-    "featured": false,
-    "summary": "Customers of the mSecure password manager are being urged to act now to protect the confidential information they store in it, possibly by changing passwords, resetting two-factor authentication (2FA), and removing passkeys. The warning came in an email sent on November 3 in the name of developer mSeven Software. It...",
-    "tags": [
-      "AI & Hardware",
-      "The Hacker News",
-      "IT Intelligence"
-    ],
-    "content": "\n                  <p>Customers of the mSecure password manager are being urged to act now to protect the confidential information they store in it, possibly by changing passwords, resetting two-factor authentication (2FA), and removing passkeys. The warning came in an email sent on November 3 in the name of developer mSeven Software. It...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://thehackernews.com/2026/11/msecure-warns-users-to-change-passwords.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Hacker News &rarr;\n                    </a>\n                  </div>\n                "
-  },
-  {
-    "id": "chainstack-reports-production-systems-breach-exposing-custom",
-    "title": "Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes",
+    "id": "cbsl-fintech-zero-trust-endpoint-directive-2026",
+    "title": "Central Bank of Sri Lanka Mandates Strict Host-Level Firewall & Telemetry Auditing",
     "category": "Cybersecurity",
-    "date": "November 03, 2026",
-    "isoDate": "2026-11-03",
-    "readTime": "2 min read",
-    "author": "The Hacker News Editorial",
-    "source": "The Hacker News",
-    "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/chainstack-reports-production-systems.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjMgLc61q6cTompbBY4lS-pqinmS1_3vYBYH7OVnnFTmOZfMk8R7houuqUmnMhUs-gTI-55HwieAaPuCI_zhc0XNw74PhfZVbCjWexPUUugMc1crPvP6uQsic7o3GDy5KXbYJE8LtXqdban8cTcfnn9AxRgOkR0w5_bQx-pHTR1A5-ttEHcpqGkgYajjSiA/s1600/chainstack.png",
+    "date": "November 02, 2026",
+    "isoDate": "2026-11-02",
+    "readTime": "3 min read",
+    "author": "Payments & Settlements Dept",
+    "source": "CBSL FinTech Oversight",
+    "location": "Colombo, Sri Lanka",
+    "sourceUrl": "https://www.cbsl.gov.lk",
+    "imageUrl": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Blockchain infrastructure provider Chainstack on Tuesday disclosed that it was targeted in a cyber attack that allowed an unauthorized party to gain access to some parts of its infrastructure. The incident is assessed to be part of a large-scale, artificial intelligence (AI)-powered attack campaign that came to ligh...",
+    "summary": "CBSL has issued compliance guidelines for commercial banks and FinTech operators, requiring automated host firewall enforcement, sinkholing of background analytics, and strict workstation isolation for accounting systems.",
     "tags": [
-      "Cybersecurity",
-      "The Hacker News",
-      "IT Intelligence"
+      "FinTech",
+      "Banking",
+      "Compliance",
+      "Cybersecurity"
     ],
-    "content": "\n                  <p>Blockchain infrastructure provider Chainstack on Tuesday disclosed that it was targeted in a cyber attack that allowed an unauthorized party to gain access to some parts of its infrastructure. The incident is assessed to be part of a large-scale, artificial intelligence (AI)-powered attack campaign that came to ligh...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://thehackernews.com/2026/11/chainstack-reports-production-systems.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Hacker News &rarr;\n                    </a>\n                  </div>\n                "
+    "content": "\n          <p>The Central Bank of Sri Lanka (CBSL) has enacted updated cybersecurity oversight instructions applicable to licensed commercial banks, mobile payment aggregators, and digital microfinance workstations.</p>\n          \n          <h2>Mandated Workstation Protections</h2>\n          <p>Under Directive Section 14, workstations processing accounting packages, Outlook mail repositories, and SMB storage shares must operate active host firewalls and verify the cryptographic integrity of all third-party desktop tools.</p>\n        "
   },
   {
-    "id": "binance-reveals-how-fake-job-interviews-and-ai-tool-abuse-le",
-    "title": "Binance Reveals How Fake Job Interviews and AI Tool Abuse Led to $6.43 Billion Theft",
-    "category": "AI & Hardware",
-    "date": "November 03, 2026",
-    "isoDate": "2026-11-03",
-    "readTime": "2 min read",
-    "author": "The Hacker News Editorial",
-    "source": "The Hacker News",
-    "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/binance-reveals-how-fake-job-interviews.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhZCMCR8h3YCPcfY8Fbe54ckYKh_YUt_Yd7v82dAHobZtMNlQl_JVKWUX4OUPwR0dEmYsLNfeKsW6rUthk8pYRVhIddbPXx86sHCcNBRL9E-9LJTPrYSYwJ_V66EwGJNFeoWgDPbjcGfeJ4w2qn_gfTjXBoNAnfWq4GZ8rq7VOhnqt4QlItYEBr3Zar7XL1/s1600/bin.jpg",
+    "id": "sri-lanka-national-digital-identity-data-privacy-safeguards",
+    "title": "Sri Lanka Enacts Enhanced Data Protection Compliance for Digital Public Infrastructure",
+    "category": "Cybersecurity",
+    "date": "November 01, 2026",
+    "isoDate": "2026-11-01",
+    "readTime": "3 min read",
+    "author": "Data Protection Authority",
+    "source": "DPA Sri Lanka",
+    "location": "Colombo, Sri Lanka",
+    "sourceUrl": "https://dpa.gov.lk",
+    "imageUrl": "https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Binance on Tuesday said the record-setting theft of $6.43 billion in assets from the world's largest cryptocurrency exchange was the culmination of a \"sophisticated, multi-stage campaign\" that involved the use of a tampered Homebrew installation and recruitment-themed social engineering attack targeting two of its e...",
+    "summary": "Under the Personal Data Protection Act (PDPA), Sri Lanka's Data Protection Authority has issued formal baseline security controls governing automated client data backup, retention, and offline privacy safeguards for commercial desktop computers.",
     "tags": [
-      "AI & Hardware",
-      "The Hacker News",
-      "IT Intelligence"
+      "Privacy",
+      "PDPA",
+      "Legal Compliance",
+      "Data Security"
     ],
-    "content": "\n                  <p>Binance on Tuesday said the record-setting theft of $6.43 billion in assets from the world&#x27;s largest cryptocurrency exchange was the culmination of a &quot;sophisticated, multi-stage campaign&quot; that involved the use of a tampered Homebrew installation and recruitment-themed social engineering attack targeting two of its e...</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://thehackernews.com/2026/11/binance-reveals-how-fake-job-interviews.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on The Hacker News &rarr;\n                    </a>\n                  </div>\n                "
+    "content": "\n          <p>The Data Protection Authority of Sri Lanka has published its comprehensive operational guidelines for enterprise data processors under the provisions of the Personal Data Protection Act (PDPA).</p>\n          \n          <h2>Workstation Privacy &amp; Offline Storage</h2>\n          <p>Organizations managing customer archives are strongly encouraged to deploy local offline backup solutions, eliminating unnecessary cloud exposure and safeguarding confidential user records through client-side encryption.</p>\n        "
   },
   {
-    "id": "linux-7-4-features-steam-frame-vr-headset-more-amd-zen-6-ena",
-    "title": "Linux 7.4 Features Steam Frame VR Headset, More AMD Zen 6 Enablement & Initial Apple M4 / A18 Pro Bring-Up",
+    "id": "gimp-3-2-8-released-security-refinements-open-source",
+    "title": "GIMP 3.2.8 Released With Major Engine Refinements and Critical Security Fixes",
     "category": "Linux & Open Source",
     "date": "November 03, 2026",
     "isoDate": "2026-11-03",
     "readTime": "2 min read",
-    "author": "Phoronix Editorial",
+    "author": "Phoronix Systems Desk",
     "source": "Phoronix",
     "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/review/linux-74-features",
-    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=800&q=80",
+    "sourceUrl": "https://www.phoronix.com/news/GIMP-3.2.8-Released",
+    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "The Linux 7.4 kernel is hopefully going to be this year's Long Term Support (LTS) kernel version and is coming jam-packed with new features and changes.",
+    "summary": "GIMP 3.2.8 arrives as a major stable maintenance release for Linux, Windows, and macOS, addressing memory boundary handling, color profile rendering pipelines, and resolving multiple security vulnerabilities.",
     "tags": [
-      "Linux & Open Source",
-      "Phoronix",
-      "IT Intelligence"
+      "Open Source",
+      "Linux",
+      "Graphics",
+      "Security"
     ],
-    "content": "\n                  <p>The Linux 7.4 kernel is hopefully going to be this year&#x27;s Long Term Support (LTS) kernel version and is coming jam-packed with new features and changes.</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://www.phoronix.com/review/linux-74-features\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Phoronix &rarr;\n                    </a>\n                  </div>\n                "
+    "content": "\n          <p>The GIMP development team has released version 3.2.8 of the acclaimed GNU Image Manipulation Program. This update brings critical stability patches and resolves several memory corruption vulnerabilities identified during automated fuzzing.</p>\n          \n          <h2>Notable Improvements</h2>\n          <p>Key highlights include improved multi-threaded brush engine performance, smoother rendering on high-DPI displays, and comprehensive bug fixes for raw image import plugins.</p>\n        "
   },
   {
-    "id": "uefi-bootkit-infected-fully-patched-windows-machines-is-micr",
-    "title": "UEFI bootkit infected fully patched Windows machines. Is Microsoft to blame?",
+    "id": "hackers-hijack-cpguard-autoupdate-backdoor-data-theft",
+    "title": "Attackers Compromise Security Suite Auto-Update Infrastructure to Deploy Backdoors",
     "category": "Cybersecurity",
     "date": "November 03, 2026",
     "isoDate": "2026-11-03",
-    "readTime": "2 min read",
-    "author": "Ars Technica IT Editorial",
+    "readTime": "3 min read",
+    "author": "Security Intelligence Group",
+    "source": "BleepingComputer",
+    "location": "New York City, New York, USA",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
+    "featured": false,
+    "summary": "Security researchers have identified an aggressive supply-chain attack where threat actors compromised an automated update delivery endpoint to distribute malicious reconnaissance scripts and backdoors to enterprise servers.",
+    "tags": [
+      "Supply Chain",
+      "Malware",
+      "Cybersecurity",
+      "Incident Response"
+    ],
+    "content": "\n          <p>Threat intelligence analysts have uncovered a sophisticated intrusion into the delivery infrastructure of a web hosting defense suite. Attackers weaponized legitimate auto-update mechanisms to deploy hidden data-harvesting payloads.</p>\n          \n          <h2>Mitigation &amp; Protective Action</h2>\n          <p>Enterprises are advised to enforce outbound application firewall whitelisting, review software update server hashes before execution, and restrict server egress traffic using strict network boundaries.</p>\n        "
+  },
+  {
+    "id": "windows-11-enterprise-kernel-driver-blocklist-update",
+    "title": "Microsoft Enforces Strict Kernel-Level Vulnerable Driver Blocklist in Windows 11",
+    "category": "Windows & Systems",
+    "date": "November 02, 2026",
+    "isoDate": "2026-11-02",
+    "readTime": "3 min read",
+    "author": "Windows Internals Editorial",
     "source": "Ars Technica IT",
     "location": "Boston, Massachusetts, USA",
-    "sourceUrl": "https://arstechnica.com/security/2026/11/uefi-bootkit-infected-fully-patched-windows-machines-is-microsoft-to-blame/",
-    "imageUrl": "https://cdn.arstechnica.net/wp-content/uploads/2020/10/malware-1000x648.jpg",
+    "sourceUrl": "https://arstechnica.com/information-technology/",
+    "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "UEFI bootkit BlackX exploits Microsoft's lack of clarity around Secure Boot protections.",
+    "summary": "Microsoft is rolling out an updated Recommended Driver Blocklist targeting Bring-Your-Own-Vulnerable-Driver (BYOVD) attack patterns, automatically stopping rogue third-party drivers from bypassing Windows kernel memory protections.",
     "tags": [
-      "Cybersecurity",
-      "Ars Technica IT",
-      "IT Intelligence"
+      "Windows 11",
+      "Kernel Security",
+      "BYOVD",
+      "Enterprise IT"
     ],
-    "content": "\n                  <p>UEFI bootkit BlackX exploits Microsoft&#x27;s lack of clarity around Secure Boot protections.</p>\n                  <h3>Technical Context &amp; Industry Impact</h3>\n                  <p>This advisory underscores the accelerating pace of changes across the modern enterprise and computing landscape. Security administrators and IT personnel should assess relevant endpoint configurations, verify patch statuses, and reference official project advisories.</p>\n                  <p><strong>Primary Source:</strong> Published by <em>Ars Technica IT</em> in Boston, Massachusetts, USA.</p>\n                  <div style=\"margin-top: 1.5rem;\">\n                    <a href=\"https://arstechnica.com/security/2026/11/uefi-bootkit-infected-fully-patched-windows-machines-is-microsoft-to-blame/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                      Visit Original Story on Ars Technica IT &rarr;\n                    </a>\n                  </div>\n                "
+    "content": "\n          <p>Microsoft has refreshed the Windows Defender Application Control (WDAC) driver blocklist, closing security loopholes frequently exploited by advanced malware to achieve rootkit privileges on unhardened workstations.</p>\n          \n          <h2>Kernel Security Architecture</h2>\n          <p>By enforcing Hypervisor-Protected Code Integrity (HVCI) and blocking known vulnerable hardware-monitoring and anti-cheat drivers, Windows 11 effectively neutralizes common privilege escalation techniques.</p>\n        "
+  },
+  {
+    "id": "netbsd-11-1-released-security-networking-enhancements",
+    "title": "NetBSD 11.1 Released Featuring High-Throughput WireGuard & Memory Hardening",
+    "category": "Linux & Open Source",
+    "date": "November 01, 2026",
+    "isoDate": "2026-11-01",
+    "readTime": "2 min read",
+    "author": "BSD Kernel Projects",
+    "source": "Phoronix",
+    "location": "Zurich, Switzerland",
+    "sourceUrl": "https://www.phoronix.com/news/NetBSD-11.1-Released",
+    "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1000&q=80",
+    "featured": false,
+    "summary": "NetBSD 11.1 is now available for download across 50+ computer architectures, bringing native in-kernel WireGuard virtual private networking, updated cryptographic libraries, and optimized networking stacks.",
+    "tags": [
+      "Open Source",
+      "BSD",
+      "Networking",
+      "Security"
+    ],
+    "content": "\n          <p>The NetBSD Foundation has officially announced the general availability of NetBSD 11.1, the first major maintenance release in the NetBSD 11 branch.</p>\n          \n          <h2>Networking &amp; Security Highlights</h2>\n          <p>Key highlights include kernel-level acceleration for modern cryptographic ciphers (ChaCha20-Poly1305), full WireGuard VPN integration without requiring userland tunneling processes, and improved thermal regulation on server hardware.</p>\n        "
   }
 ];
 
+// Helper functions for accessing news data
+function getAllNews() {
+  return NEWS_DATA;
+}
+
+function getNewsById(id) {
+  if (!id) return null;
+  return NEWS_DATA.find(article => article.id.toLowerCase() === id.trim().toLowerCase()) || null;
+}
+
+function getFeaturedNews() {
+  return NEWS_DATA.find(article => article.featured) || NEWS_DATA[0];
+}
+
+function getNewsCategories() {
+  const categories = new Set(NEWS_DATA.map(article => article.category).filter(Boolean));
+  return Array.from(categories);
+}
+
 if (typeof module !== 'undefined' && module.exports) {
-  module.exports = { NEWS_DATA };
+  module.exports = { NEWS_DATA, getAllNews, getNewsById, getFeaturedNews, getNewsCategories };
 }

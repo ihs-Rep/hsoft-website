@@ -509,10 +509,13 @@ function createToolCardHtml(tool) {
   const downloads = getToolDownloads(tool.id);
   const ratingData = getToolRatingData(tool.id);
 
+  const rawSize = tool.fileSize || "ZIP";
+  const cleanSize = rawSize.replace(/\s*\(ZIP\)/gi, "").trim() || "ZIP";
+
   const downloadBtn = isReleased
     ? `<a href="${escapeHtml(tool.downloadUrl)}" class="btn btn-primary btn-sm" download onclick="handleDownloadAction('${escapeHtml(tool.id)}', event)">
          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-         Download ZIP (${escapeHtml(tool.fileSize || "ZIP")})
+         Download ZIP (${escapeHtml(cleanSize)})
        </a>`
     : `<button class="btn btn-secondary btn-sm btn-disabled" disabled title="Under active development">Coming Soon</button>`;
 
@@ -524,12 +527,10 @@ function createToolCardHtml(tool) {
     ? `<img src="${escapeHtml(tool.iconUrl)}" alt="${escapeHtml(tool.name)} Icon" class="tool-card-icon">`
     : `<div class="tool-card-icon-placeholder"><span>${escapeHtml(tool.name.charAt(0))}</span></div>`;
 
-  const dlDisplay = isReleased 
-    ? `<span class="tool-stat-downloads" title="Total downloads">
-         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-         <span class="dl-count-${escapeHtml(tool.id)}">${formatNumber(downloads)}</span>
-       </span>`
-    : `<span class="tool-stat-downloads" style="color: var(--text-light); font-weight: 500;">Coming Soon</span>`;
+  const dlDisplay = `<span class="tool-stat-downloads" title="Total downloads">
+       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+       <span class="dl-count-${escapeHtml(tool.id)}">${formatNumber(downloads)}</span>
+     </span>`;
 
   const ratingHtml = ratingData.count > 0
     ? `<div class="tool-stat-rating tool-rating-badge-${escapeHtml(tool.id)}" title="${ratingData.average.toFixed(1)} out of 5 stars (${ratingData.count} reviews)">
@@ -540,6 +541,16 @@ function createToolCardHtml(tool) {
     : `<div class="tool-stat-rating tool-rating-badge-${escapeHtml(tool.id)}" title="No reviews yet">
          ${renderStarsHtml(0)}
          <span class="tool-stat-count">New (0)</span>
+       </div>`;
+
+  const statsHtml = isReleased
+    ? `<div class="tool-card-stats">
+         ${ratingHtml}
+         ${dlDisplay}
+       </div>`
+    : `<div class="tool-card-stats tool-card-stats-unreleased">
+         <span class="tool-stage-badge">In Development</span>
+         <span class="tool-planned-badge">Native Windows</span>
        </div>`;
 
   return `
@@ -557,10 +568,7 @@ function createToolCardHtml(tool) {
           <span style="font-size: 0.8rem; color: var(--text-light); font-weight: 500;">IHSByte Utility</span>
         </div>
       </div>
-      <div class="tool-card-stats">
-        ${ratingHtml}
-        ${dlDisplay}
-      </div>
+      ${statsHtml}
       <p class="tool-card-desc">${escapeHtml(tool.shortDescription || tool.description)}</p>
       <div class="tool-card-meta">
         ${osPills}
@@ -581,7 +589,7 @@ function createToolCardHtml(tool) {
 function createNewsCardHtml(article) {
   const sourceLabel = article.source || article.author || "IHSByte Desk";
   const locationBadge = article.location 
-    ? `<div class="news-location-tag" style="font-size: 0.78rem; color: var(--text-light); margin-top: 0.25rem;">📍 ${escapeHtml(article.location)}</div>`
+    ? `<div class="news-location-tag" title="${escapeHtml(article.location)}">📍 ${escapeHtml(article.location)}</div>`
     : "";
 
   const imageHtml = article.imageUrl ? `
@@ -593,27 +601,23 @@ function createNewsCardHtml(article) {
   return `
     <article class="news-card" onclick="openArticleModal('${escapeHtml(article.id)}')">
       ${imageHtml}
-      <div class="news-card-header">
-        <span class="news-category-badge">${escapeHtml(article.category)}</span>
-        <span class="news-read-time">${escapeHtml(article.readTime)}</span>
-      </div>
-      <h3 class="news-card-title">${escapeHtml(article.title)}</h3>
-      <p class="news-card-summary">${escapeHtml(article.summary)}</p>
-      <div class="news-card-footer" style="align-items: flex-start;">
-        <div class="news-author-date">
-          <div>
-            <div style="font-weight: 600; color: var(--text-heading); font-size: 0.85rem;">
-              📅 ${escapeHtml(article.date)}
-            </div>
-            <div style="font-size: 0.8rem; color: var(--secondary); font-weight: 500; margin-top: 0.15rem;">
-              🏢 ${escapeHtml(sourceLabel)}
-            </div>
+      <div class="news-card-content">
+        <div class="news-card-header">
+          <span class="news-category-badge">${escapeHtml(article.category)}</span>
+          <span class="news-read-time">${escapeHtml(article.readTime || "2 min read")}</span>
+        </div>
+        <h3 class="news-card-title">${escapeHtml(article.title)}</h3>
+        <p class="news-card-summary">${escapeHtml(article.summary)}</p>
+        <div class="news-card-footer">
+          <div class="news-author-date">
+            <div class="news-date-text">📅 ${escapeHtml(article.date)}</div>
+            <div class="news-source-text">🏢 ${escapeHtml(sourceLabel)}</div>
             ${locationBadge}
           </div>
+          <span class="news-read-action">
+            Read Story &rarr;
+          </span>
         </div>
-        <span class="news-read-action" style="margin-top: 0.25rem;">
-          Read Story &rarr;
-        </span>
       </div>
     </article>
   `;
@@ -1008,7 +1012,7 @@ function initToolDetailsPage() {
     downloadSectionHtml = `
       <a href="${escapeHtml(tool.downloadUrl)}" class="btn btn-primary" download onclick="handleDownloadAction('${escapeHtml(tool.id)}', event)">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download ZIP Package (${escapeHtml(tool.fileSize || "33.8 KB")})
+        Download ZIP Package (${escapeHtml((tool.fileSize || "ZIP").replace(/\s*\(ZIP\)/gi, "").trim())})
       </a>
     `;
   } else {
@@ -1037,7 +1041,7 @@ function initToolDetailsPage() {
     metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Release Date</span><span class="meta-box-val">${escapeHtml(tool.releaseDate)}</span></div>`;
   }
   if (tool.fileSize) {
-    metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">File Size</span><span class="meta-box-val">${escapeHtml(tool.fileSize)}</span></div>`;
+    metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">File Size</span><span class="meta-box-val">${escapeHtml((tool.fileSize || "").replace(/\s*\(ZIP\)/gi, "").trim())}</span></div>`;
   }
   if (Array.isArray(tool.supportedWindows) && tool.supportedWindows.length > 0) {
     metaListHtml += `<div class="meta-box-item"><span class="meta-box-label">Supported OS</span><span class="meta-box-val">${escapeHtml(tool.supportedWindows.join(", "))}</span></div>`;

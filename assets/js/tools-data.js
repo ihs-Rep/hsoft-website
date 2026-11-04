@@ -34,7 +34,7 @@ const IHSBYTE_TOOLS = [
     ],
     screenshots: [],
     downloadUrl: "downloads/FirewallBlocker-v3.5.zip",
-    fileSize: "32.8 KB (ZIP)",
+    fileSize: "32.8 KB",
     sha256: "53ADA2F9178E084BF41348364CFAB18DA6F679E8937C343840D20721D6B5789E",
     changelog: [
       {
@@ -92,7 +92,7 @@ const IHSBYTE_TOOLS = [
     ],
     screenshots: [],
     downloadUrl: "downloads/Decoy-v1.0.0.zip",
-    fileSize: "220 KB (ZIP)",
+    fileSize: "220 KB",
     sha256: "D8D0DFEB1128E600DEE5408D1D5E788A0F885D4921C64DD0FBABFA020BAAD7A7",
     changelog: [
       {
