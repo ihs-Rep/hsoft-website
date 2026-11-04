@@ -127,7 +127,7 @@ const IHSBYTE_TOOLS = [
     version: "1.0.0",
     releaseDate: "November 2026",
     supportedWindows: ["Windows 11", "Windows 10 (64-bit)"],
-    systemRequirements: "Windows 10 or Windows 11 (64-bit). Standalone self-contained portable executable (~72 MB), zero external runtimes or installation required.",
+    systemRequirements: "Windows 10 or Windows 11 (64-bit). Portable package (~1.1 MB) with local data storage. Requires .NET 8 Desktop Runtime.",
     features: [
       "Multiple Independent Widgets: Run unlimited simultaneous countdown & count-up timers anywhere on your desktop",
       "Gregorian Segmented Display: Precise real-time tracking for Months, Days, Hours, Minutes, and Seconds with leap-year awareness",
@@ -140,8 +140,8 @@ const IHSBYTE_TOOLS = [
     ],
     screenshots: [],
     downloadUrl: "downloads/WidgetX-v1.0.0.zip",
-    fileSize: "63.8 MB",
-    sha256: "92565A6336E46BD17A8A61DB9B2E8EDD9E3077F042B3E6659C32A77CA6AFD8D1",
+    fileSize: "1.1 MB",
+    sha256: "280F4A5D7F4236F2DF832F2EEE9B1DD535DC09CD072ADCE41F423A3826542C41",
     changelog: [
       {
         version: "1.0.0",
