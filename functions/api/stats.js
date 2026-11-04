@@ -34,7 +34,7 @@ export async function onRequestGet(context) {
     }), { headers });
   }
 
-  const VALID_TOOLS = ["firewall-blocker", "decoy", "focuspoint", "mailsafe", "netmode-smb-monitor"];
+  const VALID_TOOLS = ["firewall-blocker", "decoy", "widgetx", "focuspoint", "mailsafe", "netmode-smb-monitor"];
   if (!VALID_TOOLS.includes(toolId)) {
     toolId = "firewall-blocker";
   }

@@ -2,11 +2,12 @@
  * IHSByte - Central Software Tools Data
  * 
  * Featured Projects from D:\Antigravity:
- * - Firewall Blocker
- * - Decoy
- * - FocusPoint
- * - MailSafe
- * - Net Mode SMB Monitor
+ * - Firewall Blocker (Released)
+ * - Decoy (Released)
+ * - WidgetX (Released)
+ * - FocusPoint (In Development)
+ * - MailSafe (In Development)
+ * - Net Mode SMB Monitor (In Development)
  */
 
 const IHSBYTE_TOOLS = [
@@ -15,12 +16,12 @@ const IHSBYTE_TOOLS = [
     name: "Firewall Blocker",
     iconUrl: "assets/images/tool-firewall-blocker.png",
     shortDescription: "Universal Windows firewall and hosts limiter to disable Adobe Suite & CorelDRAW background telemetry, licensing checks, and update services.",
-    description: "Firewall Blocker v3.5 is a specialized, high-performance Windows desktop utility engineered for creative professionals, video editors, and system administrators. It delivers one-click universal inbound and outbound network & firewall isolation for all installed Adobe Creative Cloud apps (Photoshop, Illustrator, Premiere Pro, Acrobat DC, etc.) and CorelDRAW Graphics Suite (all versions). Featuring a distraction-free obsidian dark interface (#0A101C), real-time breathing status indicator, 1-second batch netsh firewall rule injection, deep multi-drive app scanning, automated background service termination (AGSService, ARM, Corel IPM), and 50+ hosts sinkholes.",
+    description: "Firewall Blocker v3.5 is a specialized, high-performance Windows desktop utility engineered for creative professionals, video editors, and system administrators. It delivers one-click universal inbound and outbound network & firewall isolation for all installed Adobe Creative Cloud apps (Photoshop, Illustrator, Premiere Pro, Acrobat DC, etc.) and CorelDRAW Graphics Suite (all versions). Featuring a distraction-free obsidian dark interface, real-time status indicator, 1-second batch netsh firewall rule injection, deep multi-drive app scanning, automated background service termination (AGSService, ARM, Corel IPM), and 50+ hosts sinkholes.",
     category: "Security & Firewall",
     version: "3.5",
     releaseDate: "November 2026",
     supportedWindows: ["Windows 11", "Windows 10", "Windows 8.1", "Windows 8", "Windows 7 (32/64-bit)"],
-    systemRequirements: "Windows 7, 8, 8.1, 10, or 11 (32-bit or 64-bit). Requires Administrator privileges for Windows Firewall and Hosts rules. Standalone portable executable (~138 KB), zero external runtimes needed.",
+    systemRequirements: "Windows 7, 8, 8.1, 10, or 11 (32-bit or 64-bit). Requires Administrator privileges for Windows Firewall and Hosts rules. Standalone portable executable (~190 KB), zero external runtimes needed.",
     features: [
       "Universal dual-suite protection: One-click blocking for both Adobe Creative Cloud & CorelDRAW Graphics Suite",
       "High-speed native netsh batch firewall engine: Injects both Inbound and Outbound blocking rules in under 1 second",
@@ -34,15 +35,15 @@ const IHSBYTE_TOOLS = [
     ],
     screenshots: [],
     downloadUrl: "downloads/FirewallBlocker-v3.5.zip",
-    fileSize: "32.8 KB",
-    sha256: "53ADA2F9178E084BF41348364CFAB18DA6F679E8937C343840D20721D6B5789E",
+    fileSize: "77.3 KB",
+    sha256: "59AD7E05AF9A469EABF79265BC06A5FCFE49C4352E0CEC0668C0F26313DA1296",
     changelog: [
       {
         version: "3.5",
         date: "November 2026",
         changes: [
           "Rebranded from Adobe Blocker to Firewall Blocker with dual Adobe & CorelDRAW Suite support",
-          "Distraction-free dark interface with ambient cyan accent and breathing pulse status pill",
+          "Updated high-speed compiled binary with real-time breathing status indicators",
           "CorelDRAW Graphics Suite (all versions) inbound & outbound firewall rules and hosts sinkholing added",
           "Automated termination for Corel IPM and Adobe Genuine Service (AGS)",
           "Zero-latency batch netsh injection engine (executes in < 1 second)",
@@ -79,7 +80,7 @@ const IHSBYTE_TOOLS = [
     version: "1.0.0",
     releaseDate: "November 2026",
     supportedWindows: ["Windows 11", "Windows 10", "Windows 8.1", "Windows 7 (32/64-bit)"],
-    systemRequirements: "Windows 7, 8, 8.1, 10, or 11. Administrator elevation required for hosts-file protection. Standalone universal installer (~710 KB).",
+    systemRequirements: "Windows 7, 8, 8.1, 10, or 11. Administrator elevation required for hosts-file protection. Standalone universal installer (~921 KB).",
     features: [
       "Tamper-proof uninstallation and bypass prevention locked by master administrator password",
       "Category-based domain blocking: Social Media, Streaming, Games, Torrents, Explicit Content, and Telemetry",
@@ -88,12 +89,12 @@ const IHSBYTE_TOOLS = [
       "Automated hosts file backup with instant one-click rollback on authorized uninstall",
       "Zero network latency overhead, zero cloud dependency, and ultra-light memory usage",
       "Silent 10-minute session auto-lock to Viewer Mode for shared workstations",
-      "Permanent backend audit logging in C:\ProgramData\Decoy\audit.log"
+      "Permanent backend audit logging in C:\\ProgramData\\Decoy\\audit.log"
     ],
     screenshots: [],
     downloadUrl: "downloads/Decoy-v1.0.0.zip",
-    fileSize: "220 KB",
-    sha256: "D8D0DFEB1128E600DEE5408D1D5E788A0F885D4921C64DD0FBABFA020BAAD7A7",
+    fileSize: "445 KB",
+    sha256: "6CEED64B2A986554B16F11219B836570987A3A900352EA35B26C32F398BB413A",
     changelog: [
       {
         version: "1.0.0",
@@ -104,6 +105,53 @@ const IHSBYTE_TOOLS = [
           "Real-time category filtering and autocomplete domain search across 150+ preset targets",
           "Viewer Privacy Mode with smart domain masking and adult keyword concealment",
           "Permanent administrative audit logging"
+        ]
+      }
+    ],
+    knownIssues: [],
+    supportUrl: "contact.html",
+    status: "released",
+    isFeatured: true,
+    downloads: 0,
+    rating: 0,
+    ratingCount: 0,
+    reviews: []
+  },
+  {
+    id: "widgetx",
+    name: "WidgetX",
+    iconUrl: "assets/images/tool-widgetx.png",
+    shortDescription: "Minimal lightweight desktop day counter and multi-widget countdown suite with acrylic glass and frameless modes.",
+    description: "WidgetX is a modern, ultra-lightweight Windows desktop countdown and day tracking utility built with C# and .NET 8 (WPF). It empowers users to place unlimited independent floating widgets across their desktop for project milestones, event countdowns, and anniversary tracking. Featuring Gregorian leap-year precision (Months, Days, Hours, Minutes, Seconds), modern Acrylic Glass and Frameless transparent themes, click-drag lock protection, clean Windows 11 context menus, and 100% portable JSON configuration backup.",
+    category: "Productivity & Workflow",
+    version: "1.0.0",
+    releaseDate: "November 2026",
+    supportedWindows: ["Windows 11", "Windows 10 (64-bit)"],
+    systemRequirements: "Windows 10 or Windows 11 (64-bit). Standalone self-contained portable executable (~72 MB), zero external runtimes or installation required.",
+    features: [
+      "Multiple Independent Widgets: Run unlimited simultaneous countdown & count-up timers anywhere on your desktop",
+      "Gregorian Segmented Display: Precise real-time tracking for Months, Days, Hours, Minutes, and Seconds with leap-year awareness",
+      "Advanced Glass & Frameless Themes: Acrylic glass, frosted surface, fully transparent, or frameless floating numerals with custom opacity",
+      "Widget Drag Lock: Prevent accidental mouse dragging while maintaining live background timekeeping",
+      "Clean Windows 11 Context Menu: Zero AI emoji clutter, native menus for rapid editing, duplication, and color presets",
+      "100% Portable & Flash Drive Friendly: Local JSON configuration in Data/settings.json without Windows registry pollution",
+      "Complete JSON Backup & Restore: One-click export and import of all widget titles, dates, positions, and styling",
+      "Single-Instance Mutex Engine: Intelligent window signaling preventing duplicate background processes"
+    ],
+    screenshots: [],
+    downloadUrl: "downloads/WidgetX-v1.0.0.zip",
+    fileSize: "63.8 MB",
+    sha256: "92565A6336E46BD17A8A61DB9B2E8EDD9E3077F042B3E6659C32A77CA6AFD8D1",
+    changelog: [
+      {
+        version: "1.0.0",
+        date: "November 2026",
+        changes: [
+          "Official public release of WidgetX desktop day counter suite",
+          "Multi-widget manager supporting unlimited simultaneous desktop timers",
+          "Acrylic glass, frosted glass, and frameless transparent visual styles",
+          "Widget position locking and Always-on-Top desktop integration",
+          "Standalone self-contained executable with zero external dependency"
         ]
       }
     ],

@@ -310,6 +310,9 @@ function initRealtimeStatsSync() {
   if (activeToolId !== "decoy") {
     syncToolStatsFromCloud("decoy");
   }
+  if (activeToolId !== "widgetx") {
+    syncToolStatsFromCloud("widgetx");
+  }
 
   // 2. Background polling every 8 seconds for real-time updates
   setInterval(() => {
