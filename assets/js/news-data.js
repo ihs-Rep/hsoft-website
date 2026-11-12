@@ -8,7 +8,7 @@
  * - Phoronix, Kernel.org (Linux & Systems Architecture)
  * - Ars Technica, The Register (Enterprise Cloud & Networking)
  * 
- * Last Editorial Sync: November 11, 2026
+ * Last Editorial Sync: November 12, 2026
  */
 
 const NEWS_DATA = [
