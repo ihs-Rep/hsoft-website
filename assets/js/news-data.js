@@ -8,7 +8,7 @@
  * - Phoronix, Kernel.org (Linux & Systems Architecture)
  * - Ars Technica, The Register (Enterprise Cloud & Networking)
  * 
- * Last Editorial Sync: November 19, 2026 17:33:29 UTC
+ * Last Editorial Sync: November 19, 2026 13:01:47 UTC
  */
 
 const NEWS_DATA = [
@@ -101,6 +101,27 @@ const NEWS_DATA = [
     "content": "\n          <p>The Data Protection Authority of Sri Lanka has published its comprehensive operational guidelines for enterprise data processors under the provisions of the Personal Data Protection Act (PDPA).</p>\n          \n          <h2>Workstation Privacy &amp; Offline Storage</h2>\n          <p>Organizations managing customer archives are strongly encouraged to deploy local offline backup solutions, eliminating unnecessary cloud exposure and safeguarding confidential user records through client-side encryption.</p>\n        "
   },
   {
+    "id": "everything-is-a-web-application-including-your-firewall",
+    "title": "Everything Is a Web Application, Including Your Firewall",
+    "category": "Cybersecurity",
+    "date": "November 19, 2026",
+    "isoDate": "2026-11-19",
+    "readTime": "3 min read",
+    "author": "The Hacker News Editorial",
+    "source": "The Hacker News",
+    "location": "San Francisco, California, USA",
+    "sourceUrl": "https://thehackernews.com/2026/11/everything-is-web-application-including.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiC0roCfV92el2-gLSGwmumyjXgCjHookzwGjft2a6UWPZA1QvyrazDNLTvlZrF1F5iagg74JxnPEXbnK60OEeJuFNo2Fc2xcNSnJCeNw9BLu_y-lsRhrpO6s1End2gdDDlRU_r4wysTiiJS4ZKPDTmWK152psFdhxRizlSJZFCjnYr6nnamRsUciEJui4/s1600/php-app.jpg",
+    "featured": false,
+    "summary": "One of the early targets of PHP2Shell exploitation was the firewall. On October 28, Palo Alto Networks confirmed that attackers were exploiting the two PHP vulnerabilities, CVE-2026-109618 and CVE-2026-109619, against PAN-OS management interfaces exposed to the internet. Both fla...",
+    "tags": [
+      "Cybersecurity",
+      "The Hacker News",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>One of the early targets of PHP2Shell exploitation was the firewall. On October 28, Palo Alto Networks confirmed that attackers were exploiting the two PHP vulnerabilities, CVE-2026-109618 and CVE-2026-109619, against PAN-OS management interfaces exposed to the internet. Both flaws let anyone execute code on the web server without authentication. The disclosure itself went a little wrong.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/everything-is-web-application-including.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
     "id": "hackers-breach-n-able-cloud-server-disrupting-email-sec",
     "title": "Hackers Breach N-able Cloud Server, Disrupting Email Security Management Across 3 Regions",
     "category": "Cybersecurity",
@@ -162,27 +183,6 @@ const NEWS_DATA = [
       "Global Tech"
     ],
     "content": "\n                      <p>Low-privilege database accounts that cannot read a single application table can still be used to run code on the database server itself, a researcher has shown, by reaching memory-corruption bugs in the engine code behind ordinary SQL. The exploits, published yesterday, are the researcher&#x27;s proofs of concept against PostgreSQL, MySQL and ClickHouse, plus a separate Oracle chain that needs no</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
-  },
-  {
-    "id": "cisa-warns-of-4-exploited-flaws-linked-to-ransomware-cr",
-    "title": "CISA Warns of 4 Exploited Flaws Linked to Ransomware, Cryptomining, and LLMjacking Attacks",
-    "category": "Cybersecurity",
-    "date": "November 19, 2026",
-    "isoDate": "2026-11-19",
-    "readTime": "3 min read",
-    "author": "The Hacker News Editorial",
-    "source": "The Hacker News",
-    "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJc2bWATWnk5-O72K0n3cYlHuhhox3nVPELPst8c1bui3mTiwBZFUjAUSem14OyqLB6CTECCs9fc-iyng9KmY3jelZ2cqrHg4FKvP2qOZui8piIbYTZy9WdZD0NqiY4fXcLud5GYzmNEXR6DRNuQpjkFzfPvW4fIcDtwaFg4SM9xW-eG09WxFuEcmuKx7U/s1600/cisa.jpg",
-    "featured": false,
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added four vulnerabilities impacting Synology DiskStation Manager (DSM), BerriAI LiteLLM, Apache Axis, and Vanderbilt University Research Electronic Data Capture (REDCap) to its Known Exploited Vulnerab...",
-    "tags": [
-      "Cybersecurity",
-      "The Hacker News",
-      "Global Tech"
-    ],
-    "content": "\n                      <p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added four vulnerabilities impacting Synology DiskStation Manager (DSM), BerriAI LiteLLM, Apache Axis, and Vanderbilt University Research Electronic Data Capture (REDCap) to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerabilities are listed below -</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
     "id": "microsoft-tests-new-edge-lockdown-mode-that-disables-gp",
@@ -269,6 +269,27 @@ const NEWS_DATA = [
     "content": "\n                      <p>Ukrainian authorities, working with the FBI, have arrested four suspected members of an international ransomware organization linked to more than $40.5 million in ransom payments from at least 28 companies worldwide.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
+    "id": "libernt-an-ai-fueled-fork-of-reactos-focused-on-windows",
+    "title": "LiberNT: An AI-Fueled Fork Of ReactOS Focused On Windows 11 Compatibility",
+    "category": "Linux & Open Source",
+    "date": "November 19, 2026",
+    "isoDate": "2026-11-19",
+    "readTime": "3 min read",
+    "author": "Phoronix Editorial",
+    "source": "Phoronix",
+    "location": "Chicago, Illinois, USA",
+    "sourceUrl": "https://www.phoronix.com/news/LiberNT",
+    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
+    "featured": false,
+    "summary": "While the ReactOS project has been enjoying nice conventional progress this year from initial USB 3.0 driver support to improved DirectX support, there is now a new project called LiberNT that is forked from the ReactOS codebase and leveraging AI to quickly iterate on it with a g...",
+    "tags": [
+      "Linux & Open Source",
+      "Phoronix",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>While the ReactOS project has been enjoying nice conventional progress this year from initial USB 3.0 driver support to improved DirectX support, there is now a new project called LiberNT that is forked from the ReactOS codebase and leveraging AI to quickly iterate on it with a goal of Windows 11 compatibility</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/LiberNT\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
     "id": "more-asus-asrock-motherboards-seeing-sensor-monitoring-",
     "title": "More ASUS & ASRock Motherboards Seeing Sensor Monitoring Support With Linux 7.5",
     "category": "Linux & Open Source",
@@ -309,27 +330,6 @@ const NEWS_DATA = [
       "Global Tech"
     ],
     "content": "\n                      <p>Separate from the existing AMDXDNA accelerator driver in the Linux kernel for Ryzen AI NPUs, on Wednesday AMD posted patches for the new AMD AI Engine &quot;AIE&quot; accelerator driver</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/AMD-AI-Engine-Linux-Driver\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
-  },
-  {
-    "id": "valkey-9-2-delivers-more-performance-zstd-compression-l",
-    "title": "Valkey 9.2 Delivers More Performance, Zstd Compression & Lower Memory Overhead",
-    "category": "Linux & Open Source",
-    "date": "November 19, 2026",
-    "isoDate": "2026-11-19",
-    "readTime": "3 min read",
-    "author": "Phoronix Editorial",
-    "source": "Phoronix",
-    "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/Valkey-9.2",
-    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
-    "featured": false,
-    "summary": "Valkey 9.2 is out today as the latest feature update to this leading fork of the Redis in-memory, key-value database",
-    "tags": [
-      "Linux & Open Source",
-      "Phoronix",
-      "Global Tech"
-    ],
-    "content": "\n                      <p>Valkey 9.2 is out today as the latest feature update to this leading fork of the Redis in-memory, key-value database</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Valkey-9.2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   }
 ];
 
