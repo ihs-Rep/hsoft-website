@@ -767,6 +767,14 @@ function initHomePage() {
   const featuredContainer = document.getElementById("featured-tools-container");
   const homeNewsContainer = document.getElementById("home-news-container");
 
+  // Dynamic Studio Stats Row Update (Released Tools Counter)
+  if (typeof getReleasedTools === "function") {
+    const releasedCount = getReleasedTools().length;
+    document.querySelectorAll(".released-tools-count").forEach(el => {
+      el.textContent = formatNumber(releasedCount);
+    });
+  }
+
   // Render Featured Tools
   if (featuredContainer && typeof getAllTools === "function") {
     const featured = getFeaturedTools();
