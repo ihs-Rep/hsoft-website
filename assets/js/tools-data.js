@@ -176,6 +176,70 @@ const IHSBYTE_TOOLS = [
     reviews: []
   },
   {
+    id: "mailsafe",
+    name: "MailSafe",
+    iconUrl: "assets/images/tool-mailsafe.png?v=2.5.0",
+    shortDescription: "Enterprise automated Windows data protection suite for live Outlook PST/OST archives, business documents, and network shares.",
+    description: "MailSafe v2.5.0 is an enterprise-grade automated Windows data protection and backup suite engineered for office workstations, accounting PCs, and Outlook power users. Utilizing Volume Shadow Copy Service (VSS), MailSafe safely snapshots live, open, and locked Outlook PST/OST files without requiring users to close Outlook. It supports multi-destination redundancy across local drives, external USB disks, and authenticated SMB network shares with automated rolling retention pruning, ephemeral connection recycling (Error 67 resolution), and hardware-backed DPAPI credential encryption.",
+    category: "Backup & Data Protection",
+    version: "2.5.0",
+    releaseDate: "November 2026",
+    supportedWindows: ["Windows 11", "Windows 10", "Windows 8.1", "Windows 7 SP1", "Windows Server 2016-2025"],
+    systemRequirements: "Windows 7 SP1, 8, 8.1, 10, 11, or Windows Server (32/64-bit). Requires .NET Framework 4.6.1 or later and Administrator privileges for VSS snapshots.",
+    features: [
+      "VSS-Aware Hot Snapshotting: Safely back up live, in-use Outlook PST/OST email archives without closing applications",
+      "Multi-Destination Redundancy: Concurrent backups to local drives, removable USB media, and authenticated SMB network shares",
+      "Ephemeral SMB Sessions: Automated connection recycling to resolve server session exhaustion (Windows Error 67)",
+      "Automated Rolling Retention: Configurable version limits prevent backup storage drives from running out of space",
+      "Hardware-Backed DPAPI Encryption: Zero cloud dependency with Windows-level encrypted network and SMTP credentials",
+      "Task Scheduler Integration: High-priority background scheduling with automatic wake-up and missed-job recovery",
+      "Fleet Auto-Sync & Diagnostics: Centralized update verification and detailed scheduler_activity.log audit trails",
+      "Modern Obsidian Dark UI: Sleek WPF desktop interface with real-time progress bars and system tray notifications"
+    ],
+    screenshots: [],
+    downloadUrl: "downloads/MailSafe-v2.5.0.zip",
+    fileSize: "1.7 MB",
+    sha256: "3FD4D0BC1A832B2C396B9F3DF280F2EC1F3E4D1F0B71BE136F2132F9A7C1369B",
+    changelog: [
+      {
+        version: "2.5.0",
+        date: "November 2026",
+        changes: [
+          "Automated daily background update verification routine via Windows Task Scheduler",
+          "Per-job credential inheritance for SMB update shares without global credential storage",
+          "Deferred update auto-resume engine after active backup jobs complete",
+          "Post-download binary integrity verification before launching silent installer",
+          "Headless CLI execution support via --check-update and background job flags"
+        ]
+      },
+      {
+        version: "2.4.0",
+        date: "September 2026",
+        changes: [
+          "Optimized differential delta engine for large multi-gigabyte PST files",
+          "Enhanced network path reachability pre-flight checks and retry logic"
+        ]
+      },
+      {
+        version: "2.0.0",
+        date: "July 2026",
+        changes: [
+          "Mandatory elevation guard enforcing administrator privileges for VSS shadow copies",
+          "Strict zero-corruption policy eliminating non-VSS direct copy fallbacks",
+          "Authenticode digital signing preventing antivirus false-positive alerts"
+        ]
+      }
+    ],
+    knownIssues: [],
+    supportUrl: "contact.html",
+    status: "released",
+    isFeatured: true,
+    downloads: 0,
+    rating: 0,
+    ratingCount: 0,
+    reviews: []
+  },
+  {
     id: "focuspoint",
     name: "FocusPoint",
     iconUrl: "assets/images/tool-focuspoint.svg",
@@ -193,39 +257,6 @@ const IHSBYTE_TOOLS = [
       "Lightweight system tray agent with instant status summary and one-click quick actions",
       "100% offline local storage with zero cloud accounts, zero ads, and zero telemetry",
       "Minimal system footprint engineered for continuous 24/7 background execution"
-    ],
-    screenshots: [],
-    downloadUrl: "",
-    fileSize: "",
-    sha256: "",
-    changelog: [],
-    knownIssues: [],
-    supportUrl: "contact.html",
-    status: "coming-soon",
-    isFeatured: true,
-    downloads: 0,
-    rating: 0,
-    ratingCount: 0,
-    reviews: []
-  },
-  {
-    id: "mailsafe",
-    name: "MailSafe",
-    iconUrl: "assets/images/tool-mailsafe.png",
-    shortDescription: "Automated desktop backup tool for Outlook email archives (PST/OST), sensitive documents, and critical folders.",
-    description: "MailSafe is an automated Windows data protection and backup utility tailored for office workstations, accounting PCs, and Outlook power users. It safeguards Outlook PST/OST data files, documents, and business directories with automated interval or daily schedules to local drives, external USB disks, or mapped network storage with background tray monitoring.",
-    category: "Backup & Data Protection",
-    version: "1.0.0",
-    releaseDate: "",
-    supportedWindows: ["Windows 11", "Windows 10", "Windows 8.1", "Windows 7 SP1"],
-    systemRequirements: "Windows 7 SP1, 8, 10, or 11. .NET Framework 4.6.1 or later. Local or network write permissions for backup targets.",
-    features: [
-      "Automated interval and scheduled background backups for Outlook PST/OST archives and documents",
-      "Multi-destination redundancy: local drives, removable USB storage, and mapped SMB network shares",
-      "Background system tray agent with real-time status updates and execution progress notifications",
-      "Smart incremental copying to minimize network bandwidth usage and disk wear",
-      "Comprehensive backup audit logs, failure tracking, and error reporting",
-      "Zero cloud reliance — your critical business data stays 100% on-premise"
     ],
     screenshots: [],
     downloadUrl: "",

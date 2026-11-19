@@ -8,7 +8,7 @@
  * - Phoronix, Kernel.org (Linux & Systems Architecture)
  * - Ars Technica, The Register (Enterprise Cloud & Networking)
  * 
- * Last Editorial Sync: November 19, 2026
+ * Last Editorial Sync: November 19, 2026 17:33:29 UTC
  */
 
 const NEWS_DATA = [
@@ -16,8 +16,8 @@ const NEWS_DATA = [
     "id": "slcert-national-cybersecurity-advisory-critical-infrastructure",
     "title": "Sri Lanka CERT Issues National Advisory on Critical Windows & Linux Endpoint Security",
     "category": "Cybersecurity",
-    "date": "November 04, 2026",
-    "isoDate": "2026-11-04",
+    "date": "November 19, 2026",
+    "isoDate": "2026-11-19",
     "readTime": "3 min read",
     "author": "National Incident Coordination",
     "source": "Sri Lanka CERT | CC",
@@ -38,8 +38,8 @@ const NEWS_DATA = [
     "id": "colombo-tech-city-subsea-cable-digital-infrastructure-expansion",
     "title": "Sri Lanka Expands South Asian Cloud Gateway with Direct High-Capacity Subsea Cable Hub",
     "category": "Cloud & Enterprise IT",
-    "date": "November 03, 2026",
-    "isoDate": "2026-11-03",
+    "date": "November 18, 2026",
+    "isoDate": "2026-11-18",
     "readTime": "4 min read",
     "author": "Telecommunications Regulatory Authority",
     "source": "Colombo Tech Authority",
@@ -60,8 +60,8 @@ const NEWS_DATA = [
     "id": "cbsl-fintech-zero-trust-endpoint-directive-2026",
     "title": "Central Bank of Sri Lanka Mandates Strict Host-Level Firewall & Telemetry Auditing",
     "category": "Cybersecurity",
-    "date": "November 02, 2026",
-    "isoDate": "2026-11-02",
+    "date": "November 18, 2026",
+    "isoDate": "2026-11-18",
     "readTime": "3 min read",
     "author": "Payments & Settlements Dept",
     "source": "CBSL FinTech Oversight",
@@ -82,8 +82,8 @@ const NEWS_DATA = [
     "id": "sri-lanka-national-digital-identity-data-privacy-safeguards",
     "title": "Sri Lanka Enacts Enhanced Data Protection Compliance for Digital Public Infrastructure",
     "category": "Cybersecurity",
-    "date": "November 01, 2026",
-    "isoDate": "2026-11-01",
+    "date": "November 17, 2026",
+    "isoDate": "2026-11-17",
     "readTime": "3 min read",
     "author": "Data Protection Authority",
     "source": "DPA Sri Lanka",
@@ -101,92 +101,235 @@ const NEWS_DATA = [
     "content": "\n          <p>The Data Protection Authority of Sri Lanka has published its comprehensive operational guidelines for enterprise data processors under the provisions of the Personal Data Protection Act (PDPA).</p>\n          \n          <h2>Workstation Privacy &amp; Offline Storage</h2>\n          <p>Organizations managing customer archives are strongly encouraged to deploy local offline backup solutions, eliminating unnecessary cloud exposure and safeguarding confidential user records through client-side encryption.</p>\n        "
   },
   {
-    "id": "gimp-3-2-8-released-security-refinements-open-source",
-    "title": "GIMP 3.2.8 Released With Major Engine Refinements and Critical Security Fixes",
-    "category": "Linux & Open Source",
-    "date": "November 03, 2026",
-    "isoDate": "2026-11-03",
-    "readTime": "2 min read",
-    "author": "Phoronix Systems Desk",
-    "source": "Phoronix",
-    "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/GIMP-3.2.8-Released",
-    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
+    "id": "hackers-breach-n-able-cloud-server-disrupting-email-sec",
+    "title": "Hackers Breach N-able Cloud Server, Disrupting Email Security Management Across 3 Regions",
+    "category": "Cybersecurity",
+    "date": "November 19, 2026",
+    "isoDate": "2026-11-19",
+    "readTime": "3 min read",
+    "author": "The Hacker News Editorial",
+    "source": "The Hacker News",
+    "location": "San Francisco, California, USA",
+    "sourceUrl": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjPpZ9yL9D7JBQvp4_ZmnP8S_U6HKdq3rSM_FVv_uDgT9Iz8D56tO6GNDNE4rs29pejUiKQlxi1HpZ38KYbaSB01PmgPItVL8N-Y9G9vcuJlnadltKvmGhvUKYntAEIVCXFixjdBMyu6S9-zEUlIgGf7E5euvodJbn9LIYWTkRpxwH0g7nz2xp2v5PGMdq/s1600/n-able-hacked.jpg",
     "featured": false,
-    "summary": "GIMP 3.2.8 arrives as a major stable maintenance release for Linux, Windows, and macOS, addressing memory boundary handling, color profile rendering pipelines, and resolving multiple security vulnerabilities.",
+    "summary": "N-able on Wednesday disclosed that unknown threat actors gained unauthorized access to one of the servers in the Mail Assure and Spam Experts Hosted Cloud, causing it to disable management interfaces and APIs. \"We have taken steps to mitigate the threat and are continuing to hard...",
     "tags": [
-      "Open Source",
-      "Linux",
-      "Graphics",
-      "Security"
+      "Cybersecurity",
+      "The Hacker News",
+      "Global Tech"
     ],
-    "content": "\n          <p>The GIMP development team has released version 3.2.8 of the acclaimed GNU Image Manipulation Program. This update brings critical stability patches and resolves several memory corruption vulnerabilities identified during automated fuzzing.</p>\n          \n          <h2>Notable Improvements</h2>\n          <p>Key highlights include improved multi-threaded brush engine performance, smoother rendering on high-DPI displays, and comprehensive bug fixes for raw image import plugins.</p>\n        "
+    "content": "\n                      <p>N-able on Wednesday disclosed that unknown threat actors gained unauthorized access to one of the servers in the Mail Assure and Spam Experts Hosted Cloud, causing it to disable management interfaces and APIs. &quot;We have taken steps to mitigate the threat and are continuing to harden our services to reduce the risk of recurrence,&quot; N-able said. &quot;The investigation is ongoing, but at this time we</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "hackers-hijack-cpguard-autoupdate-backdoor-data-theft",
-    "title": "Attackers Compromise Security Suite Auto-Update Infrastructure to Deploy Backdoors",
+    "id": "ruby-releases-fixes-for-7-regex-and-string-flaws-warns-",
+    "title": "Ruby Releases Fixes for 7 Regex and String Flaws, Warns 5 Have Proof-of-Concept RCE",
     "category": "Cybersecurity",
-    "date": "November 03, 2026",
-    "isoDate": "2026-11-03",
+    "date": "November 19, 2026",
+    "isoDate": "2026-11-19",
     "readTime": "3 min read",
-    "author": "Security Intelligence Group",
+    "author": "The Hacker News Editorial",
+    "source": "The Hacker News",
+    "location": "San Francisco, California, USA",
+    "sourceUrl": "https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj7rmcgZ7yffFsn_7SX4iQcfMhw1dgsxPFXXh6TUunbQ9VaxZh8O5-AFT2V3q0PE7Wx0rW9nLKuB73eluixYuM9N38Dvq_Gjs1nNOXVk3e71jjfhHoP7W97eeuc5AivI3CQNxIrwSaPR9IGV0f2NZ7900Ihtkdgiw1ZivTvgVrXWH2CrX2X5MZGjos6-bs/s1600/ruby.jpg",
+    "featured": false,
+    "summary": "Ruby contains seven memory-safety flaws in its regular expression engine and its string case-conversion code. For five of them, its maintainers say, proof-of-concept exploits, or PoCs, have shown that crafted input can run code on the machine. \"We are aware of PoCs that prove som...",
+    "tags": [
+      "Cybersecurity",
+      "The Hacker News",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>Ruby contains seven memory-safety flaws in its regular expression engine and its string case-conversion code. For five of them, its maintainers say, proof-of-concept exploits, or PoCs, have shown that crafted input can run code on the machine. &quot;We are aware of PoCs that prove some of them can be used to trigger remote code execution,&quot; the maintainers said. The project released fixed versions</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
+    "id": "researcher-demonstrates-database-rce-exploits-affecting",
+    "title": "Researcher Demonstrates Database RCE Exploits Affecting PostgreSQL, MySQL and Oracle",
+    "category": "Cybersecurity",
+    "date": "November 19, 2026",
+    "isoDate": "2026-11-19",
+    "readTime": "3 min read",
+    "author": "The Hacker News Editorial",
+    "source": "The Hacker News",
+    "location": "San Francisco, California, USA",
+    "sourceUrl": "https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDE1pOkFxdtUcDqLptfhjaBnnEyzz2JfxUJICSOrW3vpcNlygN1XleKCdkv9CA3Zp901yQ884tOkPX9TmSYx5tpevenJw1CmW4oktkn2creXnB5-dvbiJB3crcILx4Kb8b6eVhiKjh-RRZTGnvWskqROJOjF3yaWFVK17fmh-tdT7WMas7MbdK-JsCBmw/s1600/database-rce.jpg",
+    "featured": false,
+    "summary": "Low-privilege database accounts that cannot read a single application table can still be used to run code on the database server itself, a researcher has shown, by reaching memory-corruption bugs in the engine code behind ordinary SQL. The exploits, published yesterday, are the r...",
+    "tags": [
+      "Cybersecurity",
+      "The Hacker News",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>Low-privilege database accounts that cannot read a single application table can still be used to run code on the database server itself, a researcher has shown, by reaching memory-corruption bugs in the engine code behind ordinary SQL. The exploits, published yesterday, are the researcher&#x27;s proofs of concept against PostgreSQL, MySQL and ClickHouse, plus a separate Oracle chain that needs no</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
+    "id": "cisa-warns-of-4-exploited-flaws-linked-to-ransomware-cr",
+    "title": "CISA Warns of 4 Exploited Flaws Linked to Ransomware, Cryptomining, and LLMjacking Attacks",
+    "category": "Cybersecurity",
+    "date": "November 19, 2026",
+    "isoDate": "2026-11-19",
+    "readTime": "3 min read",
+    "author": "The Hacker News Editorial",
+    "source": "The Hacker News",
+    "location": "San Francisco, California, USA",
+    "sourceUrl": "https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJc2bWATWnk5-O72K0n3cYlHuhhox3nVPELPst8c1bui3mTiwBZFUjAUSem14OyqLB6CTECCs9fc-iyng9KmY3jelZ2cqrHg4FKvP2qOZui8piIbYTZy9WdZD0NqiY4fXcLud5GYzmNEXR6DRNuQpjkFzfPvW4fIcDtwaFg4SM9xW-eG09WxFuEcmuKx7U/s1600/cisa.jpg",
+    "featured": false,
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added four vulnerabilities impacting Synology DiskStation Manager (DSM), BerriAI LiteLLM, Apache Axis, and Vanderbilt University Research Electronic Data Capture (REDCap) to its Known Exploited Vulnerab...",
+    "tags": [
+      "Cybersecurity",
+      "The Hacker News",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added four vulnerabilities impacting Synology DiskStation Manager (DSM), BerriAI LiteLLM, Apache Axis, and Vanderbilt University Research Electronic Data Capture (REDCap) to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The vulnerabilities are listed below -</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
+    "id": "microsoft-tests-new-edge-lockdown-mode-that-disables-gp",
+    "title": "Microsoft tests new Edge Lockdown Mode that disables GPU APIs",
+    "category": "Cybersecurity",
+    "date": "November 19, 2026",
+    "isoDate": "2026-11-19",
+    "readTime": "3 min read",
+    "author": "BleepingComputer Editorial",
     "source": "BleepingComputer",
     "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/microsoft/microsoft-tests-new-edge-lockdown-mode-that-disables-gpu-apis/",
     "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Security researchers have identified an aggressive supply-chain attack where threat actors compromised an automated update delivery endpoint to distribute malicious reconnaissance scripts and backdoors to enterprise servers.",
+    "summary": "Microsoft is developing a new Edge security feature to reduce the attack surface by disabling the WebGL, WebGL2, and WebGPU APIs.",
     "tags": [
-      "Supply Chain",
-      "Malware",
       "Cybersecurity",
-      "Incident Response"
+      "BleepingComputer",
+      "Global Tech"
     ],
-    "content": "\n          <p>Threat intelligence analysts have uncovered a sophisticated intrusion into the delivery infrastructure of a web hosting defense suite. Attackers weaponized legitimate auto-update mechanisms to deploy hidden data-harvesting payloads.</p>\n          \n          <h2>Mitigation &amp; Protective Action</h2>\n          <p>Enterprises are advised to enforce outbound application firewall whitelisting, review software update server hashes before execution, and restrict server egress traffic using strict network boundaries.</p>\n        "
+    "content": "\n                      <p>Microsoft is developing a new Edge security feature to reduce the attack surface by disabling the WebGL, WebGL2, and WebGPU APIs.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/microsoft/microsoft-tests-new-edge-lockdown-mode-that-disables-gpu-apis/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "windows-11-enterprise-kernel-driver-blocklist-update",
-    "title": "Microsoft Enforces Strict Kernel-Level Vulnerable Driver Blocklist in Windows 11",
-    "category": "Windows & Systems",
-    "date": "November 02, 2026",
-    "isoDate": "2026-11-02",
+    "id": "microsoft-confirms-app-installation-launch-issues-after",
+    "title": "Microsoft confirms app installation, launch issues after hotpatch",
+    "category": "Cybersecurity",
+    "date": "November 19, 2026",
+    "isoDate": "2026-11-19",
     "readTime": "3 min read",
-    "author": "Windows Internals Editorial",
-    "source": "Ars Technica IT",
-    "location": "Boston, Massachusetts, USA",
-    "sourceUrl": "https://arstechnica.com/information-technology/",
-    "imageUrl": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1000&q=80",
+    "author": "BleepingComputer Editorial",
+    "source": "BleepingComputer",
+    "location": "New York City, New York, USA",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-app-installation-launch-issues-after-hotpatch/",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Microsoft is rolling out an updated Recommended Driver Blocklist targeting Bring-Your-Own-Vulnerable-Driver (BYOVD) attack patterns, automatically stopping rogue third-party drivers from bypassing Windows kernel memory protections.",
+    "summary": "Microsoft has shared a workaround for installation and launch issues affecting Office and third-party applications after installing this month's Windows 11 hotpatch.",
     "tags": [
-      "Windows 11",
-      "Kernel Security",
-      "BYOVD",
-      "Enterprise IT"
+      "Cybersecurity",
+      "BleepingComputer",
+      "Global Tech"
     ],
-    "content": "\n          <p>Microsoft has refreshed the Windows Defender Application Control (WDAC) driver blocklist, closing security loopholes frequently exploited by advanced malware to achieve rootkit privileges on unhardened workstations.</p>\n          \n          <h2>Kernel Security Architecture</h2>\n          <p>By enforcing Hypervisor-Protected Code Integrity (HVCI) and blocking known vulnerable hardware-monitoring and anti-cheat drivers, Windows 11 effectively neutralizes common privilege escalation techniques.</p>\n        "
+    "content": "\n                      <p>Microsoft has shared a workaround for installation and launch issues affecting Office and third-party applications after installing this month&#x27;s Windows 11 hotpatch.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-app-installation-launch-issues-after-hotpatch/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "netbsd-11-1-released-security-networking-enhancements",
-    "title": "NetBSD 11.1 Released Featuring High-Throughput WireGuard & Memory Hardening",
-    "category": "Linux & Open Source",
-    "date": "November 01, 2026",
-    "isoDate": "2026-11-01",
-    "readTime": "2 min read",
-    "author": "BSD Kernel Projects",
-    "source": "Phoronix",
-    "location": "Zurich, Switzerland",
-    "sourceUrl": "https://www.phoronix.com/news/NetBSD-11.1-Released",
-    "imageUrl": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1000&q=80",
+    "id": "nvidia-investigating-gentlemen-ransomware-breach-claims",
+    "title": "NVIDIA investigating Gentlemen ransomware breach claims",
+    "category": "Cybersecurity",
+    "date": "November 19, 2026",
+    "isoDate": "2026-11-19",
+    "readTime": "3 min read",
+    "author": "BleepingComputer Editorial",
+    "source": "BleepingComputer",
+    "location": "New York City, New York, USA",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "NetBSD 11.1 is now available for download across 50+ computer architectures, bringing native in-kernel WireGuard virtual private networking, updated cryptographic libraries, and optimized networking stacks.",
+    "summary": "NVIDIA is investigating claims of a security breach after the Gentlemen ransomware group has added the company to its dark web data leak site.",
     "tags": [
-      "Open Source",
-      "BSD",
-      "Networking",
-      "Security"
+      "Cybersecurity",
+      "BleepingComputer",
+      "Global Tech"
     ],
-    "content": "\n          <p>The NetBSD Foundation has officially announced the general availability of NetBSD 11.1, the first major maintenance release in the NetBSD 11 branch.</p>\n          \n          <h2>Networking &amp; Security Highlights</h2>\n          <p>Key highlights include kernel-level acceleration for modern cryptographic ciphers (ChaCha20-Poly1305), full WireGuard VPN integration without requiring userland tunneling processes, and improved thermal regulation on server hardware.</p>\n        "
+    "content": "\n                      <p>NVIDIA is investigating claims of a security breach after the Gentlemen ransomware group has added the company to its dark web data leak site.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
+    "id": "ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-",
+    "title": "Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms",
+    "category": "Cybersecurity",
+    "date": "November 18, 2026",
+    "isoDate": "2026-11-18",
+    "readTime": "3 min read",
+    "author": "BleepingComputer Editorial",
+    "source": "BleepingComputer",
+    "location": "New York City, New York, USA",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
+    "featured": false,
+    "summary": "Ukrainian authorities, working with the FBI, have arrested four suspected members of an international ransomware organization linked to more than $40.5 million in ransom payments from at least 28 companies worldwide.",
+    "tags": [
+      "Cybersecurity",
+      "BleepingComputer",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>Ukrainian authorities, working with the FBI, have arrested four suspected members of an international ransomware organization linked to more than $40.5 million in ransom payments from at least 28 companies worldwide.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
+    "id": "more-asus-asrock-motherboards-seeing-sensor-monitoring-",
+    "title": "More ASUS & ASRock Motherboards Seeing Sensor Monitoring Support With Linux 7.5",
+    "category": "Linux & Open Source",
+    "date": "November 19, 2026",
+    "isoDate": "2026-11-19",
+    "readTime": "3 min read",
+    "author": "Phoronix Editorial",
+    "source": "Phoronix",
+    "location": "Chicago, Illinois, USA",
+    "sourceUrl": "https://www.phoronix.com/news/Linux-75-More-ASUS-ASRock-HWMON",
+    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
+    "featured": false,
+    "summary": "A number of patches were recently queued into the Linux hardware monitoring subsystem's \"hwmon-next\" Git branch of expanded ASUS and ASRock motherboard support for the upcoming Linux 7.5 kernel",
+    "tags": [
+      "Linux & Open Source",
+      "Phoronix",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>A number of patches were recently queued into the Linux hardware monitoring subsystem&#x27;s &quot;hwmon-next&quot; Git branch of expanded ASUS and ASRock motherboard support for the upcoming Linux 7.5 kernel</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Linux-75-More-ASUS-ASRock-HWMON\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
+    "id": "amd-ai-engine-aie-driver-posted-for-mainline-linux-kern",
+    "title": "AMD AI Engine \"AIE\" Driver Posted For Mainline Linux Kernel Review",
+    "category": "Linux & Open Source",
+    "date": "November 19, 2026",
+    "isoDate": "2026-11-19",
+    "readTime": "3 min read",
+    "author": "Phoronix Editorial",
+    "source": "Phoronix",
+    "location": "Chicago, Illinois, USA",
+    "sourceUrl": "https://www.phoronix.com/news/AMD-AI-Engine-Linux-Driver",
+    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
+    "featured": false,
+    "summary": "Separate from the existing AMDXDNA accelerator driver in the Linux kernel for Ryzen AI NPUs, on Wednesday AMD posted patches for the new AMD AI Engine \"AIE\" accelerator driver",
+    "tags": [
+      "Linux & Open Source",
+      "Phoronix",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>Separate from the existing AMDXDNA accelerator driver in the Linux kernel for Ryzen AI NPUs, on Wednesday AMD posted patches for the new AMD AI Engine &quot;AIE&quot; accelerator driver</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/AMD-AI-Engine-Linux-Driver\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
+    "id": "valkey-9-2-delivers-more-performance-zstd-compression-l",
+    "title": "Valkey 9.2 Delivers More Performance, Zstd Compression & Lower Memory Overhead",
+    "category": "Linux & Open Source",
+    "date": "November 19, 2026",
+    "isoDate": "2026-11-19",
+    "readTime": "3 min read",
+    "author": "Phoronix Editorial",
+    "source": "Phoronix",
+    "location": "Chicago, Illinois, USA",
+    "sourceUrl": "https://www.phoronix.com/news/Valkey-9.2",
+    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
+    "featured": false,
+    "summary": "Valkey 9.2 is out today as the latest feature update to this leading fork of the Redis in-memory, key-value database",
+    "tags": [
+      "Linux & Open Source",
+      "Phoronix",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>Valkey 9.2 is out today as the latest feature update to this leading fork of the Redis in-memory, key-value database</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Valkey-9.2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   }
 ];
 

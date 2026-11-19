@@ -313,6 +313,9 @@ function initRealtimeStatsSync() {
   if (activeToolId !== "widgetx") {
     syncToolStatsFromCloud("widgetx");
   }
+  if (activeToolId !== "mailsafe") {
+    syncToolStatsFromCloud("mailsafe");
+  }
 
   // 2. Background polling every 8 seconds for real-time updates
   setInterval(() => {
