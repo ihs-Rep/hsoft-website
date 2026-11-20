@@ -8,7 +8,7 @@
  * - Phoronix, Kernel.org (Linux & Systems Architecture)
  * - Ars Technica, The Register (Enterprise Cloud & Networking)
  * 
- * Last Editorial Sync: November 19, 2026 13:01:47 UTC
+ * Last Editorial Sync: November 20, 2026 00:51:11 UTC
  */
 
 const NEWS_DATA = [
@@ -16,8 +16,8 @@ const NEWS_DATA = [
     "id": "slcert-national-cybersecurity-advisory-critical-infrastructure",
     "title": "Sri Lanka CERT Issues National Advisory on Critical Windows & Linux Endpoint Security",
     "category": "Cybersecurity",
-    "date": "November 19, 2026",
-    "isoDate": "2026-11-19",
+    "date": "November 20, 2026",
+    "isoDate": "2026-11-20",
     "readTime": "3 min read",
     "author": "National Incident Coordination",
     "source": "Sri Lanka CERT | CC",
@@ -38,8 +38,8 @@ const NEWS_DATA = [
     "id": "colombo-tech-city-subsea-cable-digital-infrastructure-expansion",
     "title": "Sri Lanka Expands South Asian Cloud Gateway with Direct High-Capacity Subsea Cable Hub",
     "category": "Cloud & Enterprise IT",
-    "date": "November 18, 2026",
-    "isoDate": "2026-11-18",
+    "date": "November 19, 2026",
+    "isoDate": "2026-11-19",
     "readTime": "4 min read",
     "author": "Telecommunications Regulatory Authority",
     "source": "Colombo Tech Authority",
@@ -60,8 +60,8 @@ const NEWS_DATA = [
     "id": "cbsl-fintech-zero-trust-endpoint-directive-2026",
     "title": "Central Bank of Sri Lanka Mandates Strict Host-Level Firewall & Telemetry Auditing",
     "category": "Cybersecurity",
-    "date": "November 18, 2026",
-    "isoDate": "2026-11-18",
+    "date": "November 19, 2026",
+    "isoDate": "2026-11-19",
     "readTime": "3 min read",
     "author": "Payments & Settlements Dept",
     "source": "CBSL FinTech Oversight",
@@ -82,8 +82,8 @@ const NEWS_DATA = [
     "id": "sri-lanka-national-digital-identity-data-privacy-safeguards",
     "title": "Sri Lanka Enacts Enhanced Data Protection Compliance for Digital Public Infrastructure",
     "category": "Cybersecurity",
-    "date": "November 17, 2026",
-    "isoDate": "2026-11-17",
+    "date": "November 18, 2026",
+    "isoDate": "2026-11-18",
     "readTime": "3 min read",
     "author": "Data Protection Authority",
     "source": "DPA Sri Lanka",
@@ -101,8 +101,29 @@ const NEWS_DATA = [
     "content": "\n          <p>The Data Protection Authority of Sri Lanka has published its comprehensive operational guidelines for enterprise data processors under the provisions of the Personal Data Protection Act (PDPA).</p>\n          \n          <h2>Workstation Privacy &amp; Offline Storage</h2>\n          <p>Organizations managing customer archives are strongly encouraged to deploy local offline backup solutions, eliminating unnecessary cloud exposure and safeguarding confidential user records through client-side encryption.</p>\n        "
   },
   {
-    "id": "everything-is-a-web-application-including-your-firewall",
-    "title": "Everything Is a Web Application, Including Your Firewall",
+    "id": "threatsday-gpt-6-2-jailbreak-flaws-bubbleloader-png-mal",
+    "title": "ThreatsDay: GPT-6.2 Jailbreak Flaws, BubbleLoader PNG Malware, $500M Ransom Demands + 17 More Stories",
+    "category": "Cybersecurity",
+    "date": "November 20, 2026",
+    "isoDate": "2026-11-20",
+    "readTime": "3 min read",
+    "author": "The Hacker News Editorial",
+    "source": "The Hacker News",
+    "location": "San Francisco, California, USA",
+    "sourceUrl": "https://thehackernews.com/2026/11/threatsday-gpt-62-jailbreak-flaws.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgTqUIWPjGeycl6xafh8Hx8n2UN3UCUgjhTpxUul68DHi7Y_IoHVYBvjDd5DpFg15sKI767hVEq-8CbGhK69JNusMh0OBBXfVMwJlZiKT2gNnTPAL9DyvTY85SB68WkvBxFCMF2_rNS9rUgYkQN8sKssDMBS8gO6YpMudQohf_JWnPztX_h8TdbSX6Vtfi/s1600/td.jpg",
+    "featured": false,
+    "summary": "The easiest way to fool someone is to give them something they already expect. A job offer. A message about a service outage. A familiar app. Nothing looks strange at first. And that's the problem. This week's stories show how ordinary things are being used to steal data, spread ...",
+    "tags": [
+      "Cybersecurity",
+      "The Hacker News",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>The easiest way to fool someone is to give them something they already expect. A job offer. A message about a service outage. A familiar app. Nothing looks strange at first. And that&#x27;s the problem. This week&#x27;s stories show how ordinary things are being used to steal data, spread malware, and get people to hand over access. There&#x27;s another shift worth watching. AI is making some attacks easier</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/threatsday-gpt-62-jailbreak-flaws.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
+    "id": "phpaftershell-explained-how-hackers-could-turn-a-php-se",
+    "title": "phpAfterShell Explained: How Hackers Could Turn a PHP Session Flaw Into Code Execution",
     "category": "Cybersecurity",
     "date": "November 19, 2026",
     "isoDate": "2026-11-19",
@@ -110,20 +131,20 @@ const NEWS_DATA = [
     "author": "The Hacker News Editorial",
     "source": "The Hacker News",
     "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/everything-is-web-application-including.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiC0roCfV92el2-gLSGwmumyjXgCjHookzwGjft2a6UWPZA1QvyrazDNLTvlZrF1F5iagg74JxnPEXbnK60OEeJuFNo2Fc2xcNSnJCeNw9BLu_y-lsRhrpO6s1End2gdDDlRU_r4wysTiiJS4ZKPDTmWK152psFdhxRizlSJZFCjnYr6nnamRsUciEJui4/s1600/php-app.jpg",
+    "sourceUrl": "https://thehackernews.com/2026/11/phpaftershell-explained-how-hackers.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiEEFyvreIQgAheXoKRJxLcNgyzFh0rlydmiMfaOBIlmM7zGPc_71mCSG6zWGlpFcRQg59gVUw6NbpmFiNKIcDB3AqVA5eKpjYExWhMu-uBD_W5xu1wiYRtX5MklAgxeuHOBJOI8H9LmaIoXv7IrvFMVHvVhor06lj_ljcIDjIDAPYJ8w01X-BTA51EpOU/s1600/php-after-shell.jpg",
     "featured": false,
-    "summary": "One of the early targets of PHP2Shell exploitation was the firewall. On October 28, Palo Alto Networks confirmed that attackers were exploiting the two PHP vulnerabilities, CVE-2026-109618 and CVE-2026-109619, against PAN-OS management interfaces exposed to the internet. Both fla...",
+    "summary": "PHP's default file-based session storage can be made to return objects an attacker chose, by cutting off a session write at the right moment. When combined with a second weakness, such as a suitable gadget chain in the app, those objects can allow the attacker to run code on the ...",
     "tags": [
       "Cybersecurity",
       "The Hacker News",
       "Global Tech"
     ],
-    "content": "\n                      <p>One of the early targets of PHP2Shell exploitation was the firewall. On October 28, Palo Alto Networks confirmed that attackers were exploiting the two PHP vulnerabilities, CVE-2026-109618 and CVE-2026-109619, against PAN-OS management interfaces exposed to the internet. Both flaws let anyone execute code on the web server without authentication. The disclosure itself went a little wrong.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/everything-is-web-application-including.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>PHP&#x27;s default file-based session storage can be made to return objects an attacker chose, by cutting off a session write at the right moment. When combined with a second weakness, such as a suitable gadget chain in the app, those objects can allow the attacker to run code on the server. Today&#x27;s PHP releases fix the flaw, called phpAfterShell. The flaw is tracked as CVE-2026-126714 and rated</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/phpaftershell-explained-how-hackers.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "hackers-breach-n-able-cloud-server-disrupting-email-sec",
-    "title": "Hackers Breach N-able Cloud Server, Disrupting Email Security Management Across 3 Regions",
+    "id": "php-fixes-7-critical-flaws-including-bugs-that-could-al",
+    "title": "PHP Fixes 7 Critical Flaws, Including Bugs That Could Allow Remote Code Execution",
     "category": "Cybersecurity",
     "date": "November 19, 2026",
     "isoDate": "2026-11-19",
@@ -131,20 +152,20 @@ const NEWS_DATA = [
     "author": "The Hacker News Editorial",
     "source": "The Hacker News",
     "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjPpZ9yL9D7JBQvp4_ZmnP8S_U6HKdq3rSM_FVv_uDgT9Iz8D56tO6GNDNE4rs29pejUiKQlxi1HpZ38KYbaSB01PmgPItVL8N-Y9G9vcuJlnadltKvmGhvUKYntAEIVCXFixjdBMyu6S9-zEUlIgGf7E5euvodJbn9LIYWTkRpxwH0g7nz2xp2v5PGMdq/s1600/n-able-hacked.jpg",
+    "sourceUrl": "https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjD2D26Hu7r43uUrdDxmsmmbBe2oMxd-L3_DIVLqAPyDrOnSmdvXfkIq1_lNmWqr49gbrIZ0NeTmA2OYgyWgdUjRf_RTRfflyXn3Vgujkb9tiByOPfej1OqEszpQf2FeozeSqmK5L7aSj28GLwzKmzehIp9zJyeJqgRvbVOW91_pVEMhs3KY9_oXjwf5BE/s1600/php-flawss.jpg",
     "featured": false,
-    "summary": "N-able on Wednesday disclosed that unknown threat actors gained unauthorized access to one of the servers in the Mail Assure and Spam Experts Hosted Cloud, causing it to disable management interfaces and APIs. \"We have taken steps to mitigate the threat and are continuing to hard...",
+    "summary": "The PHP Foundation has released security updates to address multiple critical security flaws that could be exploited to achieve remote code execution on affected deployments, including CVE-2026-115560. The release of the patch follows an advance notice in which the project mainta...",
     "tags": [
       "Cybersecurity",
       "The Hacker News",
       "Global Tech"
     ],
-    "content": "\n                      <p>N-able on Wednesday disclosed that unknown threat actors gained unauthorized access to one of the servers in the Mail Assure and Spam Experts Hosted Cloud, causing it to disable management interfaces and APIs. &quot;We have taken steps to mitigate the threat and are continuing to harden our services to reduce the risk of recurrence,&quot; N-able said. &quot;The investigation is ongoing, but at this time we</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/n-able-confirms-hackers-accessed-cloud.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>The PHP Foundation has released security updates to address multiple critical security flaws that could be exploited to achieve remote code execution on affected deployments, including CVE-2026-115560. The release of the patch follows an advance notice in which the project maintainers alerted users to multiple critical vulnerabilities affecting all supported PHP versions under specific</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/php-fixes-7-critical-flaws-including.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "ruby-releases-fixes-for-7-regex-and-string-flaws-warns-",
-    "title": "Ruby Releases Fixes for 7 Regex and String Flaws, Warns 5 Have Proof-of-Concept RCE",
+    "id": "critical-vmware-vcenter-flaw-cvss-9-8-lets-network-atta",
+    "title": "Critical VMware vCenter Flaw (CVSS 9.8) Lets Network Attackers Bypass Authentication",
     "category": "Cybersecurity",
     "date": "November 19, 2026",
     "isoDate": "2026-11-19",
@@ -152,41 +173,20 @@ const NEWS_DATA = [
     "author": "The Hacker News Editorial",
     "source": "The Hacker News",
     "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj7rmcgZ7yffFsn_7SX4iQcfMhw1dgsxPFXXh6TUunbQ9VaxZh8O5-AFT2V3q0PE7Wx0rW9nLKuB73eluixYuM9N38Dvq_Gjs1nNOXVk3e71jjfhHoP7W97eeuc5AivI3CQNxIrwSaPR9IGV0f2NZ7900Ihtkdgiw1ZivTvgVrXWH2CrX2X5MZGjos6-bs/s1600/ruby.jpg",
+    "sourceUrl": "https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjZ5IDT81eb7KUE0LzwGJAzuAETft3pD5sOz2dJxnQin_-zR_hH8tDKFTsLNBNoe35KM4DhFJjP7K-0YwaMoVwz7xUhTiP2vKeNqmN3kenPgwflENu35qx-QlFj-rDFdyXx1HMz6ykegw6nlnPDXppYbotjoRj-ammlyUZ-Cr0JYLS5iyZXkJXkaIO5UAc/s1600/vmware.jpg",
     "featured": false,
-    "summary": "Ruby contains seven memory-safety flaws in its regular expression engine and its string case-conversion code. For five of them, its maintainers say, proof-of-concept exploits, or PoCs, have shown that crafted input can run code on the machine. \"We are aware of PoCs that prove som...",
+    "summary": "A critical flaw in VMware vCenter lets an attacker with network access bypass authentication and gain unauthorized access to the system, Broadcom, which owns VMware, said in an advisory published today. Fixed versions are out for all supported branches, and the company lists no w...",
     "tags": [
       "Cybersecurity",
       "The Hacker News",
       "Global Tech"
     ],
-    "content": "\n                      <p>Ruby contains seven memory-safety flaws in its regular expression engine and its string case-conversion code. For five of them, its maintainers say, proof-of-concept exploits, or PoCs, have shown that crafted input can run code on the machine. &quot;We are aware of PoCs that prove some of them can be used to trigger remote code execution,&quot; the maintainers said. The project released fixed versions</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/ruby-releases-fixes-for-7-regex-and.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>A critical flaw in VMware vCenter lets an attacker with network access bypass authentication and gain unauthorized access to the system, Broadcom, which owns VMware, said in an advisory published today. Fixed versions are out for all supported branches, and the company lists no workaround. vCenter is the central console for managing an organization&#x27;s ESX hosts and virtual machines. The</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/critical-vmware-vcenter-flaw-cvss-98.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "researcher-demonstrates-database-rce-exploits-affecting",
-    "title": "Researcher Demonstrates Database RCE Exploits Affecting PostgreSQL, MySQL and Oracle",
-    "category": "Cybersecurity",
-    "date": "November 19, 2026",
-    "isoDate": "2026-11-19",
-    "readTime": "3 min read",
-    "author": "The Hacker News Editorial",
-    "source": "The Hacker News",
-    "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDE1pOkFxdtUcDqLptfhjaBnnEyzz2JfxUJICSOrW3vpcNlygN1XleKCdkv9CA3Zp901yQ884tOkPX9TmSYx5tpevenJw1CmW4oktkn2creXnB5-dvbiJB3crcILx4Kb8b6eVhiKjh-RRZTGnvWskqROJOjF3yaWFVK17fmh-tdT7WMas7MbdK-JsCBmw/s1600/database-rce.jpg",
-    "featured": false,
-    "summary": "Low-privilege database accounts that cannot read a single application table can still be used to run code on the database server itself, a researcher has shown, by reaching memory-corruption bugs in the engine code behind ordinary SQL. The exploits, published yesterday, are the r...",
-    "tags": [
-      "Cybersecurity",
-      "The Hacker News",
-      "Global Tech"
-    ],
-    "content": "\n                      <p>Low-privilege database accounts that cannot read a single application table can still be used to run code on the database server itself, a researcher has shown, by reaching memory-corruption bugs in the engine code behind ordinary SQL. The exploits, published yesterday, are the researcher&#x27;s proofs of concept against PostgreSQL, MySQL and ClickHouse, plus a separate Oracle chain that needs no</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/researcher-demonstrates-database-rce.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
-  },
-  {
-    "id": "microsoft-tests-new-edge-lockdown-mode-that-disables-gp",
-    "title": "Microsoft tests new Edge Lockdown Mode that disables GPU APIs",
+    "id": "vmware-patches-vcenter-zero-day-exploited-in-attacks-si",
+    "title": "VMware patches vCenter zero-day exploited in attacks since September",
     "category": "Cybersecurity",
     "date": "November 19, 2026",
     "isoDate": "2026-11-19",
@@ -194,20 +194,20 @@ const NEWS_DATA = [
     "author": "BleepingComputer Editorial",
     "source": "BleepingComputer",
     "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/microsoft/microsoft-tests-new-edge-lockdown-mode-that-disables-gpu-apis/",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/",
     "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Microsoft is developing a new Edge security feature to reduce the attack surface by disabling the WebGL, WebGL2, and WebGPU APIs.",
+    "summary": "Broadcom has released security updates to fix a critical VMware vCenter Server authentication bypass vulnerability that Chinese-linked hackers have exploited in zero-day attacks since September 2026.",
     "tags": [
       "Cybersecurity",
       "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>Microsoft is developing a new Edge security feature to reduce the attack surface by disabling the WebGL, WebGL2, and WebGPU APIs.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/microsoft/microsoft-tests-new-edge-lockdown-mode-that-disables-gpu-apis/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>Broadcom has released security updates to fix a critical VMware vCenter Server authentication bypass vulnerability that Chinese-linked hackers have exploited in zero-day attacks since September 2026.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/vmware-patches-vcenter-zero-day-exploited-in-attacks-since-september/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "microsoft-confirms-app-installation-launch-issues-after",
-    "title": "Microsoft confirms app installation, launch issues after hotpatch",
+    "id": "hackers-steal-data-of-1-6-million-sbc-medical-group-cus",
+    "title": "Hackers steal data of 1.6 million SBC Medical Group customers",
     "category": "Cybersecurity",
     "date": "November 19, 2026",
     "isoDate": "2026-11-19",
@@ -215,20 +215,20 @@ const NEWS_DATA = [
     "author": "BleepingComputer Editorial",
     "source": "BleepingComputer",
     "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-app-installation-launch-issues-after-hotpatch/",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/hackers-steal-data-of-16-million-sbc-medical-group-customers/",
     "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Microsoft has shared a workaround for installation and launch issues affecting Office and third-party applications after installing this month's Windows 11 hotpatch.",
+    "summary": "SBC Medical Group has warned in a filing with the U.S. Securities and Exchange Commission (SEC) that two cybersecurity incidents exposed sensitive customer and employee information, including personal data belonging to 1.6 million people.",
     "tags": [
       "Cybersecurity",
       "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>Microsoft has shared a workaround for installation and launch issues affecting Office and third-party applications after installing this month&#x27;s Windows 11 hotpatch.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/microsoft/microsoft-confirms-app-installation-launch-issues-after-hotpatch/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>SBC Medical Group has warned in a filing with the U.S. Securities and Exchange Commission (SEC) that two cybersecurity incidents exposed sensitive customer and employee information, including personal data belonging to 1.6 million people.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/hackers-steal-data-of-16-million-sbc-medical-group-customers/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "nvidia-investigating-gentlemen-ransomware-breach-claims",
-    "title": "NVIDIA investigating Gentlemen ransomware breach claims",
+    "id": "asus-warns-of-critical-hard-coded-key-flaw-in-control-c",
+    "title": "ASUS warns of critical hard-coded key flaw in Control Center Express",
     "category": "Cybersecurity",
     "date": "November 19, 2026",
     "isoDate": "2026-11-19",
@@ -236,41 +236,41 @@ const NEWS_DATA = [
     "author": "BleepingComputer Editorial",
     "source": "BleepingComputer",
     "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/asus-warns-of-critical-hard-coded-key-flaw-in-control-center-express/",
     "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "NVIDIA is investigating claims of a security breach after the Gentlemen ransomware group has added the company to its dark web data leak site.",
+    "summary": "ASUS released Control Center Express v1.7.29 to fix three critical vulnerabilities that could let remote attackers gain administrative control of the management console and the devices it manages.",
     "tags": [
       "Cybersecurity",
       "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>NVIDIA is investigating claims of a security breach after the Gentlemen ransomware group has added the company to its dark web data leak site.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/nvidia-investigating-gentlemen-ransomware-breach-claims/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>ASUS released Control Center Express v1.7.29 to fix three critical vulnerabilities that could let remote attackers gain administrative control of the management console and the devices it manages.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/asus-warns-of-critical-hard-coded-key-flaw-in-control-center-express/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-",
-    "title": "Ukraine, FBI arrest ransomware gang members tied to $40M in ransoms",
+    "id": "transport-for-london-breach-exposes-265-000-oyster-card",
+    "title": "Transport for London breach exposes 265,000 Oyster card users' data",
     "category": "Cybersecurity",
-    "date": "November 18, 2026",
-    "isoDate": "2026-11-18",
+    "date": "November 19, 2026",
+    "isoDate": "2026-11-19",
     "readTime": "3 min read",
     "author": "BleepingComputer Editorial",
     "source": "BleepingComputer",
     "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/",
     "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Ukrainian authorities, working with the FBI, have arrested four suspected members of an international ransomware organization linked to more than $40.5 million in ransom payments from at least 28 companies worldwide.",
+    "summary": "Transport for London (TfL) has announced that around 265,000 Oyster photocard customers may have had their account details exposed in a data breach.",
     "tags": [
       "Cybersecurity",
       "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>Ukrainian authorities, working with the FBI, have arrested four suspected members of an international ransomware organization linked to more than $40.5 million in ransom payments from at least 28 companies worldwide.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/ukraine-fbi-arrest-ransomware-gang-members-tied-to-40m-in-ransoms/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>Transport for London (TfL) has announced that around 265,000 Oyster photocard customers may have had their account details exposed in a data breach.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/transport-for-london-breach-exposes-265-000-oyster-card-users-data/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "libernt-an-ai-fueled-fork-of-reactos-focused-on-windows",
-    "title": "LiberNT: An AI-Fueled Fork Of ReactOS Focused On Windows 11 Compatibility",
+    "id": "linux-7-5-to-optionally-block-proc-kcore-access-for-bet",
+    "title": "Linux 7.5 To Optionally Block /proc/kcore Access For Better Security",
     "category": "Linux & Open Source",
     "date": "November 19, 2026",
     "isoDate": "2026-11-19",
@@ -278,20 +278,20 @@ const NEWS_DATA = [
     "author": "Phoronix Editorial",
     "source": "Phoronix",
     "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/LiberNT",
+    "sourceUrl": "https://www.phoronix.com/news/Linux-7.5-Restrict-proc-kcore",
     "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "While the ReactOS project has been enjoying nice conventional progress this year from initial USB 3.0 driver support to improved DirectX support, there is now a new project called LiberNT that is forked from the ReactOS codebase and leveraging AI to quickly iterate on it with a g...",
+    "summary": "A patch that is queued up ahead of the Linux 7.5 merge window allows for optionally disabling /proc/kcore access at boot time. This can allow for better system security though will remain enabled by default for kernel builds with the typical CONFIG_PROC_KCORE option",
     "tags": [
       "Linux & Open Source",
       "Phoronix",
       "Global Tech"
     ],
-    "content": "\n                      <p>While the ReactOS project has been enjoying nice conventional progress this year from initial USB 3.0 driver support to improved DirectX support, there is now a new project called LiberNT that is forked from the ReactOS codebase and leveraging AI to quickly iterate on it with a goal of Windows 11 compatibility</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/LiberNT\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>A patch that is queued up ahead of the Linux 7.5 merge window allows for optionally disabling /proc/kcore access at boot time. This can allow for better system security though will remain enabled by default for kernel builds with the typical CONFIG_PROC_KCORE option</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Linux-7.5-Restrict-proc-kcore\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "more-asus-asrock-motherboards-seeing-sensor-monitoring-",
-    "title": "More ASUS & ASRock Motherboards Seeing Sensor Monitoring Support With Linux 7.5",
+    "id": "llvm-effectively-completes-its-relicensing-after-nearly",
+    "title": "LLVM Effectively Completes Its Relicensing After Nearly A Decade Of Work",
     "category": "Linux & Open Source",
     "date": "November 19, 2026",
     "isoDate": "2026-11-19",
@@ -299,20 +299,20 @@ const NEWS_DATA = [
     "author": "Phoronix Editorial",
     "source": "Phoronix",
     "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/Linux-75-More-ASUS-ASRock-HWMON",
+    "sourceUrl": "https://www.phoronix.com/news/LLVM-Re-Licensing-Complete",
     "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "A number of patches were recently queued into the Linux hardware monitoring subsystem's \"hwmon-next\" Git branch of expanded ASUS and ASRock motherboard support for the upcoming Linux 7.5 kernel",
+    "summary": "Back around 2017 an effort began to work on re-licensing all of the LLVM code under the Apache 2.0 license with exceptions, moving away from their prior 3-clause BSD-like \"LLVM license\". Prior updates on the topic included LLVM Developers Are Still Working On Their Massive Relice...",
     "tags": [
       "Linux & Open Source",
       "Phoronix",
       "Global Tech"
     ],
-    "content": "\n                      <p>A number of patches were recently queued into the Linux hardware monitoring subsystem&#x27;s &quot;hwmon-next&quot; Git branch of expanded ASUS and ASRock motherboard support for the upcoming Linux 7.5 kernel</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Linux-75-More-ASUS-ASRock-HWMON\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>Back around 2017 an effort began to work on re-licensing all of the LLVM code under the Apache 2.0 license with exceptions, moving away from their prior 3-clause BSD-like &quot;LLVM license&quot;. Prior updates on the topic included LLVM Developers Are Still Working On Their Massive Relicensing Effort (2018) and then LLVM Is Still Working On Relicensing, Needs Help Locating Some Past Contributors (2021)... Now finally as we approach the end of 2026, this re-licensing effort has been deemed effectively complete</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/LLVM-Re-Licensing-Complete\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "amd-ai-engine-aie-driver-posted-for-mainline-linux-kern",
-    "title": "AMD AI Engine \"AIE\" Driver Posted For Mainline Linux Kernel Review",
+    "id": "windows-11-vs-ubuntu-26-10-linux-performance-on-amd-ryz",
+    "title": "Windows 11 vs. Ubuntu 26.10 Linux Performance On AMD Ryzen AI Max+",
     "category": "Linux & Open Source",
     "date": "November 19, 2026",
     "isoDate": "2026-11-19",
@@ -320,16 +320,16 @@ const NEWS_DATA = [
     "author": "Phoronix Editorial",
     "source": "Phoronix",
     "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/AMD-AI-Engine-Linux-Driver",
+    "sourceUrl": "https://www.phoronix.com/review/windows-ubuntu2610-strix-halo",
     "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Separate from the existing AMDXDNA accelerator driver in the Linux kernel for Ryzen AI NPUs, on Wednesday AMD posted patches for the new AMD AI Engine \"AIE\" accelerator driver",
+    "summary": "With recently having received a review sample of the GMKtec EVO-X2 mini PC powered by the AMD Ryzen AI Max+ 395 \"Strix Halo\" SoC and pre-loaded with Microsoft Windows 11 Pro, I took the opportunity to see how the AMD Ryzen AI Max+ performance is comparing between Windows 11 and U...",
     "tags": [
       "Linux & Open Source",
       "Phoronix",
       "Global Tech"
     ],
-    "content": "\n                      <p>Separate from the existing AMDXDNA accelerator driver in the Linux kernel for Ryzen AI NPUs, on Wednesday AMD posted patches for the new AMD AI Engine &quot;AIE&quot; accelerator driver</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/AMD-AI-Engine-Linux-Driver\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>With recently having received a review sample of the GMKtec EVO-X2 mini PC powered by the AMD Ryzen AI Max+ 395 &quot;Strix Halo&quot; SoC and pre-loaded with Microsoft Windows 11 Pro, I took the opportunity to see how the AMD Ryzen AI Max+ performance is comparing between Windows 11 and Ubuntu 26.10 Linux on a range of workloads from gaming to AI and creator applications.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/review/windows-ubuntu2610-strix-halo\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   }
 ];
 
