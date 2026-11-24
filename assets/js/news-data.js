@@ -8,7 +8,7 @@
  * - Phoronix, Kernel.org (Linux & Systems Architecture)
  * - Ars Technica, The Register (Enterprise Cloud & Networking)
  * 
- * Last Editorial Sync: November 23, 2026 23:30:03 UTC
+ * Last Editorial Sync: November 24, 2026 08:49:21 UTC
  */
 
 const NEWS_DATA = [
@@ -16,8 +16,8 @@ const NEWS_DATA = [
     "id": "slcert-national-cybersecurity-advisory-critical-infrastructure",
     "title": "Sri Lanka CERT Issues National Advisory on Critical Windows & Linux Endpoint Security",
     "category": "Cybersecurity",
-    "date": "November 23, 2026",
-    "isoDate": "2026-11-23",
+    "date": "November 24, 2026",
+    "isoDate": "2026-11-24",
     "readTime": "3 min read",
     "author": "National Incident Coordination",
     "source": "Sri Lanka CERT | CC",
@@ -38,8 +38,8 @@ const NEWS_DATA = [
     "id": "colombo-tech-city-subsea-cable-digital-infrastructure-expansion",
     "title": "Sri Lanka Expands South Asian Cloud Gateway with Direct High-Capacity Subsea Cable Hub",
     "category": "Cloud & Enterprise IT",
-    "date": "November 22, 2026",
-    "isoDate": "2026-11-22",
+    "date": "November 23, 2026",
+    "isoDate": "2026-11-23",
     "readTime": "4 min read",
     "author": "Telecommunications Regulatory Authority",
     "source": "Colombo Tech Authority",
@@ -60,8 +60,8 @@ const NEWS_DATA = [
     "id": "cbsl-fintech-zero-trust-endpoint-directive-2026",
     "title": "Central Bank of Sri Lanka Mandates Strict Host-Level Firewall & Telemetry Auditing",
     "category": "Cybersecurity",
-    "date": "November 22, 2026",
-    "isoDate": "2026-11-22",
+    "date": "November 23, 2026",
+    "isoDate": "2026-11-23",
     "readTime": "3 min read",
     "author": "Payments & Settlements Dept",
     "source": "CBSL FinTech Oversight",
@@ -82,8 +82,8 @@ const NEWS_DATA = [
     "id": "sri-lanka-national-digital-identity-data-privacy-safeguards",
     "title": "Sri Lanka Enacts Enhanced Data Protection Compliance for Digital Public Infrastructure",
     "category": "Cybersecurity",
-    "date": "November 21, 2026",
-    "isoDate": "2026-11-21",
+    "date": "November 22, 2026",
+    "isoDate": "2026-11-22",
     "readTime": "3 min read",
     "author": "Data Protection Authority",
     "source": "DPA Sri Lanka",
@@ -99,6 +99,48 @@ const NEWS_DATA = [
       "Data Security"
     ],
     "content": "\n          <p>The Data Protection Authority of Sri Lanka has published its comprehensive operational guidelines for enterprise data processors under the provisions of the Personal Data Protection Act (PDPA).</p>\n          \n          <h2>Workstation Privacy &amp; Offline Storage</h2>\n          <p>Organizations managing customer archives are strongly encouraged to deploy local offline backup solutions, eliminating unnecessary cloud exposure and safeguarding confidential user records through client-side encryption.</p>\n        "
+  },
+  {
+    "id": "openai-and-cisco-unveil-ai-assisted-linux-security-tool",
+    "title": "OpenAI and Cisco Unveil AI-Assisted Linux Security Tool to Block Exploits Before Patching",
+    "category": "Cybersecurity",
+    "date": "November 24, 2026",
+    "isoDate": "2026-11-24",
+    "readTime": "3 min read",
+    "author": "The Hacker News Editorial",
+    "source": "The Hacker News",
+    "location": "San Francisco, California, USA",
+    "sourceUrl": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKBknwzOcmsT5P3Gnyn8-WGRNbttWLAtmWlHkVuS900lrH1Q7Wj_kBCJiASbBvhNUKWEsO8Xt5VKKokGA-M17y8Pj4EtH6564yafSWGebOVgMuTwxUUB5fV4oProNTbg8MeEhcaiy95WbMi6og3q0uSM4SxLCyzVwV3FbCfiSXrVoJtQUrYpJfyeW1AUFm/s1600/openai-linux.jpg",
+    "featured": false,
+    "summary": "OpenAI and Cisco have teamed up to launch Shirudo (meaning \"shield\" in Japanese), an open-source Linux runtime that allows artificial intelligence (AI) agents to defend systems without downtime. \"It lets agents write dynamic eBPF controls to shield systems from exploits, giving d...",
+    "tags": [
+      "Cybersecurity",
+      "The Hacker News",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>OpenAI and Cisco have teamed up to launch Shirudo (meaning &quot;shield&quot; in Japanese), an open-source Linux runtime that allows artificial intelligence (AI) agents to defend systems without downtime. &quot;It lets agents write dynamic eBPF controls to shield systems from exploits, giving defenders more time to test and roll out patches,&quot; OpenAI said in a post on X. The AI upstart called the initiative a</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
+    "id": "hackers-exploit-n-able-mailassure-flaw-while-ai-agents-",
+    "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
+    "category": "Cybersecurity",
+    "date": "November 24, 2026",
+    "isoDate": "2026-11-24",
+    "readTime": "3 min read",
+    "author": "The Hacker News Editorial",
+    "source": "The Hacker News",
+    "location": "San Francisco, California, USA",
+    "sourceUrl": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrPCPwSotVSX8IYSgpSrVceRAIYqba8YSZSlNwD5RjetEhPG6vLRhk_NKkatjg1h-fulZJDm4CucsLvQrEtCO6v0NtuJGo3nZD3mXSHyKpgPrUZMpq7YNpheStYC_AqyMWRfWIFiK9bcHJNAw6pwK9JqirhO8JESKdmsI5Pl8UgtsVsRivmMmMenQ01ClW/s1600/cisa-kev.jpg",
+    "featured": false,
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added two flaws impacting N-able MailAssure and MONAI Label to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The critical vulnerabilities are listed below - CVE...",
+    "tags": [
+      "Cybersecurity",
+      "The Hacker News",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added two flaws impacting N-able MailAssure and MONAI Label to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The critical vulnerabilities are listed below - CVE-2026-134624 (CVSS score: 9.3) - A server-side request forgery (SSRF) vulnerability in N-able MailAssure&#x27;s LDAP</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
     "id": "webworm-suspected-of-modifying-softether-vpn-to-evade-d",
@@ -141,48 +183,6 @@ const NEWS_DATA = [
       "Global Tech"
     ],
     "content": "\n                      <p>A stolen key. A trusted message. A routine update. None of these looks like the start of a major security problem. That&#x27;s partly why they work. Attackers don&#x27;t always need to break down a door. Sometimes they just use one that&#x27;s already open. This week&#x27;s stories show how quickly a small opening can turn into a much bigger mess. One breach helps attackers reach another target. Tools people rely</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
-  },
-  {
-    "id": "critical-binary-parser-flaw-enables-javascript-injectio",
-    "title": "Critical binary-parser Flaw Enables JavaScript Injection via Malicious Parser Definitions",
-    "category": "Cybersecurity",
-    "date": "November 23, 2026",
-    "isoDate": "2026-11-23",
-    "readTime": "3 min read",
-    "author": "The Hacker News Editorial",
-    "source": "The Hacker News",
-    "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjJ_LYD1NyoPDf8MFXggODpgd2hvazxjShSZltgrLUVic7V-ZIQSjXIzFrkUx0FNoUjlxlIYocEd1AZwGx66uqGWEUyd1TMSlDmxUu8M_r6jdYkmWDZjbszL2WsK7LJzrwI-NgsI7EaLe9WkLwNLGKj8ww3tTOY4X4JPug3RWQqoypUiEpZjVXgBhhcLuZG/s1600/js-cve.jpg",
-    "featured": false,
-    "summary": "A critical security flaw has been disclosed in the popular binary-parser library that could allow an attacker who controls parser definitions to execute arbitrary code. The vulnerability, tracked as CVE-2026-134814 (CVSS score: 9.2 / 8.1), is a case of code injection impacting bi...",
-    "tags": [
-      "Cybersecurity",
-      "The Hacker News",
-      "Global Tech"
-    ],
-    "content": "\n                      <p>A critical security flaw has been disclosed in the popular binary-parser library that could allow an attacker who controls parser definitions to execute arbitrary code. The vulnerability, tracked as CVE-2026-134814 (CVSS score: 9.2 / 8.1), is a case of code injection impacting binary-parser versions prior to 2.3.1. &quot;Binary-parser before 2.3.1 contains a code injection vulnerability that allows</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
-  },
-  {
-    "id": "hackers-exploit-critical-screenconnect-flaw-to-hijack-m",
-    "title": "Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs Without Warning",
-    "category": "Cybersecurity",
-    "date": "November 23, 2026",
-    "isoDate": "2026-11-23",
-    "readTime": "3 min read",
-    "author": "The Hacker News Editorial",
-    "source": "The Hacker News",
-    "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiWAI03mMW-UNs2bdUuZEiugVBMZq3speEoo8tbQ7TZVITD4fnXiK4l657Tn4-G9fX2w8xLz2zkP9-RTrg3QZPtNMHL_Lg7YRoruCnp8TJA4tbA5bW1YsBZU8QR2FIqSb3_IpN1Le-Xoq2MQ82ZQyRNmYxr8q70PPzijzypDcIDKMIOjrzBweBUiKJ_nuJY/s1600/screens.jpg",
-    "featured": false,
-    "summary": "Threat actors are exploiting a now-patched security flaw in ConnectWise ScreenConnect to target managed service provider (MSP) servers. The activity revolves around CVE-2026-84869 (CVSS score: 9.9), a critical ScreenConnect client flaw that allows a guest to transfer and execute ...",
-    "tags": [
-      "Cybersecurity",
-      "The Hacker News",
-      "Global Tech"
-    ],
-    "content": "\n                      <p>Threat actors are exploiting a now-patched security flaw in ConnectWise ScreenConnect to target managed service provider (MSP) servers. The activity revolves around CVE-2026-84869 (CVSS score: 9.9), a critical ScreenConnect client flaw that allows a guest to transfer and execute a malicious payload on a connecting technician&#x27;s host. &quot;On November 12, 2026, we observed one managed service</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
     "id": "south-korea-s-power-giant-kepco-confirms-data-breach-im",
@@ -269,6 +269,27 @@ const NEWS_DATA = [
     "content": "\n                      <p>LaLiga, Spain&#x27;s top men&#x27;s football league, disclosed a data breach that exposed personal information belonging to users of its services and those of some affiliated clubs.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
+    "id": "mesa-s-nvk-nvidia-driver-another-step-closer-to-vulkan-",
+    "title": "Mesa's NVK NVIDIA Driver Another Step Closer To Vulkan Ray-Tracing",
+    "category": "Linux & Open Source",
+    "date": "November 23, 2026",
+    "isoDate": "2026-11-23",
+    "readTime": "3 min read",
+    "author": "Phoronix Editorial",
+    "source": "Phoronix",
+    "location": "Chicago, Illinois, USA",
+    "sourceUrl": "https://www.phoronix.com/news/Mesa-NVK-TTU-Instructions",
+    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
+    "featured": false,
+    "summary": "Mesa's NVK open-source NVIDIA Vulkan driver is one step closer toward eventually supporting Vulkan ray-tracing",
+    "tags": [
+      "Linux & Open Source",
+      "Phoronix",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>Mesa&#x27;s NVK open-source NVIDIA Vulkan driver is one step closer toward eventually supporting Vulkan ray-tracing</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Mesa-NVK-TTU-Instructions\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
     "id": "zstd-1-6-released-with-many-fixes-new-performance-optim",
     "title": "Zstd 1.6 Released With Many Fixes, New Performance Optimizations",
     "category": "Linux & Open Source",
@@ -309,27 +330,6 @@ const NEWS_DATA = [
       "Global Tech"
     ],
     "content": "\n                      <p>The Ladybird open-source desktop web browser built from scratch with its own independent web engine has now entered its alpha phase</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Ladybird-Browser-Alpha\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
-  },
-  {
-    "id": "mesa-27-0-radeonsi-gallium3d-disables-radeon-kernel-dri",
-    "title": "Mesa 27.0 RadeonSI Gallium3D Disables Radeon Kernel Driver Support By Default",
-    "category": "Linux & Open Source",
-    "date": "November 23, 2026",
-    "isoDate": "2026-11-23",
-    "readTime": "3 min read",
-    "author": "Phoronix Editorial",
-    "source": "Phoronix",
-    "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/RadeonSI-Radeon-Disable-Default",
-    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
-    "featured": false,
-    "summary": "As part of encouraging AMD Radeon Linux users to switch over to the AMDGPU kernel driver and/or upgrade their kernels, Mesa 27.0 with the RadeonSI Gallium3D driver is disabling its Radeon kernel driver compatibility by default. This affects the early GCN 1.0 and GCN 1.1 graphics ...",
-    "tags": [
-      "Linux & Open Source",
-      "Phoronix",
-      "Global Tech"
-    ],
-    "content": "\n                      <p>As part of encouraging AMD Radeon Linux users to switch over to the AMDGPU kernel driver and/or upgrade their kernels, Mesa 27.0 with the RadeonSI Gallium3D driver is disabling its Radeon kernel driver compatibility by default. This affects the early GCN 1.0 and GCN 1.1 graphics processors that had been still using the legacy Radeon kernel driver by default up until about a year ago when it reached feature parity on the AMDGPU kernel driver. For now the Radeon kernel driver support in Mesa 27.0 is disabled by default but can be re-enabled, but eventually that Radeon kernel driver support by RadeonSI will be removed</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/RadeonSI-Radeon-Disable-Default\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   }
 ];
 
