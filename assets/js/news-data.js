@@ -8,7 +8,7 @@
  * - Phoronix, Kernel.org (Linux & Systems Architecture)
  * - Ars Technica, The Register (Enterprise Cloud & Networking)
  * 
- * Last Editorial Sync: November 24, 2026 08:49:21 UTC
+ * Last Editorial Sync: November 24, 2026 21:59:49 UTC
  */
 
 const NEWS_DATA = [
@@ -101,8 +101,8 @@ const NEWS_DATA = [
     "content": "\n          <p>The Data Protection Authority of Sri Lanka has published its comprehensive operational guidelines for enterprise data processors under the provisions of the Personal Data Protection Act (PDPA).</p>\n          \n          <h2>Workstation Privacy &amp; Offline Storage</h2>\n          <p>Organizations managing customer archives are strongly encouraged to deploy local offline backup solutions, eliminating unnecessary cloud exposure and safeguarding confidential user records through client-side encryption.</p>\n        "
   },
   {
-    "id": "openai-and-cisco-unveil-ai-assisted-linux-security-tool",
-    "title": "OpenAI and Cisco Unveil AI-Assisted Linux Security Tool to Block Exploits Before Patching",
+    "id": "iran-aligned-volant-manticore-uses-ipfs-based-kuboshell",
+    "title": "Iran-Aligned Volant Manticore Uses IPFS-Based KuboShell Backdoor in Espionage Campaigns",
     "category": "Cybersecurity",
     "date": "November 24, 2026",
     "isoDate": "2026-11-24",
@@ -110,20 +110,20 @@ const NEWS_DATA = [
     "author": "The Hacker News Editorial",
     "source": "The Hacker News",
     "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiKBknwzOcmsT5P3Gnyn8-WGRNbttWLAtmWlHkVuS900lrH1Q7Wj_kBCJiASbBvhNUKWEsO8Xt5VKKokGA-M17y8Pj4EtH6564yafSWGebOVgMuTwxUUB5fV4oProNTbg8MeEhcaiy95WbMi6og3q0uSM4SxLCyzVwV3FbCfiSXrVoJtQUrYpJfyeW1AUFm/s1600/openai-linux.jpg",
+    "sourceUrl": "https://thehackernews.com/2026/11/iran-aligned-volant-manticore-uses-ipfs.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqukTcR2pkDWiTqMzORa4j7zZRB0MDUGfBly50X7gPwPHqSeBmfReQWpMR9IdPOP_NbeuQSBdYPknSgxvutDll4VAZNSoGqcwmXzhZNEez-UoE-MwTnM9i9XxjoLYRdhY0iY6tD9BK9IDB0o8RUU7sNsOex5tVNtoNwRHCCAxM9ri66c4G2wPa9AqW9saA/s1600/iran-hackers.jpg",
     "featured": false,
-    "summary": "OpenAI and Cisco have teamed up to launch Shirudo (meaning \"shield\" in Japanese), an open-source Linux runtime that allows artificial intelligence (AI) agents to defend systems without downtime. \"It lets agents write dynamic eBPF controls to shield systems from exploits, giving d...",
+    "summary": "A previously undocumented Iran-aligned cyber espionage group called Volant Manticore has targeted telecommunications companies, airlines, and critical infrastructure in Cyprus. Central to the group's operations is a backdoor called KuboShell that uses the InterPlanetary File Syst...",
     "tags": [
       "Cybersecurity",
       "The Hacker News",
       "Global Tech"
     ],
-    "content": "\n                      <p>OpenAI and Cisco have teamed up to launch Shirudo (meaning &quot;shield&quot; in Japanese), an open-source Linux runtime that allows artificial intelligence (AI) agents to defend systems without downtime. &quot;It lets agents write dynamic eBPF controls to shield systems from exploits, giving defenders more time to test and roll out patches,&quot; OpenAI said in a post on X. The AI upstart called the initiative a</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>A previously undocumented Iran-aligned cyber espionage group called Volant Manticore has targeted telecommunications companies, airlines, and critical infrastructure in Cyprus. Central to the group&#x27;s operations is a backdoor called KuboShell that uses the InterPlanetary File System (IPFS) for command-and-control (C2) and deploys Homa, a post-compromise framework that&#x27;s a reimplementation of</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/iran-aligned-volant-manticore-uses-ipfs.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "hackers-exploit-n-able-mailassure-flaw-while-ai-agents-",
-    "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
+    "id": "vmware-vcenter-hit-by-another-critical-9-8-rated-auth-b",
+    "title": "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
     "category": "Cybersecurity",
     "date": "November 24, 2026",
     "isoDate": "2026-11-24",
@@ -131,205 +131,205 @@ const NEWS_DATA = [
     "author": "The Hacker News Editorial",
     "source": "The Hacker News",
     "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjrPCPwSotVSX8IYSgpSrVceRAIYqba8YSZSlNwD5RjetEhPG6vLRhk_NKkatjg1h-fulZJDm4CucsLvQrEtCO6v0NtuJGo3nZD3mXSHyKpgPrUZMpq7YNpheStYC_AqyMWRfWIFiK9bcHJNAw6pwK9JqirhO8JESKdmsI5Pl8UgtsVsRivmMmMenQ01ClW/s1600/cisa-kev.jpg",
+    "sourceUrl": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi0zpQTclLnhVQHphFdBZZ_hrxhsZvA5G50sGBz5qq1iOg2B1YLu8rE5e_HM1GZOE24SNpwexwst80NTKP7_Wwexq7EzIl-I7ykIXCtTGQjeZhBGVVuAgzxac5JwaquTQuMNRstBFo8JzMDyqgsNbM_KtxGF3wHPBIM9GfaclNu0OTPlpF5YhNvqoKKytAY/s1600/vmware-exploit.jpg",
     "featured": false,
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added two flaws impacting N-able MailAssure and MONAI Label to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The critical vulnerabilities are listed below - CVE...",
+    "summary": "Broadcom has shipped patches to address 23 vulnerabilities impacting VMware ESX, vCenter, Workstation, Fusion, and Avi Load Balancer, including one critical bug that could be abused to bypass authentication. The critical vulnerability, tracked as CVE-2026-123903, is rated 9.8 out...",
     "tags": [
       "Cybersecurity",
       "The Hacker News",
       "Global Tech"
     ],
-    "content": "\n                      <p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added two flaws impacting N-able MailAssure and MONAI Label to its Known Exploited Vulnerabilities (KEV) catalog, citing evidence of active exploitation. The critical vulnerabilities are listed below - CVE-2026-134624 (CVSS score: 9.3) - A server-side request forgery (SSRF) vulnerability in N-able MailAssure&#x27;s LDAP</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>Broadcom has shipped patches to address 23 vulnerabilities impacting VMware ESX, vCenter, Workstation, Fusion, and Avi Load Balancer, including one critical bug that could be abused to bypass authentication. The critical vulnerability, tracked as CVE-2026-123903, is rated 9.8 out of 10.0 on the CVSS scoring system. It resides in the VMware Directory Service (&quot;vmdir&quot;). &quot;A malicious actor with</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "webworm-suspected-of-modifying-softether-vpn-to-evade-d",
-    "title": "Webworm Suspected of Modifying SoftEther VPN to Evade Detection and Hide Remote Access",
+    "id": "okta-links-shinyhunters-associated-vishing-group-to-new",
+    "title": "Okta Links ShinyHunters-Associated Vishing Group to New INCEPTION Data Leak Site",
     "category": "Cybersecurity",
-    "date": "November 23, 2026",
-    "isoDate": "2026-11-23",
+    "date": "November 24, 2026",
+    "isoDate": "2026-11-24",
     "readTime": "3 min read",
     "author": "The Hacker News Editorial",
     "source": "The Hacker News",
     "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/webworm-suspected-of-modifying.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi9_mXkFA2_QQWa_ajcGxgoc3rSAfxGJqP-uIREqPGAfJGM7D7-mLrjwSE_F1egX-pwVRvMRinRGs4QbcBE1yJrmHFw4Fa_ILg6ZuTIOy1bf86-wPQ-Zgsqa-6hqdBapRROk97rOeT-Vfa002vHuWF6fCSE1KPttjswyjUeBxjrJzrmVU9KY724e75Giq1T/s1600/chinese-malware.jpg",
+    "sourceUrl": "https://thehackernews.com/2026/11/okta-links-shinyhunters-associated.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjete6dy8Fmd7sbjqKI5GKSySXkcnz4NF__irfVMBHzgRIDUnpGHtvRIbCywZYYsoKsnMdPhvanoXcnXbYvZpMjL2lL6d_F9a4ErEaI5rH_boPedH_ru2Ush9wonb8tYhGNVM6M_01DTue1THY7uGMbuKBJKNgMbrACkxHCGJiJylHWoxkkpCXNr2Z_CIdf/s1600/leaks.jpg",
     "featured": false,
-    "summary": "The China-aligned threat actor known as Webworm is suspected to be using a custom version of the open-source SoftEther VPN Bridge tool in an attempt to remove recognizable detection fingerprints, while disguising it as network-monitoring software to establish covert remote access...",
+    "summary": "A threat cluster previously assessed to be affiliated with the ShinyHunters extortion crew may have rebranded and continued operations under a new name called INCEPTION, according to Okta's Threat Intelligence team. The cluster, dubbed O-UNC-053, is characterized by the use of vo...",
     "tags": [
       "Cybersecurity",
       "The Hacker News",
       "Global Tech"
     ],
-    "content": "\n                      <p>The China-aligned threat actor known as Webworm is suspected to be using a custom version of the open-source SoftEther VPN Bridge tool in an attempt to remove recognizable detection fingerprints, while disguising it as network-monitoring software to establish covert remote access to compromised networks. The modified variant &quot;implements various tricks to hide itself from security tools,&quot;</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/webworm-suspected-of-modifying.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>A threat cluster previously assessed to be affiliated with the ShinyHunters extortion crew may have rebranded and continued operations under a new name called INCEPTION, according to Okta&#x27;s Threat Intelligence team. The cluster, dubbed O-UNC-053, is characterized by the use of voice phishing (aka vishing) attacks to trick targets into entering credentials in phishing pages and approving</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/okta-links-shinyhunters-associated.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "weekly-recap-vmware-0-day-java4shell-nginx2root-ruby2sh",
-    "title": "\u26a1 Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lot of Shell Trouble",
+    "id": "hackers-found-a-way-around-github-sha-pinning-this-webi",
+    "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
     "category": "Cybersecurity",
-    "date": "November 23, 2026",
-    "isoDate": "2026-11-23",
+    "date": "November 24, 2026",
+    "isoDate": "2026-11-24",
     "readTime": "3 min read",
     "author": "The Hacker News Editorial",
     "source": "The Hacker News",
     "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiBkXdg7nYK3nVTpBuC9FL7mGBvzvUxU0VxYplArVFYSTg2d_6tFITemHBYRAOD29pVBKzfo2aZ9Jsy8avRdACCMqrVdlEER0zn2xIWDBdswcH_nZpnJYkfORK6CEaWwX3f-B8AvkUqbR2TLNa7odUG4PFu1uTk_cwsUt8DPGJBSjjF2wd8VPIa5ATJ4fo3/s1600/crecap.jpg",
+    "sourceUrl": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgYUhfLA6wixTr6AiVmOSa8uxO2mHxPqG7rHalDaUtYlOaTwUSIzi3JAP78cfEUhwwaoijNe8vJ0ZFiBqDmfrG9LVOzItxMxCYcTCbEc4f7W8iWgKSvzR6DrT0XtK_cM4eTKQ2Edvz-QG5P8iXF_GV_-k6CXMN_-D_QAJags-LpeuXmJ5C6DDz7mDRSBMY/s1600/git-actions.jpg",
     "featured": false,
-    "summary": "A stolen key. A trusted message. A routine update. None of these looks like the start of a major security problem. That's partly why they work. Attackers don't always need to break down a door. Sometimes they just use one that's already open. This week's stories show how quickly ...",
+    "summary": "Pinning GitHub Actions to an exact version of their code, known as SHA pinning, has become the go-to defense against software supply chain attacks. Attackers have already found a way around it. In March 2026, the hackers who hijacked Trivy, a widely used open-source security scan...",
     "tags": [
       "Cybersecurity",
       "The Hacker News",
       "Global Tech"
     ],
-    "content": "\n                      <p>A stolen key. A trusted message. A routine update. None of these looks like the start of a major security problem. That&#x27;s partly why they work. Attackers don&#x27;t always need to break down a door. Sometimes they just use one that&#x27;s already open. This week&#x27;s stories show how quickly a small opening can turn into a much bigger mess. One breach helps attackers reach another target. Tools people rely</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>Pinning GitHub Actions to an exact version of their code, known as SHA pinning, has become the go-to defense against software supply chain attacks. Attackers have already found a way around it. In March 2026, the hackers who hijacked Trivy, a widely used open-source security scanner, planted malicious code that looked like it came from GitHub&#x27;s official checkout tool. They even labeled it a</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "south-korea-s-power-giant-kepco-confirms-data-breach-im",
-    "title": "South Korea\u2019s power giant KEPCO confirms data breach impacting 1.5 million",
+    "id": "rackspace-shuts-down-spot-cloud-platform-after-security",
+    "title": "Rackspace shuts down Spot cloud platform after security breach",
     "category": "Cybersecurity",
-    "date": "November 23, 2026",
-    "isoDate": "2026-11-23",
+    "date": "November 24, 2026",
+    "isoDate": "2026-11-24",
     "readTime": "3 min read",
     "author": "BleepingComputer Editorial",
     "source": "BleepingComputer",
     "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/",
     "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "A threat actor breached the internal network of Korea Electric Power Corporation (KEPCO) and accessed two systems containing customer, employee, and contractor data.",
+    "summary": "Rackspace is shutting down its Rackspace Spot cloud platform after a security breach allowed hackers to access customer Kubernetes clusters and secrets, giving customers until December 8 to migrate their services and download their data.",
     "tags": [
       "Cybersecurity",
       "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>A threat actor breached the internal network of Korea Electric Power Corporation (KEPCO) and accessed two systems containing customer, employee, and contractor data.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/south-koreas-power-giant-kepco-confirms-data-breach-impacting-15-million/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>Rackspace is shutting down its Rackspace Spot cloud platform after a security breach allowed hackers to access customer Kubernetes clusters and secrets, giving customers until December 8 to migrate their services and download their data.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "openrouter-drops-ai-providers-over-leaked-prompts-and-s",
-    "title": "OpenRouter drops AI providers over leaked prompts and secrets",
+    "id": "new-inception-extortion-gang-launches-large-scale-vishi",
+    "title": "New Inception extortion gang launches large-scale vishing campaign",
     "category": "Cybersecurity",
-    "date": "November 23, 2026",
-    "isoDate": "2026-11-23",
+    "date": "November 24, 2026",
+    "isoDate": "2026-11-24",
     "readTime": "3 min read",
     "author": "BleepingComputer Editorial",
     "source": "BleepingComputer",
     "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/",
     "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "OpenRouter removed three AI providers from its platform after discovering that they had violated their stated data-handling policies and exposed sensitive data.",
+    "summary": "A newly formed data extortion group named 'Inception' has been linked to a large-scale campaign that targets single sign-on (SSO) credentials of multiple global brands and firms.",
     "tags": [
       "Cybersecurity",
       "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>OpenRouter removed three AI providers from its platform after discovering that they had violated their stated data-handling policies and exposed sensitive data.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/openrouter-drops-ai-providers-over-leaked-prompts-and-secrets/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>A newly formed data extortion group named &#x27;Inception&#x27; has been linked to a large-scale campaign that targets single sign-on (SSO) credentials of multiple global brands and firms.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "microsoft-azure-flaw-exploited-to-steal-customers-api-c",
-    "title": "Microsoft Azure flaw exploited to steal customers' API credentials",
+    "id": "turnitin-discloses-cyberattack-affecting-customer-facin",
+    "title": "Turnitin discloses cyberattack affecting customer-facing systems",
     "category": "Cybersecurity",
-    "date": "November 23, 2026",
-    "isoDate": "2026-11-23",
+    "date": "November 24, 2026",
+    "isoDate": "2026-11-24",
     "readTime": "3 min read",
     "author": "BleepingComputer Editorial",
     "source": "BleepingComputer",
     "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/turnitin-discloses-cyberattack-affecting-customer-facing-systems/",
     "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Microsoft is warning customers that a security vulnerability in Azure API Management (APIM) Classic tiers was exploited to steal stored API credentials, with Norwegian authorities linking the flaw to cyberattacks against energy companies.",
+    "summary": "Turnitin disclosed via a statement from its CEO, Chris Caren, that it recently detected unauthorized activity involving certain customer-facing systems.",
     "tags": [
       "Cybersecurity",
       "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>Microsoft is warning customers that a security vulnerability in Azure API Management (APIM) Classic tiers was exploited to steal stored API credentials, with Norwegian authorities linking the flaw to cyberattacks against energy companies.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/microsoft-azure-flaw-exploited-to-steal-customers-api-credentials/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>Turnitin disclosed via a statement from its CEO, Chris Caren, that it recently detected unauthorized activity involving certain customer-facing systems.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/turnitin-discloses-cyberattack-affecting-customer-facing-systems/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "spanish-laliga-confirms-hackers-stole-soccer-fans-perso",
-    "title": "Spanish LaLiga confirms hackers stole soccer fans\u2019 personal data",
+    "id": "radware-discloses-breach-exposing-customer-cloud-access",
+    "title": "Radware discloses breach exposing customer cloud access keys",
     "category": "Cybersecurity",
-    "date": "November 23, 2026",
-    "isoDate": "2026-11-23",
+    "date": "November 24, 2026",
+    "isoDate": "2026-11-24",
     "readTime": "3 min read",
     "author": "BleepingComputer Editorial",
     "source": "BleepingComputer",
     "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/",
     "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "LaLiga, Spain's top men's football league, disclosed a data breach that exposed personal information belonging to users of its services and those of some affiliated clubs.",
+    "summary": "Cybersecurity company Radware says attackers gained access to some of its customers' account details and cloud access keys through an unsecured internal Cloud WAF (Web Application Firewall) management API that was left exposed online.",
     "tags": [
       "Cybersecurity",
       "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>LaLiga, Spain&#x27;s top men&#x27;s football league, disclosed a data breach that exposed personal information belonging to users of its services and those of some affiliated clubs.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/spanish-laliga-confirms-hackers-stole-soccer-fans-personal-data/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>Cybersecurity company Radware says attackers gained access to some of its customers&#x27; account details and cloud access keys through an unsecured internal Cloud WAF (Web Application Firewall) management API that was left exposed online.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "mesa-s-nvk-nvidia-driver-another-step-closer-to-vulkan-",
-    "title": "Mesa's NVK NVIDIA Driver Another Step Closer To Vulkan Ray-Tracing",
+    "id": "linus-torvalds-tell-your-ai-companion-to-get-its-act-to",
+    "title": "Linus Torvalds: \"Tell Your AI Companion To Get Its Act Together\"",
     "category": "Linux & Open Source",
-    "date": "November 23, 2026",
-    "isoDate": "2026-11-23",
+    "date": "November 24, 2026",
+    "isoDate": "2026-11-24",
     "readTime": "3 min read",
     "author": "Phoronix Editorial",
     "source": "Phoronix",
     "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/Mesa-NVK-TTU-Instructions",
+    "sourceUrl": "https://www.phoronix.com/news/Linus-Torvalds-EXT4-AI-Big",
     "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Mesa's NVK open-source NVIDIA Vulkan driver is one step closer toward eventually supporting Vulkan ray-tracing",
+    "summary": "A big EXT4 pull request today intended for the Linux 7.4-rc5 kernel has set off Linus Torvalds. Over 41k lines of new code in this EXT4 pull request going in as \"fixes\".... Much of that being new KUnit test coverage to make it safer to validate AI-generated patches. And then a lo...",
     "tags": [
       "Linux & Open Source",
       "Phoronix",
       "Global Tech"
     ],
-    "content": "\n                      <p>Mesa&#x27;s NVK open-source NVIDIA Vulkan driver is one step closer toward eventually supporting Vulkan ray-tracing</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Mesa-NVK-TTU-Instructions\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>A big EXT4 pull request today intended for the Linux 7.4-rc5 kernel has set off Linus Torvalds. Over 41k lines of new code in this EXT4 pull request going in as &quot;fixes&quot;.... Much of that being new KUnit test coverage to make it safer to validate AI-generated patches. And then a lot of AI generated patches themselves for the EXT4 file-system</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Linus-Torvalds-EXT4-AI-Big\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "zstd-1-6-released-with-many-fixes-new-performance-optim",
-    "title": "Zstd 1.6 Released With Many Fixes, New Performance Optimizations",
+    "id": "pop-os-26-04-lts-released-with-more-cosmic-apps-remote-",
+    "title": "Pop!_OS 26.04 LTS Released With More COSMIC Apps, Remote Desktop & More",
     "category": "Linux & Open Source",
-    "date": "November 23, 2026",
-    "isoDate": "2026-11-23",
+    "date": "November 24, 2026",
+    "isoDate": "2026-11-24",
     "readTime": "3 min read",
     "author": "Phoronix Editorial",
     "source": "Phoronix",
     "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/Zstandard-Zstd-1.6",
+    "sourceUrl": "https://www.phoronix.com/news/Pop-OS-26.04-Released",
     "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "It's been a year and a half since the last Zstandard release (v1.5.7) while Zstandard 1.6.0 was tagged a short time ago as the next major step forward for this widely-used, open-source compression algorithm and implementation",
+    "summary": "System76 has a wonderful surprise today with the release of Pop!_OS 26.04 LTS as the newest iteration of their in-house Linux distribution now built atop the Ubuntu 26.04 LTS package base and incorporating their latest enhancements to their COSMIC desktop",
     "tags": [
       "Linux & Open Source",
       "Phoronix",
       "Global Tech"
     ],
-    "content": "\n                      <p>It&#x27;s been a year and a half since the last Zstandard release (v1.5.7) while Zstandard 1.6.0 was tagged a short time ago as the next major step forward for this widely-used, open-source compression algorithm and implementation</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Zstandard-Zstd-1.6\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>System76 has a wonderful surprise today with the release of Pop!_OS 26.04 LTS as the newest iteration of their in-house Linux distribution now built atop the Ubuntu 26.04 LTS package base and incorporating their latest enhancements to their COSMIC desktop</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Pop-OS-26.04-Released\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "ladybird-web-browser-engine-reaches-alpha",
-    "title": "Ladybird Web Browser/Engine Reaches Alpha",
+    "id": "ubuntu-outlines-plans-for-its-ai-powered-new-way-to-int",
+    "title": "Ubuntu Outlines Plans For Its AI-Powered New Way To Interact With The Ubuntu Desktop",
     "category": "Linux & Open Source",
-    "date": "November 23, 2026",
-    "isoDate": "2026-11-23",
+    "date": "November 24, 2026",
+    "isoDate": "2026-11-24",
     "readTime": "3 min read",
     "author": "Phoronix Editorial",
     "source": "Phoronix",
     "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/Ladybird-Browser-Alpha",
+    "sourceUrl": "https://www.phoronix.com/news/Ubuntu-AI-Desktop-Interact",
     "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "The Ladybird open-source desktop web browser built from scratch with its own independent web engine has now entered its alpha phase",
+    "summary": "Following Ubuntu 26.10 offering the Myna speech-to-text AI powered functionality in tech preview form and then a Snap appearing recently as a new design mock-up for an AI-powered launcher, Canonical today shared more plans on their AI-embraced Ubuntu desktop",
     "tags": [
       "Linux & Open Source",
       "Phoronix",
       "Global Tech"
     ],
-    "content": "\n                      <p>The Ladybird open-source desktop web browser built from scratch with its own independent web engine has now entered its alpha phase</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Ladybird-Browser-Alpha\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>Following Ubuntu 26.10 offering the Myna speech-to-text AI powered functionality in tech preview form and then a Snap appearing recently as a new design mock-up for an AI-powered launcher, Canonical today shared more plans on their AI-embraced Ubuntu desktop</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Ubuntu-AI-Desktop-Interact\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   }
 ];
 
