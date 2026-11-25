@@ -8,7 +8,7 @@
  * - Phoronix, Kernel.org (Linux & Systems Architecture)
  * - Ars Technica, The Register (Enterprise Cloud & Networking)
  * 
- * Last Editorial Sync: November 25, 2026 07:24:32 UTC
+ * Last Editorial Sync: November 25, 2026 21:12:47 UTC
  */
 
 const NEWS_DATA = [
@@ -101,8 +101,8 @@ const NEWS_DATA = [
     "content": "\n          <p>The Data Protection Authority of Sri Lanka has published its comprehensive operational guidelines for enterprise data processors under the provisions of the Personal Data Protection Act (PDPA).</p>\n          \n          <h2>Workstation Privacy &amp; Offline Storage</h2>\n          <p>Organizations managing customer archives are strongly encouraged to deploy local offline backup solutions, eliminating unnecessary cloud exposure and safeguarding confidential user records through client-side encryption.</p>\n        "
   },
   {
-    "id": "hackers-compromise-24-check-point-management-servers-in",
-    "title": "Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign",
+    "id": "hackers-exploit-two-geoserver-flaws-as-researchers-warn",
+    "title": "Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains",
     "category": "Cybersecurity",
     "date": "November 25, 2026",
     "isoDate": "2026-11-25",
@@ -110,20 +110,20 @@ const NEWS_DATA = [
     "author": "The Hacker News Editorial",
     "source": "The Hacker News",
     "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhzxhgIKTt8K5ep8a4qHW9dDpkSYcBC5D1CWgkvvh9Ee5DRlNRSg-2UcZZVNoXrHXVTeIcdzj47FFcSz6gAssLknSDf6f0JDyQCoH51D4GYLSju_wh4smA6-2yE3Z7I30SPeuY8LOKA__Y9xPiU66t1aPsHTzuRnX0QUq2iadcKXFfv7ZhAhcXti_BDnrmu/s1600/code.jpg",
+    "sourceUrl": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhi8jBS9UW1bUouUo2cLun5A5rtqPOFJoVQctV4ZsoX9uuMottAxM0HLjLZrvTVGU1GtrewszjOwVMBkvHgyFIBsOndc049nwMidNiVnnoKCOePOhy-XDsjiVjxFvubbxn-Z6ca8VJAxxgLmyQ9KGYBRMWV5GP2et02dmXzcG3jKJw1p_njPdaPuJAaxAz1/s1600/geoserver.png",
     "featured": false,
-    "summary": "An unknown threat actor has been using artificial intelligence (AI)-driven offensive tooling in a campaign targeting Check Point Security Management servers, impacting 22 distinct organizations across the world. The intrusion activity, tracked by GreyNoise under the moniker GreyN...",
+    "summary": "Threat actors are actively exploiting two newly patched security flaws in GeoServer, according to watchTowr. The vulnerabilities in question are CVE-2026-120705 and CVE-2026-129243, details of which are below - CVE-2026-120705 (CVSS score: 8.6) - An arbitrary file read vulnerabil...",
     "tags": [
       "Cybersecurity",
       "The Hacker News",
       "Global Tech"
     ],
-    "content": "\n                      <p>An unknown threat actor has been using artificial intelligence (AI)-driven offensive tooling in a campaign targeting Check Point Security Management servers, impacting 22 distinct organizations across the world. The intrusion activity, tracked by GreyNoise under the moniker GreyNoise Threat 13 (GT13), is assessed to have targeted organizations in the financial services, energy, government,</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>Threat actors are actively exploiting two newly patched security flaws in GeoServer, according to watchTowr. The vulnerabilities in question are CVE-2026-120705 and CVE-2026-129243, details of which are below - CVE-2026-120705 (CVSS score: 8.6) - An arbitrary file read vulnerability that could enable an attacker to access local text files readable by the GeoServer process or fetch</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "com-affiliated-hackers-hijack-cloud-accounts-via-vishin",
-    "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
+    "id": "u-s-treasury-s-financial-crimes-agency-takes-some-syste",
+    "title": "U.S. Treasury's Financial Crimes Agency Takes Some Systems Offline After Cyber Intrusion",
     "category": "Cybersecurity",
     "date": "November 25, 2026",
     "isoDate": "2026-11-25",
@@ -131,20 +131,20 @@ const NEWS_DATA = [
     "author": "The Hacker News Editorial",
     "source": "The Hacker News",
     "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgoCQn2zL8-RpfdhDeb1Zmyn46vLk1s9lerpXtGlcMkN5IGF9nlhEejtwoOXwhznjS7JVrix_FeG_G6yJ6Jb8mI31CU4Mi2dndKvLp-4nG4wWsqMaBpI60HFIk5d8_5uIxj6XEjSt4sixJYkJN8Xeqs4OrgSzOPK48esNtXbQ_FgtVe67B_WZkfpuUSEiD7/s1600/vishing.jpg",
+    "sourceUrl": "https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJn89Gr-RFxS6UFEzrbUZ5Ys11fK1OwvmMYUPl29eJudnlmmp7Q34p8O0DqV8SvGu4whZke8tiysvZNQWeE4Tm3zRhJSpojYAagBXGUEVM5w6lAw2Z5C-lfRaC2IwOYrnwQSWxwso31woM4CSoluNEjA3N0gFe0RQpsV0r3MCobiKFArLMa1or-QTIBcQ/s1600/fincern.jpg",
     "featured": false,
-    "summary": "Palo Alto Networks Unit 42 has disclosed that it's tracking and has responded to \"numerous waves of vishing attacks\" orchestrated by Com-affiliated threat actors since August 2026 that have led to data theft and extortion attempts. The attacks have targeted financial services, he...",
+    "summary": "The U.S. Treasury Department's Financial Crimes Enforcement Network (FinCEN) has been hit by a cybersecurity incident that resulted in \"unauthorized access to a limited subset of its systems,\" the bureau said on Tuesday. As a precaution, it has taken some systems offline. The bur...",
     "tags": [
       "Cybersecurity",
       "The Hacker News",
       "Global Tech"
     ],
-    "content": "\n                      <p>Palo Alto Networks Unit 42 has disclosed that it&#x27;s tracking and has responded to &quot;numerous waves of vishing attacks&quot; orchestrated by Com-affiliated threat actors since August 2026 that have led to data theft and extortion attempts. The attacks have targeted financial services, healthcare, and legal services located in the U.S., the U.K., and Australia. Other targets include construction,</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>The U.S. Treasury Department&#x27;s Financial Crimes Enforcement Network (FinCEN) has been hit by a cybersecurity incident that resulted in &quot;unauthorized access to a limited subset of its systems,&quot; the bureau said on Tuesday. As a precaution, it has taken some systems offline. The bureau collects suspicious activity reports and other Bank Secrecy Act (BSA) filings from banks and other financial</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "wordpress-blocks-six-backdoored-wp-connect-plugins-befo",
-    "title": "WordPress Blocks Six Backdoored WP Connect Plugins Before Malicious Releases Go Live",
+    "id": "credential-remediation-is-slow-when-you-don-t-know-what",
+    "title": "Credential Remediation Is Slow When You Don\u2019t Know What Will Break",
     "category": "Cybersecurity",
     "date": "November 25, 2026",
     "isoDate": "2026-11-25",
@@ -152,184 +152,184 @@ const NEWS_DATA = [
     "author": "The Hacker News Editorial",
     "source": "The Hacker News",
     "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgNbawIx8zYCfd7sCTbVfIzPFBtykkY65lf8EOswU62pIdZKTrx9ReB3mGnqYqujmW5eGzN_w8pEijAZMTpmOZ3fGB5zFyFaPo4ZhRQ8V0BkAmDCH3WoVqJ3kAfjDcw3_wRjhwphfyJxjF3_rDYiudb-cxt0pY3t8s-IRjNP1aEYHqtO5L1eZMkgBX6y2xD/s1600/wp.jpg",
+    "sourceUrl": "https://thehackernews.com/2026/11/credential-remediation-is-slow-when-you.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEil06YVYkZZwt0a8nA97RyMZvYZEQIoZ7r9_YHMtjx5eWc7RNAB4ol6OWb7NIsJOpC0v4w11xynwGgR1SsTnArvWAF7yJseVMbQfoawpTPEKYDdmH6O5UrbIZgJ2Fz9MGBFC6kF95oLeubdwlrdVKaVTPz4kjrOCH0X1neixvpNSYHhotL5WuzdYM12tUo/s1600/GitGuardian.gif",
     "featured": false,
-    "summary": "WordPress has removed six WordPress plugins developed by WP Connect after they were backdoored on November 22, 2026, to enable arbitrary code execution on sites that have them installed, following a suspected compromise of the developer's account. The WordPress plugins team has i...",
+    "summary": "TL;DR More than 64% still valid after four years: GitGuardian\u2019s State of Secrets Sprawl 2026 found that most valid secrets discovered in 2022 still worked in January 2026, because teams stall on what a revoke will break. Validity-only triage misses 46% of critical secrets: Priori...",
     "tags": [
       "Cybersecurity",
       "The Hacker News",
       "Global Tech"
     ],
-    "content": "\n                      <p>WordPress has removed six WordPress plugins developed by WP Connect after they were backdoored on November 22, 2026, to enable arbitrary code execution on sites that have them installed, following a suspected compromise of the developer&#x27;s account. The WordPress plugins team has independently detected and blocked the threat before it could be officially released. Visiting each plugin listing now</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>TL;DR More than 64% still valid after four years: GitGuardian\u2019s State of Secrets Sprawl 2026 found that most valid secrets discovered in 2022 still worked in January 2026, because teams stall on what a revoke will break. Validity-only triage misses 46% of critical secrets: Prioritize by impact instead, weighing what a credential can access and whether it leaked publicly, and update the</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/credential-remediation-is-slow-when-you.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "iran-aligned-volant-manticore-uses-ipfs-based-kuboshell",
-    "title": "Iran-Aligned Volant Manticore Uses IPFS-Based KuboShell Backdoor in Espionage Campaigns",
+    "id": "drupal-fail2install-exploit-details-emerge-as-critical-",
+    "title": "Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation",
     "category": "Cybersecurity",
-    "date": "November 24, 2026",
-    "isoDate": "2026-11-24",
+    "date": "November 25, 2026",
+    "isoDate": "2026-11-25",
     "readTime": "3 min read",
     "author": "The Hacker News Editorial",
     "source": "The Hacker News",
     "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/iran-aligned-volant-manticore-uses-ipfs.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqukTcR2pkDWiTqMzORa4j7zZRB0MDUGfBly50X7gPwPHqSeBmfReQWpMR9IdPOP_NbeuQSBdYPknSgxvutDll4VAZNSoGqcwmXzhZNEez-UoE-MwTnM9i9XxjoLYRdhY0iY6tD9BK9IDB0o8RUU7sNsOex5tVNtoNwRHCCAxM9ri66c4G2wPa9AqW9saA/s1600/iran-hackers.jpg",
+    "sourceUrl": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbChdPRqvJHt9cIG4Z1W9o12tl4thtxIDNNcntDjmIytSIC1PWvOytT0JjY0OJtnba6UVJcEmqNxgOMuWxX2pvNJzjQ70-CIeruqZEDdgaDG66Lv2T6lLMv8cEhrXRie1gcaLz6OoNw6f2822s2yz8jl958kok6WpHmZ7p_n3TRWTdEWSpr1le5T28kFQO/s1600/drupal.gif",
     "featured": false,
-    "summary": "A previously undocumented Iran-aligned cyber espionage group called Volant Manticore has targeted telecommunications companies, airlines, and critical infrastructure in Cyprus. Central to the group's operations is a backdoor called KuboShell that uses the InterPlanetary File Syst...",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a critical flaw impacting Drupal to its Known Exploited Vulnerabilities (KEV) catalog, requiring federal agencies to apply the fixes by November 27, 2026. The vulnerability, tracked as CVE-2026-1321...",
     "tags": [
       "Cybersecurity",
       "The Hacker News",
       "Global Tech"
     ],
-    "content": "\n                      <p>A previously undocumented Iran-aligned cyber espionage group called Volant Manticore has targeted telecommunications companies, airlines, and critical infrastructure in Cyprus. Central to the group&#x27;s operations is a backdoor called KuboShell that uses the InterPlanetary File System (IPFS) for command-and-control (C2) and deploys Homa, a post-compromise framework that&#x27;s a reimplementation of</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/iran-aligned-volant-manticore-uses-ipfs.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a critical flaw impacting Drupal to its Known Exploited Vulnerabilities (KEV) catalog, requiring federal agencies to apply the fixes by November 27, 2026. The vulnerability, tracked as CVE-2026-132165 aka Fail2Install (CVSS score: 9.8), is a case of remote code execution (RCE) impacting Drupal core. &quot;Drupal Core</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "rackspace-shuts-down-spot-cloud-platform-after-security",
-    "title": "Rackspace shuts down Spot cloud platform after security breach",
+    "id": "italy-and-switzerland-warn-of-autonomous-ai-driven-cybe",
+    "title": "Italy and Switzerland warn of autonomous AI-driven cyberattacks",
     "category": "Cybersecurity",
-    "date": "November 24, 2026",
-    "isoDate": "2026-11-24",
+    "date": "November 25, 2026",
+    "isoDate": "2026-11-25",
     "readTime": "3 min read",
     "author": "BleepingComputer Editorial",
     "source": "BleepingComputer",
     "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/",
     "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Rackspace is shutting down its Rackspace Spot cloud platform after a security breach allowed hackers to access customer Kubernetes clusters and secrets, giving customers until December 8 to migrate their services and download their data.",
+    "summary": "Swiss and Italian cybersecurity agencies are warning about automated cyberattacks powered by AI agents targeting organizations in the critical infrastructure sector.",
     "tags": [
       "Cybersecurity",
       "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>Rackspace is shutting down its Rackspace Spot cloud platform after a security breach allowed hackers to access customer Kubernetes clusters and secrets, giving customers until December 8 to migrate their services and download their data.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/rackspace-shuts-down-spot-cloud-platform-after-security-breach/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>Swiss and Italian cybersecurity agencies are warning about automated cyberattacks powered by AI agents targeting organizations in the critical infrastructure sector.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "new-inception-extortion-gang-launches-large-scale-vishi",
-    "title": "New Inception extortion gang launches large-scale vishing campaign",
+    "id": "cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrig",
+    "title": "CISA warns of critical unpatched flaw in Danfoss refrigeration controllers",
     "category": "Cybersecurity",
-    "date": "November 24, 2026",
-    "isoDate": "2026-11-24",
+    "date": "November 25, 2026",
+    "isoDate": "2026-11-25",
     "readTime": "3 min read",
     "author": "BleepingComputer Editorial",
     "source": "BleepingComputer",
     "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/",
     "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "A newly formed data extortion group named 'Inception' has been linked to a large-scale campaign that targets single sign-on (SSO) credentials of multiple global brands and firms.",
+    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is warning about a critical vulnerability in Danfoss AK-SM 8xxA Series controllers used by food retailers to manage commercial refrigeration, HVAC, and lighting systems.",
     "tags": [
       "Cybersecurity",
       "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>A newly formed data extortion group named &#x27;Inception&#x27; has been linked to a large-scale campaign that targets single sign-on (SSO) credentials of multiple global brands and firms.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/new-inception-extortion-gang-launches-large-scale-vishing-campaign/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is warning about a critical vulnerability in Danfoss AK-SM 8xxA Series controllers used by food retailers to manage commercial refrigeration, HVAC, and lighting systems.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "turnitin-discloses-cyberattack-affecting-customer-facin",
-    "title": "Turnitin discloses cyberattack affecting customer-facing systems",
+    "id": "more-pentests-without-more-pentesters-where-ai-safely-h",
+    "title": "More Pentests Without More Pentesters: Where AI Safely Helps",
     "category": "Cybersecurity",
-    "date": "November 24, 2026",
-    "isoDate": "2026-11-24",
+    "date": "November 25, 2026",
+    "isoDate": "2026-11-25",
     "readTime": "3 min read",
     "author": "BleepingComputer Editorial",
     "source": "BleepingComputer",
     "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/turnitin-discloses-cyberattack-affecting-customer-facing-systems/",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/more-pentests-without-more-pentesters-where-ai-safely-helps/",
     "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Turnitin disclosed via a statement from its CEO, Chris Caren, that it recently detected unauthorized activity involving certain customer-facing systems.",
+    "summary": "Penetration testers spend a significant portion of their engagements on documentation, reporting, and other tasks outside of testing. PentestPad explains how AI can reduce this workload, help teams handle more engagements, and keep sensitive client data within their own infrastru...",
     "tags": [
       "Cybersecurity",
       "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>Turnitin disclosed via a statement from its CEO, Chris Caren, that it recently detected unauthorized activity involving certain customer-facing systems.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/turnitin-discloses-cyberattack-affecting-customer-facing-systems/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>Penetration testers spend a significant portion of their engagements on documentation, reporting, and other tasks outside of testing. PentestPad explains how AI can reduce this workload, help teams handle more engagements, and keep sensitive client data within their own infrastructure.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/more-pentests-without-more-pentesters-where-ai-safely-helps/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "radware-discloses-breach-exposing-customer-cloud-access",
-    "title": "Radware discloses breach exposing customer cloud access keys",
+    "id": "infratrust-warns-of-exploited-supply-chain-flaws-in-net",
+    "title": "InfraTrust warns of exploited supply chain flaws in network appliances",
     "category": "Cybersecurity",
-    "date": "November 24, 2026",
-    "isoDate": "2026-11-24",
+    "date": "November 25, 2026",
+    "isoDate": "2026-11-25",
     "readTime": "3 min read",
     "author": "BleepingComputer Editorial",
     "source": "BleepingComputer",
     "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/infratrust-warns-of-exploited-supply-chain-flaws-in-network-appliances/",
     "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Cybersecurity company Radware says attackers gained access to some of its customers' account details and cloud access keys through an unsecured internal Cloud WAF (Web Application Firewall) management API that was left exposed online.",
+    "summary": "Eclypsium's November InfraTrust report warns that most infrastructure security advisories addressing exploited vulnerabilities over the past month involve flaws in third-party software bundled into products rather than code developed by the vendors themselves.",
     "tags": [
       "Cybersecurity",
       "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>Cybersecurity company Radware says attackers gained access to some of its customers&#x27; account details and cloud access keys through an unsecured internal Cloud WAF (Web Application Firewall) management API that was left exposed online.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/radware-discloses-breach-exposing-customer-cloud-access-keys/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>Eclypsium&#x27;s November InfraTrust report warns that most infrastructure security advisories addressing exploited vulnerabilities over the past month involve flaws in third-party software bundled into products rather than code developed by the vendors themselves.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/infratrust-warns-of-exploited-supply-chain-flaws-in-network-appliances/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "benchmarking-the-performance-benefit-of-fred-on-amd-zen",
-    "title": "Benchmarking The Performance Benefit Of FRED On AMD Zen 6",
+    "id": "postgresql-19-delivering-nice-performance-gains-benchma",
+    "title": "PostgreSQL 19 Delivering Nice Performance Gains, Benchmarks On 6th Gen AMD EPYC Venice",
     "category": "Linux & Open Source",
-    "date": "November 24, 2026",
-    "isoDate": "2026-11-24",
+    "date": "November 25, 2026",
+    "isoDate": "2026-11-25",
     "readTime": "3 min read",
     "author": "Phoronix Editorial",
     "source": "Phoronix",
     "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/AMD-Zen-6-FRED-Benefits",
+    "sourceUrl": "https://www.phoronix.com/review/postgresql-19-benchmarks",
     "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "With the new EPYC 9006 SP7 Venice processors now shipping, one of the curious follow-up benchmarks I have been wanting to pursue is around quantifying the performance impact of Flexible Return and Event Delivery \"FRED\". After all, FRED showed very nice gains for Intel Panther Lak...",
+    "summary": "Last week PostgreSQL 19.0 finally shipped after being delayed due to the AI/LLM burden facing open-source developers this year. The wait is worth it though as PostgreSQL 19 is showing some very nice performance gains over PostgreSQL 18 in my benchmarking. Here are some initial Po...",
     "tags": [
       "Linux & Open Source",
       "Phoronix",
       "Global Tech"
     ],
-    "content": "\n                      <p>With the new EPYC 9006 SP7 Venice processors now shipping, one of the curious follow-up benchmarks I have been wanting to pursue is around quantifying the performance impact of Flexible Return and Event Delivery &quot;FRED&quot;. After all, FRED showed very nice gains for Intel Panther Lake for first featuring FRED. Since then the Linux kernel has enabled FRED usage by default with capable CPUs, so all the EPYC 9006 benchmarks on Phoronix have already been with FRED, so here are some numbers when going ahead and forcing FRED off in the Linux kernel</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/AMD-Zen-6-FRED-Benefits\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>Last week PostgreSQL 19.0 finally shipped after being delayed due to the AI/LLM burden facing open-source developers this year. The wait is worth it though as PostgreSQL 19 is showing some very nice performance gains over PostgreSQL 18 in my benchmarking. Here are some initial PostgreSQL 19 vs. 18 database server benchmarks on the new 6th Gen AMD EPYC Venice platform.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/review/postgresql-19-benchmarks\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "linus-torvalds-tell-your-ai-companion-to-get-its-act-to",
-    "title": "Linus Torvalds: \"Tell Your AI Companion To Get Its Act Together\"",
+    "id": "pop-os-26-04-lts-vs-pop-os-24-04-lts-benchmarks",
+    "title": "Pop!_OS 26.04 LTS vs. Pop!_OS 24.04 LTS Benchmarks",
     "category": "Linux & Open Source",
-    "date": "November 24, 2026",
-    "isoDate": "2026-11-24",
+    "date": "November 25, 2026",
+    "isoDate": "2026-11-25",
     "readTime": "3 min read",
     "author": "Phoronix Editorial",
     "source": "Phoronix",
     "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/Linus-Torvalds-EXT4-AI-Big",
+    "sourceUrl": "https://www.phoronix.com/review/pop-os-2604-benchmarks",
     "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "A big EXT4 pull request today intended for the Linux 7.4-rc5 kernel has set off Linus Torvalds. Over 41k lines of new code in this EXT4 pull request going in as \"fixes\".... Much of that being new KUnit test coverage to make it safer to validate AI-generated patches. And then a lo...",
+    "summary": "System76 released Pop!_OS 26.04 LTS yesterday as the newest version of their Ubuntu-derived Linux distribution featuring their in-house COSMIC desktop environment. For those curious about any performance differences out of Pop!_OS 26.04 LTS, I already have some benchmarks compari...",
     "tags": [
       "Linux & Open Source",
       "Phoronix",
       "Global Tech"
     ],
-    "content": "\n                      <p>A big EXT4 pull request today intended for the Linux 7.4-rc5 kernel has set off Linus Torvalds. Over 41k lines of new code in this EXT4 pull request going in as &quot;fixes&quot;.... Much of that being new KUnit test coverage to make it safer to validate AI-generated patches. And then a lot of AI generated patches themselves for the EXT4 file-system</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Linus-Torvalds-EXT4-AI-Big\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>System76 released Pop!_OS 26.04 LTS yesterday as the newest version of their Ubuntu-derived Linux distribution featuring their in-house COSMIC desktop environment. For those curious about any performance differences out of Pop!_OS 26.04 LTS, I already have some benchmarks comparing it to the former 24.04 release since the new System76 Thelio Prime SFF PC has been shipping with 26.04 LTS since last week.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/review/pop-os-2604-benchmarks\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "pop-os-26-04-lts-released-with-more-cosmic-apps-remote-",
-    "title": "Pop!_OS 26.04 LTS Released With More COSMIC Apps, Remote Desktop & More",
+    "id": "servo-now-supports-html-video-captions-flutter-web-cont",
+    "title": "Servo Now Supports HTML Video Captions, Flutter Web Content Working",
     "category": "Linux & Open Source",
-    "date": "November 24, 2026",
-    "isoDate": "2026-11-24",
+    "date": "November 25, 2026",
+    "isoDate": "2026-11-25",
     "readTime": "3 min read",
     "author": "Phoronix Editorial",
     "source": "Phoronix",
     "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/Pop-OS-26.04-Released",
+    "sourceUrl": "https://www.phoronix.com/news/Servo-0.8-October-2026",
     "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "System76 has a wonderful surprise today with the release of Pop!_OS 26.04 LTS as the newest iteration of their in-house Linux distribution now built atop the Ubuntu 26.04 LTS package base and incorporating their latest enhancements to their COSMIC desktop",
+    "summary": "The Rust-based Servo open-source web browser engine and Servoshell demo browser enjoyed a lot of new features in October. Servo 0.8 debuted recently with all of their October changes and out today is a blog post to highlight their latest round of improvements",
     "tags": [
       "Linux & Open Source",
       "Phoronix",
       "Global Tech"
     ],
-    "content": "\n                      <p>System76 has a wonderful surprise today with the release of Pop!_OS 26.04 LTS as the newest iteration of their in-house Linux distribution now built atop the Ubuntu 26.04 LTS package base and incorporating their latest enhancements to their COSMIC desktop</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Pop-OS-26.04-Released\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>The Rust-based Servo open-source web browser engine and Servoshell demo browser enjoyed a lot of new features in October. Servo 0.8 debuted recently with all of their October changes and out today is a blog post to highlight their latest round of improvements</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Servo-0.8-October-2026\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   }
 ];
 
