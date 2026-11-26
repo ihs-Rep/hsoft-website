@@ -8,7 +8,7 @@
  * - Phoronix, Kernel.org (Linux & Systems Architecture)
  * - Ars Technica, The Register (Enterprise Cloud & Networking)
  * 
- * Last Editorial Sync: November 26, 2026 07:13:29 UTC
+ * Last Editorial Sync: November 26, 2026 21:01:41 UTC
  */
 
 const NEWS_DATA = [
@@ -101,6 +101,69 @@ const NEWS_DATA = [
     "content": "\n          <p>The Data Protection Authority of Sri Lanka has published its comprehensive operational guidelines for enterprise data processors under the provisions of the Personal Data Protection Act (PDPA).</p>\n          \n          <h2>Workstation Privacy &amp; Offline Storage</h2>\n          <p>Organizations managing customer archives are strongly encouraged to deploy local offline backup solutions, eliminating unnecessary cloud exposure and safeguarding confidential user records through client-side encryption.</p>\n        "
   },
   {
+    "id": "threatsday-10m-nginx-services-at-risk-250-malicious-ext",
+    "title": "ThreatsDay: 10M NGINX Services at Risk, 250+ Malicious Extensions, AI Server Hijacking + 17 More Stories",
+    "category": "Cybersecurity",
+    "date": "November 27, 2026",
+    "isoDate": "2026-11-27",
+    "readTime": "3 min read",
+    "author": "The Hacker News Editorial",
+    "source": "The Hacker News",
+    "location": "San Francisco, California, USA",
+    "sourceUrl": "https://thehackernews.com/2026/11/threatsday-250-rogue-extensions-10m.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhlwb4cL2xbF38yynT-hp8rHaGntsYzuQwL4-68g3SxEW4Taw6_Kl4WFfL4CuNRNXGxO_KS9prZaqk0A6SA6fib3k8j9miTymP8PzABv9OA21eSDsRv1j9NEgbIEVMR7u1C7VmFyFxdBf0Zcj2sckIyHDkRSjm76oFMDd10drUHa1ctv6190vdYHhuVuRPk/s1600/thday.jpg",
+    "featured": false,
+    "summary": "A website can look perfectly fine to the person running it. Log out, visit the same page, and things might look different. Something similar is happening with browser extensions, where even the way you find and install one can change what it does. Checking whether software works ...",
+    "tags": [
+      "Cybersecurity",
+      "The Hacker News",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>A website can look perfectly fine to the person running it. Log out, visit the same page, and things might look different. Something similar is happening with browser extensions, where even the way you find and install one can change what it does. Checking whether software works as expected only tells you so much. Then there\u2019s the question of who gets to use what. Stolen logins are opening</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/threatsday-250-rogue-extensions-10m.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
+    "id": "north-korea-linked-polinrider-poisons-over-7-600-github",
+    "title": "North Korea-Linked PolinRider Poisons Over 7,600 GitHub Repositories to Spread Malware",
+    "category": "Cybersecurity",
+    "date": "November 26, 2026",
+    "isoDate": "2026-11-26",
+    "readTime": "3 min read",
+    "author": "The Hacker News Editorial",
+    "source": "The Hacker News",
+    "location": "San Francisco, California, USA",
+    "sourceUrl": "https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgquhPuqGJrSE3xNpn5ZUELVAv-Y7qXqkHgpw7nbVqCay4gyraYO5NNE12rAGzuqk_zhreNwcyzjZf3vZZB5C4teohyuppUP-JlP41PQiLu-hGEFCsqMZO0T6MoaVk-uY818yaTaiJaX-d2O0h0RER22knXbUQc7qnwIcVbleLQrEspMQ8btNa4Q9mFrmue/s1600/gitcat.jpg",
+    "featured": false,
+    "summary": "The threat actors behind the PolinRider campaign have been observed planting a Python loader in GitHub repositories, as evidence emerges that the activity may have started as far back as February 2025. \"The loader hides in a small utils package or in conftest.py,\" SafeDep said in...",
+    "tags": [
+      "Cybersecurity",
+      "The Hacker News",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>The threat actors behind the PolinRider campaign have been observed planting a Python loader in GitHub repositories, as evidence emerges that the activity may have started as far back as February 2025. &quot;The loader hides in a small utils package or in conftest.py,&quot; SafeDep said in a report published this week. &quot;When Python imports the file, the loader reads the newest transaction that an</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/north-korea-linked-polinrider-poisons.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
+    "id": "most-wanted-the-phishing-kits-and-techniques-getting-pa",
+    "title": "Most Wanted: The Phishing Kits and Techniques Getting Past Security Controls",
+    "category": "Cybersecurity",
+    "date": "November 26, 2026",
+    "isoDate": "2026-11-26",
+    "readTime": "3 min read",
+    "author": "The Hacker News Editorial",
+    "source": "The Hacker News",
+    "location": "San Francisco, California, USA",
+    "sourceUrl": "https://thehackernews.com/2026/11/most-wanted-phishing-kits-and.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOYXUiExbrrmBGGBgTjOFcDJSrLYJuITQwZY-l1mOzzkes21-mR0My9ikeCM7cI6VDXuBIE9BZPnKazemiuZf7A4w_xeeMy_IUUlNVTKX3PmW-Xt7FA9UI8JoICZDPW4ZWSspztPv_Mo4Zf7G_fXEw_phMe4uc89O38ugIlQJJKmc6VD7QN3NzU0n0SQU/s1600/push-most.jpg",
+    "featured": false,
+    "summary": "Every phishing attack has to get past email security, web filtering, and safe browsing before it reaches an employee. Some kits manage that far more often than others, and those are the kits that security teams need to know about. At Push Security, we measure this as breakthrough...",
+    "tags": [
+      "Cybersecurity",
+      "The Hacker News",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>Every phishing attack has to get past email security, web filtering, and safe browsing before it reaches an employee. Some kits manage that far more often than others, and those are the kits that security teams need to know about. At Push Security, we measure this as breakthrough rate: The share of attacks that get past email security, web gateways, and safe browsing to reach the user. How an</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/most-wanted-phishing-kits-and.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
     "id": "1password-hacked-customer-data-and-source-code-stolen-i",
     "title": "1Password Hacked, Customer Data and Source Code Stolen in GitHub Account Breach",
     "category": "Cybersecurity",
@@ -122,214 +185,151 @@ const NEWS_DATA = [
     "content": "\n                      <p>Popular password management software 1Password on Wednesday disclosed a security incident involving its backend systems that led to the unauthorized access of some customer information, but emphasized that customer password vaults and other secrets were not accessed. &quot;While we took immediate steps to contain the incident, the attacker gained access to some of our backend systems and accessed a</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/1password-hacked-customer-data-and.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "13-malicious-nuget-packages-turn-fake-net-job-assessmen",
-    "title": "13 Malicious NuGet Packages Turn Fake .NET Job Assessments Into Malware Delivery Traps",
+    "id": "nordvpn-black-friday-deal-get-78-off-vpn-plans-in-2026",
+    "title": "NordVPN Black Friday Deal: Get 78% off VPN plans in 2026",
     "category": "Cybersecurity",
     "date": "November 26, 2026",
     "isoDate": "2026-11-26",
     "readTime": "3 min read",
-    "author": "The Hacker News Editorial",
-    "source": "The Hacker News",
-    "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/13-malicious-nuget-packages-turn-fake.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjt0w3YJQrn6VoUVUTTj46NLfeL_JJE-sDoxKsuBe-_OxBtQ3iX8AZTZ1CEn39-N5TGKYd-0ZKdOT43UwAWUbpIXlFdDwhyphenhyphenEKpkQVVJYJVodQRHyz0pJeKEvJIJgUpAEQqXizajmrriq9Mj1aqioeK1Zug__X26Ra4HwzFg8ImTajGc6b7Ck9LW2OCIpPoa/s1600/dotnet.jpg",
-    "featured": false,
-    "summary": "Cybersecurity researchers have discovered 13 malicious NuGet packages that are designed to target Windows .NET developers under the guise of a fake take-home job assessment. \"Most of the packages pose as WinUI 3 and WPF [Windows Presentation Foundation] button controls,\" Socket s...",
-    "tags": [
-      "Cybersecurity",
-      "The Hacker News",
-      "Global Tech"
-    ],
-    "content": "\n                      <p>Cybersecurity researchers have discovered 13 malicious NuGet packages that are designed to target Windows .NET developers under the guise of a fake take-home job assessment. &quot;Most of the packages pose as WinUI 3 and WPF [Windows Presentation Foundation] button controls,&quot; Socket security researcher Kush Pandya said in a technical write-up. &quot;In the versions we analyzed, building or running a</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/13-malicious-nuget-packages-turn-fake.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
-  },
-  {
-    "id": "hackers-exploit-two-geoserver-flaws-as-researchers-warn",
-    "title": "Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains",
-    "category": "Cybersecurity",
-    "date": "November 25, 2026",
-    "isoDate": "2026-11-25",
-    "readTime": "3 min read",
-    "author": "The Hacker News Editorial",
-    "source": "The Hacker News",
-    "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhi8jBS9UW1bUouUo2cLun5A5rtqPOFJoVQctV4ZsoX9uuMottAxM0HLjLZrvTVGU1GtrewszjOwVMBkvHgyFIBsOndc049nwMidNiVnnoKCOePOhy-XDsjiVjxFvubbxn-Z6ca8VJAxxgLmyQ9KGYBRMWV5GP2et02dmXzcG3jKJw1p_njPdaPuJAaxAz1/s1600/geoserver.png",
-    "featured": false,
-    "summary": "Threat actors are actively exploiting two newly patched security flaws in GeoServer, according to watchTowr. The vulnerabilities in question are CVE-2026-120705 and CVE-2026-129243, details of which are below - CVE-2026-120705 (CVSS score: 8.6) - An arbitrary file read vulnerabil...",
-    "tags": [
-      "Cybersecurity",
-      "The Hacker News",
-      "Global Tech"
-    ],
-    "content": "\n                      <p>Threat actors are actively exploiting two newly patched security flaws in GeoServer, according to watchTowr. The vulnerabilities in question are CVE-2026-120705 and CVE-2026-129243, details of which are below - CVE-2026-120705 (CVSS score: 8.6) - An arbitrary file read vulnerability that could enable an attacker to access local text files readable by the GeoServer process or fetch</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
-  },
-  {
-    "id": "u-s-treasury-s-financial-crimes-agency-takes-some-syste",
-    "title": "U.S. Treasury's Financial Crimes Agency Takes Some Systems Offline After Cyber Intrusion",
-    "category": "Cybersecurity",
-    "date": "November 25, 2026",
-    "isoDate": "2026-11-25",
-    "readTime": "3 min read",
-    "author": "The Hacker News Editorial",
-    "source": "The Hacker News",
-    "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgJn89Gr-RFxS6UFEzrbUZ5Ys11fK1OwvmMYUPl29eJudnlmmp7Q34p8O0DqV8SvGu4whZke8tiysvZNQWeE4Tm3zRhJSpojYAagBXGUEVM5w6lAw2Z5C-lfRaC2IwOYrnwQSWxwso31woM4CSoluNEjA3N0gFe0RQpsV0r3MCobiKFArLMa1or-QTIBcQ/s1600/fincern.jpg",
-    "featured": false,
-    "summary": "The U.S. Treasury Department's Financial Crimes Enforcement Network (FinCEN) has been hit by a cybersecurity incident that resulted in \"unauthorized access to a limited subset of its systems,\" the bureau said on Tuesday. As a precaution, it has taken some systems offline. The bur...",
-    "tags": [
-      "Cybersecurity",
-      "The Hacker News",
-      "Global Tech"
-    ],
-    "content": "\n                      <p>The U.S. Treasury Department&#x27;s Financial Crimes Enforcement Network (FinCEN) has been hit by a cybersecurity incident that resulted in &quot;unauthorized access to a limited subset of its systems,&quot; the bureau said on Tuesday. As a precaution, it has taken some systems offline. The bureau collects suspicious activity reports and other Bank Secrecy Act (BSA) filings from banks and other financial</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
-  },
-  {
-    "id": "palo-alto-networks-warns-of-fragnesia-flaw-exploited-in",
-    "title": "Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks",
-    "category": "Cybersecurity",
-    "date": "November 25, 2026",
-    "isoDate": "2026-11-25",
-    "readTime": "3 min read",
     "author": "BleepingComputer Editorial",
     "source": "BleepingComputer",
     "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/nordvpn-black-friday-deal-get-78-percent-off-vpn-plans-in-2026/",
     "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Threat actors are chaining exploits for the PHP2Shell and Fragnesia vulnerabilities to target Palo Alto Networks devices with management interfaces exposed to the internet.",
+    "summary": "NordVPN's 2026 Black Friday and Cyber Monday deal is now live, offering savings of up to 78% on VPN subscriptions, plus three extra months of protection.",
     "tags": [
       "Cybersecurity",
       "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>Threat actors are chaining exploits for the PHP2Shell and Fragnesia vulnerabilities to target Palo Alto Networks devices with management interfaces exposed to the internet.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>NordVPN&#x27;s 2026 Black Friday and Cyber Monday deal is now live, offering savings of up to 78% on VPN subscriptions, plus three extra months of protection.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/nordvpn-black-friday-deal-get-78-percent-off-vpn-plans-in-2026/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "1password-customer-data-stolen-after-employee-github-ac",
-    "title": "1Password customer data stolen after employee GitHub account breach",
+    "id": "fake-paid-expert-interviews-impersonate-brands-to-steal",
+    "title": "Fake paid expert interviews impersonate brands to steal Google logins",
     "category": "Cybersecurity",
-    "date": "November 25, 2026",
-    "isoDate": "2026-11-25",
+    "date": "November 26, 2026",
+    "isoDate": "2026-11-26",
     "readTime": "3 min read",
     "author": "BleepingComputer Editorial",
     "source": "BleepingComputer",
     "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/apple/fake-paid-expert-interviews-impersonate-brands-to-steal-google-logins/",
     "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "1Password has disclosed a data breach after a an employee's corporate GitHub account was hacked and used to deploy malicious code to the company's backend services to steal customer data.",
+    "summary": "An ongoing phishing campaign dubbed \"GoodGuys\" impersonates major brands, including Google, Nvidia, Accenture, and SpaceX, to steal corporate Google and Okta credentials using fake invitations to paid expert interviews and webinars.",
     "tags": [
       "Cybersecurity",
       "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>1Password has disclosed a data breach after a an employee&#x27;s corporate GitHub account was hacked and used to deploy malicious code to the company&#x27;s backend services to steal customer data.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>An ongoing phishing campaign dubbed &quot;GoodGuys&quot; impersonates major brands, including Google, Nvidia, Accenture, and SpaceX, to steal corporate Google and Okta credentials using fake invitations to paid expert interviews and webinars.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/apple/fake-paid-expert-interviews-impersonate-brands-to-steal-google-logins/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "italy-and-switzerland-warn-of-autonomous-ai-driven-cybe",
-    "title": "Italy and Switzerland warn of autonomous AI-driven cyberattacks",
+    "id": "remus-malware-steals-gmail-messages-via-fake-google-she",
+    "title": "Remus malware steals Gmail messages via fake Google Sheets extension",
     "category": "Cybersecurity",
-    "date": "November 25, 2026",
-    "isoDate": "2026-11-25",
+    "date": "November 26, 2026",
+    "isoDate": "2026-11-26",
     "readTime": "3 min read",
     "author": "BleepingComputer Editorial",
     "source": "BleepingComputer",
     "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/remus-malware-steals-gmail-messages-via-fake-google-sheets-extension/",
     "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Swiss and Italian cybersecurity agencies are warning about automated cyberattacks powered by AI agents targeting organizations in the critical infrastructure sector.",
+    "summary": "The Remus infostealer is stealing Gmail messages through a stealthy malicious Chrome extension, a capability the malware operators marketed as a zero-day exploit in Google's email service.",
     "tags": [
       "Cybersecurity",
       "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>Swiss and Italian cybersecurity agencies are warning about automated cyberattacks powered by AI agents targeting organizations in the critical infrastructure sector.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/italy-and-switzerland-warn-of-autonomous-ai-driven-cyberattacks/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>The Remus infostealer is stealing Gmail messages through a stealthy malicious Chrome extension, a capability the malware operators marketed as a zero-day exploit in Google&#x27;s email service.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/remus-malware-steals-gmail-messages-via-fake-google-sheets-extension/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrig",
-    "title": "CISA warns of critical unpatched flaw in Danfoss refrigeration controllers",
+    "id": "sys010-malware-abuses-browser-management-to-spy-on-gmai",
+    "title": "SYS010 malware abuses browser management to spy on Gmail, Outlook",
     "category": "Cybersecurity",
-    "date": "November 25, 2026",
-    "isoDate": "2026-11-25",
+    "date": "November 26, 2026",
+    "isoDate": "2026-11-26",
     "readTime": "3 min read",
     "author": "BleepingComputer Editorial",
     "source": "BleepingComputer",
     "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/sys010-malware-abuses-browser-management-to-spy-on-gmail-outlook/",
     "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is warning about a critical vulnerability in Danfoss AK-SM 8xxA Series controllers used by food retailers to manage commercial refrigeration, HVAC, and lighting systems.",
+    "summary": "A new version of the SYS01 infostealer malware delivered through Meta ads is enrolling browsers into enterprise-style management to force the installation of an extension that steals sensitive data, including Gmail and Outlook emails.",
     "tags": [
       "Cybersecurity",
       "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is warning about a critical vulnerability in Danfoss AK-SM 8xxA Series controllers used by food retailers to manage commercial refrigeration, HVAC, and lighting systems.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>A new version of the SYS01 infostealer malware delivered through Meta ads is enrolling browsers into enterprise-style management to force the installation of an extension that steals sensitive data, including Gmail and Outlook emails.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/sys010-malware-abuses-browser-management-to-spy-on-gmail-outlook/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "kosmickrisp-now-the-go-to-solution-for-vulkan-on-macs-i",
-    "title": "KosmicKrisp Now The Go-To Solution For Vulkan On Macs In Place Of MoltenVK",
+    "id": "amid-all-the-ai-generated-patches-bug-reports-linux-gai",
+    "title": "Amid All The AI Generated Patches & Bug Reports, Linux Gains Another Network Maintainer",
     "category": "Linux & Open Source",
-    "date": "November 25, 2026",
-    "isoDate": "2026-11-25",
+    "date": "November 26, 2026",
+    "isoDate": "2026-11-26",
     "readTime": "3 min read",
     "author": "Phoronix Editorial",
     "source": "Phoronix",
     "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/Vulkan-Macs-Go-KosmicKrisp",
+    "sourceUrl": "https://www.phoronix.com/news/Linux-Another-Net-Maintainer",
     "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "While MoltenVK began as an initiative to layer the Vulkan API atop Apple's Metal for use on macOS and iOS, the KosmicKrisp effort spearheaded by LunarG is now the go-to solution for Vulkan API support on modern Apple devices",
+    "summary": "Linux networking developers have previously said they've been \"completely overwhelmed\" with all the AI/LLM-driven activity from bug reports to patches over the past year. In an increasing number of cases, they end up diverting fixes to the next Linux kernel version due to the see...",
     "tags": [
       "Linux & Open Source",
       "Phoronix",
       "Global Tech"
     ],
-    "content": "\n                      <p>While MoltenVK began as an initiative to layer the Vulkan API atop Apple&#x27;s Metal for use on macOS and iOS, the KosmicKrisp effort spearheaded by LunarG is now the go-to solution for Vulkan API support on modern Apple devices</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Vulkan-Macs-Go-KosmicKrisp\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>Linux networking developers have previously said they&#x27;ve been &quot;completely overwhelmed&quot; with all the AI/LLM-driven activity from bug reports to patches over the past year. In an increasing number of cases, they end up diverting fixes to the next Linux kernel version due to the seemingly endless activity. All the AI activity around seldom used drivers and other networking areas also led to removing various old networking code. As some good news, another Linux developer has now been promoted to being an additional Linux networking subsystem maintainer</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Linux-Another-Net-Maintainer\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "postgresql-19-delivering-nice-performance-gains-benchma",
-    "title": "PostgreSQL 19 Delivering Nice Performance Gains, Benchmarks On 6th Gen AMD EPYC Venice",
+    "id": "ubuntu-27-04-snapshot-1-released-for-testing",
+    "title": "Ubuntu 27.04 Snapshot 1 Released For Testing",
     "category": "Linux & Open Source",
-    "date": "November 25, 2026",
-    "isoDate": "2026-11-25",
+    "date": "November 26, 2026",
+    "isoDate": "2026-11-26",
     "readTime": "3 min read",
     "author": "Phoronix Editorial",
     "source": "Phoronix",
     "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/review/postgresql-19-benchmarks",
+    "sourceUrl": "https://www.phoronix.com/news/Ubuntu-27.04-Snapshot-1",
     "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Last week PostgreSQL 19.0 finally shipped after being delayed due to the AI/LLM burden facing open-source developers this year. The wait is worth it though as PostgreSQL 19 is showing some very nice performance gains over PostgreSQL 18 in my benchmarking. Here are some initial Po...",
+    "summary": "For those with extra time around the US Thanksgiving holiday, the first Tenacious Snapshot 1 was just released today as the first stepping stone toward Ubuntu 27.04",
     "tags": [
       "Linux & Open Source",
       "Phoronix",
       "Global Tech"
     ],
-    "content": "\n                      <p>Last week PostgreSQL 19.0 finally shipped after being delayed due to the AI/LLM burden facing open-source developers this year. The wait is worth it though as PostgreSQL 19 is showing some very nice performance gains over PostgreSQL 18 in my benchmarking. Here are some initial PostgreSQL 19 vs. 18 database server benchmarks on the new 6th Gen AMD EPYC Venice platform.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/review/postgresql-19-benchmarks\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>For those with extra time around the US Thanksgiving holiday, the first Tenacious Snapshot 1 was just released today as the first stepping stone toward Ubuntu 27.04</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Ubuntu-27.04-Snapshot-1\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "pop-os-26-04-lts-vs-pop-os-24-04-lts-benchmarks",
-    "title": "Pop!_OS 26.04 LTS vs. Pop!_OS 24.04 LTS Benchmarks",
+    "id": "linux-7-4-delivers-some-performance-gains-for-intel-pan",
+    "title": "Linux 7.4 Delivers Some Performance Gains For Intel Panther Lake's Arc B390 Graphics",
     "category": "Linux & Open Source",
-    "date": "November 25, 2026",
-    "isoDate": "2026-11-25",
+    "date": "November 26, 2026",
+    "isoDate": "2026-11-26",
     "readTime": "3 min read",
     "author": "Phoronix Editorial",
     "source": "Phoronix",
     "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/review/pop-os-2604-benchmarks",
+    "sourceUrl": "https://www.phoronix.com/news/Linux-7.4-Arc-B390-Performance",
     "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "System76 released Pop!_OS 26.04 LTS yesterday as the newest version of their Ubuntu-derived Linux distribution featuring their in-house COSMIC desktop environment. For those curious about any performance differences out of Pop!_OS 26.04 LTS, I already have some benchmarks compari...",
+    "summary": "With the recently reviewed Dell XPS 14 laptop powered by Intel Core Ultra Series 3 \"Panther Lake\", it ships with Ubuntu 26.04 LTS as one of the Dell supported options. If aiming for maximizing the performance out of Panther Lake, upgrading to Ubuntu 26.10 provides some performanc...",
     "tags": [
       "Linux & Open Source",
       "Phoronix",
       "Global Tech"
     ],
-    "content": "\n                      <p>System76 released Pop!_OS 26.04 LTS yesterday as the newest version of their Ubuntu-derived Linux distribution featuring their in-house COSMIC desktop environment. For those curious about any performance differences out of Pop!_OS 26.04 LTS, I already have some benchmarks comparing it to the former 24.04 release since the new System76 Thelio Prime SFF PC has been shipping with 26.04 LTS since last week.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/review/pop-os-2604-benchmarks\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>With the recently reviewed Dell XPS 14 laptop powered by Intel Core Ultra Series 3 &quot;Panther Lake&quot;, it ships with Ubuntu 26.04 LTS as one of the Dell supported options. If aiming for maximizing the performance out of Panther Lake, upgrading to Ubuntu 26.10 provides some performance boosts. If wanting to take things even further, going with the in-development Linux 7.4 kernel provides some advantages particularly for the Arc B390 integrated Xe3 graphics</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Linux-7.4-Arc-B390-Performance\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   }
 ];
 
