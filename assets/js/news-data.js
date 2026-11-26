@@ -8,7 +8,7 @@
  * - Phoronix, Kernel.org (Linux & Systems Architecture)
  * - Ars Technica, The Register (Enterprise Cloud & Networking)
  * 
- * Last Editorial Sync: November 25, 2026 21:12:47 UTC
+ * Last Editorial Sync: November 26, 2026 07:13:29 UTC
  */
 
 const NEWS_DATA = [
@@ -16,8 +16,8 @@ const NEWS_DATA = [
     "id": "slcert-national-cybersecurity-advisory-critical-infrastructure",
     "title": "Sri Lanka CERT Issues National Advisory on Critical Windows & Linux Endpoint Security",
     "category": "Cybersecurity",
-    "date": "November 25, 2026",
-    "isoDate": "2026-11-25",
+    "date": "November 26, 2026",
+    "isoDate": "2026-11-26",
     "readTime": "3 min read",
     "author": "National Incident Coordination",
     "source": "Sri Lanka CERT | CC",
@@ -38,8 +38,8 @@ const NEWS_DATA = [
     "id": "colombo-tech-city-subsea-cable-digital-infrastructure-expansion",
     "title": "Sri Lanka Expands South Asian Cloud Gateway with Direct High-Capacity Subsea Cable Hub",
     "category": "Cloud & Enterprise IT",
-    "date": "November 24, 2026",
-    "isoDate": "2026-11-24",
+    "date": "November 25, 2026",
+    "isoDate": "2026-11-25",
     "readTime": "4 min read",
     "author": "Telecommunications Regulatory Authority",
     "source": "Colombo Tech Authority",
@@ -60,8 +60,8 @@ const NEWS_DATA = [
     "id": "cbsl-fintech-zero-trust-endpoint-directive-2026",
     "title": "Central Bank of Sri Lanka Mandates Strict Host-Level Firewall & Telemetry Auditing",
     "category": "Cybersecurity",
-    "date": "November 24, 2026",
-    "isoDate": "2026-11-24",
+    "date": "November 25, 2026",
+    "isoDate": "2026-11-25",
     "readTime": "3 min read",
     "author": "Payments & Settlements Dept",
     "source": "CBSL FinTech Oversight",
@@ -82,8 +82,8 @@ const NEWS_DATA = [
     "id": "sri-lanka-national-digital-identity-data-privacy-safeguards",
     "title": "Sri Lanka Enacts Enhanced Data Protection Compliance for Digital Public Infrastructure",
     "category": "Cybersecurity",
-    "date": "November 23, 2026",
-    "isoDate": "2026-11-23",
+    "date": "November 24, 2026",
+    "isoDate": "2026-11-24",
     "readTime": "3 min read",
     "author": "Data Protection Authority",
     "source": "DPA Sri Lanka",
@@ -99,6 +99,48 @@ const NEWS_DATA = [
       "Data Security"
     ],
     "content": "\n          <p>The Data Protection Authority of Sri Lanka has published its comprehensive operational guidelines for enterprise data processors under the provisions of the Personal Data Protection Act (PDPA).</p>\n          \n          <h2>Workstation Privacy &amp; Offline Storage</h2>\n          <p>Organizations managing customer archives are strongly encouraged to deploy local offline backup solutions, eliminating unnecessary cloud exposure and safeguarding confidential user records through client-side encryption.</p>\n        "
+  },
+  {
+    "id": "1password-hacked-customer-data-and-source-code-stolen-i",
+    "title": "1Password Hacked, Customer Data and Source Code Stolen in GitHub Account Breach",
+    "category": "Cybersecurity",
+    "date": "November 26, 2026",
+    "isoDate": "2026-11-26",
+    "readTime": "3 min read",
+    "author": "The Hacker News Editorial",
+    "source": "The Hacker News",
+    "location": "San Francisco, California, USA",
+    "sourceUrl": "https://thehackernews.com/2026/11/1password-hacked-customer-data-and.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgbu9vulg5_P2PLmwCbF5nNRu8UujJDFNLLCGackgRWjz4lmkQcAom8TerCouyPh1pF8sgBAiJTwO7qAQN3kLVd-_0e7czxqhyphenhyphenUQuSG6WyCJvoNsI92X7tl1ukE6h8QDLmQBUBJaKBCyTYXjaGMUeaczy-sTIjMvDHdQjphWmWyCsUyIG4Y7WD4J2FoQfgY/s1600/1password.jpg",
+    "featured": false,
+    "summary": "Popular password management software 1Password on Wednesday disclosed a security incident involving its backend systems that led to the unauthorized access of some customer information, but emphasized that customer password vaults and other secrets were not accessed. \"While we to...",
+    "tags": [
+      "Cybersecurity",
+      "The Hacker News",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>Popular password management software 1Password on Wednesday disclosed a security incident involving its backend systems that led to the unauthorized access of some customer information, but emphasized that customer password vaults and other secrets were not accessed. &quot;While we took immediate steps to contain the incident, the attacker gained access to some of our backend systems and accessed a</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/1password-hacked-customer-data-and.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
+    "id": "13-malicious-nuget-packages-turn-fake-net-job-assessmen",
+    "title": "13 Malicious NuGet Packages Turn Fake .NET Job Assessments Into Malware Delivery Traps",
+    "category": "Cybersecurity",
+    "date": "November 26, 2026",
+    "isoDate": "2026-11-26",
+    "readTime": "3 min read",
+    "author": "The Hacker News Editorial",
+    "source": "The Hacker News",
+    "location": "San Francisco, California, USA",
+    "sourceUrl": "https://thehackernews.com/2026/11/13-malicious-nuget-packages-turn-fake.html",
+    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjt0w3YJQrn6VoUVUTTj46NLfeL_JJE-sDoxKsuBe-_OxBtQ3iX8AZTZ1CEn39-N5TGKYd-0ZKdOT43UwAWUbpIXlFdDwhyphenhyphenEKpkQVVJYJVodQRHyz0pJeKEvJIJgUpAEQqXizajmrriq9Mj1aqioeK1Zug__X26Ra4HwzFg8ImTajGc6b7Ck9LW2OCIpPoa/s1600/dotnet.jpg",
+    "featured": false,
+    "summary": "Cybersecurity researchers have discovered 13 malicious NuGet packages that are designed to target Windows .NET developers under the guise of a fake take-home job assessment. \"Most of the packages pose as WinUI 3 and WPF [Windows Presentation Foundation] button controls,\" Socket s...",
+    "tags": [
+      "Cybersecurity",
+      "The Hacker News",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>Cybersecurity researchers have discovered 13 malicious NuGet packages that are designed to target Windows .NET developers under the guise of a fake take-home job assessment. &quot;Most of the packages pose as WinUI 3 and WPF [Windows Presentation Foundation] button controls,&quot; Socket security researcher Kush Pandya said in a technical write-up. &quot;In the versions we analyzed, building or running a</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/13-malicious-nuget-packages-turn-fake.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
     "id": "hackers-exploit-two-geoserver-flaws-as-researchers-warn",
@@ -143,46 +185,46 @@ const NEWS_DATA = [
     "content": "\n                      <p>The U.S. Treasury Department&#x27;s Financial Crimes Enforcement Network (FinCEN) has been hit by a cybersecurity incident that resulted in &quot;unauthorized access to a limited subset of its systems,&quot; the bureau said on Tuesday. As a precaution, it has taken some systems offline. The bureau collects suspicious activity reports and other Bank Secrecy Act (BSA) filings from banks and other financial</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "credential-remediation-is-slow-when-you-don-t-know-what",
-    "title": "Credential Remediation Is Slow When You Don\u2019t Know What Will Break",
+    "id": "palo-alto-networks-warns-of-fragnesia-flaw-exploited-in",
+    "title": "Palo Alto Networks warns of Fragnesia flaw exploited in PAN-OS attacks",
     "category": "Cybersecurity",
     "date": "November 25, 2026",
     "isoDate": "2026-11-25",
     "readTime": "3 min read",
-    "author": "The Hacker News Editorial",
-    "source": "The Hacker News",
-    "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/credential-remediation-is-slow-when-you.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEil06YVYkZZwt0a8nA97RyMZvYZEQIoZ7r9_YHMtjx5eWc7RNAB4ol6OWb7NIsJOpC0v4w11xynwGgR1SsTnArvWAF7yJseVMbQfoawpTPEKYDdmH6O5UrbIZgJ2Fz9MGBFC6kF95oLeubdwlrdVKaVTPz4kjrOCH0X1neixvpNSYHhotL5WuzdYM12tUo/s1600/GitGuardian.gif",
+    "author": "BleepingComputer Editorial",
+    "source": "BleepingComputer",
+    "location": "New York City, New York, USA",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "TL;DR More than 64% still valid after four years: GitGuardian\u2019s State of Secrets Sprawl 2026 found that most valid secrets discovered in 2022 still worked in January 2026, because teams stall on what a revoke will break. Validity-only triage misses 46% of critical secrets: Priori...",
+    "summary": "Threat actors are chaining exploits for the PHP2Shell and Fragnesia vulnerabilities to target Palo Alto Networks devices with management interfaces exposed to the internet.",
     "tags": [
       "Cybersecurity",
-      "The Hacker News",
+      "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>TL;DR More than 64% still valid after four years: GitGuardian\u2019s State of Secrets Sprawl 2026 found that most valid secrets discovered in 2022 still worked in January 2026, because teams stall on what a revoke will break. Validity-only triage misses 46% of critical secrets: Prioritize by impact instead, weighing what a credential can access and whether it leaked publicly, and update the</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/credential-remediation-is-slow-when-you.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>Threat actors are chaining exploits for the PHP2Shell and Fragnesia vulnerabilities to target Palo Alto Networks devices with management interfaces exposed to the internet.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/palo-alto-networks-warns-of-fragnesia-flaw-exploited-in-pan-os-attacks/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "drupal-fail2install-exploit-details-emerge-as-critical-",
-    "title": "Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation",
+    "id": "1password-customer-data-stolen-after-employee-github-ac",
+    "title": "1Password customer data stolen after employee GitHub account breach",
     "category": "Cybersecurity",
     "date": "November 25, 2026",
     "isoDate": "2026-11-25",
     "readTime": "3 min read",
-    "author": "The Hacker News Editorial",
-    "source": "The Hacker News",
-    "location": "San Francisco, California, USA",
-    "sourceUrl": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html",
-    "imageUrl": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhbChdPRqvJHt9cIG4Z1W9o12tl4thtxIDNNcntDjmIytSIC1PWvOytT0JjY0OJtnba6UVJcEmqNxgOMuWxX2pvNJzjQ70-CIeruqZEDdgaDG66Lv2T6lLMv8cEhrXRie1gcaLz6OoNw6f2822s2yz8jl958kok6WpHmZ7p_n3TRWTdEWSpr1le5T28kFQO/s1600/drupal.gif",
+    "author": "BleepingComputer Editorial",
+    "source": "BleepingComputer",
+    "location": "New York City, New York, USA",
+    "sourceUrl": "https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/",
+    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a critical flaw impacting Drupal to its Known Exploited Vulnerabilities (KEV) catalog, requiring federal agencies to apply the fixes by November 27, 2026. The vulnerability, tracked as CVE-2026-1321...",
+    "summary": "1Password has disclosed a data breach after a an employee's corporate GitHub account was hacked and used to deploy malicious code to the company's backend services to steal customer data.",
     "tags": [
       "Cybersecurity",
-      "The Hacker News",
+      "BleepingComputer",
       "Global Tech"
     ],
-    "content": "\n                      <p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a critical flaw impacting Drupal to its Known Exploited Vulnerabilities (KEV) catalog, requiring federal agencies to apply the fixes by November 27, 2026. The vulnerability, tracked as CVE-2026-132165 aka Fail2Install (CVSS score: 9.8), is a case of remote code execution (RCE) impacting Drupal core. &quot;Drupal Core</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>The Hacker News</em> in San Francisco, California, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on The Hacker News &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>1Password has disclosed a data breach after a an employee&#x27;s corporate GitHub account was hacked and used to deploy malicious code to the company&#x27;s backend services to steal customer data.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/1password-customer-data-stolen-after-employee-github-account-breach/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
     "id": "italy-and-switzerland-warn-of-autonomous-ai-driven-cybe",
@@ -227,46 +269,25 @@ const NEWS_DATA = [
     "content": "\n                      <p>The U.S. Cybersecurity and Infrastructure Security Agency (CISA) is warning about a critical vulnerability in Danfoss AK-SM 8xxA Series controllers used by food retailers to manage commercial refrigeration, HVAC, and lighting systems.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/cisa-warns-of-critical-unpatched-flaw-in-danfoss-refrigeration-controllers/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
-    "id": "more-pentests-without-more-pentesters-where-ai-safely-h",
-    "title": "More Pentests Without More Pentesters: Where AI Safely Helps",
-    "category": "Cybersecurity",
+    "id": "kosmickrisp-now-the-go-to-solution-for-vulkan-on-macs-i",
+    "title": "KosmicKrisp Now The Go-To Solution For Vulkan On Macs In Place Of MoltenVK",
+    "category": "Linux & Open Source",
     "date": "November 25, 2026",
     "isoDate": "2026-11-25",
     "readTime": "3 min read",
-    "author": "BleepingComputer Editorial",
-    "source": "BleepingComputer",
-    "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/more-pentests-without-more-pentesters-where-ai-safely-helps/",
-    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
+    "author": "Phoronix Editorial",
+    "source": "Phoronix",
+    "location": "Chicago, Illinois, USA",
+    "sourceUrl": "https://www.phoronix.com/news/Vulkan-Macs-Go-KosmicKrisp",
+    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
     "featured": false,
-    "summary": "Penetration testers spend a significant portion of their engagements on documentation, reporting, and other tasks outside of testing. PentestPad explains how AI can reduce this workload, help teams handle more engagements, and keep sensitive client data within their own infrastru...",
+    "summary": "While MoltenVK began as an initiative to layer the Vulkan API atop Apple's Metal for use on macOS and iOS, the KosmicKrisp effort spearheaded by LunarG is now the go-to solution for Vulkan API support on modern Apple devices",
     "tags": [
-      "Cybersecurity",
-      "BleepingComputer",
+      "Linux & Open Source",
+      "Phoronix",
       "Global Tech"
     ],
-    "content": "\n                      <p>Penetration testers spend a significant portion of their engagements on documentation, reporting, and other tasks outside of testing. PentestPad explains how AI can reduce this workload, help teams handle more engagements, and keep sensitive client data within their own infrastructure.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/more-pentests-without-more-pentesters-where-ai-safely-helps/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
-  },
-  {
-    "id": "infratrust-warns-of-exploited-supply-chain-flaws-in-net",
-    "title": "InfraTrust warns of exploited supply chain flaws in network appliances",
-    "category": "Cybersecurity",
-    "date": "November 25, 2026",
-    "isoDate": "2026-11-25",
-    "readTime": "3 min read",
-    "author": "BleepingComputer Editorial",
-    "source": "BleepingComputer",
-    "location": "New York City, New York, USA",
-    "sourceUrl": "https://www.bleepingcomputer.com/news/security/infratrust-warns-of-exploited-supply-chain-flaws-in-network-appliances/",
-    "imageUrl": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1000&q=80",
-    "featured": false,
-    "summary": "Eclypsium's November InfraTrust report warns that most infrastructure security advisories addressing exploited vulnerabilities over the past month involve flaws in third-party software bundled into products rather than code developed by the vendors themselves.",
-    "tags": [
-      "Cybersecurity",
-      "BleepingComputer",
-      "Global Tech"
-    ],
-    "content": "\n                      <p>Eclypsium&#x27;s November InfraTrust report warns that most infrastructure security advisories addressing exploited vulnerabilities over the past month involve flaws in third-party software bundled into products rather than code developed by the vendors themselves.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/infratrust-warns-of-exploited-supply-chain-flaws-in-network-appliances/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
+    "content": "\n                      <p>While MoltenVK began as an initiative to layer the Vulkan API atop Apple&#x27;s Metal for use on macOS and iOS, the KosmicKrisp effort spearheaded by LunarG is now the go-to solution for Vulkan API support on modern Apple devices</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Vulkan-Macs-Go-KosmicKrisp\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
     "id": "postgresql-19-delivering-nice-performance-gains-benchma",
@@ -309,27 +330,6 @@ const NEWS_DATA = [
       "Global Tech"
     ],
     "content": "\n                      <p>System76 released Pop!_OS 26.04 LTS yesterday as the newest version of their Ubuntu-derived Linux distribution featuring their in-house COSMIC desktop environment. For those curious about any performance differences out of Pop!_OS 26.04 LTS, I already have some benchmarks comparing it to the former 24.04 release since the new System76 Thelio Prime SFF PC has been shipping with 26.04 LTS since last week.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/review/pop-os-2604-benchmarks\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
-  },
-  {
-    "id": "servo-now-supports-html-video-captions-flutter-web-cont",
-    "title": "Servo Now Supports HTML Video Captions, Flutter Web Content Working",
-    "category": "Linux & Open Source",
-    "date": "November 25, 2026",
-    "isoDate": "2026-11-25",
-    "readTime": "3 min read",
-    "author": "Phoronix Editorial",
-    "source": "Phoronix",
-    "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/Servo-0.8-October-2026",
-    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
-    "featured": false,
-    "summary": "The Rust-based Servo open-source web browser engine and Servoshell demo browser enjoyed a lot of new features in October. Servo 0.8 debuted recently with all of their October changes and out today is a blog post to highlight their latest round of improvements",
-    "tags": [
-      "Linux & Open Source",
-      "Phoronix",
-      "Global Tech"
-    ],
-    "content": "\n                      <p>The Rust-based Servo open-source web browser engine and Servoshell demo browser enjoyed a lot of new features in October. Servo 0.8 debuted recently with all of their October changes and out today is a blog post to highlight their latest round of improvements</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Servo-0.8-October-2026\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   }
 ];
 
