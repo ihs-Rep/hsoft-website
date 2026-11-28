@@ -8,7 +8,7 @@
  * - Phoronix, Kernel.org (Linux & Systems Architecture)
  * - Ars Technica, The Register (Enterprise Cloud & Networking)
  * 
- * Last Editorial Sync: November 27, 2026 20:47:09 UTC
+ * Last Editorial Sync: November 28, 2026 06:42:49 UTC
  */
 
 const NEWS_DATA = [
@@ -16,8 +16,8 @@ const NEWS_DATA = [
     "id": "slcert-national-cybersecurity-advisory-critical-infrastructure",
     "title": "Sri Lanka CERT Issues National Advisory on Critical Windows & Linux Endpoint Security",
     "category": "Cybersecurity",
-    "date": "November 27, 2026",
-    "isoDate": "2026-11-27",
+    "date": "November 28, 2026",
+    "isoDate": "2026-11-28",
     "readTime": "3 min read",
     "author": "National Incident Coordination",
     "source": "Sri Lanka CERT | CC",
@@ -38,8 +38,8 @@ const NEWS_DATA = [
     "id": "colombo-tech-city-subsea-cable-digital-infrastructure-expansion",
     "title": "Sri Lanka Expands South Asian Cloud Gateway with Direct High-Capacity Subsea Cable Hub",
     "category": "Cloud & Enterprise IT",
-    "date": "November 26, 2026",
-    "isoDate": "2026-11-26",
+    "date": "November 27, 2026",
+    "isoDate": "2026-11-27",
     "readTime": "4 min read",
     "author": "Telecommunications Regulatory Authority",
     "source": "Colombo Tech Authority",
@@ -60,8 +60,8 @@ const NEWS_DATA = [
     "id": "cbsl-fintech-zero-trust-endpoint-directive-2026",
     "title": "Central Bank of Sri Lanka Mandates Strict Host-Level Firewall & Telemetry Auditing",
     "category": "Cybersecurity",
-    "date": "November 26, 2026",
-    "isoDate": "2026-11-26",
+    "date": "November 27, 2026",
+    "isoDate": "2026-11-27",
     "readTime": "3 min read",
     "author": "Payments & Settlements Dept",
     "source": "CBSL FinTech Oversight",
@@ -82,8 +82,8 @@ const NEWS_DATA = [
     "id": "sri-lanka-national-digital-identity-data-privacy-safeguards",
     "title": "Sri Lanka Enacts Enhanced Data Protection Compliance for Digital Public Infrastructure",
     "category": "Cybersecurity",
-    "date": "November 25, 2026",
-    "isoDate": "2026-11-25",
+    "date": "November 26, 2026",
+    "isoDate": "2026-11-26",
     "readTime": "3 min read",
     "author": "Data Protection Authority",
     "source": "DPA Sri Lanka",
@@ -269,6 +269,48 @@ const NEWS_DATA = [
     "content": "\n                      <p>Hackers have reportedly breached the US Air Force&#x27;s Cloud One computing platform, adding to a recent wave of cyberattacks affecting US government agencies, including the FBI, CIA, and Treasury Department.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>BleepingComputer</em> in New York City, New York, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.bleepingcomputer.com/news/security/us-air-force-cloud-platform-reportedly-hacked-in-latest-federal-breach/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on BleepingComputer &rarr;\n                        </a>\n                      </div>\n                    "
   },
   {
+    "id": "wine-11-23-released-with-support-for-arm64-macos-avx-in",
+    "title": "Wine 11.23 Released With Support For ARM64 macOS, AVX In 32-bit Emulation On ARM64",
+    "category": "Linux & Open Source",
+    "date": "November 27, 2026",
+    "isoDate": "2026-11-27",
+    "readTime": "3 min read",
+    "author": "Phoronix Editorial",
+    "source": "Phoronix",
+    "location": "Chicago, Illinois, USA",
+    "sourceUrl": "https://www.phoronix.com/news/Wine-11.23-Released",
+    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
+    "featured": false,
+    "summary": "We are getting close to the Wine 12.0 release candidate phase but out today is Wine 11.23 as the latest bi-weekly development release continuing to land new features into Wine",
+    "tags": [
+      "Linux & Open Source",
+      "Phoronix",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>We are getting close to the Wine 12.0 release candidate phase but out today is Wine 11.23 as the latest bi-weekly development release continuing to land new features into Wine</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Wine-11.23-Released\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
+    "id": "gmktec-evo-x2-amd-ryzen-ai-max-strix-halo-mini-pc",
+    "title": "GMKtec EVO-X2 AMD Ryzen AI Max+ Strix Halo Mini PC",
+    "category": "Linux & Open Source",
+    "date": "November 27, 2026",
+    "isoDate": "2026-11-27",
+    "readTime": "3 min read",
+    "author": "Phoronix Editorial",
+    "source": "Phoronix",
+    "location": "Chicago, Illinois, USA",
+    "sourceUrl": "https://www.phoronix.com/review/gmktec-evo-x2",
+    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
+    "featured": false,
+    "summary": "For those in the market for an AMD Ryzen AI Max+ mini PC but not able to procure the likes of the Ryzen AI Halo or Framework Desktop in your region or with elevated pricing, another Strix Halo option that's been available is the GMKtec EVO-X2. I recently received a review sample ...",
+    "tags": [
+      "Linux & Open Source",
+      "Phoronix",
+      "Global Tech"
+    ],
+    "content": "\n                      <p>For those in the market for an AMD Ryzen AI Max+ mini PC but not able to procure the likes of the Ryzen AI Halo or Framework Desktop in your region or with elevated pricing, another Strix Halo option that&#x27;s been available is the GMKtec EVO-X2. I recently received a review sample of the GMKtec EVO-X2 and put it through a variety of benchmarks in seeing how the performance stacks up against the flagship Ryzen AI Halo and Framework Desktop offerings as well as the BOSGAME VTA-439 powered by the AMD Ryzen AI 9 HX 470 for reference plus also the Dell Pro Max GB10 powered by the NVIDIA GB10 SoC.</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/review/gmktec-evo-x2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
+  },
+  {
     "id": "new-earthqaic-gallium3d-driver-merged-for-mesa-27-0",
     "title": "New \"Earthqaic\" Gallium3D Driver Merged For Mesa 27.0",
     "category": "Linux & Open Source",
@@ -288,48 +330,6 @@ const NEWS_DATA = [
       "Global Tech"
     ],
     "content": "\n                      <p>Merged today to Mesa Git is a brand new Gallium3D driver: Earthqaic</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Earthqaic-Gallium3D-Mesa-27.0\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
-  },
-  {
-    "id": "linux-dropping-last-of-the-1980-s-versamodular-eurocard",
-    "title": "Linux Dropping Last Of The 1980's VersaModular Eurocard \"VME\" vme_user Code Over AI/LLM Noise",
-    "category": "Linux & Open Source",
-    "date": "November 27, 2026",
-    "isoDate": "2026-11-27",
-    "readTime": "3 min read",
-    "author": "Phoronix Editorial",
-    "source": "Phoronix",
-    "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/Linux-Drops-VME-Bus-User",
-    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
-    "featured": false,
-    "summary": "The Linux kernel is removing more old driver code due to AI/LLMs generating more noise over this unused, obsolete code within the source tree. Following various old ISA and PCMCIA code removed, ham radio, ISDN, and other old network code, the latest vintage artifact set to be str...",
-    "tags": [
-      "Linux & Open Source",
-      "Phoronix",
-      "Global Tech"
-    ],
-    "content": "\n                      <p>The Linux kernel is removing more old driver code due to AI/LLMs generating more noise over this unused, obsolete code within the source tree. Following various old ISA and PCMCIA code removed, ham radio, ISDN, and other old network code, the latest vintage artifact set to be stripped out of the Linux kernel is around the VersaModular Eurocard &quot;VME&quot; bus vme_user driver from the 1980s</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Linux-Drops-VME-Bus-User\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
-  },
-  {
-    "id": "linux-mint-27-beta-released-with-new-apps-full-wayland-",
-    "title": "Linux Mint 27 Beta Released With New Apps, Full Wayland Support",
-    "category": "Linux & Open Source",
-    "date": "November 27, 2026",
-    "isoDate": "2026-11-27",
-    "readTime": "3 min read",
-    "author": "Phoronix Editorial",
-    "source": "Phoronix",
-    "location": "Chicago, Illinois, USA",
-    "sourceUrl": "https://www.phoronix.com/news/Linux-Mint-27-Beta",
-    "imageUrl": "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&w=1000&q=80",
-    "featured": false,
-    "summary": "Ahead of the official release expected around Christmas, the beta of Linux Mint 27 was announced today for testing",
-    "tags": [
-      "Linux & Open Source",
-      "Phoronix",
-      "Global Tech"
-    ],
-    "content": "\n                      <p>Ahead of the official release expected around Christmas, the beta of Linux Mint 27 was announced today for testing</p>\n                      <h2>Technical Context &amp; Enterprise Impact</h2>\n                      <p>This advisory reflects evolving cyberthreats and software systems updates across modern computing infrastructure. System administrators and desktop users are advised to verify relevant endpoints and reference official source documentation.</p>\n                      <p><strong>Primary Source:</strong> Published by <em>Phoronix</em> in Chicago, Illinois, USA.</p>\n                      <div style=\"margin-top: 1.5rem;\">\n                        <a href=\"https://www.phoronix.com/news/Linux-Mint-27-Beta\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"btn btn-primary btn-sm\">\n                          Read Original Story on Phoronix &rarr;\n                        </a>\n                      </div>\n                    "
   }
 ];
 
